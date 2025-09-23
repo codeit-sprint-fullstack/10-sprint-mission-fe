@@ -102,3 +102,50 @@ header > button > a {
     font-weight: 600;
     line-height: 32px;
 }
+
+.hot-item {
+    margin: 0 auto;
+    padding: 138px 344px;
+    display: flex;
+    gap: 4rem;
+    align-items: center;
+}
+
+.hot-item > img {
+    padding-left: 122px;
+}
+
+.explain {
+    display: flex;
+    flex-direction: column;
+    height: 238px;
+    justify-content: center;
+    padding: 103px 146px 103px 24px;
+}
+
+.explain > .word {
+    margin-bottom: 0.75rem;
+    color: var(--primary-100);
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 26px;
+}
+
+.explain > .main-explain {
+    margin-bottom: 1.5rem;
+    color: var(--gray-700);
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 140%;
+    letter-spacing: 0.8px;
+}
+
+.explain > .sub-explain {
+    color: var(--gray-700);
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 2rem;
+}
