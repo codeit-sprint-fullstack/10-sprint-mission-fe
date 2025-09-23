@@ -30,6 +30,8 @@ header {
     justify-content: space-between;
     align-items: center;
     text-align: center;
+    position: fixed;
+    background-color: #ffffff;
 }
 
 header > .logo-Container {
