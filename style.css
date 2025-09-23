@@ -111,8 +111,12 @@ header > button > a {
     align-items: center;
 }
 
-.hot-item > img {
-    padding-left: 122px;
+.section-Container {
+    display: flex;
+    width: 1232px;
+    align-items: center;
+    gap: 64px;
+    padding: 0px 122px;
 }
 
 .explain {
@@ -120,10 +124,9 @@ header > button > a {
     flex-direction: column;
     height: 238px;
     justify-content: center;
-    padding: 103px 146px 103px 24px;
 }
 
-.explain > .word {
+.section-Container > .explain > .word {
     margin-bottom: 0.75rem;
     color: var(--primary-100);
     font-size: 18px;
@@ -132,7 +135,7 @@ header > button > a {
     line-height: 26px;
 }
 
-.explain > .main-explain {
+.section-Container > .explain > .main-explain {
     margin-bottom: 1.5rem;
     color: var(--gray-700);
     font-size: 40px;
