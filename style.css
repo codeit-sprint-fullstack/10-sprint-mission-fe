@@ -24,7 +24,9 @@
 }
 
 header {
-    width: 1920px;
+    top: 0;
+    left: 0;
+    right: 0;
     padding: 9px 200px;
     display: flex;
     justify-content: space-between;
@@ -78,7 +80,7 @@ header > button > a {
 }
 
 .goSite-Container {
-    flex: 0 0 357px;
+    flex: 0 1 357px;
     flex-direction: column;
     height: 200px;
 }
