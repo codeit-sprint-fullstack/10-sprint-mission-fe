@@ -1,0 +1,65 @@
+:root {
+    --primary-100: #3692FF;
+    --primary-200: #1967D6;
+    --primary-300: #1251AA;
+
+    --error-red: #F74747;
+
+    --gray-900: #111827;
+    --gray-800: #1F2937;
+    --gray-700: #374151;
+    --gray-600: #4B5563;
+    --gray-500: #6B7280;
+    --gray-400: #9CA3AF;
+    --gray-200: #E5E7EB;
+    --gray-100: #F3F4F6;
+    --gray-50: #F9FAFB;
+}
+
+@font-face {
+    font-family: 'ROKAF Sans';
+    src: url('./assets/fonts/ROKAF\ Sans\ ROKAF\Sans\Medium.otf');
+}
+
+header {
+    width: 1920px;
+    padding: 9px 200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+
+header > .logo-Container {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+
+    color: var(--primary-100);
+    font-family: 'ROKAF Sans';
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+header > .logo-Container > img {
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+}
+
+header > button > a {
+    padding: 12px 24px;
+    background-color: var(--primary-100);
+    color: var(--gray-100);
+    font-size: 1em;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 26px;
+    border-radius: 8px;
+
+    width: 128px;
+    height: 48px;
+    flex-shrink: 0;
+}
