@@ -19,8 +19,12 @@
 }
 
 @font-face {
-    font-family: 'ROKAF Sans';
-    src: url('./assets/fonts/ROKAF\ Sans\ ROKAF\Sans\Medium.otf');
+  font-family: 'ROKAF Sans';
+  src: url('./assets/fonts/ROKAF Sans ROKAFSans Medium.otf') format('opentype');     
+}
+
+body {
+  font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
 }
 
 header {
@@ -68,6 +72,7 @@ header > button > a {
     width: 128px;
     height: 48px;
     flex-shrink: 0;
+    font-family: 'Pretendard ';
 }
 
 .banner {
