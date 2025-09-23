@@ -174,3 +174,46 @@ header > button > a {
     line-height: 140%;
     flex-shrink: 0 0 350px;
 }
+
+.footer-Container {
+    padding: 32px 200px;
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--gray-900);
+    padding-bottom: 74px;
+}
+
+.footer-Container > p {
+    color: var(--gray-400);
+    text-align: center;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.footer-Container > .question-Container {
+    display: flex;
+    gap: 30px;
+}
+
+.footer-Container > .question-Container > p {
+    color: var(--gray-200);
+    text-align: center;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+
+    cursor: pointer;
+}
+
+.footer-Container > .icon-Container {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+.footer-Container > .icon-Container > img {
+    cursor: pointer;
+}
