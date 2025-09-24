@@ -19,12 +19,25 @@
 }
 
 @font-face {
-  font-family: 'ROKAF Sans';
-  src: url('./assets/fonts/ROKAF Sans ROKAFSans Medium.otf') format('opentype');     
+  font-family: 'Pretendard';
+  src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Thin.woff') format('woff');
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'ROKAF Sans Test';
+  src: url('/public/assets/fonts/ROKAFSans-Medium.otf') format('opentype');
+  /* 테스트 단계에선 normal로 열어놓음 */
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
 }
 
+/* 임시로 강제 적용해서 폰트가 보이는지 확인 */
 body {
-  font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+  font-family: 'ROKAF Sans Test', sans-serif !important;
+  font-weight: normal !important;
 }
 
 header {
