@@ -1,0 +1,57 @@
+/* *************** nav **************** */
+.container-nav {
+  max-width: 116rem;
+  padding: 0.9rem 3rem;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.logoWrap {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.logo {
+  width: 4rem;
+}
+
+.logoWrap div {
+  color: #3692ff;
+  font-family: "ROKAF Sans";
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+/* *************** section-hero **************** */
+.section-hero {
+  background-color: #cfe5ff;
+}
+
+.section-hero .container {
+  display: flex;
+  align-items: end;
+  padding-top: 20rem;
+  justify-content: center;
+}
+
+.container .grid {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  justify-content: center;
+}
+
+/* *************** section-best **************** */
+.best-container {
+  gap: 6.4rem;
+}
+
+/* *************** section-search **************** */
+
+/* *************** section-register **************** */
+
+/* *************** section-last  **************** */
+
+/* *************** footer **************** */
