@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>로그인</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="frame-login">
+    <main class="frame-main">
+        <!-- /* -------------------- 상단 로그+판다마켓 -------------- */ -->
+        <div class="frame-logo">
+            <a href="/">
+                <img class="logo-img" src="./image/img_logo.svg" alt="logo">
+            </a>
+            <span>판다마켓</span>
+        </div>
+        <!-- /* -------------------- 이메일, 닉네임, 비밀번호 -------------- */ -->
+        <form class="frame-login">
+            <div class="frame-email">
+                <label for="email">이메일</label>
+                <input id="email" name="email" type="email" placeholder="이메일을 입력해주세요" required>
+            </div>
+            <div class="frame-username">
+                <label for="username">닉네임</label>
+                <input id="username" name="username" type="username" placeholder="닉네임을 입력해주세요" required>
+            </div>
+            <div class="frame-password">
+                <label for="password">비밀번호</label>
+                <input id="password" name="password" type="password" placeholder="비밀번호를 입력해주세요" required>
+            </div>
+            <div class="frame-password">
+                <label for="password">비밀번호 확인</label>
+                <input id="password" name="password" type="password" placeholder="비밀번호를 다시 한 번 입력해주세요" required>
+            </div>
+        </form>
+        <!-- /* -------------------- 회원가입 버튼 -------------- */ -->
+        <button class="bt_login" type="submit">
+            <a href="/login.html">회원가입</a>
+        </button>
+        <!-- /* -------------------- 간편 로그인 -------------- */ -->
+        <div class="simple-login-frame">
+            <div class="simple-login-inner">
+                <span>간편 로그인하기</span>
+                <div class="login-social">
+                    <a href="https://www.google.com/" target="_blank">
+                        <img  src="./image/ic_google.svg" alt="Google">
+                    </a>
+                    <a href="https://www.kakaocorp.com/page/" target="_blank">
+                        <img src="./image/ic_kakao.svg" alt="Kakao">
+                </div>
+            </div>
+        </div>
+        <!-- /* -------------------- 이미 회원이신가요? -------------- */ -->
+        <div class="login-bottom">
+            <span>이미 회원이신가요?
+                <a class="link-signup" href="/login.html">로그인</a>
+            </span>
+        </div>
+    </main>
+</body>
+</html>
