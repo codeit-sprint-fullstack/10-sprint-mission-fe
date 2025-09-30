@@ -1,0 +1,267 @@
+* {
+  box-sizing: border-box;
+}
+
+a {
+  cursor: pointer;
+}
+
+.header {
+  height: 4.375rem;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+  background-color: #FFF;
+}
+
+.header .inner {
+  margin:0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5625rem 12.5rem;
+  height: 4.375rem;
+  max-width: 1920px;
+  border-bottom: 1px solid #DFDFDF
+}
+
+.panda-logo {
+  cursor: pointer;
+}
+
+.header-login {
+  width: 8rem;
+  height: 3rem;
+  padding: 0.75rem 1.4375rem;
+  border-radius: 0.5rem;
+  background-color: #3692FF;
+  color: #F3F4F6;
+  font-family: Pretendard, sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.625rem;
+  text-align: center;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+main {
+  margin-top: 4.375rem;
+}
+
+main .inner {
+  max-width:1920px;
+  margin:0 auto;
+}
+
+.ad {
+  width: 100%;
+  height: 33.75rem;
+  flex-shrink: 0;
+  background-color: #CFE5FF;
+}
+
+.ad .inner {
+  position: relative;
+  max-width: 1920px;
+  margin: 0 auto;
+}
+
+.shopping {
+  display: inline-block;
+  height: 3.5rem;
+  padding: 1rem 7.75rem;
+  background-color: #3692FF;
+  border-radius: 2.5rem;
+  color: #F9FAFB;
+  font-family: Pretendard, sans-serif;
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 2rem;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  top: 384px;
+  left: 408px;
+  text-decoration: none;
+  z-index: 1;
+}
+
+.ad-announcement {
+  color: #374151;
+  font-family: Pretendard, sans-serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 140%;
+  padding-bottom: 3.75rem;
+}
+
+.home-top-ad-announcement {
+  position: absolute;
+  top: 240px;
+  left: 405px;
+}
+
+.panda-top-ad {
+  position: absolute;
+  top: 200px;
+  left: 769px;
+}
+
+.hot-product .inner {
+  position: relative;
+  max-width: 1920px;
+  padding: 8.625rem 21.5rem;
+  margin: 0 auto;
+}
+
+.hot-product-content,
+.search-content,
+.register-product-content {
+  display: flex;
+  width: 61.75rem;
+  gap: 4rem;
+  justify-content: center;
+  align-items: center;
+  background-color: #FCFCFC;
+}
+
+.hot-product-description {
+  display: flex;
+  flex-direction: column;
+}
+
+.badge {
+  font-family: Pretendard, sans-serif;
+  font-size: 1.125rem;
+  font-weight: 700;
+  line-height: 1.625rem;
+  color: #3692FF;
+  margin-bottom: 0.75rem;
+}
+
+.check {
+  font-family: Pretendard, sans-serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 3.5rem;
+  letter-spacing: 0.05rem;
+  color: #374151;
+  margin-bottom: 1.5rem;
+}
+
+.announcement {
+  font-family: Pretendard, sans-serif;
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 2rem;
+  color: #374151;
+}
+
+.search .inner {
+  position: relative;
+  max-width: 1920px;
+  padding: 8.625rem 21.375rem;
+  margin: 0 auto;
+}
+
+
+.search-description {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.search-img,
+.register-img {
+  width: 36.75rem;
+  height: 27.75rem;
+}
+
+.search-check,
+.search-announcement {
+  text-align: right;
+}
+
+.register-product {
+  margin-bottom: 8.625rem;
+}
+
+.register-product .inner {
+  position: relative;
+  max-width: 1920px;
+  padding: 8.625rem 22.5rem;
+  margin: 0 auto;
+}
+
+.home-bottom-ad-announcement {
+  position: absolute;
+  top: 255.5px;
+  left: 405px;
+}
+
+.panda-bottom-ad {
+  position: absolute;
+  top: 143px;
+  left: 769px;
+}
+
+.footer .inner {
+  margin:0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 2rem 12.5rem;
+  height: 10rem;
+  max-width: 1920px;
+}
+
+.footer {
+  width: 100%;
+  height: 10rem;
+  flex-shrink: 0;
+  background-color: #111827;
+}
+
+.link {
+  cursor: pointer;
+}
+
+.copyright {
+  text-align: center;
+  font-family: Pretendard;
+  font-size: 1rem;
+  font-weight: 400;
+  color: #9CA3AF;
+}
+
+.legal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.875rem;
+}
+
+.privacy,
+.faq {
+  text-align: center;
+  font-family: Pretendard, sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  color: #E5E7EB;
+  text-decoration: none;
+}
+
+.footer-link-logo {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.links {
+  display: flex;
+  justify-content: flex-end;
+  justify-items: center;
+  gap: 0.75rem;
+}
