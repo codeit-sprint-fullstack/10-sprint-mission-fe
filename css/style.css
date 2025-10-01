@@ -1,0 +1,159 @@
+.title {
+  color: var(--gray700);
+  font-size: 4rem;
+  font-weight: 700;
+  margin-bottom: 2.4rem;
+}
+
+.subtitle {
+  color: var(--primary-100);
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 1.2rem;
+}
+
+.text {
+  color: var(--gray700);
+  font-size: 2.4rem;
+  font-weight: 500;
+}
+
+.btn {
+  background-color: var(--primary600);
+  color: white;
+  font-size: 2rem;
+  font-weight: 600;
+  border: none;
+  display: inline-block;
+}
+
+.container-hero,
+.container-bottom {
+  max-width: 111rem;
+  padding: 0 3rem;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: auto 1fr;
+}
+.section-best,
+.section-search,
+.section-register {
+  padding: 13.8rem 0;
+}
+
+.container-best,
+.container-search,
+.container-register {
+  max-width: 98.8rem;
+  padding: 0 3rem;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  column-gap: 6.4rem;
+  background-color: #fcfcfc;
+}
+
+.contentWrap {
+  align-self: center;
+}
+
+/* *************** nav **************** */
+.section-nav {
+  padding: 0.9rem;
+}
+
+.container-nav {
+  max-width: 152rem;
+  padding: 0 3rem;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.logoWrap {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.logo {
+  width: 4rem;
+}
+
+.logoWrap div {
+  color: var(--primary600);
+  font-family: var(--font-logo);
+  font-size: 2.5rem;
+  font-weight: 700;
+  font-family: "ROKAF Sans";
+}
+.login-btn {
+  border-radius: 0.8rem;
+  padding: 1.2rem 2.3rem;
+}
+
+/* *************** section-hero **************** */
+.section-hero,
+.section-bottom {
+  background-color: #cfe5ff;
+  padding-top: 20rem;
+}
+
+.section-hero .container {
+  display: flex;
+  align-items: end;
+  padding-top: 20rem;
+  justify-content: center;
+}
+
+.heroWrap {
+  align-self: center;
+}
+
+.hero-btn {
+  width: 100%;
+  padding: 1.6rem 0;
+  border-radius: 3rem;
+  display: inline-block;
+  text-align: center;
+}
+/* *************** section-best **************** */
+
+.best-container {
+  gap: 6.4rem;
+}
+
+/* *************** section-search **************** */
+.container-search div:first-child {
+  order: 2;
+}
+
+.container-search .contentWrap {
+  text-align: right;
+}
+
+/* *************** footer **************** */
+.section-footer {
+  background-color: var(--gray900);
+  padding: 3.2rem 0 11rem;
+}
+
+.container-footer {
+  color: white;
+  max-width: 152rem;
+  padding: 0 3rem;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.6rem;
+}
+.footer-nav {
+  display: flex;
+  gap: 3rem;
+}
+
+.social-links {
+  display: flex;
+  gap: 1.2rem;
+  align-items: center;
+}
