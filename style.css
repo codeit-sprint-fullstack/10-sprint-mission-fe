@@ -26,6 +26,11 @@ header {
   flex-shrink: 0;
   border-bottom: 1px solid #dfdfdf;
   background: #ffffff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+
 }
 
 .logo-img {
@@ -55,6 +60,7 @@ header {
   display: flex;
   justify-content: center;
   align-items: flex-end;
+  margin-top: 70px;
 }
 
 .sideline-box.side-bottom {
