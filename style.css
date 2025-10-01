@@ -1,3 +1,11 @@
+:root {
+    /* 🎨 팔레트 색상 정의 */
+    --primary-color: #3692FF;
+    --secondary-color: #1F2937;
+    --text-color: #374151;
+    --background-color: #CFE5FF;
+  }
+
 html {
     font-size: 16px;
 }
@@ -8,7 +16,7 @@ a{
 
 /* 정보 굵은 텍스트 */
 h1 {
-    color: #374151;
+    color: var(--text-color);
     font-family: Pretendard;
     font-size: 2.5rem;
     font-style: normal;
@@ -52,7 +60,7 @@ header {
 
 /* 헤더 판다마켓 텍스트 */
 .header-title span {
-    color: #3692FF;
+    color: var(--primary-color);
     font-family: "ROKAF Sans";
     font-size: 1.6rem;
     font-style: normal;
@@ -74,7 +82,7 @@ header {
     gap: 0.625rem;
     font-size: 1rem;
     color: #ffffff;
-    background: #3692FF;
+    background-color: var(--primary-color);
     cursor: pointer;
 }
 
@@ -123,7 +131,7 @@ header {
     height: 3.5rem;
     padding: 1.75rem 7.75rem;
     border-radius: 2.5rem;
-    background: #3692FF;
+    background-color: var(--primary-color);
     color: #F9FAFB;
 
     font-family: Pretendard;
@@ -163,7 +171,7 @@ header {
 }
 
 .description-title {
-    color: var(--Primary-100, #3692FF);
+    color: var(--primary-color);
     font-family: Pretendard;
     font-size: 1.125rem;
     font-style: normal;
@@ -172,7 +180,7 @@ header {
 }
 
 .description {
-    color: var(--Secondary-700, #374151);
+    color: var(--text-color);
     font-family: Pretendard;
     font-size: 1.5rem;
     font-style: normal;
@@ -284,7 +292,7 @@ footer {
     justify-content: center;
     align-items: center;
     /* 폰트 */
-    color: var(--brand-blue, #3692FF);
+    color: var(--primary-color);
     font-family: "ROKAF Sans";
     font-size: 4.1465rem;
     font-style: normal;
@@ -305,11 +313,6 @@ footer {
 .logo-img  {
     flex-shrink: 0;
     width: 100%;
-
-}
-
-/* 판다마켓 폰트 */
-.logo-text {
 
 }
 
@@ -358,7 +361,7 @@ input {
   }
  /* focus 커서있을 때 테두리 색상 변경 */
 .frame-login input:focus {
-    border-color: #3692ff;
+    border-color: var(--primary-color);
 }
 
   
@@ -410,7 +413,7 @@ input {
 /* 간편 로그인하기 영역 자동 늘어나도록 */
 .simple-login-inner span {
     flex: 1 1 auto;
-    color: #1F2937;
+    color: var(--secondary-color);
     /* pretendard/lg-16px-medium */
     font-family: Pretendard;
     font-size: 1rem;
@@ -439,7 +442,7 @@ input {
 .login-bottom span {
     font-family: "Pretendard-Medium", Helvetica;
     font-weight: 500;
-    color: #1f2937;
+    color: var(--secondary-color);
     font-size: 0.875rem;
 }
 
