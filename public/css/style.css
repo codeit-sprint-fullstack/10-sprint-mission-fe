@@ -1,8 +1,11 @@
 * {
     box-sizing: border-box;
-    font-family: 'Pretendard';
 }
 
+html {
+    font-size:20px;
+    font-family: 'Pretendard'
+}
 body {
     padding-top: 91px;
 }
@@ -52,7 +55,7 @@ body {
 }
 
 .banner-text span {
-    font-size: 40px;
+    font-size: 2rem;
     font-weight: 700;
 }
 
@@ -135,21 +138,21 @@ body {
 
 
 .info .tag {
-    font-size: 18px;
+    font-size: 1rem;
     font-weight: 700;
     margin-bottom: 26px;
     color: #3692ff;
 }
 
 .info .title {
-    font-size: 40px;
+    font-size: 2rem;
     font-weight: 700;
     margin-bottom: 26px;
     color: #374151;
 }
 
 .info .desc {
-    font-size: 24px;
+    font-size: 1rem;
     font-weight: 500;
     margin-bottom: 10px;
 }
@@ -187,7 +190,7 @@ body {
 }
 
 .footer-text span {
-    font-size: 40px;
+    font-size: 2rem;
     font-weight: 700;
 }
 
@@ -202,7 +205,7 @@ body {
 
 .ft-shoutout .one,
 .ft-shoutout .two {
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 400;
     color: #9CA3AF;
 }
@@ -222,3 +225,8 @@ body {
     display: flex;
     gap: 12px;
 }
+
+/* login.style */
+
+
+
