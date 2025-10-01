@@ -118,12 +118,18 @@ form > button {
     align-items: center;
 }
 
-.oAuth > .icon-box > img {
+.oAuth > .icon-box > a {
+    display: flex;
+    align-items: center;
+}
+
+.oAuth > .icon-box > a > img {
     cursor: pointer;
     border-radius: 100%;
 }
 
-.oAuth > .icon-box > a > img:nth-child(2) {
+#kakaoicon {
+    border-radius: 100%;
     background-color: #F5E14B;
 }
 
@@ -132,6 +138,10 @@ footer {
     align-items: center;
     justify-content: center;
     gap: 0.5vw;
+
+    font-size: 0.75rem;
+    font-weight: 500;
+    line-height: 1.5rem;
 }
 
 footer > a {
