@@ -3,32 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../reset.css">
+    <link rel="stylesheet" href="./login-style.css">
     <title>로그인</title>
 </head>
 <body>
-    <section>
+    <section class="main-container">
         <header>
-            <img>
+            <a href="/index.html"><img src="./images/panda-icon.png" alt="판다 아이콘"></a>
+            
             판다마켓
         </header>
         <form>
-            <label></label>
-            <input>
+            <label for="email">이메일</label>
+            <input placeholder="이메일을 입력해주세요" id="email" type="email" autofocus>
 
-            <label></label>
-            <input>
-            <img>
+            <label for="password">비밀번호</label>
+            <input placeholder="비밀번호를 입력해주세요" id="password" type="password">
+            <img src="./images/btn-visibility.png" alt="비밀번호 표시/비표시">
 
-            <button></button>
+            <button>로그인</button>
         </form>
-        <section>
+        <section class="oAuth">
             간편 로그인하기
-            <img>
-            <img>
+            <div class="icon-box">
+                <a href="https://www.google.com/"><img src="./images/google-icon.png" alt="구글로 간편 로그인"></a>
+                <a href="https://www.kakaocorp.com/page/"><img src="./images/kakaotalk-icon.png" alt="카카오로 간편 로그인"></a>
+            </div>
         </section>
 
         <footer>
-            판다마켓이 처음이신가요? <a>회원가입</a>
+            판다마켓이 처음이신가요?<a href="./register.html">회원가입</a>
         </footer>
     </section>
 </body>
