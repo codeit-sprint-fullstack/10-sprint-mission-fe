@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>로그인</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="style.css">
 </head>
@@ -24,7 +25,11 @@
             </div>
             <div class="frame-password">
                 <label for="password">비밀번호</label>
-                <input id="password" name="password" type="password" placeholder="비밀번호를 입력해주세요" required>
+                <!-- input과 아이콘을 같이 담을 박스 -->
+                <div class="input-box">
+                    <input id="password" name="password" type="password" placeholder="비밀번호를 입력해주세요" required>
+                    <img src="./image/ic_eye_off.svg" alt="비밀번호 보기" class="toggle-password" data-target="password">
+                </div>
             </div>
         </form>
         <!-- /* -------------------- 로그인 버튼 -------------- */ -->
@@ -51,5 +56,6 @@
             </span>
         </div>
     </main>
+    <script src="script.js"></script>
 </body>
 </html>
