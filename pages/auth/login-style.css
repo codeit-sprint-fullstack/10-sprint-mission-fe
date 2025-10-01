@@ -50,38 +50,50 @@ form > label {
     align-self: flex-start;
 }
 
-form > input {
+form > .input-wrapper > input {
     border: 0;
     width: 33vw;
     height: 5vh;
     padding-top: 1vh;
     padding-bottom: 1vh;
     padding-left: 1.5vw;
-    padding-right: 1.5vw;
-    margin-bottom: 0.5rem;
-
+    padding-right: 4vw;
+    margin-bottom: 1rem;
     border-radius: 0.75rem;
-
     background-color: var(--gray-100);
+    box-sizing: border-box;
 }
 
-form > input:focus {
+form > .input-wrapper {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0.5vh;
+    align-items: center;
+}
+
+form > .input-wrapper > input:focus {
     border: 1px solid var(--primary-100);
 }
 
-form > input::placeholder {
+form > .input-wrapper> input::placeholder {
     color: var(--gray-400);
     font-weight: 400;
     line-height: 1.625em;
     font-size: 0.75rem;
 }
 
-form > img {
+form > .input-wrapper > img {
     position: relative;
-    bottom: 5.5vh;
-    right: -15vw;
+    margin-top: -5.5vh;
+    margin-left: 15vw;
     cursor: pointer;
     flex-shrink: 0;
+    width: 1.5rem;
+    height: 1.5rem;
+    
+    align-self: flex-end;
+    margin-right: 1vw;
+    margin-bottom: 2vh;
 }
 
 form > button {
@@ -91,10 +103,10 @@ form > button {
     padding: 1vh 7.75vw;
     border-radius: 2.5rem;
     background-color: var(--gray-400);
-
     color: var(--gray-100);
     font-weight: 600;
     font-size: 1rem;
+    border: 0;
 }
 
 .oAuth {
