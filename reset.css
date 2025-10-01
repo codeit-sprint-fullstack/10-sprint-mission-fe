@@ -1,3 +1,43 @@
+:root {
+    --primary-100: #3692FF;
+    --primary-200: #1967D6;
+    --primary-300: #1251AA;
+
+    --error-red: #F74747;
+
+    --gray-900: #111827;
+    --gray-800: #1F2937;
+    --gray-700: #374151;
+    --gray-600: #4B5563;
+    --gray-500: #6B7280;
+    --gray-400: #9CA3AF;
+    --gray-200: #E5E7EB;
+    --gray-100: #F3F4F6;
+    --gray-50: #F9FAFB;
+
+    --background: #CFE5FF;
+}
+
+@font-face {
+  font-family: 'Pretendard';
+  src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Thin.woff') format('woff');
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'ROKAF Sans';
+  src: url('/public/assets/fonts/ROKAFSans-Medium.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+body {
+  font-family: 'Pretendard', 'ROKAF Sans', sans-serif !important;
+  font-weight: normal !important;
+}
+
 * {
     margin: 0;
     padding: 0;
