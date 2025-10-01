@@ -55,7 +55,7 @@ main {
     display: flex;
     flex-direction: column;
     width: 640px;
-    gap: 16px;
+    gap: 24px;
 }
 
 .loginform label {
