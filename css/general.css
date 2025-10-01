@@ -1,0 +1,74 @@
+/*
+
+------color------
+
+-Primary:
+#3692FF
+#1967D6
+#1251AA
+
+-Secondary:
+#111827
+#1F2937
+#374151
+#4B5563
+#6B7280
+#9CA3AF
+#E5E7EB
+#F3F4F6
+#F9FAFB
+
+-Error:
+#F74747
+ */
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary800: #1251aa;
+  --primary700: #1967d6;
+  --primary600: #3692ff;
+  --primary300: #e6f2ff;
+
+  --gray900: #111827;
+  --gray800: #1f2937;
+  --gray700: #374151;
+  --gray600: #4b5563;
+  --gray500: #6b7280;
+  --gray400: #9ca3af;
+  --gray200: #e5e7eb;
+  --gray100: #f3f4f6;
+  --gray50: #f9fafb;
+
+  --font-logo: "ROKAF Sans", serif;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Pretendard", sans-serif;
+  color: var(--gray700);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+img {
+  width: 100%;
+}
+
+a,
+button {
+  cursor: pointer;
+  border: none;
+  color: white;
+}
