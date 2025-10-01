@@ -1,0 +1,525 @@
+:root {
+  --Primary-100: #3692FF;
+  --Primary-200: #1967D6;
+  --Primary-300: #1251AA;
+  --Primary-050: #CFE5FF;
+  --Primary-025: #E6F2FF;
+
+  --Secondary-900: #111827;
+  --Secondary-800: #1F2937;
+  --Secondary-700: #374151;
+  --Secondary-600: #4B5563;
+  --Secondary-500: #6B7280;
+  --Secondary-400: #9CA3AF;
+  --Secondary-300: #E5E7EB;
+  --Secondary-200: #F3F4F6;
+  --Secondary-150: #DFDFDF;
+  --Secondary-100: #F9FAFB;
+  --Secondary-050: #FCFCFC;
+
+  --error-red: #F74747;
+
+  --White: #FFFFFF;
+}
+
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  cursor: pointer;
+}
+
+.header {
+  height: 4.375rem;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+  background-color: var(--White);
+}
+
+.header .inner {
+  margin:0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5625rem 12.5rem;
+  height: 4.375rem;
+  max-width: 1920px;
+  border-bottom: 1px solid var(--Secondary-150);
+}
+
+.panda-logo {
+  cursor: pointer;
+}
+
+.header-login {
+  width: 8rem;
+  height: 3rem;
+  padding: 0.75rem 1.4375rem;
+  border-radius: 0.5rem;
+  background-color: var(--Primary-100);
+  color: var(--Secondary-200);
+  font-family: Pretendard, sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.625rem;
+  text-align: center;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.with-fixed-header {
+  margin-top: 4.375rem;
+}
+
+main .inner {
+  max-width:1920px;
+  margin:0 auto;
+}
+
+.ad {
+  width: 100%;
+  height: 33.75rem;
+  flex-shrink: 0;
+  background-color: var(--Primary-050);
+}
+
+.ad .inner {
+  position: relative;
+  max-width: 1920px;
+  margin: 0 auto;
+}
+
+.shopping {
+  display: inline-block;
+  height: 3.5rem;
+  padding: 1rem 7.75rem;
+  background-color: var(--Primary-100);
+  border-radius: 2.5rem;
+  color: var(--Secondary-100);
+  font-family: Pretendard, sans-serif;
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 2rem;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  top: 384px;
+  left: 408px;
+  text-decoration: none;
+  z-index: 1;
+}
+
+.ad-announcement {
+  color: var(--Secondary-700);
+  font-family: Pretendard, sans-serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 140%;
+  padding-bottom: 3.75rem;
+}
+
+.home-top-ad-announcement {
+  position: absolute;
+  top: 240px;
+  left: 405px;
+}
+
+.panda-top-ad {
+  position: absolute;
+  top: 200px;
+  left: 769px;
+}
+
+.hot-product .inner {
+  position: relative;
+  max-width: 1920px;
+  padding: 8.625rem 21.5rem;
+  margin: 0 auto;
+}
+
+.hot-product-content,
+.search-content,
+.register-product-content {
+  display: flex;
+  width: 61.75rem;
+  gap: 4rem;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--Secondary-050);
+}
+
+.hot-product-description {
+  display: flex;
+  flex-direction: column;
+}
+
+.badge {
+  font-family: Pretendard, sans-serif;
+  font-size: 1.125rem;
+  font-weight: 700;
+  line-height: 1.625rem;
+  color: var(--Primary-100);
+  margin-bottom: 0.75rem;
+}
+
+.check {
+  font-family: Pretendard, sans-serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 3.5rem;
+  letter-spacing: 0.05rem;
+  color: var(--Secondary-700);
+  margin-bottom: 1.5rem;
+}
+
+.announcement {
+  font-family: Pretendard, sans-serif;
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 2rem;
+  color: var(--Secondary-700);
+}
+
+.search .inner {
+  position: relative;
+  max-width: 1920px;
+  padding: 8.625rem 21.375rem;
+  margin: 0 auto;
+}
+
+
+.search-description {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.search-img,
+.register-img {
+  width: 36.75rem;
+  height: 27.75rem;
+}
+
+.search-check,
+.search-announcement {
+  text-align: right;
+}
+
+.register-product {
+  margin-bottom: 8.625rem;
+}
+
+.register-product .inner {
+  position: relative;
+  max-width: 1920px;
+  padding: 8.625rem 22.5rem;
+  margin: 0 auto;
+}
+
+.home-bottom-ad-announcement {
+  position: absolute;
+  top: 255.5px;
+  left: 405px;
+}
+
+.panda-bottom-ad {
+  position: absolute;
+  top: 143px;
+  left: 769px;
+}
+
+.footer .inner {
+  margin:0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 2rem 12.5rem;
+  height: 10rem;
+  max-width: 1920px;
+}
+
+.footer {
+  width: 100%;
+  height: 10rem;
+  flex-shrink: 0;
+  background-color: var(--Secondary-900);
+}
+
+.link {
+  cursor: pointer;
+}
+
+.copyright {
+  text-align: center;
+  font-family: Pretendard;
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--Secondary-400);
+}
+
+.legal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.875rem;
+}
+
+.privacy,
+.faq {
+  text-align: center;
+  font-family: Pretendard, sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--Secondary-300);
+  text-decoration: none;
+}
+
+.footer-link-logo {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.links {
+  display: flex;
+  justify-content: flex-end;
+  justify-items: center;
+  gap: 0.75rem;
+}
+
+/* ======================= Login ======================= */
+
+.login .inner {
+  max-width: 1920px;
+  margin: 0 auto;
+  padding-top: 14.4375rem;
+  padding-bottom: 17.75rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-box {
+  width: 40rem;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+}
+
+.authentication-btn,
+.visibility-icon {
+  cursor: pointer;
+}
+
+.authentication-panda-logo {
+  cursor: pointer;
+  width: 24.75rem; 
+  display: block;
+}
+
+.authentication-panda-logo img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.authentication-panda-market-logo {
+  margin-bottom: 2.5rem;
+  display: flex;
+  justify-content: center;
+}
+
+.authentication-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.authentication-email,
+.authentication-password {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.social-login {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  padding: 1rem 1.4375rem;
+  background-color: var(--Primary-025);
+}
+
+.login-signup {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.social-login-links {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.authentication-form input {
+  font-family: Pretendard;
+  color: var(--Secondary-400);
+}
+
+.authentication-form label {
+  color: var(--Secondary-800);
+  font-family: Pretendard;
+  font-size: 1.125rem;
+  font-weight: 700;
+}
+
+.authentication-form .authentication-email input {
+  width: 100%;
+  padding: 1.5rem 1rem;                  
+  border-radius: 0.75rem;
+  background-color: var(--Secondary-200);   
+  border: 1px solid var(--Secondary-200);  
+}
+
+.authentication-form .authentication-email input:focus {
+  border: 1px solid var(--Primary-100);
+  outline: none;
+}
+
+.authentication-form .input-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;     
+  padding: 1.5rem 1rem;                
+  border-radius: 0.75rem;
+  background-color: var(--Secondary-200);     
+  border: 1px solid var(--Secondary-200);  
+}
+
+.authentication-form .input-wrap:focus-within {
+  border: 1px solid var(--Primary-100);
+  outline: none;
+}
+
+.authentication-form .input-wrap > input {
+  border: 0;
+  padding: 0;  
+  margin: 0;
+  color: var(--Secondary-400);  
+  background-color: var(--Secondary-200); 
+  outline: none;
+}
+
+.authentication-form .input-wrap > button {
+  border: none;
+  background-color: var(--Secondary-200); 
+}
+
+.authentication-btn {
+  padding: 1rem 7.75rem;
+  border-radius: 2.5rem;
+  border: none;
+  background-color: var(--Secondary-400);
+  color: var(--Secondary-200);
+  text-align: center;
+  font-family: Pretendard;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.social-login {
+  padding: 1rem 1.4375rem;
+  border-radius: 0.5rem;
+  border: none;
+  background-color: var(--Primary-025);
+}
+
+.start-social-login {
+  color: var(--Secondary-800);
+  font-family: Pretendard;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.login-signup-question {
+  color: var(--Secondary-800);
+  font-family: Pretendard;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.login-signup-link {
+  color: var(--Primary-100);
+  font-family: Pretendard;
+  font-size: 0.875rem;
+  font-weight: 500;
+  text-decoration: underline;
+}
+
+/* ======================= Login ======================= */
+
+/* ======================= Signup ====================== */
+
+.signup .inner {
+  max-width: 1920px;
+  margin: 0 auto;
+  padding-top: 14.4375rem;
+  padding-bottom: 11.125rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.signup-box {
+  width: 40rem;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+}
+
+.authentication-nickname {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.authentication-form .authentication-nickname input {
+  width: 100%;
+  padding: 1.5rem 1rem;                  
+  border-radius: 0.75rem;
+  background-color: var(--Secondary-200);   
+  border: 1px solid var(--Secondary-200);  
+}
+
+.authentication-form .authentication-nickname input:focus {
+  border: 1px solid var(--Primary-100);
+  outline: none;
+}
+
+/* 스프린트미션에서 요구했듯이 나름대로 눈 모양 아이콘을 오른쪽에 배치하고 비밀번호를 치는 input box를 flex로 왼쪽에 배치했습니다. 그랬더니 password input box를 누르면 자동으로 눈이 생겨서 이걸 없애려고 했는데 지식이 부족해서 이 부분은 chat gpt의 도움을 받았습니다.. */
+.authentication-form input[type="password"]::-ms-reveal,
+.authentication-form input[type="password"]::-ms-clear {
+  display: none;
+}
+.authentication-form input[type="password"]::-webkit-credentials-auto-fill-button {
+  visibility: hidden; pointer-events: none;
+}
+.authentication-form input[type="password"]::-webkit-textfield-decoration-container {
+  display: none !important;
+}
+
+/* ======================= Signup ====================== */
