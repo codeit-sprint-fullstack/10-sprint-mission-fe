@@ -1,0 +1,247 @@
+/*==================== 전역 CSS ====================*/
+@font-face {
+  font-family: 'Pretendard';
+  src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Thin.woff')
+    format('woff');
+  font-weight: 100;
+  font-display: swap;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  font-family: 'Pretendard', sans-serif;
+}
+
+body {
+  color: #000000;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/*==================== 이미지 관련 CSS ====================*/
+#home_top,
+#home_bottom {
+  width: 746px;
+  height: 340px;
+}
+
+#home_1,
+#home_2,
+#home_3 {
+  width: 588px;
+  height: 444px;
+}
+
+/*==================== header 관련 CSS ====================*/
+header {
+  display: flex;
+  position: fixed;
+  height: 70px;
+  width: 100%;
+  margin: 0 auto;
+  align-items: center;
+  justify-self: center;
+  border: 1px solid #dfdfdf;
+  background-color: #f3f4f6;
+  z-index: 10;
+}
+
+.header-content {
+  display: flex;
+  width: 80%;
+  height: 80%;
+  margin: 9px 200px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#logo {
+  width: 40px;
+  height: 40px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 153px;
+  height: 51px;
+  padding: 5px auto;
+  gap: 5px;
+
+  /*===== 하단부터는 로고 "판다마켓 텍스트 부분" CSS =====*/
+  font-family: 'ROKAF sans';
+  font-weight: 700;
+  font-style: Bold;
+  font-size: 25.6331px;
+  line-height: 100%;
+  color: #3692ff;
+}
+
+.login-button {
+  width: 128px;
+  height: 48px;
+  padding: 12px 23px;
+  border-radius: 8px;
+  background-color: #3692ff;
+  border: none;
+  font-weight: 600;
+  font-style: semiBold;
+  font-size: 16px;
+  line-height: 26px;
+  color: #f3f4f6;
+  cursor: pointer;
+}
+
+/*==================== main 관련 CSS ====================*/
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin: 0 auto;
+}
+
+section.blue-bar,
+section.white-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  width: 100%;
+  height: 720px;
+}
+
+section.blue-bar {
+  align-items: end;
+  height: 540px;
+  margin: 0 auto;
+  background-color: #cfe5ff;
+}
+
+.blue-frame,
+.white-frame {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 1000px;
+}
+
+.blue-frame {
+  width: 1110px;
+}
+
+.white-frame {
+  background-color: #fcfcfc;
+}
+
+/*==================== text 관련 CSS ====================*/
+.join-button {
+  width: 100%;
+  height: 56px;
+  background: #3692ff;
+  border: none;
+  border-radius: 9999px;
+  font-weight: 600;
+  font-style: SemiBold;
+  font-size: 20px;
+  line-height: 32px;
+  color: #f9fafb;
+  margin: 32px auto 50px;
+  cursor: pointer;
+}
+
+.sub-title-type1,
+.sub-title-type2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  height: 260px;
+}
+
+.sub-title-type1 {
+  justify-content: start;
+}
+
+div.text-content-reverse {
+  display: inline-block;
+  text-align: right;
+}
+
+.highlight {
+  font-weight: 700;
+  font-style: Bold;
+  font-size: 18px;
+  line-height: 26px;
+  color: #3692ff;
+}
+
+.sub-title {
+  font-weight: 700;
+  font-style: Bold;
+  font-size: 40px;
+  line-height: 140%;
+  margin-top: 12px;
+}
+
+.article {
+  font-weight: 500;
+  font-style: Medium;
+  font-size: 24px;
+  line-height: 32px;
+  margin-top: 24px;
+}
+
+/*===== 하단부터는 main 내 image CSS =====*/
+
+#home_1,
+#home_3 {
+  margin-right: 64px;
+}
+
+#home_2 {
+  margin-left: 64px;
+}
+
+#home_bottom {
+  width: 746px;
+  height: 397px;
+  margin-left: 60px;
+}
+
+/*==================== footer 관련 CSS ====================*/
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 160px;
+}
+
+footer .footer-content {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  width: 100%;
+  height: 160px;
+  padding: 32px 200px;
+  background-color: #111827;
+  color: #e5e7eb;
+}
+
+div.footer-content > span,
+div.footer-content > div > span {
+  cursor: pointer;
+}
+
+.footer-right > img {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
