@@ -19,12 +19,12 @@ body {
 
     color: var(--primary-100);
     font-family: 'ROKAF Sans';
-    font-size: 4.1465rem;
+    font-size: 4rem;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
 
-    flex-wrap: nowrap;
+    text-wrap: nowrap;
     flex-shrink: 0;
 }
 
