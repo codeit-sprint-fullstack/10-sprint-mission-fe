@@ -1,0 +1,163 @@
+body {
+    background-color: #FCFCFC;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin: 0 auto;
+    margin-top: 14.44vh;
+    width: 33vw;
+}
+
+.main-container > header {
+    display: flex;
+    align-items: center;
+    gap: 1.39rem;
+    justify-content: center;
+
+    color: var(--primary-100);
+    font-family: 'ROKAF Sans';
+    font-size: 4rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+
+    text-wrap: nowrap;
+    flex-shrink: 0;
+}
+
+.main-container > header > a {
+    display: flex;
+    align-items: center;
+}
+
+.main-container > header > a > img {
+    width: 5rem;
+    height: 5rem;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1vh;
+    align-items: center;
+    position: relative;
+}
+
+form > label {
+    align-self: flex-start;
+}
+
+form > .input-wrapper > input {
+    border: 0;
+    width: 33vw;
+    height: 5vh;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+    padding-left: 1.5vw;
+    padding-right: 4vw;
+    margin-bottom: 1rem;
+    border-radius: 0.75rem;
+    background-color: var(--gray-100);
+    box-sizing: border-box;
+}
+
+form > .input-wrapper {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0.5vh;
+    align-items: center;
+}
+
+form > .input-wrapper > input:focus {
+    border: 1px solid var(--primary-100);
+}
+
+form > .input-wrapper> input::placeholder {
+    color: var(--gray-400);
+    font-weight: 400;
+    line-height: 1.625em;
+    font-size: 0.75rem;
+}
+
+form > .input-wrapper > img {
+    position: relative;
+    margin-top: -5.5vh;
+    margin-left: 15vw;
+    cursor: pointer;
+    flex-shrink: 0;
+    width: 1.5rem;
+    height: 1.5rem;
+    
+    align-self: flex-end;
+    margin-right: 1vw;
+    margin-bottom: 2vh;
+}
+
+form > button {
+    cursor: pointer;
+    width: 33vw;
+    height: 5vh;
+    padding: 1vh 7.75vw;
+    border-radius: 2.5rem;
+    background-color: var(--gray-400);
+    color: var(--gray-100);
+    font-weight: 600;
+    font-size: 1rem;
+    border: 0;
+}
+
+.oAuth {
+    width: 33vw;
+    height: 6vh;
+
+    background-color: #E6F2FF;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.44vw;
+
+    font-size: 0.75rem;
+    font-weight: 500;
+    line-height: 1.625rem;
+}
+
+.oAuth > .icon-box {
+    display: flex;
+    gap: 1vw;
+    align-items: center;
+}
+
+.oAuth > .icon-box > a {
+    display: flex;
+    align-items: center;
+}
+
+.oAuth > .icon-box > a > img {
+    cursor: pointer;
+    border-radius: 100%;
+}
+
+#kakaoicon {
+    border-radius: 100%;
+    background-color: #F5E14B;
+}
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5vw;
+
+    font-size: 0.75rem;
+    font-weight: 500;
+    line-height: 1.5rem;
+}
+
+footer > a {
+    color: var(--primary-100);
+    text-decoration: underline;
+    cursor: pointer;
+}
