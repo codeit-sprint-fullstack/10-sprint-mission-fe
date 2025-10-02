@@ -1,0 +1,177 @@
+
+body {
+    margin: 50;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    width: 640px;
+    height: 618px;
+
+}
+
+
+.logo-text-area {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  color: #3692FF;
+  font-size: 66.34px;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+.top-logo-img {
+    display: flex;
+    margin-right: 15px;
+}
+
+form {
+  margin: 16px auto;
+  width: 640px;
+}
+
+label {
+  color: #2c2c2c;
+  display: block;
+  margin: 16px 0 20px;
+}
+
+input {
+    background-color: #F3F4F6;
+    border: 0px solid #d1d1d1;
+    color: #ababab;
+    display: block;
+    font-size: 16px;
+    line-height: 24px;
+    margin: 8px 0;
+    padding: 16px 24px;
+    border-radius: 12px;
+    width: 640px;
+    height: 56px;
+}
+
+.inputPWD {
+    position: relative;
+}
+
+.inputPWD .input {
+    width: 100%;
+    padding: 10px 40px 10px 10px; /* Add paddings */
+    box-sizing: border-box; /* Include paddings and border to width */
+    border: 0px solid #F3F4F6;
+    outline: none;
+}
+
+.inputPWDs {
+    position: relative;
+}
+
+.inputPWDs .input {
+    width: 100%;
+    padding: 10px 40px 10px 10px; /* Add paddings */
+    box-sizing: border-box; /* Include paddings and border to width */
+    border: 0px solid #F3F4F6;
+    outline: none;
+}
+
+
+.input:focus {
+    border-color: #3692FF;
+}
+
+.fa-eye {
+    position: absolute;
+    top: 50%; /* Vertical align center */
+    right: 10px; /* To locate 10px from the right wall */
+    transform: translateY(-50%); /* Additional attribute for perfect vertical central alignment */
+    width: 24px;
+    height: 24px;
+    z-index: 1; /* To be overlayed on the input */
+}
+
+button {
+  background: #9CA3AF;
+  border: none;
+  color: #ffffff;
+  display: block;
+  font-size: 18px;
+  font-weight: 700;
+  margin: 24px 0;
+  padding: 16px;
+  width: 100%;
+  border-radius: 40px;
+}
+
+.login-title {
+  color: #4e4e4e;
+  font-size: 36px;
+  font-weight: 700;
+  margin: 24px 0;
+  text-align: center;
+}
+
+.outerbox-simple-login {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #E6F2FF;
+    border:0px solid #2c2c2c;
+    padding: 10px;
+    font-size: 16px;
+}
+
+.simple_login {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.simple-login-text {
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+}
+
+.sns-icons {
+    display: flex;
+    flex-direction: row;
+
+}
+
+
+.sign-in-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+    margin-bottom: 100px;
+}
+
+.sign-in-text .question {
+    display: flex;
+    font-size: 14px;
+    margin-right: 5px;
+    color: #1F2937;
+}
+
+.sign-in-text .signup {
+    display: flex;
+    font-size: 14px;
+    color: #3692FF;
+}
+
+.google-login {
+    display: flex;
+    margin-right: 20px;
+}

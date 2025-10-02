@@ -1,0 +1,513 @@
+body {
+    position: relative;
+    background: #f8f8f8;
+    color: #3692FF;
+    margin: 0;
+}
+/* header : Logo, Logo text, 중간 분리자, 로그인 버튼 */
+
+.head-container { 
+    display: flex;
+    flex-direction: row;
+    margin: 0 auto;
+    width: 1520px;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    align-items: center;    /* 수평 가운데 정렬 */
+    margin: 0 auto;
+    width: 1920px;
+    background: #FFFFFF;
+    padding-top: 9px;
+    padding-right: 200px;
+    padding-bottom: 9px;
+    padding-left: 200px;
+    border: 0px solid #3692FF;
+}
+
+
+.logo-area {
+    display: flex;  /* child object 수직가운데 정렬 */
+    align-items: center; /* child object 수직가운데 정렬 */
+    width: 153px;
+    height: 51px;
+    border:0px solid black;
+}
+
+.logo {
+    width: 40px;
+    height: 40.14px;
+    margin-right: 13px;
+}
+
+.logo-text {
+
+    margin-left: 10px;
+    font-weight: 700;
+    font-size: 25.63px;
+    font-family: ROKAF Sans, sans-serif;
+}
+
+.center-space {
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    vertical-align: middle;
+    width: 1367px;
+    height: 51px;
+    border: 0px solid #3692FF;
+}
+
+.center-space .login-button {
+
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+
+    width: 128px;
+    height: 48px;
+    background: #3692FF;
+    border-radius: 5px;
+    color: #ffffff;
+    text-align: center;
+    font-weight: 500;
+    font-size: 16px;
+
+    text-decoration: none;
+
+}
+
+
+
+/* Panda on earth, 구경하러 가기 버튼 */
+.slide-container {
+    align-items: center;    /* 수평 가운데 정렬 */
+    justify-items: center;
+    margin: 0 auto;
+    width: 1920px;
+    height: 540px;
+    padding-top: 9px;
+    padding-left: 200px;
+    padding-right: 200px;
+    padding-bottom: 9px;
+    background-color: #CFE5FF;    
+    border-bottom: 0px solid #3692FF;
+}
+
+.content-area {
+    display: flex;
+    flex-direction: row;
+    width: 1110px;
+    height: 340px;
+    margin-top: 210px;
+
+    border:0px solid green;
+}
+
+.text-area {
+    margin-top: 40px;
+    width: 357px;
+    height: 260px;
+    border: 0px solid red;
+    display: inline-block;
+}
+
+.text-area-title {
+    font-weight: 700;
+    font-size: 40px;
+    font-family: Pretendard, sans-serif;
+    line-height: 140%;
+    color: #374151;
+    margin-bottom: 40px;
+}
+
+.trade-button {
+
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+
+    width: 357px;
+    height: 56px;
+    background: #3692FF;
+    border-radius: 40px;
+    color: #F9FAFB;
+    text-align: center;
+    font-weight: 600;
+    font-size: 20px;
+    font-family: Pretendard, sans-serif;
+    font-style: semibold;
+    text-decoration: none;
+}
+
+.Panda_img {
+    width: 746px;
+    height: 340px;
+    margin-left: 362px;
+    margin-top: -303px;
+    border: 0px solid black;
+    background-image: url('img/panda.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+
+.hot-item-container {
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    width: 1920px;
+    height: 720px;
+    background-color: #FFFFFF;    
+    border: 0px solid #3692FF;  /* 영역확인용 */
+}
+
+.hot-item-area {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 988px;
+    height: 444px;
+    border: 0px solid #3692FF;  /* 영역확인용 */
+}
+
+.home_img01 {
+    flex: 1;
+    width: 588px;
+    height: 444px;
+    border: 0px solid green;  /* 영역확인용 */
+}
+
+.hot-item-text-area {
+    display: flex;
+    flex-direction: column;
+
+    flex: 1;
+    width: 374px;
+    height: 238px;
+    border: 0px solid blue;  /* 영역확인용 */
+}
+
+
+.hot-item-area .hot-item-text-area1 {
+    flex: 1;
+    width: 72px;
+    height: 26px;
+    font-family: 'Pretendard';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 26px;
+    color: #3692FF;
+    align-items: first baseline;
+    border:0px solid red;  /* 영역확인용 */
+    display: block;
+    margin-bottom: 10px;
+    margin-left: 50px;
+}
+
+
+.hot-item-area .hot-item-text-area2 {
+    flex: 1;
+    width: 255px;
+    height: 112px;
+    font-family: 'Pretendard';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    color: #374151;
+    border:0px solid blue;  /* 영역확인용 */
+    display: block;
+    margin-bottom: 10px;
+    margin-left: 50px;
+}
+
+.hot-item-area .hot-item-text-area3 {
+    flex: 1;
+    width: 290px;
+    height: 64px;
+    font-family: 'Pretendard';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    color: #374151;
+    border:0px solid green;  /* 영역확인용 */
+    display: block;
+    margin-bottom: 10px;
+    margin-left: 50px;
+}
+
+
+
+.search-item-container {
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    width: 1920px;
+    height: 720px;
+    background-color: #FFFFFF;    
+    border: 0px solid #3692FF;  /* 영역확인용 */
+}
+
+.search-item-area {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search-text-area {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    flex: 1;
+    flex-basis: 1;
+    width: 317px;
+    height: 238px;
+}
+
+.search-text-area .search-item-text-area1 {
+    flex: 1;
+    width: 60px;
+    height: 26px;
+    font-size: 18px;
+    font-weight: 700;
+    font-family: 'Pretendard';
+    border: 0px solid #3692FF;  /* 영역확인용 */
+    color: #3692FF;
+}
+
+.search-text-area .search-item-text-area2 {
+    flex: 1;
+    width: 317px;
+    height: 112px;
+    font-size: 40px;
+    font-weight: 700;
+    font-family: 'Pretendard';
+    border: 0px solid #374151;  /* 영역확인용 */
+    color: #374151;
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    margin-left: 50px;
+}
+
+.search-text-area .search-item-text-area3 {
+    flex: 1;
+    width: 288px;
+    height: 64px;
+    font-size: 24px;
+    font-weight: 500;
+    font-family: 'Pretendard';
+    border: 0px solid #374151;  /* 영역확인용 */
+    color: #374151;
+    display: block;
+    margin-top: 30px;
+    margin-bottom: 50px;
+    margin-left: 50px;
+}
+
+.search_img01 {
+    flex: 1;
+    width: 588px;
+    height: 444px;
+    border: 0px solid green;  /* 영역확인용 */
+}
+
+
+
+
+.sell-item-container {
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    width: 1920px;
+    height: 720px;
+    background-color: #FFFFFF;    
+    border: 0px solid #3692FF;  /* 영역확인용 */
+}
+
+.sell-item-area {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 988px;
+    height: 444px;
+    border: 0px solid #3692FF;  /* 영역확인용 */
+}
+
+.sell_img01 {
+    flex: 1;
+    width: 588px;
+    height: 444px;
+    border: 0px solid green;  /* 영역확인용 */
+}
+
+.sell-item-text-area {
+    display: flex;
+    flex-direction: column;
+
+    flex: 1;
+    width: 374px;
+    height: 238px;
+    
+    border: 0px solid blue;  /* 영역확인용 */
+}
+
+
+.sell-item-area .sell-item-text-area1 {
+    flex: 1;
+    width: 71px;
+    height: 26px;
+    font-family: 'Pretendard';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 26px;
+    color: #3692FF;
+    align-items: first baseline;
+    border:0px solid red;  /* 영역확인용 */
+    display: block;
+    margin-bottom: 10px;
+    margin-left: 50px;
+}
+
+
+.sell-item-area .sell-item-text-area2 {
+    flex: 1;
+    width: 355px;
+    height: 112px;
+    font-family: 'Pretendard';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    color: #374151;
+    border:0px solid blue;  /* 영역확인용 */
+    display: block;
+    margin-bottom: 10px;
+    margin-left: 50px;
+}
+
+.sell-item-area .sell-item-text-area3 {
+    flex: 1;
+    width: 350px;
+    height: 64px;
+    font-family: 'Pretendard';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    color: #374151;
+    border:0px solid green;  /* 영역확인용 */
+    display: block;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-left: 50px;
+}
+
+
+
+
+.footer-container {
+    display: flex; 
+    justify-content: center;
+    align-items: end;
+    margin: 0 auto;
+
+    width: 1920px;
+    height: 540px;
+    background-color: #CFE5FF;    
+    border: 0px solid #3692FF;  /* 영역확인용 */
+}
+
+
+.footer_inner_div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 1110px;
+    height: 397px;
+    border: 0px solid #3692FF;  /* 영역확인용 */  
+}
+
+.footer-text-area {
+    flex: 1;
+    width: 295px;
+    height: 172px;
+    border: 0px solid green;  /* 영역확인용 */
+    align-items: flex-center;
+    gap: 10px;
+    font-family: 'Pretendard';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    color: #374151;
+}
+
+.footer_img01 {
+
+    width: 746px;
+    height: 397px;
+    border: 0px solid #000000;  /* 영역확인용 */
+}
+
+
+.copyright-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+
+    width: 1920px;
+    height: 160px;
+    background-color: #111827;    
+    border: 0px solid #3692FF;  /* 영역확인용 */
+}
+
+
+.copyright_inner_div {
+    display: flex;
+    align-items: top;
+    justify-content: space-between;
+    margin: 0 auto;
+    width: 1520px;
+    height: 160px;
+    border: 0px solid #FFFFFF;
+    font-family: 'Pretendard';
+}
+
+.cp-text-area {
+    flex: 1;
+    width: 112px;
+    height: 19px;
+    text-align: left;
+    color: #9CA3AF;
+    padding-top: 50px;
+    font-family: 'Pretendard';
+}
+
+.privacy-faq {
+    flex: 1;
+    width: 159px;
+    height: 19px;
+    text-align: center;
+    color: #E5E7EB;
+    padding-top: 50px;
+    font-family: 'Pretendard';
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.sns_icons {
+    flex: 1;
+    width: 116px;
+    height: 20px;
+    text-align: right;
+    padding-top: 50px;
+}
