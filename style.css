@@ -1,0 +1,158 @@
+* {
+    box-sizing: border-box;
+}
+
+body{
+    margin:0;
+    width:100%;
+    height:auto;
+    color: #374151;
+    font-family: "Pretendard", sans-serif;
+}
+
+header {
+    width: 100%;
+    height: 4.375rem;
+    padding-left: 12.5rem;
+    padding-right: 12.5rem;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    inset: 0;
+}
+
+.btn {
+    background-color: #3692ff;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    border: 0;
+    cursor: pointer;
+}
+
+.btn.loginbtn {
+    font-size: 1rem;
+    padding: 0.75rem 1.4375rem;
+    border-radius: 0.5rem;
+    width: 8rem;
+}
+
+.btn.itemsbtn{
+    font-size: 1.25rem;
+    padding: 1rem 7.75rem;
+    border-radius: 2.5rem;
+}
+
+.btn:hover {
+    background-color: #1967D6;
+}
+
+.btn:active {
+    background-color: #1251AA;
+}
+
+
+.banner {
+    background-color: #CFE5FF;
+    height: 33.75rem;
+    background-repeat: no-repeat;
+    background-position: 70% bottom;
+    display:flex;
+    justify-content: center;
+    align-items: end;
+}
+
+.bannerwrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.bannerwraptop{
+    gap: 0.4375rem;
+}
+.bannerwrapbottom{
+    gap: 4.3125rem;
+}
+
+.cardwrap{
+    background-color: #fcfcfc;
+    width: 61.75rem;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    gap: 4rem;
+}
+
+h1 {
+    color: #374151;
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: 140%; 
+}
+
+.card {
+    height: 45rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h2 {
+    color: #3692FF;
+    font-size: 1.125rem;
+    font-weight: 700;
+}
+
+p {
+    font-size: 1.5rem;
+    font-weight: 500;
+    line-height: 2rem;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    background-color: #111827;
+    color: #9CA3AF;
+    height: 10rem;
+    padding: 2rem 12.5rem;
+    font-size: 1rem;
+}
+
+footer div{
+    display:flex;
+    gap: 1.875rem;
+}
+
+.socials {
+    gap: 0.75rem;
+
+}
+
+
+a {
+    text-decoration: none;
+    color: #E5E7EB;
+}
+
+.tagright {
+    text-align: right;
+}
+
+.tagwrap, div.bannerwrapbottom h1 {
+    padding-bottom: 3.75rem;
+}
+
+.tagwrap {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.card2 .tagwrap {
+    text-align: right;
+}

@@ -1,0 +1,94 @@
+* {
+    box-sizing: border-box;
+    font-family: Pretendard;
+}
+
+body {
+    display: flex;
+    padding: 14.4375rem 40rem 17.75rem;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    width: 40rem;
+    flex-shrink: 0;
+    gap:2.5rem;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 40rem;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+form div {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+label {
+    color: #1F2937;
+    font-size: 1.125rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 1.625rem;
+}
+
+input {
+    padding: 1rem 1.5rem;
+    border-radius: 0.75rem;
+    border: none;
+    background-color: #F3F4F6;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.625rem; 
+}
+
+input:focus {
+    border-color: #3692FF;
+}
+
+button {
+    padding: 1rem 7.75rem;
+    border-radius: 2.5rem;
+    background-color: #9CA3AF;
+    border: none;
+    color: #F3F4F6;
+    font-size: 1.25rem;
+    font-weight: 600;
+    line-height: 2rem;
+}
+
+.simplelogin {
+    color: #1F2937;
+    font-weight: 500;
+    line-height: 1.625rem;
+    background-color: #E6F2FF;
+    height: 4.625rem;
+    padding: 1rem 1.4375rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+
+.footer {
+    text-align: center;
+    color: #1F2937;
+    font-size: 0.875rem;
+    font-weight: 500;
+    line-height: 1.5rem;
+}
