@@ -1,0 +1,179 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 기본 html 폰트 크기를 62.5%로 설정하여, 기본 크기가 16px가 아닌, 10px가 되도록 하여
+   계산이 편리하도록 하였습니다. */ 
+html {
+    font-size: 62.5%;
+    line-height: 1.5;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button {
+    background: none;
+    border: none;
+    outline: none;
+    box-shadow: none;
+    cursor: pointer;
+}
+
+img {
+    vertical-align: bottom;
+}
+
+body {
+    font-family: "Pretendard", sans-serif;
+    word-break: keep-all;
+    color: #374151
+    background-color: #FCFCFC;
+    display; flex;
+    flex-direction: column;
+}
+
+header {
+    width: 100%;
+    height: 7rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20rem;
+    background-color: #FFFFFF;
+    border-bottom: 0.1rem solid #DFDFDF;
+}
+
+main {
+    margin-top: 7rem;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top : 0;
+    left: 0;
+    width: 100%;
+}
+
+
+.product1 {
+    background-color: #CFE5FF;
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 54rem;
+}  
+
+.hero {
+    position: absolute;
+    top: 240px;
+    left: 405px;
+}
+
+.product2 {
+    background-color: #FFFFFF;
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 72rem;
+    padding: 13.8rem 34.4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.product3 {
+    background-color: #FFFFFF;
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 72rem;
+    padding: 13.8rem 34.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.product4 {
+    background-color: #FFFFFF;
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 72rem;
+    padding: 13.8rem 36rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.product5 {
+    background-color: #CFE5FF;
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 54rem;
+}
+
+#loginLink {
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 8px;
+    padding: 12px 23px;
+}
+
+#productList {
+    font-size: 20px;
+    font-weight: 600;
+    border-radius: 40px;
+    padding: 16px 124px;
+}
+
+
+
+h1 {
+    font-size: 4rem;
+    font-weight: 29.5rem;
+}
+
+
+footer {
+    background-color: #111827;
+    position: relative;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex: 1 0 auto
+    padding: 3.2rem 20rem 10.8rem 20rem;
+    width: 100%;
+    height: 16rem;
+    font-size: 1.6rem;
+}
+
+.button {
+    background-color: #3692FF;
+    color: #F3F4F6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.button:hover {
+    background-color: #09448c;
+}
