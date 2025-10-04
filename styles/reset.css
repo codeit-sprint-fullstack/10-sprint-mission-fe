@@ -8,7 +8,6 @@
    계산이 편리하도록 하였습니다. */ 
 html {
     font-size: 62.5%;
-    line-height: 1.5;
 }
 
 a {
@@ -31,7 +30,6 @@ img {
 body {
     font-family: "Pretendard", sans-serif;
     word-break: keep-all;
-    color: #374151
     background-color: #FCFCFC;
     display; flex;
     flex-direction: column;
@@ -70,13 +68,25 @@ main {
     left: 0;
     width: 100%;
     height: 54rem;
+    background-image: url("../images/Img_home_top.png");
+    background-repeat: no-repeat;
+    background-position: right 20% bottom;
+    background-size: 50%;
 }  
 
 .hero {
     position: absolute;
-    top: 240px;
-    left: 405px;
+    top: 24rem;
+    left: 15%; 
 }
+
+h1 {
+    font-size: 4rem;
+    font-color: #374151;
+    font-weight: 600;
+    line-height: 5.6rem;
+}
+
 
 .product2 {
     background-color: #FFFFFF;
@@ -127,6 +137,16 @@ main {
     left: 0;
     width: 100%;
     height: 54rem;
+    background-image: url(../images/Img_home_bottom.png);
+    background-repeat: no-repeat;
+    background-position: right 20% bottom;
+    background-size: 50%;
+}
+
+.bottomBanner {
+    position: absolute;
+    top: 25.5rem;
+    left: 15%; 
 }
 
 #loginLink {
@@ -137,19 +157,11 @@ main {
 }
 
 #productList {
-    font-size: 20px;
+    font-size: 2rem;
     font-weight: 600;
-    border-radius: 40px;
-    padding: 16px 124px;
+    border-radius: 4rem;
+    padding: 1.6rem 12.4rem;
 }
-
-
-
-h1 {
-    font-size: 4rem;
-    font-weight: 29.5rem;
-}
-
 
 footer {
     background-color: #111827;
