@@ -67,7 +67,7 @@ main {
     left: 0;
     width: 100%;
     height: 54rem;
-    background-image: url("../images/Img_home_top.png");
+    background-image: url("images/Img_home_top1.png");
     background-repeat: no-repeat;
     background-position: right 20% bottom;
     background-size: 50%;
@@ -179,8 +179,8 @@ p {
     left: 0;
     width: 100%;
     height: 54rem;
-    background-image: url("../images/Img_home_bottom.png");
-        background-repeat: no-repeat;
+    background-image: url("images/Img_home_bottom1.png");
+    background-repeat: no-repeat;
     background-position: right 20% bottom;
     background-size: 50%;
 }
