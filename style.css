@@ -179,8 +179,8 @@ p {
     left: 0;
     width: 100%;
     height: 54rem;
-    background-image: url(../images/Img_home_bottom.png);
-    background-repeat: no-repeat;
+    background-image: url("../images/Img_home_bottom.png");
+        background-repeat: no-repeat;
     background-position: right 20% bottom;
     background-size: 50%;
 }
