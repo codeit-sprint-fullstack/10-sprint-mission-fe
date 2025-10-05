@@ -1,0 +1,230 @@
+/* 기본 리셋 및 폰트 설정 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 이미지에서 보이는 부드러운 파란색 계열을 정의 */
+:root {
+    --main-blue: #3296FF; /* 메인 버튼 및 포인트 색상 */
+    --light-blue: #E9F4FF; /* 배경색 */
+    --text-dark: #333;
+    --text-light: #555;
+    --bg-white: #FFFFFF;
+}
+
+body {
+    font-family: "Noto Sans KR", sans-serif; /* 한국어 폰트 설정 (가정) */
+    color: var(--text-dark);
+    line-height: 1.6;
+}
+
+h1, h2 {
+    font-weight: 700;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* 1. 헤더 스타일 */
+.main-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 9px 200px;
+    background-color: #ffffff;
+    position: fixed; /* 상단 고정 */
+    width: 100%; /*1920px로 했다가, 로그인이 사라져 다시 고침. */
+    height: 70px;
+    z-index: 100;
+    /* margin: 0 auto; */
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    margin: 0;
+    width: auto;
+    flex-grow: 1; 
+    flex-shrink: 0;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 900;
+    color: var(--main-blue);
+    display: flex; 
+    align-items: center;
+}
+
+.logo-icon-img {
+    height: 24px; 
+    width: auto; 
+    margin-right: 5px; 
+}
+
+
+.login-btn {
+    padding: 12px 23px;
+    border: 1px solid #3692FF;
+    border-radius: 8px;
+    background-color: #3692FF;
+    font-weight: 500;
+    color: #FFFFFF;
+    width: 128px;
+    height: 48px;
+}
+
+/* 2.1. 히어로 섹션 스타일 */
+.hero-section {
+    padding-top: 80px; /* 고정 헤더 아래에 배치 */
+    background-color: #CFE5FF;
+    /* display: flex; */
+    justify-content: center;
+    align-items: center;
+    padding: 100px 5%; /* 상단 padding 더 주기 */
+    min-height: 540px;
+    max-width: 1200px;
+    margin: 0 auto;;
+    /* text-align: left; */
+    position: relative;
+}
+
+
+.top-image-area {
+
+    position: absolutes;
+    top: 200px;
+    right: 405px;
+    left: 769px;
+    height: 340px;
+    width:auto;
+}
+
+.top-image-area-image{
+    height: 100%; 
+    width: auto;
+    display: block;
+
+}
+
+
+
+.hero-section h1 {
+    font-size: 40px;
+    margin-bottom: 25px;
+    line-height: 1.2;
+}
+
+.cta-btn {
+    display: inline-block;
+    background-color: var(--main-blue);
+    color: var(--bg-white);
+    padding: 12px 30px;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: 500;
+    transition: background-color 0.3s;
+}
+
+.cta-btn:hover {
+    background-color: #2a7bd4; /* 약간 어두운 색 */
+}
+
+
+/* 2.2. 기능 소개 섹션 스타일 (Feature Sections) */
+.feature-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 80px 5%;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 50px;
+}
+
+.feature-section .text-box {
+    width: 40%;
+}
+
+.feature-section .illustration-box {
+    width: 40%;
+    /* 이미지 대신 임시로 영역 표시 */
+    height: 200px; 
+    background-color: #f0f0f0; 
+    border-radius: 10px;
+}
+
+.feature-section h2 {
+    font-size: 32px;
+    margin: 10px 0;
+}
+
+.section-subtitle {
+    color: var(--main-blue);
+    font-weight: 500;
+}
+
+/* 레이아웃 반전 섹션 (두 번째 섹션처럼 텍스트/이미지 순서 변경) */
+.feature-section.reverse {
+    flex-direction: row-reverse;
+}
+
+/* 2.5. 하단 CTA 섹션 */
+.bottom-cta-section {
+    background-color: var(--light-blue);
+    padding: 80px 5% 50px;
+    text-align: center;
+}
+
+.bottom-cta-section h1 {
+    font-size: 36px;
+    margin-bottom: 30px;
+    line-height: 1.2;
+}
+
+/* 3. 푸터 스타일 */
+.main-footer {
+    background-color: #222;
+    color: #bbb;
+    padding: 20px 5%;
+    font-size: 14px;
+    text-align: center;
+}
+
+/* 미디어 쿼리: 모바일 최적화 */
+@media (max-width: 768px) {
+    .main-header {
+        padding: 10px 3%;
+    }
+    
+    .hero-section {
+        flex-direction: column;
+        text-align: center;
+        padding-top: 80px;
+        min-height: auto;
+    }
+
+    .hero-section h1 {
+        font-size: 30px;
+    }
+    
+    .hero-image-area {
+        width: 80%;
+        margin-top: 30px;
+    }
+
+    .feature-section, .feature-section.reverse {
+        flex-direction: column; /* 모든 기능 섹션을 세로로 쌓기 */
+        text-align: center;
+        gap: 30px;
+    }
+    
+    .feature-section .text-box, .feature-section .illustration-box {
+        width: 100%; /* 모바일에서 너비 100% 사용 */
+    }
+}
