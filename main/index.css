@@ -1,0 +1,165 @@
+* {
+    box-sizing: border-box;
+}
+
+body{
+    margin:0;
+    width:100%;
+    height:auto;
+    color: #374151;
+    font-family: "Pretendard", sans-serif;
+}
+
+h1 {
+    color: #374151;
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: 140%; 
+}
+
+h2 {
+    color: #3692FF;
+    font-size: 1.125rem;
+    font-weight: 700;
+}
+
+
+p {
+    font-size: 1.5rem;
+    font-weight: 500;
+    line-height: 2rem;
+}
+
+header {
+    width: 100%;
+    height: 4.375rem;
+    padding-left: 12.5rem;
+    padding-right: 12.5rem;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    inset: 0;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    background-color: #111827;
+    color: #9CA3AF;
+    height: 10rem;
+    padding: 2rem 12.5rem;
+    font-size: 1rem;
+}
+
+.button {
+    background-color: #3692ff;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    border: 0;
+    cursor: pointer;
+}
+
+.button.loginbtn {
+    font-size: 1rem;
+    padding: 0.75rem 1.4375rem;
+    border-radius: 0.5rem;
+    width: 8rem;
+}
+
+.button.itemsbtn{
+    font-size: 1.25rem;
+    padding: 1rem 7.75rem;
+    border-radius: 2.5rem;
+}
+
+.button:hover {
+    background-color: #1967D6;
+}
+
+.button:active {
+    background-color: #1251AA;
+}
+
+.main {
+    background-color: #CFE5FF;
+    height: 33.75rem;
+    background-repeat: no-repeat;
+    background-position: 70% bottom;
+    display:flex;
+    justify-content: center;
+    align-items: end;
+}
+
+.w-main {
+    height: 45rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sectionWrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wmainWrap{
+    background-color: #fcfcfc;
+    width: 61.75rem;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    gap: 4rem;
+}
+.sectionWrapTop {
+    gap: 0.4375rem;
+}
+.sectionWrapBottom{
+    gap: 4.3125rem;
+}
+
+.textWrap {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+a{
+		text-decoration: none;
+		color: inherit;
+}
+
+.textRight {
+	text-align: right;
+}
+
+.textwrap, div.sectionWrapBottom h1 {
+    padding-bottom: 3.75rem;
+}
+
+footer div{
+    display:flex;
+    gap: 1.25rem;
+}
+
+.socials {
+    gap: 0.35rem;
+    
+	justify-items: center;
+     
+      
+    }
+.socials a{
+display: flex;
+width: 20px;
+height: 20px;
+padding: 0.853px 1px 1.147px 1px;
+justify-content: center;
+align-items: center;
+flex-shrink: 0;
+}
