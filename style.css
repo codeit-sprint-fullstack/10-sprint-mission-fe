@@ -246,8 +246,9 @@ footer {
 }
 
 .iconLink {
-    font-size: 1.6rem;
-    font-weight: 400;
+    display: flex;
+    justify-content: flex-end;
+    gap: 1.2rem;
     color: #FFFFFF
 }
 
