@@ -1,0 +1,98 @@
+body{
+    display: flex;
+    justify-content: center;           
+    align-items: center;
+    flex-direction: column;
+}
+
+.logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 90px; 
+    font-family: "ROKAF Sans";
+    color: #3692FF;
+    gap:20px;
+}
+
+.list {
+    margin-top: 24px;
+    font-family: Pretendard;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 26px;
+}
+
+
+.password{
+    display: flex;
+    padding-right: 20px;
+    width : 620px;
+    border-radius: 12px;
+    background: var(--Cool-Gray-100, #F3F4F6);
+}
+
+
+input {
+    display: flex;
+    width: 640px;
+    height:40px;
+    font-size: 18px;
+
+    align-items: center;
+    gap: 10px;
+
+    border : 0;
+    border-radius: 12px;
+    background: var(--Cool-Gray-100, #F3F4F6);
+}
+
+
+button {
+    margin-top: 24px;
+    display: flex;
+    width: 640px;
+    height: 56px;
+   
+    color: white;
+    font-size: 1rem;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border : 0 ;
+    border-radius: 40px;
+    background: var(--Secondary-400, #3692FF);
+
+}
+
+
+.easy_login {
+    margin-top: 24px;
+    display: flex;
+    width: 600px;
+    height: 74px;
+    padding-left: 20px;
+    padding-right: 20px;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+
+    border-radius: 8px;
+    background-color: #E6F2FF;
+}
+
+
+.login_button{
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+
+}
+
+.tail{
+    display: flex;
+    justify-content: center;
+
+
+}
