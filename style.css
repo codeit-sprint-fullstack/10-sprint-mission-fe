@@ -7,7 +7,7 @@
 
 /* 이미지에서 보이는 부드러운 파란색 계열을 정의 */
 :root {
-    --main-blue: #3296FF; /* 메인 버튼 및 포인트 색상 */
+    --main-blue: #3292FF; 
     --light-blue: #E9F4FF; /* 배경색 */
     --text-dark: #333;
     --text-light: #555;
@@ -40,7 +40,7 @@ a {
     width: 100%; /*1920px로 했다가, 로그인이 사라져 다시 고침. */
     height: 70px;
     z-index: 100;
-    /* margin: 0 auto; */
+    /* margin: 0 auto; 넣어야 하는지 안넣어야 하는지 헷갈림. */
 }
 
 .header-container {
@@ -69,29 +69,37 @@ a {
 
 
 .login-btn {
-    padding: 12px 23px;
-    border: 1px solid #3692FF;
-    border-radius: 8px;
-    background-color: #3692FF;
-    font-weight: 500;
-    color: #FFFFFF;
+    display: flex;
     width: 128px;
     height: 48px;
+    padding: 12px 23px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 8px;
+    background: var(--Primary-100, #3692FF);
+    color: #F3F4F6;
 }
 
 /* 2.1. 히어로 섹션 스타일 */
 .hero-section {
-    padding-top: 80px; /* 고정 헤더 아래에 배치 */
+    padding-top: 70px; /* 고정 헤더 아래에 배치 */
     background-color: #CFE5FF;
     /* display: flex; */
     justify-content: center;
     align-items: center;
-    padding: 100px 5%; /* 상단 padding 더 주기 */
-    min-height: 540px;
-    max-width: 1200px;
+    padding: 200px 405px 0; /* 상단 padding 더 주기 */
+    /* min-height: 540px; */
+    width: 100%;
     margin: 0 auto;;
     /* text-align: left; */
     position: relative;
+}
+
+.hero-section-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 
@@ -121,14 +129,24 @@ a {
 }
 
 .cta-btn {
-    display: inline-block;
-    background-color: var(--main-blue);
-    color: var(--bg-white);
-    padding: 12px 30px;
-    border-radius: 5px;
-    font-size: 18px;
-    font-weight: 500;
-    transition: background-color 0.3s;
+    display: flex;
+    height: 56px;
+    width: auto;
+    border-radius: 40px;
+    padding: 16px 124px;
+    margin-top: 32px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    background-color: #3692FF;
+    color: #F9FAFB;
+    text-align: center;
+    /* pretendard/xl-20px-semibold */
+    font-family: Pretendard;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 32px; /* 160% */
 }
 
 .cta-btn:hover {
@@ -141,20 +159,32 @@ a {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 80px 5%;
-    max-width: 1200px;
+    padding: 138px 344px;
+    /* max-width: 1200px; */
     margin: 0 auto;
     gap: 50px;
 }
+
+.feature-one-container {
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    gap: 64px;
+    width: 988px;
+    height: 444px;
+    background-color: #F3F4F6;
+}
+
+
 
 .feature-section .text-box {
     width: 40%;
 }
 
 .feature-section .illustration-box {
-    width: 40%;
+    width: 588px;
     /* 이미지 대신 임시로 영역 표시 */
-    height: 200px; 
+    height: 444px; 
     background-color: #f0f0f0; 
     border-radius: 10px;
 }
@@ -174,12 +204,31 @@ a {
     flex-direction: row-reverse;
 }
 
+.bottom-buffer {
+    width: 100%;
+    height: 138px;
+    background-color: #FCFCFC;
+}
+
+
+
+
 /* 2.5. 하단 CTA 섹션 */
 .bottom-cta-section {
-    background-color: var(--light-blue);
-    padding: 80px 5% 50px;
+    width: 100%; /*width를 견본대로 1920px를 줘야 하는지 헷갈림. 그렇게 하면 공백이 생겨서 이상하게 보임*/
+    height: 540px;
+    background-color: #CFE5FF;
+    padding: 143px 405px 0 405px;
     text-align: center;
 }
+
+.bottom-cta-section-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 69px;
+}
+
 
 .bottom-cta-section h1 {
     font-size: 36px;
@@ -187,14 +236,94 @@ a {
     line-height: 1.2;
 }
 
+.cta-image-area {
+    display: flex;
+    width: 746px;
+    height: 397px;
+    justify-content: center;
+    align-items: center; 
+
+}
+
+.content-box {
+    text-align: left;
+    color: var(--Secondary-700, #374151);
+    font-family: Pretendard;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 140%;
+    flex-shrink: 0;
+}
+
+
 /* 3. 푸터 스타일 */
 .main-footer {
-    background-color: #222;
-    color: #bbb;
-    padding: 20px 5%;
-    font-size: 14px;
-    text-align: center;
+    background-color:#111827;
+    color: #E5E7EB;
+    padding: 32px 200px;
+    height: 160px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    /* flex-shrink: 0; */
 }
+
+.footer-container {
+    /* 🌟 핵심: 내부 요소들을 가로로 나란히 배치 */
+    display: flex;
+    /* 🌟 핵심: 요소들을 양 끝에 배치하고 가운데 공간을 넓게 확보 */
+    justify-content: space-between; 
+    /* 수직 중앙 정렬 */
+    align-items: center; 
+    width: 100%;
+    max-width: 1520px; 
+    /* 화면 중앙 정렬 */
+    margin: 0 auto; 
+    /* 좌우 패딩을 주어 max-width 이하 화면에서도 양 끝에 여백 확보 */
+    padding: 0 50px; 
+}
+
+/* 1. 좌측 영역 스타일 */
+.footer-left .copyright {
+    /* 저작권 텍스트에 필요한 스타일 */
+}
+
+/* 2. 중앙 링크 메뉴 스타일 */
+.footer-links {
+    display: flex; /* 링크들을 가로로 나열 */
+    gap: 20px; /* 링크 간 간격 */
+}
+
+.footer-link {
+    /* 기본 텍스트 색상을 상속받지만, hover 시 효과를 줄 수 있습니다. */
+    color: inherit; 
+    text-decoration: none;
+}
+
+/* 3. 우측 소셜 아이콘 영역 스타일 */
+.footer-social {
+    display: flex;
+    gap: 15px; /* 아이콘 간 간격 */
+}
+
+.social-icon {
+    /* 아이콘 텍스트를 더 눈에 띄게 하거나, 실제 아이콘 크기 조정 */
+    font-size: 18px;
+    color: inherit;
+    /* 이미지에서 아이콘이 흰색으로 보이므로 색상을 밝게 설정 */
+    color: #f8f8f2; 
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.social-icon:hover {
+    color: #bd93f9; /* 마우스 오버 시 색상 변경 (예시) */
+}
+
+
+
+
 
 /* 미디어 쿼리: 모바일 최적화 */
 @media (max-width: 768px) {
