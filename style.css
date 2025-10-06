@@ -5,7 +5,6 @@
     box-sizing: border-box;
 }
 
-/* 이미지에서 보이는 부드러운 파란색 계열을 정의 */
 :root {
     --main-blue: #3292FF; 
     --light-blue: #E9F4FF; /* 배경색 */
@@ -15,13 +14,14 @@
 }
 
 body {
-    font-family: "Noto Sans KR", sans-serif; /* 한국어 폰트 설정 (가정) */
+    font-family: "Noto Sans KR", sans-serif; 
     color: var(--text-dark);
     line-height: 1.6;
 }
 
 h1, h2 {
     font-weight: 700;
+    text-decoration: none;
 }
 
 a {
@@ -40,7 +40,7 @@ a {
     width: 100%; /*1920px로 했다가, 로그인이 사라져 다시 고침. */
     height: 70px;
     z-index: 100;
-    /* margin: 0 auto; 넣어야 하는지 안넣어야 하는지 헷갈림. */
+    margin: 0 auto; /*넣어야 하는지 안넣어야 하는지 헷갈림.*/
 }
 
 .header-container {
@@ -103,21 +103,26 @@ a {
 }
 
 
+.content-box {
+    text-align: left;
+    color: var(--Secondary-700, #374151);
+    font-family: Pretendard;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 140%;
+    flex-shrink: 0;
+}
+
+
 .top-image-area {
 
     position: absolutes;
     top: 200px;
     right: 405px;
-    left: 769px;
+    left: 746px;
     height: 340px;
     width:auto;
-}
-
-.top-image-area-image{
-    height: 100%; 
-    width: auto;
-    display: block;
-
 }
 
 
@@ -173,6 +178,11 @@ a {
     width: 988px;
     height: 444px;
     background-color: #F3F4F6;
+}
+
+
+.text-box-two {
+    text-align: right;
 }
 
 
@@ -245,16 +255,6 @@ a {
 
 }
 
-.content-box {
-    text-align: left;
-    color: var(--Secondary-700, #374151);
-    font-family: Pretendard;
-    font-size: 40px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 140%;
-    flex-shrink: 0;
-}
 
 
 /* 3. 푸터 스타일 */
