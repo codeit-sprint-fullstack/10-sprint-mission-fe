@@ -9,8 +9,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 2rem;
-    margin-bottom: 4rem;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    /* 위의 margin-top은 6rem, margin-bottom은 4rem이어야 시안과 같으나, 브라우저 변동 사이즈에 비해 이미지가 좀 큰 것 같아 줄여봤습니다. */
 }
 
 .input_item {
@@ -131,3 +132,4 @@ input:focus {
     text-decoration: underline;
     text-underline-offset: 0.2rem;  
 }
+
