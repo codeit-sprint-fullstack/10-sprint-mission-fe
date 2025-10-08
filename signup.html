@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>판다마켓 회원가입</title>
+    <link rel="stylesheet" href="signup.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="signup-container">
+        <header class="logo">
+            <img src="images/판다아이콘.svg" alt="판다 아이콘">
+            <h1>판다마켓</h1>
+        </header>
+
+        <form class="signup-form">
+            
+            <div class="input-group">
+                <label for="email">이메일</label>
+                <input type="email" id="email" name="email" placeholder="이메일을 입력해 주세요">
+            </div>
+
+            <div class="input-group">
+                <label for="nickname">닉네임</label>
+                <input type="text" id="nickname" name="nickname" placeholder="닉네임을 입력해 주세요">
+            </div>
+
+            <div class="input-group password-group">
+                <label for="password">비밀번호</label>
+                <div class="input-wrapper">
+                    <input type="password" id="password" name="password" placeholder="비밀번호를 입력해 주세요">
+                    <span class="password-toggle">
+                        <img src="images/눈모양아이콘.png" alt="비밀번호 보기/숨기기">
+                    </span>
+                </div>
+            </div>
+
+            <div class="input-group password-group">
+                <label for="confirm-password">비밀번호 확인</label>
+                <div class="input-wrapper">
+                    <input type="password" id="confirm-password" name="confirm-password" placeholder="비밀번호를 다시 한 번 입력해 주세요">
+                    <span class="password-toggle">
+                        <img src="images/눈모양아이콘.png" alt="비밀번호 보기/숨기기">
+                    </span>
+                </div>
+            </div>
+
+            <button type="submit" class="signup-btn">회원가입</button>
+
+             <div class="social-login">
+                <p>간편 로그인하기</p>
+                <div class="social-buttons">
+                    <a href="https://www.google.com/" class="social-icon-google"><img src="images/google.svg" alt="Google"></a> <a href="https://www.kakaocorp.com/page/" class="social-icon-kakao"><img src="images/카카오아이콘.svg" alt="Kakao"></a> </div>
+            </div>
+            
+            <div class="login-link">
+                이미 회원이신가요? <a href="login.html">로그인</a>
+            </div>
+            
+        </form>
+    </div>
+</body>
+</html>
