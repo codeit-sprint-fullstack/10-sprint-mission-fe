@@ -1,3 +1,9 @@
+/* [sprint2_심화 요구사항] palette에 있는 color값들을 css 변수로 등록해서 사용합니다.
+   바로 아래에 로그인 페이지와 회원가입 페이지에서 반복 사용되는 [#3692FF] blue color를 사용자 지정 속성 선언하여 사용하였습니다. */ 
+:root {
+    --blue: #3692FF;
+}
+
 .auth {
     width: 100%;
     max-width: 640px;
@@ -59,7 +65,7 @@ input::placeholder {
 }
 
 input:focus {
-    outline-color: #3692FF;
+    outline-color: var(--blue);
 }
 
 .form-password {    
@@ -87,7 +93,7 @@ input:focus {
 }
 
 .submit-button:hover {
-    background-color: #3692FF;
+    background-color: var(--blue);
 }
 
 .social_login {
@@ -128,7 +134,7 @@ input:focus {
 }
 
 .signup a {
-    color: #3692FF;
+    color: var(--blue);
     text-decoration: underline;
     text-underline-offset: 0.2rem;  
 }
