@@ -1,0 +1,52 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panda Sign In</title>
+    <link rel="stylesheet" href="./css/sign-in-and-up.css">
+</head>
+<body>
+<!-- 
+    header tag는 사이트의 로고와 로그인 버튼을 포함합니다. 
+    하지만, 가능하다면, header 는 사이트의 최고 상단에 위치해야 하므로, 
+    독립적인 페이지에 포함된 로고나 이미지, 외 기타 요소들은 header에 
+    포함시키지 않도록 한다. 
+    
+    *** header tag의 역할을 명확히 구분하는 것이 SEO에 도움이 된다.
+
+    그러므로, 아래의 header tag내에 로고 이미지는 main tag로 이동시키는 것이 추천되는 방식이다.
+ -->
+<header>
+    <div class="logo-container">
+        <a href="/"><img class="logo-img" src="./images/Panda_logo-login.svg" alt="판다마켓"></a>
+    </div>
+</header>
+
+<main>
+    <form method="post">
+        <label for="username">이메일</label>
+        <input id="username" name="email" placeholder="이메일을 입력하세요." required>
+        <label for="password">비밀번호</label>
+        <div class="inputPWD">
+            <input id="passwordInput" name="password" type="password" placeholder="비밀번호를 입력하세요." required>
+            <img class="fa-eye" src="./images/fa-eye.svg" alt="비밀번호 보기">
+        </div>
+        <button type="submit" aria-label="로그인 하기">로그인</button>
+    </form>
+</main>
+
+<div class="footerLogin">
+    간편 로그인하기
+    <div class="social-login-button">
+        <a href="https://www.google.com/" target="_blank"><img src="./images/google_button.svg" width="42"/></a>
+        <a href="https://www.kakaocorp.com/page/" target="_blank"><img src="./images/kakao-button.svg" width="42"/></a>
+    </div>
+</div>
+
+<footer>
+    판다마켓이 처음이신가요? <a href="./sign-up.html">회원가입</a>
+</footer>
+
+
+</body>
+</html>
