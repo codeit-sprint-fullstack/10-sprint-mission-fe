@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>판다마켓</title>
+    <link rel="stylesheet" href="../style/reset.css">
+    <link rel="stylesheet" href="../style/style.css">
+    <link rel="icon" href="../img/판다 얼굴.svg" type="image/x-icon">
+
+</head>
+
+<body>
+
+    <header>
+
+    </header>
+    <main>
+        <article class="panda_login_01">
+            <section class="">
+
+                <a class="panda_login_01_header df al_it dfc" href="../index.html"><img src="../img/판다 얼굴.svg" alt="">
+                <h2 class="fs66 tc_primary fw_b">
+                    판다마켓
+                </h2>
+</a>
+            </section>
+            <section class="panda_login_01_form mt40">
+                <form action="" method="post">
+
+                    <!-- 아이디 입력 -->
+                    <div class="panda_input_wrap ">
+                        <label for="panda_email01" class="Text-lg-bold">이메일</label>
+                        <input type="email" class="panda_input" placeholder="이메일을 입력해주세요" id="panda_email01">
+                    </div>
+                    <!-- 닉네임 입력 -->
+                    <div class="panda_input_wrap mt24">
+                        <label for="panda_email01" class="Text-lg-bold">닉네임</label>
+                        <input type="text" class="panda_input" placeholder="닉네임을 입력해주세요" id="panda_email01">
+                    </div>
+
+
+                    <!-- 비밀번호 입력 -->
+                    <div class="panda_input_wrap panda_input_icon mt24">
+                        <label class="Text-lg-bold">비밀번호</label>
+                        <div class="password_hid_wrap">
+                            <input type="password" class="panda_input password_hid" placeholder="비밀번호를 입력해주세요">
+                            <button type="button" class="password_hid_icon_btn" onclick="togglePassword(this)"></button>
+                        </div>
+                    </div>
+
+                    <div class="panda_input_wrap panda_input_icon mt24">
+                        <label class="Text-lg-bold">비밀번호 확인</label>
+                        <div class="password_hid_wrap">
+                            <input type="password" class="panda_input password_hid" placeholder="비밀번호를 다시 입력해주세요">
+                            <button type="button" class="password_hid_icon_btn" onclick="togglePassword(this)"></button>
+                        </div>
+                    </div>
+
+<!-- 로그인 데이터입력시 클래스에 btn_disabled를 붙여서 활성화 -->
+                    <button class="panda_btn_login mt24" type="submit">로그인</button>
+
+                </form>
+            </section>
+            <section class="mt24 ">
+                <div class="quick_login df dfsb al_it">
+                    <p class="Text-md-medium">간편 로그인하기</p>
+                    <div class=" df dfsb al_it gap15">
+                        <a href="https://www.google.com"><img src="../img/kakao.svg" alt=""></a>
+                        <a href="https://www.kakaocorp.com"><img src="../img/google.svg" alt=""></a>
+                    </div>
+                </div>
+
+            </section>
+            <section class="mt24  df dfc al_it">
+                <p class="Text-sm-medium">이미 회원이신가요?</p><a href="../html/login.html" class="text-underline ml5 tc_primary  Text-sm-medium ">로그인</a>
+            </section>
+
+
+        </article>
+    </main>
+
+    <script>
+        function togglePassword(btn) {
+            // 버튼과 가장 가까운 input을 찾음
+            const wrapper = btn.closest(".password_hid_wrap");
+            const input = wrapper.querySelector("input");
+
+            if (input.type === "password") {
+                input.type = "text";
+                btn.classList.add("on");
+            } else {
+                input.type = "password";
+                btn.classList.remove("on");
+            }
+        }
+    </script>
+
+
+</body>
+
+</html>

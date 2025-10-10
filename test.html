@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>Panda Input Example</title>
+  <style>
+
+
+    body {
+      font-family: 'Pretendard', sans-serif;
+      background: #000;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      padding: 40px;
+    }
+
+    .panda_input_wrap {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      width: 350px;
+      margin: 16px;
+    }
+
+    .panda_input {
+      width: 100%;
+      padding: 12px 40px 12px 12px;
+      font-size: 14px;
+      border: 1px solid #e0e0e0;
+      border-radius: 8px;
+      outline: none;
+      background: #F9FAFB;
+      color:#111;
+      transition: border 0.2s;
+    }
+
+    .panda_input:focus {
+      border-color:#3B82F6;
+    }
+
+    .panda_input.error {
+      border-color: #EF4444;
+    }
+
+    .panda_error_message {
+      font-size: 12px;
+      color: #EF4444;
+    }
+
+    /* 비밀번호 토글 아이콘 */
+    .panda_input_icon {
+      position: relative;
+    }
+
+    .panda_input_icon button {
+      position: absolute;
+      right: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      border: none;
+      background: none;
+      cursor: pointer;
+      font-size: 14px;
+      color: #6B7280;
+    }
+
+    /* 드롭다운 */
+    .panda_select {
+      width: 100%;
+      padding: 12px;
+      font-size: 14px;
+      border: 1px solid #e0e0e0;
+      border-radius: 8px;
+      outline: none;
+      background: #F9FAFB;
+      color:#111;
+    }
+
+    .panda_select:focus {
+      border-color:#3B82F6;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 일반 텍스트 입력 -->
+  <div class="panda_input_wrap">
+    <input type="text" class="panda_input" placeholder="할 일의 제목을 적어주세요.">
+  </div>
+
+  <!-- 드롭다운 -->
+  <div class="panda_input_wrap">
+    <select class="panda_select">
+      <option>할 일의 제목을 적어주세요.</option>
+      <option>공부하기</option>
+      <option>운동하기</option>
+      <option>개발하기</option>
+    </select>
+  </div>
+
+  <!-- 포커스된 인풋 -->
+  <div class="panda_input_wrap">
+    <input type="text" class="panda_input" value="할 일을 적는 중">
+  </div>
+
+  <!-- 일반 입력 -->
+  <div class="panda_input_wrap">
+    <input type="text" class="panda_input" value="할 일입니다.">
+  </div>
+
+  <!-- 에러 인풋 -->
+  <div class="panda_input_wrap">
+    <input type="text" class="panda_input error" value="가나다라마바사가나다라마바사가나다라마바사">
+    <div class="panda_error_message">잘못된 링크 주소입니다.</div>
+  </div>
+
+  <!-- 비밀번호 입력 -->
+  <div class="panda_input_wrap panda_input_icon">
+    <input type="password" class="panda_input" placeholder="비밀번호를 입력해주세요" id="password1">
+    <button type="button" onclick="togglePassword('password1', this)">👁</button>
+  </div>
+
+  <!-- 잘못된 비밀번호 -->
+  <div class="panda_input_wrap panda_input_icon">
+    <input type="password" class="panda_input error" placeholder="비밀번호를 입력해주세요" id="password2">
+    <button type="button" onclick="togglePassword('password2', this)">👁</button>
+    <div class="panda_error_message">비밀번호를 8자 이상 입력해주세요</div>
+  </div>
+
+  <script>
+    function togglePassword(id, btn) {
+      const input = document.getElementById(id);
+      if (input.type === "password") {
+        input.type = "text";
+        btn.textContent = "🙈"; // 보임 상태
+      } else {
+        input.type = "password";
+        btn.textContent = "👁"; // 숨김 상태
+      }
+    }
+  </script>
+
+</body>
+</html>
