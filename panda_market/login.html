@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link rel="stylesheet" href="./CSS/signup.css" />
+  </head>
+  <body>
+    <h1 class="signup_title">
+      <img
+        src="./image/sprint_mission_2/logo.png"
+        alt="판다마켓"
+        onclick="location.href='./index.html'"
+        class="logo"
+      />
+      <span>판다마켓</span>
+    </h1>
+    <form class="signup">
+      <div class="signup_section">
+        <div class="section">
+          <label class="email">이메일</label>
+          <input
+            type="email"
+            placeholder="이메일을 입력해주세요"
+            class="email_input"
+          />
+        </div>
+        <div class="section">
+          <label class="password">비밀번호</label>
+          <input
+            type="password"
+            placeholder="비밀번호를 입력해주세요"
+            class="password_input"
+          />
+        </div>
+      </div>
+      <button class="signup-button" onclick="location.href='./signup.html'">
+        로그인
+      </button>
+      <div class="login-option">
+        <span>간편 로그인하기</span>
+        <div class="sns-login">
+          <img
+            src="./image/sprint_mission_2/google.png"
+            alt="구글 로그인"
+            class="google-login"
+            onclick="location.href='https://www.google.com/'"
+          />
+          <img
+            src="./image/sprint_mission_2/kakao.png"
+            alt="카카오 로그인"
+            class="kakao-login"
+            onclick="location.href='https://www.kakao.com/'"
+          />
+        </div>
+      </div>
+      <p class="go-login">
+        판다마켓이 처음이신가요?
+        <a href="./signup.html" class="signup-link">회원가입</a>
+      </p>
+    </form>
+  </body>
+</html>
