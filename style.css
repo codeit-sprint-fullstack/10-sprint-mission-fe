@@ -1,0 +1,219 @@
+header {
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 0.5625rem 12.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    position: fixed;
+    background-color: #ffffff;
+}
+
+header > .logo-Container {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+
+    color: var(--primary-100);
+    font-family: 'ROKAF Sans';
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+header > .logo-Container > img {
+    width: 2.5rem;
+    height: 2.5rem;
+    flex-shrink: 0;
+    font-weight: 700;
+}
+
+header > button > a {
+    padding: 0.75rem 1.5rem;
+    background-color: var(--primary-100);
+    color: var(--gray-100);
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 1.625rem;
+    border-radius: 0.5rem;
+
+    width: 8rem;
+    height: 3rem;
+    flex-shrink: 0;
+    font-family: 'Pretendard';
+}
+
+.banner {
+    margin: 0 auto;
+    padding: 12.5rem 5% 0 5%;
+    display: flex;
+    background-color: var(--background);
+    gap: 0.4375rem;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.goSite-Container {
+    flex: 0 1 22.3125rem;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    align-items: center;
+}
+
+.goSite-Container > .sentense {
+    color: var(--gray-700);
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: 140%;
+    margin-bottom: 2rem;
+    text-align: center;
+    flex-shrink: 1;
+}
+
+.goSite-Container > button > a {
+    padding: 1rem 3rem;
+    border-radius: 2.5rem;
+    background-color: var(--primary-100);
+    color: var(--gray-50);
+    margin-bottom: 3.75rem;
+
+    font-size: 1.125rem;
+    font-weight: 600;
+    line-height: 2rem;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.hot-item {
+    margin: 0 auto;
+    padding: 8.625rem 5%;
+    display: flex;
+    gap: 4rem;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.section-Container {
+    display: flex;
+    width: 100%;
+    max-width: 77rem;
+    align-items: center;
+    gap: 2rem;
+    padding: 0 5%;
+    justify-content: center; 
+    flex-wrap: wrap;
+}
+
+.section-Container > img {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    flex-shrink: 1;
+}
+
+.explain {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1 1 250px;
+    height: auto;
+    text-align: center;
+}
+
+.section-Container > .explain > .word {
+    margin-bottom: 0.75rem;
+    color: var(--primary-100);
+    font-size: 1.125rem;
+    font-weight: 700;
+    line-height: 1.625rem;
+}
+
+.section-Container > .explain > .main-explain {
+    margin-bottom: 1.5rem;
+    color: var(--gray-700);
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: 140%;
+    letter-spacing: 0.05rem;
+}
+
+.explain > .sub-explain {
+    color: var(--gray-700);
+    font-size: 1.5rem;
+    font-weight: 500;
+    line-height: 2rem;
+}
+
+.final {
+    padding: 8.9375rem 5% 0 5%;
+    margin: 0 auto;
+    background-color: var(--background);
+}
+
+.final > .final-Container {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+}
+
+.final > .final-Container > p {
+    margin-bottom: 3.75rem;
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 140%;
+    flex-shrink: 1;
+    max-width: 21.875rem;
+    min-width: 250px;
+    text-align: center;
+}
+
+.footer-Container {
+    padding: 2rem 12.5rem;
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--gray-900);
+    padding-bottom: 4.625rem;
+}
+
+.footer-Container > p {
+    color: var(--gray-400);
+    text-align: center;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.footer-Container > .question-Container {
+    display: flex;
+    gap: 0.11875rem;
+}
+
+.footer-Container > .question-Container > a {
+    color: var(--gray-200);
+    text-align: center;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    cursor: pointer;
+}
+
+.footer-Container > .icon-Container {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.footer-Container > .icon-Container > img {
+    cursor: pointer;
+}
