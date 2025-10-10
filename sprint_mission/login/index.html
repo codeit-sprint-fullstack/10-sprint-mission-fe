@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>로그인 - 판다마켓</title>
+  <link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" rel="stylesheet" />
+  <link rel="stylesheet" href="/reset.css">
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <main class="login">
+    <div class="inner">
+      <div class="login-box">
+        <section class="login-panda-market-logo authentication-panda-market-logo">
+          <a href="/" class="login-panda-logo authentication-panda-logo">
+            <img src="/image/panda-logo.svg" alt="판다마켓 로고">
+          </a>
+        </section>
+        <form class="login-form authentication-form">
+          <div class="login-email authentication-email">
+            <label for="email">이메일</label>
+            <input id="email" name="email" type="email" placeholder="이메일을 입력해주세요">
+          </div>
+          <div class="login-password authentication-password">
+            <label for="password">비밀번호</label>
+            <div class="input-wrap">
+              <input id="password" name="password" type="password" placeholder="비밀번호를 입력해주세요">
+              <button class="visibility-icon" type="button"><img src="/image/visibility.svg" alt="비밀번호 표시"></button>
+            </div>
+          </div>
+          <button class="login-btn authentication-btn" type="submit">로그인</button>
+        </form>
+        <section class="social-login">
+          <div class="start-social-login">
+            간편 로그인하기
+          </div>
+          <div class="social-login-links">
+            <a href="https://www.google.com/" class="link social-login-link-logo">
+              <img src="/image/google-logo.svg" alt="구글 로고">
+            </a>
+            <a href="https://www.kakaocorp.com/page/" class="link social-login-link-logo">
+              <img src="/image/kakao-logo.svg" alt="카카오 로고">
+            </a>
+          </div>
+        </section>
+        <section class="login-signup">
+          <div class="login-signup-question">
+            판다마켓이 처음이신가요?
+          </div>
+          <a href="/signup" class="login-signup-link">
+            회원가입
+          </a>
+        </section>
+      </div>
+    </div>
+  </main>
+</body>
+</html>
