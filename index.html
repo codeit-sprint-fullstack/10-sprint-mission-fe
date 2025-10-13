@@ -1,0 +1,93 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>판다마켓</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&family=Titillium+Web:wght@300;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+<body>
+
+    <header>
+        <a href="/"><img src="./images/panda_logo.svg" width="153"></a>
+        <a href="./sign-in.html" id="loginLinkButton" class="button">로그인</a>
+    </header>
+
+    <main>
+
+    <!-- 
+    1.<section></section> tag 내에 id(hero)로 background-image를 주고, 
+       banner 클래스에 #id로 준 background-image의 속성들을 설정한다.
+    2.내부에 div tag에 wrapper 클래스로 공통적으로 사용될 속성들을 설정한다.
+        
+    //-->
+
+    <section id="hero" class="banner"> 
+    <div class="wrapper">
+        <h1>일상의 모든 물건을 거래해 보세요.</h1>
+        <a href="./items.html" class="button pill-button">구경하러 가기</a>
+    </div>
+    </section>
+
+
+    <section id="features" class="wrapper">
+
+        <div class="feature">
+            <img src="./images/img_home_01.svg" width="50%" />
+            <div class="feature-content">
+                <h2 class="feature-tag">Hot item</h2>
+                <h1>인기 상품을 확인해 보세요.</h1>
+                <p class="feature-description">
+                    가장 HOT한 중고거래 물품을 판다마켓에서 확인해 보세요.
+                </p>
+            </div>
+        </div>
+
+        <div class="feature">
+            <div class="feature-content">
+                <h2 class="feature-tag">Search</h2>
+                <h1>구매를 원하는 상품을 검색하세요.</h1>
+                <p class="feature-description">구매하고 싶은 물품은 검색해서 쉽게 찾아보세요.</p>
+            </div>
+            <img src="./images/search_img_01.svg" width="50%"/>
+        </div>
+
+        <div class="feature">
+            <img src="./images/img_sell_03.svg" width="50%" />
+            <div class="feature-content">
+                <h2 class="feature-tag">Register</h2>
+                <h1>판매를 원하는 상품을 등록하세요.</h1>
+                <p class="feature-description">
+                    어떤 물건이든 판매하고 싶은 상품을 쉽게 등록하세요.
+                </p>
+            </div>
+        </div>
+
+    </section>
+
+    <section id="bottomBanner" class="banner">
+        <div class="wrapper">
+            <h1>믿을 수 있는 판다마켓 중고거래</h1>
+        </div>
+    </section>
+
+    <footer>
+        <div>@codeit -2024</div>
+        <div id="footerMenu">
+            <a href="./privacy.html">Privacy Policy</a>
+            <a href="./faq.html">FAQ</a>
+        </div>
+        <div id="socialMedia">
+            <a href="https://www.facebook.com/" target="_blank"><img src="./images/facebook-logo.svg" width="20" /></a>
+            <a href="https://www.twitter.com/" target="_blank"><img src="./images/twitter-logo.svg" width="20" /></a>
+            <a href="https://www.youtube.com" target="_blank"><img src="./images/youtube-logo.svg" width="20" /></a>
+            <a href="https://www.instagram" target="_blank"><img src="./images/instagram-logo.svg" width="20" /></a>
+        </div>
+    </footer>
+
+</body>
+</html>

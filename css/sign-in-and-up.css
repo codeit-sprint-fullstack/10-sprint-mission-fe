@@ -1,0 +1,168 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+body {
+    color: #374151;
+    word-break: break-all;
+    font-family: "Pretendard", sans-serif;
+}
+
+:root {
+    /* Primary color */
+    --blue: #3692ff;
+    --header-height: 7rem;
+
+}
+
+header {
+    margin: 1 auto;
+    max-width: 640px;
+    height: var(--header-height);
+    display: block;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+
+.logo-container {
+    text-align: center;
+
+}
+
+
+
+footer {
+    margin: 0 auto;
+    max-width: 640px;
+    color: #1F2937;
+    text-align: center;
+    gap: 6px;  
+    border: 0px solid #2c2c2c;
+    margin-top: 1%;
+    margin-bottom: 5%;
+    font-family: 'Pretendard';
+    font-size: 14px;
+}
+
+footer a {
+    color: #3182f6;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
+
+.footerLogin {
+    background-color: #E6F2FF;
+    border-radius: 8px;
+    margin: 0 auto;
+    max-width: 640px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #1F2937;
+    padding: 16px 23px;
+}
+
+.social-login-button {
+  display: flex;
+  gap: 16px;
+}
+
+/* form CSS below */
+form {
+  margin: 16px auto;
+  max-width: 640px;
+}
+
+label {
+    font-weight: 700;
+    color: #2c2c2c;
+    display: block;
+    margin: 16px 0 20px;
+}
+
+input {
+    background-color: #F3F4F6;
+    border: 0px solid #d1d1d1;
+    color: #ababab;
+    display: block;
+    font-size: 16px;
+    line-height: 24px;
+    margin: 8px 0;
+    padding: 16px 24px;
+    border-radius: 12px;
+    width: 100%;
+}
+
+.inputPWD {
+    position: relative;
+}
+
+.inputPWD .input {
+    width: 100%;
+    padding: 10px 40px 10px 10px; /* Add paddings */
+    box-sizing: border-box; /* Include paddings and border to width */
+    border: 0px solid #F3F4F6;
+    outline: none;
+}
+
+.inputPWDs {
+    position: relative;
+}
+
+.inputPWDs .input {
+    width: 100%;
+    padding: 10px 40px 10px 10px; /* Add paddings */
+    box-sizing: border-box; /* Include paddings and border to width */
+    border: 0px solid #F3F4F6;
+    outline: none;
+}
+
+
+input:focus {
+    /* border-color: #3692FF; */
+    outline-color: #3692FF;
+}
+
+.fa-eye {
+    position: absolute;
+    top: 50%; /* Vertical align center */
+    right: 10px; /* To locate 10px from the right wall */
+    transform: translateY(-50%); /* Additional attribute for perfect vertical central alignment */
+    width: 24px;
+    height: 24px;
+    z-index: 1;
+    cursor: pointer;
+}
+
+button {
+  background: var(--blue);
+  border: none;
+  color: #ffffff;
+  display: block;
+  font-size: 18px;
+  font-weight: 700;
+  margin: 24px 0;
+  padding: 16px;
+  width: 100%;
+  border-radius: 40px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #1967d6;
+}
+
+button:focus {
+  background-color: #1251aa;
+}
+
