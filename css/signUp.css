@@ -1,0 +1,80 @@
+section {
+  padding: 6rem 0;
+}
+.container {
+  margin: auto;
+  /* 설정 다시하기 */
+  padding: 0 3rem;
+  max-width: 64rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.logoWrap {
+  display: flex;
+  align-items: center;
+  gap: 2.2rem;
+  align-self: center;
+  margin-bottom: 4rem;
+}
+
+.logo {
+  width: 10.3rem;
+}
+
+.logoWrap div {
+  color: var(--primary600);
+  font-family: "ROKAF Sans";
+  font-size: 6.6rem;
+  font-weight: 700;
+}
+
+.easyLogin {
+  background-color: var(--primary300);
+  padding: 1.6rem 2.3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 0.8rem;
+  margin-bottom: 2.4rem;
+  /* width: 100%; */
+}
+
+.easyLogin p {
+  font-size: 1.6rem;
+}
+.social-icons {
+  display: flex;
+  gap: 1.6rem;
+}
+.google,
+.kakaotalk {
+  width: 4.4rem;
+  height: 4.4rem;
+  border-radius: 50%;
+}
+
+.google {
+  background-color: white;
+  padding: 1rem;
+}
+.kakaotalk {
+  background-color: #f5e14b;
+  padding: 1rem 0.8rem 0.8rem;
+}
+.google img,
+.kakaotalk img {
+  width: 100%;
+}
+.loginWrap {
+  font-size: 1.4rem;
+  display: flex;
+  justify-content: center;
+}
+.loginWrap > * {
+  display: inline-block;
+}
+.login {
+  color: var(--primary600);
+  text-decoration: underline;
+}
