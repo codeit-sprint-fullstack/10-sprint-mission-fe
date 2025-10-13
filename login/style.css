@@ -1,0 +1,154 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: Pretendard, sans-serif;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 18px;
+}
+
+body {
+  background-color: #fcfcfc;
+  color: #374151;
+  margin: 0;
+}
+
+.container-box {
+  display: flex;
+  padding: 231px 640px 284px 640px;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  width: 640px;
+}
+
+.logo-box,
+.logo-box a {
+  display: flex;
+  color: #3692ff;
+  font-family: "ROKAF Sans";
+  font-size: 66.344px;
+  font-weight: 700;
+  line-height: normal;
+  text-decoration: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo-img {
+  flex-shrink: 0;
+  width: 103.529px;
+  height: 103.88px;
+  margin: 12.98px 22.24px 15.14px 0;
+  cursor: pointer;
+}
+
+label {
+  color: #1f2937;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 26px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.login-box {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  position: relative;
+}
+
+input {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 640px;
+  height: 56px;
+  padding: 16px 24px;
+  border: none;
+  border-radius: 12px;
+  background-color: #f3f4f6;
+}
+
+button {
+  display: flex;
+  width: 640px;
+  height: 56px;
+  padding: 16px 124px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border: none;
+  border-radius: 40px;
+  background-color: #9ca3af;
+  color: #f3f4f6;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 32px;
+}
+
+.easy-login {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 640px;
+  padding: 16px 23px;
+  gap: 24px;
+  font-weight: 500;
+  line-height: 26px;
+  border-radius: 8px;
+  background-color: #e6f2ff;
+  margin: 24px 0;
+}
+
+.easy-login a {
+  text-decoration: none;
+}
+
+.sign-up {
+  text-align: center;
+  color: #1f2937;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 24px;
+}
+
+.signup-button {
+  color: #3692ff;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.eyes {
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  right: 24px;
+  bottom: 16px;
+  cursor: pointer;
+}
+
+input::placeholder {
+  color: #9ca3af;
+  font-weight: 400;
+  line-height: 26px;
+}
+
+input:focus {
+  outline-color: #3692ff;
+}
