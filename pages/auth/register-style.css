@@ -75,6 +75,19 @@ form > .input-wrapper > input:focus {
     border: 1px solid var(--primary-100);
 }
 
+form > .input-wrapper > input.invalid {
+    border: 1px solid red;
+}
+
+form > .input-wrapper > .error-message {
+    color: red;
+    font-size: 0.6rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    align-self: flex-start;
+}
+
 form > .input-wrapper> input::placeholder {
     color: var(--gray-400);
     font-weight: 400;
@@ -94,6 +107,9 @@ form > .input-wrapper > img {
     align-self: flex-end;
     margin-right: 1vw;
     margin-bottom: 2vh;
+
+    object-fit: contain;
+    vertical-align: middle;
 }
 
 form > button {
@@ -102,11 +118,15 @@ form > button {
     height: 5vh;
     padding: 1vh 7.75vw;
     border-radius: 2.5rem;
-    background-color: var(--gray-400);
+    background-color: var(--primary-100);
     color: var(--gray-100);
     font-weight: 600;
     font-size: 1rem;
     border: 0;
+}
+
+form > button:disabled {
+    background-color: var(--gray-400);
 }
 
 .oAuth {
