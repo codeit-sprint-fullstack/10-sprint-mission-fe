@@ -1,3 +1,39 @@
+const user_data = [
+    {email: 'codeit1@codeit.com', password: 'codeit101!'},
+    {email: 'codeit2@codeit.com', password: 'codeit202!'},
+    {email: 'codeit3@codeit.com', password: 'codeit303!'},
+    {email: 'codeit4@codeit.com', password: 'codeit404!'},
+    {email: 'codeit5@codeit.com', password: 'codeit505!'},
+    {email: 'codeit6@codeit.com', password: 'codeit606!'},
+]
+
+const removeModal = () => {
+    const modal = document.getElementsByClassName('modal');
+    if (modal) {
+        modal[0].remove();
+    }
+}
+
+const showModal = message => {
+    const div = document.createElement('div');
+    div.classList.add('modal');
+    
+    const p = document.createElement('p');
+    p.classList.add('modal-message');
+    p.innerHTML = message;
+
+    const button = document.createElement('button');
+    button.classList.add('modal-button');
+    button.innerHTML = "확인";
+
+    button.addEventListener('click', removeModal);
+
+    div.appendChild(p);
+    p.appendChild(button);
+    
+    document.getElementsByTagName('body')[0].appendChild(div);
+}
+
 // input 요소 선택 (존재 여부 체크)
 const email = document.getElementById('email');
 email.pattern = "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,4}$";
@@ -18,6 +54,21 @@ if (passwordRetry) {
   passwordRetry.required = true;
 }
 
+const findEmail = () => {
+    return !user_data.find(user => user.email === email.value);
+}
+
+const findEmailAndPassword = () => {
+    return !user_data.find(user => user.email === email.value && user.password === password.value);
+}
+
+const login = () => {
+    return {
+        onlyEmail: !findEmail(),
+        success: !findEmailAndPassword()
+    }
+}
+
 const submit = document.getElementById('submit');
 submit.disabled = true;
 
@@ -29,8 +80,31 @@ submit.addEventListener('click', event => {
     }
 
     if (!nickname) {
-        window.location.href = "/pages/items.html";
+        const res = login();
+        if (res.success) {
+            //modal
+            
+            window.location.href = "/pages/items.html";
+        }
+        else if (res.onlyEmail) {
+            showModal('비밀번호가 일치하지 않습니다.');
+        }
+        else {
+            
+            showModal('로그인에 실패했습니다.');
+        }
+
         return;
+    }
+
+    else {
+        const res = !findEmail();
+        if (res) {
+            alert('사용 중인 이메일입니다.');
+        }
+        else {
+            window.location.href = "/pages/auth/login.html";
+        }
     }
     
 })

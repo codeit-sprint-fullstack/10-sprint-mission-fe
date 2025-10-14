@@ -181,3 +181,37 @@ footer > a {
     text-decoration: underline;
     cursor: pointer;
 }
+
+.modal {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.7)
+}
+
+.modal > .modal-message {
+    display: flex;
+    text-align: center;
+    background-color: white;
+    padding: 10vh 10vw;
+    border-radius: 0.7rem;
+    
+}
+
+.modal > .modal-message > .modal-button {
+    background-color: var(--primary-100);
+    position: absolute;
+    top: 53vh;
+    right: 38vw;
+    padding: 2vh 2vw;
+    border-radius: 0.7rem;
+    cursor: pointer;
+    color: white;
+}
