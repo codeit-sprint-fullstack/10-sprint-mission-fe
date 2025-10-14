@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>로그인페이지</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="login.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Gmarket+Sans:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="login-container">
+        <div class="logo-area">
+            <a href="index.html"><img src="images/ic_panda.svg" alt="판다마켓 로고" class="panda-logo"></a> 
+            <h1 class="market-name">판다마켓</h1>
+        </div>
+
+        <form class="login-form">
+            <div class="input-group">
+                <label for="email">이메일</label>
+                <input type="email" id="email" name="email" placeholder="이메일을 입력해 주세요" >
+            </div>
+
+            <div class="input-group">
+                <label for="password">비밀번호</label>
+                <div class="password-wrapper">
+                    <input type="password" id="password" name="password" placeholder="비밀번호를 입력해 주세요">
+                    <img class="password-toggle" src="images/ic_blindfold.png"></div>
+            </div>
+
+            <button type="submit" class="login-button">로그인</button>
+
+            <div class="social-login">
+                <p>간편 로그인하기</p>
+                <div class="social-buttons">
+                    <a href="https://www.google.com/" class="social-icon-google"><img src="images/google.svg" alt="Google"></a> <a href="https://www.kakaocorp.com/page/" class="social-icon-kakao"><img src="images/ic_kakao.svg" alt="Kakao"></a> </div>
+            </div>
+        </form>
+
+        <p class="signup-link">판다마켓 회원이 아니신가요? <a href="signup.html">회원가입</a></p>
+    </div>
+</body>
+</html>
