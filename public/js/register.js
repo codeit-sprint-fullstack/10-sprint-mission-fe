@@ -87,6 +87,40 @@ function confirmdCheck() {
     return true;
 }
 
+function dobbleEmailCheck(email) {
+    const target = email.trim().toLowerCase();
+    return USER_DATA.some(u => u.email.toLowerCase() === target);
+}
+
+
+
+
+function modal(message) {
+    const overlay = document.createElement('div');
+    overlay.classList.add('modal-overlay');
+
+    const modal = document.createElement('div');
+    modal.classList.add('modal');
+
+    const msg = document.createElement('p')
+    msg.textContent = message;
+
+    const closeBtn = document.createElement('button');
+    closeBtn.type = 'button';
+    closeBtn.textContent = '확인';
+    closeBtn.classList.add('modal-close');
+
+    closeBtn.addEventListener('click', () => {
+        overlay.remove();
+    })
+
+    modal.append(msg, closeBtn);
+    overlay.append(modal);
+    document.body.append(overlay);
+}
+
+
+
 function updateBtn() {
     const emailOk = isEmailValid(emailInput.value);
     const pwdOk = isPwdValid(pwdInput.value);
@@ -99,11 +133,6 @@ function updateBtn() {
     signUpBtn.setAttribute('aria-disabled', String(!allOk));
     signUpBtn.classList.toggle('clearBtn', allOk);
 
-    if (!errorCheck) {
-        signUpBtn.classList.add('clearBtn');
-    } else {
-        signUpBtn.classList.remove('clearBtn');
-    }
 }
 
 emailInput.addEventListener('input', updateBtn);
@@ -123,9 +152,16 @@ signUpForm.addEventListener('submit', (e) => {
     const ok2 = passWordCheck();
     const ok3 = confirmdCheck();
     updateBtn();
-    if (!ok1 || !ok2 || !ok3) return;
+    if (!ok1 || !ok2 || !ok3) {
+        return;
+    }
+    if (dobbleEmailCheck(emailInput.value)) {
+        modal('사용 중인 이메일입니다.');
+        return;
+    }
 
     window.location.assign('/items');
+
 })
 
 

@@ -155,7 +155,8 @@ main {
     width: 100%;
 }
 
-#pwdEye, #confirmEye{
+#pwdEye,
+#confirmEye {
     position: absolute;
     top: 50%;
     right: 10px;
@@ -210,4 +211,47 @@ main {
 
 .clearBtn {
     background: var(--brand-blue, #3692FF);
+}
+
+/* 모달 CSS */
+
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+}
+
+.modal {
+    width: 540px;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+    padding: 16px 8px;
+    border-radius: 10px;
+    position: relative;
+}
+
+.modal p {
+    margin: 0 0 16px;
+    line-height: 1.5;
+}
+
+.modal-close {
+    width:120px;
+    height:48px;
+    position: absolute;
+    right:30px;
+    bottom:30px;
+    padding:12px 23px;
+    background-color: var(--Primary-100, #3692FF);
+    border:none;
+    border-radius: 8px;
+    color:#fff;
+    cursor: pointer;
 }
