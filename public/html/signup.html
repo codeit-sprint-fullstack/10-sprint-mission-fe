@@ -20,14 +20,14 @@
         </div>
 
         <div>
-            <form action="" class="loginform">
+            <form action="" id="loginform">
                 <div class="login-username">
                     <label for="username">이메일</label>
-                    <input type="text" id="username" placeholder="이메일을 입력해주세요">
+                    <input type="text" id="username" placeholder="이메일을 입력해주세요" autocomplete="email">
                 </div>
                 <div class="login-nickname">
                     <label for="nickname">닉네임</label>
-                    <input type="password" id="password" placeholder="닉네임을 입력해주세요">
+                    <input type="nickname" id="nickname" placeholder="닉네임을 입력해주세요">
                 </div>
 
                 <div class="login-password">
@@ -35,14 +35,14 @@
                     <div class="login-eyes">
                         <input type="password" id="password" placeholder="비밀번호를 입력해주세요">
                         <a href=""><img src="../img/eyes.svg" alt=""></a>
-                        <!-- button이 더 효율성이 좋음 -->
+                        <!-- button이 더 효율성 이 좋음 -->
                     </div>
 
                 </div>
                 <div class="login-password">
                     <label for="password">비밀번호 확인</label>
                     <div class="login-eyes">
-                        <input type="password" id="password" placeholder="비밀번호를 다시 한 번 입력해주세요">
+                        <input type="password" id="confirmPassword" placeholder="비밀번호를 다시 한 번 입력해주세요">
                         <a href=""><img src="../img/eyes.svg" alt=""></a>
                     </div>
                 </div>
@@ -66,6 +66,8 @@
             <p>이미 회원이신가요? <a href="./login.html">로그인</a></p>
         </div>
     </main>
+
+    <script src="../js/index.js"></script>
 </body>
 
 </html>

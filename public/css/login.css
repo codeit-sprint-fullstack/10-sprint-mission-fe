@@ -49,23 +49,26 @@ main {
 }
 
 .logo {
-    margin-bottom:40px;
+    margin-bottom: 40px;
 }
-.loginform {
+
+#loginform {
     display: flex;
     flex-direction: column;
     width: 640px;
     gap: 24px;
 }
 
-.loginform label {
+#loginform label {
     color: var(--Secondary-800, #1F2937);
     font-size: 18px;
     font-weight: 700;
     line-height: 26px;
 }
 
-.loginform input {
+.login-username input,
+.login-nickname input,
+.login-password input {
     width: 100%;
     height: 56px;
     padding: 16px 24px;
@@ -75,11 +78,28 @@ main {
     outline: none;
 }
 
-.loginform input:focus {
+#loginform input:focus {
     border-color: var(--Primary-100, #3692FF);
 }
 
-.loginform button {
+.errborder {
+    border: 1px solid #F74747 !important ;
+}
+
+.eMessage {
+    display: flex;
+    font-size:15px;
+    font-weight:600;
+    width: 640px;
+    height: 18px;
+    align-items: center;
+    padding: 18px 0 0 16px;
+    color: var(--error-red, #F74747);
+}
+
+
+
+#loginform button {
     display: flex;
     width: 100%;
     height: 56px;
@@ -103,15 +123,16 @@ main {
     position: absolute;
     width: 24px;
     height: 24px;
-    top:50%;
-    right:10px;
+    top: 50%;
+    right: 10px;
 }
+
 .snslogin {
     display: flex;
     width: 100%;
     height: 74px;
     padding: 16px 23px;
-    margin:24px 0;
+    margin: 24px 0;
     border-radius: 8px;
     background: #E6F2FF;
 }
