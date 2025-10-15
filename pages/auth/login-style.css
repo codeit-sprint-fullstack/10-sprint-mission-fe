@@ -8,8 +8,6 @@ body {
     background-color: #FCFCFC;
 }
 
-
-/*공통 부분*/
 .main-container {
     display: flex;
     width: var(--width);
@@ -106,9 +104,9 @@ form > .input-wrapper> input::placeholder {
 
 form > .input-wrapper > img {
     position: absolute;
-    right: 1rem;       /* 오른쪽 여백 */
-    top: 50%;          /* 수직 가운데 정렬 */
-    transform: translateY(-75%); /* 중앙 정렬 보정 */
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-75%);
     cursor: pointer;
     width: 1.5rem;
     height: 1.5rem;
@@ -201,7 +199,7 @@ footer > a {
 }
 
 .modal > .modal-message {
-    position: relative; /* 버튼의 기준 부모 */
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -211,7 +209,6 @@ footer > a {
     border-radius: 0.7rem;
 }
 
-/* 버튼을 우측 하단에 고정 */
 .modal > .modal-message > .modal-button {
     position: absolute;
     bottom: 2vh;
@@ -223,7 +220,6 @@ footer > a {
     color: white;
 }
 
-/*media PC 1200px up*/
 @media (min-width: 1200px) {
 
     :root {
@@ -231,7 +227,6 @@ footer > a {
     }
 }
 
-/*media Tablet 744px up*/
 @media (max-width: 1199px) {
 
     :root {
@@ -239,7 +234,6 @@ footer > a {
     }
 }
 
-/*media mobile 375px up*/
 @media (max-width: 744px) {
     :root {
         --width: calc(100vw - 32px);

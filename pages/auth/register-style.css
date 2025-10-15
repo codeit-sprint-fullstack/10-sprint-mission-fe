@@ -8,7 +8,6 @@ body {
     background-color: #FCFCFC;
 }
 
-/* 공통 레이아웃 */
 .main-container {
     display: flex;
     flex-direction: column;
@@ -18,7 +17,6 @@ body {
     width: var(--width);
 }
 
-/* 헤더 영역 */
 .main-container > header {
     display: flex;
     align-items: center;
@@ -46,7 +44,6 @@ body {
     height: var(--image-size);
 }
 
-/* 폼 영역 */
 form {
     display: flex;
     flex-direction: column;
@@ -107,9 +104,9 @@ form > .input-wrapper> input::placeholder {
 
 form > .input-wrapper > img {
     position: absolute;
-    right: 1rem;       /* 오른쪽 여백 */
-    top: 50%;          /* 수직 가운데 정렬 */
-    transform: translateY(-75%); /* 중앙 정렬 보정 */
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-75%);
     cursor: pointer;
     width: 1.5rem;
     height: 1.5rem;
@@ -133,7 +130,6 @@ form > button:disabled {
     background-color: var(--gray-400);
 }
 
-/* 소셜 로그인 */
 .oAuth {
     margin: 0 auto;
     height: 6vh;
@@ -142,7 +138,7 @@ form > button:disabled {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1.44vw;
+    padding: 1.5rem;
 
     font-size: 0.75rem;
     font-weight: 500;
@@ -171,7 +167,6 @@ form > button:disabled {
     background-color: #F5E14B;
 }
 
-/* 푸터 */
 footer {
     display: flex;
     align-items: center;
@@ -181,6 +176,7 @@ footer {
     font-size: 0.75rem;
     font-weight: 500;
     line-height: 1.5rem;
+    padding-left: 1rem;
 }
 
 footer > a {
@@ -189,23 +185,54 @@ footer > a {
     cursor: pointer;
 }
 
-/* ✅ 반응형 처리 */
+.modal {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.7);
+}
 
-/* PC (1200px 이상) */
+.modal > .modal-message {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: white;
+    padding: 10vh 10vw;
+    border-radius: 0.7rem;
+}
+
+.modal > .modal-message > .modal-button {
+    position: absolute;
+    bottom: 2vh;
+    right: 2vw;
+    background-color: var(--primary-100);
+    padding: 1vh 2vw;
+    border-radius: 0.7rem;
+    cursor: pointer;
+    color: white;
+}
+
 @media (min-width: 1200px) {
     :root {
         --width: 33vw;
     }
 }
 
-/* Tablet (744px ~ 1199px) */
 @media (max-width: 1199px) {
     :root {
         --width: 90vw;
     }
 }
 
-/* Mobile (최대 744px) */
 @media (max-width: 744px) {
     :root {
         --width: calc(100vw - 32px);
