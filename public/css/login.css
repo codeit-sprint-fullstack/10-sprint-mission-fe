@@ -59,12 +59,27 @@ main {
     gap: 24px;
 }
 
+#signupform {
+    display: flex;
+    flex-direction: column;
+    width: 640px;
+    gap: 24px;
+}
+
 #loginform label {
     color: var(--Secondary-800, #1F2937);
     font-size: 18px;
     font-weight: 700;
     line-height: 26px;
 }
+
+#signupform label {
+    color: var(--Secondary-800, #1F2937);
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 26px;
+}
+
 
 .login-username input,
 .login-nickname input,
@@ -82,14 +97,18 @@ main {
     border-color: var(--Primary-100, #3692FF);
 }
 
+#signupform input:focus {
+    border-color: var(--Primary-100, #3692FF);
+}
+
 .errborder {
-    border: 1px solid #F74747 !important ;
+    border: 1px solid #F74747 !important;
 }
 
 .eMessage {
     display: flex;
-    font-size:15px;
-    font-weight:600;
+    font-size: 15px;
+    font-weight: 600;
     width: 640px;
     height: 18px;
     align-items: center;
@@ -99,7 +118,23 @@ main {
 
 
 
-#loginform button {
+.loginBtn {
+    display: flex;
+    width: 100%;
+    height: 56px;
+    color: var(--Cool-Gray-100, #F3F4F6);
+    background: var(--Secondary-400, #9CA3AF);
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 32px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 40px;
+    border: none;
+    cursor: pointer;
+}
+
+.signupbtn {
     display: flex;
     width: 100%;
     height: 56px;
@@ -117,14 +152,16 @@ main {
 
 .login-eyes {
     position: relative;
+    width: 100%;
 }
 
-.login-password img {
+#pwdEye, #confirmEye{
     position: absolute;
-    width: 24px;
-    height: 24px;
     top: 50%;
     right: 10px;
+    background: none;
+    border: none;
+    cursor: pointer;
 }
 
 .snslogin {
@@ -168,4 +205,9 @@ main {
     color: var(--Primary-100, #3692FF);
     font-size: 14px;
     font-weight: 500;
+}
+
+
+.clearBtn {
+    background: var(--brand-blue, #3692FF);
 }
