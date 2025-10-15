@@ -52,7 +52,39 @@ function emailCheck() {
     clearError(emailInput);
     return true;
 }
+function findUserByEmail(email) {
+    const target = email.trim().toLowerCase();
+    return USER_DATA.some(u => u.email.toLowerCase() === target)
+}
 
+
+function dobblePassword(password) {
+    const target = password;
+    return USER_DATA.some(u => u.password === target);
+}
+
+function modal(message) {
+    const overlay = document.createElement('div')
+    overlay.classList.add('modal-overlay')
+
+    const modal = document.createElement('div');
+    modal.classList.add('modal')
+
+    const msg = document.createElement('p')
+    msg.textContent = message;
+
+    const closeBtn = document.createElement('button');
+    closeBtn.type = 'button'
+    closeBtn.textContent = '확인'
+    closeBtn.classList.add('modal-close')
+    closeBtn.addEventListener('click', () => {
+        overlay.remove();
+    });
+
+    modal.append(msg, closeBtn);
+    overlay.append(modal);
+    document.body.append(overlay);
+}
 
 function passWordCheck() {
     const v = pwdInput.value;
@@ -69,19 +101,15 @@ function passWordCheck() {
 
 function updateBtn() {
     const emailOk = isEmailValid(emailInput.value);
-    const pwdOK = isPwdValid(pwdInput.value);
+    const pwdOk = isPwdValid(pwdInput.value);
 
-    const errorCheck = !emailOk || !pwdOK;
-    loginBtn.disabled = errorCheck;
-    loginBtn.setAttribute('aria-disabled', String(errorCheck));
-    loginBtn.classList.toggle('clearBtn', !errorCheck);
+    const allOk = emailOk && pwdOk;
 
-    if (!errorCheck) {
-        loginBtn.classList.add('clearBtn');
-    } else {
-        loginBtn.classList.remove('clearBtn');
-    }
+    loginBtn.disabled = !allOk;
+    loginBtn.setAttribute('aria-disabled', String(!allOk));
+    loginBtn.classList.toggle('clearBtn', allOk);
 }
+
 
 emailInput.addEventListener('input', updateBtn);
 pwdInput.addEventListener('input', updateBtn);
@@ -98,6 +126,16 @@ submitForm.addEventListener('submit', (e) => {
     updateBtn();
     if (!ok1 || !ok2) return;
 
+    const user = findUserByEmail(emailInput.value);
+    if (!user) {
+        modal('등록되지 않은 이메일 입니다.')
+        return;
+    }
+
+    if (user.password !== pwdInput.value) {
+        modal('비밀번호가 일치하지 않습니다.');
+        return;
+    }
     window.location.assign('/items');
 })
 
@@ -111,4 +149,4 @@ pwdEye.addEventListener('click', (e) => {
     } else {
         pwdInput.type = 'password';
     }
-    })
+})

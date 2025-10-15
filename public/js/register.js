@@ -158,7 +158,7 @@ signUpForm.addEventListener('submit', (e) => {
     if (dobbleEmailCheck(emailInput.value)) {
         modal('사용 중인 이메일입니다.');
         return;
-    }
+    } 
 
     window.location.assign('/items');
 
