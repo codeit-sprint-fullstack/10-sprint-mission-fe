@@ -1,14 +1,22 @@
+:root {
+    --width: 33vw;
+    --image-size: 5rem;
+    --font-size: 4rem;
+}
+
 body {
     background-color: #FCFCFC;
 }
 
+
+/*공통 부분*/
 .main-container {
     display: flex;
+    width: var(--width);
     flex-direction: column;
     gap: 1.5rem;
     margin: 0 auto;
     margin-top: 14.44vh;
-    width: 33vw;
 }
 
 .main-container > header {
@@ -19,7 +27,7 @@ body {
 
     color: var(--primary-100);
     font-family: 'ROKAF Sans';
-    font-size: 4rem;
+    font-size: var(--font-size);
     font-style: normal;
     font-weight: 700;
     line-height: normal;
@@ -34,8 +42,8 @@ body {
 }
 
 .main-container > header > a > img {
-    width: 5rem;
-    height: 5rem;
+    width: var(--image-size);
+    height: var(--image-size);
 }
 
 form {
@@ -52,20 +60,20 @@ form > label {
 
 form > .input-wrapper > input {
     border: 0;
-    width: 33vw;
+    width: var(--width);
     height: 5vh;
-    padding-top: 1vh;
-    padding-bottom: 1vh;
-    padding-left: 1.5vw;
-    padding-right: 4vw;
+    padding: 1vh 4vw 1vh 1.5vw;
     margin-bottom: 1rem;
     border-radius: 0.75rem;
     background-color: var(--gray-100);
     box-sizing: border-box;
+    padding-left: 0;
+    text-indent: 2rem;
 }
 
 form > .input-wrapper {
     display: flex;
+    position: relative;
     flex-direction: column;
     margin-bottom: 0.5vh;
     align-items: center;
@@ -86,6 +94,7 @@ form > .input-wrapper > .error-message {
     font-weight: 600;
     line-height: normal;
     align-self: flex-start;
+    padding-left: 1.5rem;
 }
 
 form > .input-wrapper> input::placeholder {
@@ -96,25 +105,19 @@ form > .input-wrapper> input::placeholder {
 }
 
 form > .input-wrapper > img {
-    position: relative;
-    margin-top: -5.5vh;
-    margin-left: 15vw;
+    position: absolute;
+    right: 1rem;       /* 오른쪽 여백 */
+    top: 50%;          /* 수직 가운데 정렬 */
+    transform: translateY(-75%); /* 중앙 정렬 보정 */
     cursor: pointer;
-    flex-shrink: 0;
     width: 1.5rem;
     height: 1.5rem;
-    
-    align-self: flex-end;
-    margin-right: 1vw;
-    margin-bottom: 2vh;
-
     object-fit: contain;
-    vertical-align: middle;
 }
 
 form > button {
     cursor: pointer;
-    width: 33vw;
+    width: var(--width);
     height: 5vh;
     padding: 1vh 7.75vw;
     border-radius: 2.5rem;
@@ -130,23 +133,24 @@ form > button:disabled {
 }
 
 .oAuth {
-    width: 33vw;
+    margin: 0 auto;
     height: 6vh;
-
+    width: var(--width);
     background-color: #E6F2FF;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1.44vw;
+    padding: 1.5rem;
 
     font-size: 0.75rem;
     font-weight: 500;
     line-height: 1.625rem;
+    border-radius: 0.5rem;
 }
 
 .oAuth > .icon-box {
     display: flex;
-    gap: 1vw;
+    gap: 3vw;
     align-items: center;
 }
 
@@ -193,25 +197,69 @@ footer > a {
     z-index: 1000;
     justify-content: center;
     align-items: center;
-    background-color: rgba(0, 0, 0, 0.7)
+    background-color: rgba(0, 0, 0, 0.7);
 }
 
 .modal > .modal-message {
+    position: relative; /* 버튼의 기준 부모 */
     display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
     background-color: white;
     padding: 10vh 10vw;
     border-radius: 0.7rem;
-    
 }
 
+/* 버튼을 우측 하단에 고정 */
 .modal > .modal-message > .modal-button {
-    background-color: var(--primary-100);
     position: absolute;
-    top: 53vh;
-    right: 38vw;
-    padding: 2vh 2vw;
+    bottom: 2vh;
+    right: 2vw;
+    background-color: var(--primary-100);
+    padding: 1vh 2vw;
     border-radius: 0.7rem;
     cursor: pointer;
     color: white;
+}
+
+/*media PC 1200px up*/
+@media (min-width: 1200px) {
+
+    :root {
+        --width: 33vw;
+    }
+}
+
+/*media Tablet 744px up*/
+@media (max-width: 1199px) {
+
+    :root {
+        --width: 90vw;
+    }
+}
+
+/*media mobile 375px up*/
+@media (max-width: 744px) {
+    :root {
+        --width: calc(100vw - 32px);
+        --image-size: 3rem;
+        --font-size: 2.5rem;
+    }
+
+    .main-container {
+        max-width: 400px;
+    }
+
+    form > .input-wrapper > input {
+        max-width: 400px;
+    }
+
+    form > button {
+        max-width: 400px;
+    }
+
+    .oAuth {
+        max-width: 400px;
+    }
 }
