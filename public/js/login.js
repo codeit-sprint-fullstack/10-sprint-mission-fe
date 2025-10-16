@@ -1,5 +1,4 @@
 const submitForm = document.querySelector('#loginform');
-const signUpForm = document.querySelector('#signupform');
 
 const emailInput = document.querySelector('#username')
 const pwdInput = document.querySelector('#password')
@@ -21,12 +20,13 @@ const USER_DATA = [
 
 function clearError(input) {
     input.classList.remove('errborder');
-    const exist = input.parentElement.querySelector('.eMessage');
+
+    const parent = input.parentElement.parentElement;
+    const exist = parent.querySelector('.eMessage');
     if (exist) {
         exist.remove();
     }
 }
-
 
 function showError(input, message) {
     clearError(input)
@@ -53,16 +53,14 @@ function emailCheck() {
     clearError(emailInput);
     return true;
 }
+
+
 function findUserByEmail(email) {
     const target = email.trim().toLowerCase();
-    return USER_DATA.some(u => u.email.toLowerCase() === target)
+    return USER_DATA.find(u => u.email.toLowerCase() === target) || null;
 }
 
 
-function dobblePassword(password) {
-    const target = password;
-    return USER_DATA.some(u => u.password === target);
-}
 
 function modal(message) {
     const overlay = document.createElement('div')
@@ -122,14 +120,16 @@ pwdInput.addEventListener('blur', passWordCheck);
 
 submitForm.addEventListener('submit', (e) => {
     e.preventDefault();
+
     const ok1 = emailCheck();
     const ok2 = passWordCheck();
     updateBtn();
     if (!ok1 || !ok2) return;
 
     const user = findUserByEmail(emailInput.value);
+
     if (!user) {
-        modal('등록되지 않은 이메일 입니다.')
+        modal('등록되지 않은 이메일 입니다.');
         return;
     }
 
@@ -137,8 +137,10 @@ submitForm.addEventListener('submit', (e) => {
         modal('비밀번호가 일치하지 않습니다.');
         return;
     }
-    window.location.assign('/items');
-})
+
+    // 성공
+    window.location.assign('/items'); // 경로는 프로젝트 구조에 맞게
+});
 
 
 // 눈모양 비번

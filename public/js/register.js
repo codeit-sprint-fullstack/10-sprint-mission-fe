@@ -20,12 +20,13 @@ const USER_DATA = [
 
 function clearError(input) {
     input.classList.remove('errborder');
-    const exist = input.parentElement.querySelector('.eMessage');
+
+    const parent = input.parentElement.parentElement;
+    const exist = parent.querySelector('.eMessage');
     if (exist) {
         exist.remove();
     }
 }
-
 
 function showError(input, message) {
     clearError(input)
@@ -158,12 +159,11 @@ signUpForm.addEventListener('submit', (e) => {
     if (dobbleEmailCheck(emailInput.value)) {
         modal('사용 중인 이메일입니다.');
         return;
-    }
+    } 
 
     window.location.assign('/items');
 
 })
-
 
 function togglePasswordVisibility(button, input) {
     button.addEventListener('click', (e) => {

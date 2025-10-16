@@ -180,8 +180,6 @@ main {
     position: absolute;
     top: 50%;
     right: 10px;
-    transform: translateY(-50%);
-    /* 정확히 중앙 */
     background: none;
     border: none;
     cursor: pointer;
