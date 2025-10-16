@@ -276,6 +276,14 @@ main {
 }
 
 
+/* 태블릿 */
+@media (min-width: 744px) and (max-width: 1200px){
+    .logo img{
+        width:80%
+    }
+}
+
+
 /* 모바일 */
 @media (max-width: 743px) {
     .login-username,
@@ -283,10 +291,12 @@ main {
     .login-nickname,
     .button-container {
         margin:0px 16px;
+        max-width:400px;
     }
 
     .snslogin {
         margin: 24px 16px;
+        max-width:400px;
     }
 
     .logo img{
