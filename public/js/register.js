@@ -158,10 +158,20 @@ signUpForm.addEventListener('submit', (e) => {
     if (dobbleEmailCheck(emailInput.value)) {
         modal('사용 중인 이메일입니다.');
         return;
-    } 
+    }
 
     window.location.assign('/items');
 
 })
 
 
+function togglePasswordVisibility(button, input) {
+    button.addEventListener('click', (e) => {
+        e.preventDefault();
+        input.type = input.type === 'password' ? 'text' : 'password';
+    });
+}
+
+
+togglePasswordVisibility(pwdEye, pwdInput);
+togglePasswordVisibility(confirmEye, confirmdInput);
