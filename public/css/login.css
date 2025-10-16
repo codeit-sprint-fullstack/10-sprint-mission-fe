@@ -48,14 +48,14 @@ main {
 }
 
 .logo {
-    display:flex;
+    display: flex;
     justify-content: center;
     text-align: center;
     margin: 40px 0;
 }
 
 .logo img {
-    display:inline-block;
+    display: inline-block;
 
 }
 
@@ -95,8 +95,8 @@ main {
 .login-username,
 .login-nickname,
 .login-password {
-    width:100%;
-} 
+    width: 100%;
+}
 
 .login-username input,
 .login-nickname input,
@@ -135,7 +135,7 @@ main {
 }
 
 .signup-container {
-    width:100%;
+    width: 100%;
 }
 
 .loginBtn {
@@ -180,6 +180,8 @@ main {
     position: absolute;
     top: 50%;
     right: 10px;
+    transform: translateY(-50%);
+    /* 정확히 중앙 */
     background: none;
     border: none;
     cursor: pointer;
@@ -196,10 +198,10 @@ main {
 }
 
 .sns-container {
-    display:flex;
+    display: flex;
     justify-content: center;
     align-items: center;
-    width:100%;
+    width: 100%;
 }
 
 .easylogin {
@@ -236,7 +238,7 @@ main {
 }
 
 .button-container {
-    width:100%;
+    width: 100%;
 }
 
 .clearBtn {
@@ -273,49 +275,49 @@ main {
 }
 
 .modal-close {
-    width:120px;
-    height:48px;
+    width: 120px;
+    height: 48px;
     position: absolute;
-    right:30px;
-    bottom:30px;
-    padding:12px 23px;
+    right: 30px;
+    bottom: 30px;
+    padding: 12px 23px;
     background-color: var(--Primary-100, #3692FF);
-    border:none;
+    border: none;
     border-radius: 8px;
-    color:#fff;
+    color: #fff;
     cursor: pointer;
 }
 
 .login-container {
-    width:100%;
+    width: 100%;
 }
 
 
 /* 태블릿 */
-@media (min-width: 744px) and (max-width: 1200px){
-    .logo img{
-        width:80%
+@media (min-width: 744px) and (max-width: 1200px) {
+    .logo img {
+        width: 80%
     }
 }
 
 
 /* 모바일 */
 @media (max-width: 743px) {
+
     .login-username,
     .login-password,
     .login-nickname,
     .button-container {
-        margin:0px 16px;
-        max-width:400px;
+        margin: 0px 16px;
+        max-width: 400px;
     }
 
     .snslogin {
         margin: 24px 16px;
-        max-width:400px;
+        max-width: 400px;
     }
 
-    .logo img{
-        width:60%
+    .logo img {
+        width: 60%
     }
 }
-

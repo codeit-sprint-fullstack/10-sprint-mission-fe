@@ -34,7 +34,8 @@ function showError(input, message) {
     const span = document.createElement('span');
     span.classList.add('eMessage')
     span.textContent = message
-    input.parentElement.append(span);
+    input.parentElement.parentElement.append(span);
+
 }
 
 const isEmailValid = (v) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v.trim());

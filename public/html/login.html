@@ -23,12 +23,14 @@
             <form action="" id='loginform'>
                 <div class="login-username">
                     <label for="username">이메일</label>
-                    <input type="text" id="username" placeholder="이메일을 입력해주세요">
+                    <div>
+                        <input type="text" id="username" placeholder="이메일을 입력해주세요" autocomplete="email">
+                    </div>
                 </div>
                 <div class="login-password">
                     <label for="password">비밀번호</label>
                     <div class="login-eyes">
-                        <input type="password" id="password" placeholder="비밀번호를 입력해주세요">
+                        <input type="password" id="password" placeholder="비밀번호를 입력해주세요" autocomplete="password">
                         <button id="pwdEye" type="button"><img src="../img/eyes.svg" alt=""></button>
                     </div>
                 </div>
@@ -37,7 +39,7 @@
                 </div>
             </form>
         </div>
-        
+
         <div class="sns-container">
             <div class="snslogin">
                 <div class="easylogin">
