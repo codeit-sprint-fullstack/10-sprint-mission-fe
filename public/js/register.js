@@ -1,3 +1,5 @@
+import { USER_DATA, isEmailValid, isPwdValid } from './common.js';
+
 const signUpForm = document.querySelector('#signupform');
 const emailInput = document.querySelector('#username')
 
@@ -6,15 +8,6 @@ const confirmdInput = document.querySelector('#confirmPassword')
 
 const signUpBtn = document.querySelector('.signupbtn')
 
-
-const USER_DATA = [
-    { email: 'codeit1@codeit.com', password: "codeit101!" },
-    { email: 'codeit2@codeit.com', password: "codeit202!" },
-    { email: 'codeit3@codeit.com', password: "codeit303!" },
-    { email: 'codeit4@codeit.com', password: "codeit404!" },
-    { email: 'codeit5@codeit.com', password: "codeit505!" },
-    { email: 'codeit6@codeit.com', password: "codeit606!" },
-]
 
 
 
@@ -36,9 +29,6 @@ function showError(input, message) {
     span.textContent = message
     input.parentElement.parentElement.append(span);
 }
-
-const isEmailValid = (v) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v.trim());
-const isPwdValid = (v) => v.length >= 8;
 
 
 function emailCheck() {

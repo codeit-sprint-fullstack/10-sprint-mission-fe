@@ -1,66 +1,29 @@
+import { USER_DATA, isEmailValid, isPwdValid } from './common.js';
+
 const submitForm = document.querySelector('#loginform');
 
-const emailInput = document.querySelector('#username')
+const emailInput = document.querySelector('#username');
+
 const pwdInput = document.querySelector('#password')
 
 const loginBtn = document.querySelector('#loginbtn')
 
 const pwdEye = document.querySelector('#pwdEye')
 
-const USER_DATA = [
-    { email: 'codeit1@codeit.com', password: "codeit101!" },
-    { email: 'codeit2@codeit.com', password: "codeit202!" },
-    { email: 'codeit3@codeit.com', password: "codeit303!" },
-    { email: 'codeit4@codeit.com', password: "codeit404!" },
-    { email: 'codeit5@codeit.com', password: "codeit505!" },
-    { email: 'codeit6@codeit.com', password: "codeit606!" },
-]
 
 
-
-function clearError(input) {
-    input.classList.remove('errborder');
-
-    const parent = input.parentElement.parentElement;
-    const exist = parent.querySelector('.eMessage');
-    if (exist) {
-        exist.remove();
+function passWordCheck() {
+    const v = pwdInput.value;
+    if (v.length === 0) {
+        showError(pwdInput, '비밀번호를 입력해주세요.'); return false;
     }
-}
-
-function showError(input, message) {
-    clearError(input)
-    input.classList.add('errborder');
-    const span = document.createElement('span');
-    span.classList.add('eMessage')
-    span.textContent = message
-    input.parentElement.parentElement.append(span);
-
-}
-
-const isEmailValid = (v) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v.trim());
-const isPwdValid = (v) => v.length >= 8;
-
-
-function emailCheck() {
-    const v = emailInput.value;
-    if (v.trim() === '') {
-        showError(emailInput, '이메일을 입력해주세요.'); return false;
+    if (!isPwdValid(v)) {
+        showError(pwdInput, '비밀번호를 8자 이상 입력해주세요.');
+        return false;
     }
-    if (!isEmailValid(v)) {
-        showError(emailInput, '잘못된 이메일 형식입니다'); return false;
-    }
-    clearError(emailInput);
+    clearError(pwdInput);
     return true;
 }
-
-
-function findUserByEmail(email) {
-    const target = email.trim().toLowerCase();
-    return USER_DATA.find(u => u.email.toLowerCase() === target) || null;
-}
-
-
 
 function modal(message) {
     const overlay = document.createElement('div')
@@ -85,18 +48,46 @@ function modal(message) {
     document.body.append(overlay);
 }
 
-function passWordCheck() {
-    const v = pwdInput.value;
-    if (v.length === 0) {
-        showError(pwdInput, '비밀번호를 입력해주세요.'); return false;
+
+
+function emailCheck() {
+    const v = emailInput.value;
+    if (v.trim() === '') {
+        showError(emailInput, '이메일을 입력해주세요.'); return false;
     }
-    if (!isPwdValid(v)) {
-        showError(pwdInput, '비밀번호를 8자 이상 입력해주세요.');
-        return false;
+    if (!isEmailValid(v)) {
+        showError(emailInput, '잘못된 이메일 형식입니다'); return false;
     }
-    clearError(pwdInput);
+    clearError(emailInput);
     return true;
 }
+
+function clearError(input) {
+    input.classList.remove('errborder');
+
+    const parent = input.parentElement.parentElement;
+    const exist = parent.querySelector('.eMessage');
+    if (exist) {
+        exist.remove();
+    }
+}
+
+function showError(input, message) {
+    clearError(input)
+    input.classList.add('errborder');
+    const span = document.createElement('span');
+    span.classList.add('eMessage')
+    span.textContent = message
+    input.parentElement.parentElement.append(span);
+}
+
+function findUserByEmail(email) {
+    const target = email.trim().toLowerCase();
+    return USER_DATA.find(u => u.email.toLowerCase() === target) || null;
+}
+
+
+
 
 function updateBtn() {
     const emailOk = isEmailValid(emailInput.value);
