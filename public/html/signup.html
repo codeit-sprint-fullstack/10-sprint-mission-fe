@@ -19,7 +19,7 @@
             </a>
         </div>
 
-        <div>
+        <div class="signup-container">
             <form action="" id="signupform">
                 <div class="login-username">
                     <label for="username">이메일</label>
@@ -27,13 +27,13 @@
                 </div>
                 <div class="login-nickname">
                     <label for="nickname">닉네임</label>
-                    <input type="nickname" id="nickname" placeholder="닉네임을 입력해주세요">
+                    <input type="nickname" id="nickname" placeholder="닉네임을 입력해주세요" autocomplete="username">
                 </div>
 
                 <div class="login-password">
                     <label for="password">비밀번호</label>
                     <div class="login-eyes">
-                        <input type="password" id="password" placeholder="비밀번호를 입력해주세요">
+                        <input type="password" id="password" placeholder="비밀번호를 입력해주세요" autocomplete="password">
                         <button id="pwdEye" type="button"><img src="../img/eyes.svg" alt=""></button>
                     </div>
 
@@ -41,7 +41,7 @@
                 <div class="login-password">
                     <label for="password">비밀번호 확인</label>
                     <div class="login-eyes">
-                        <input type="password" id="confirmPassword" placeholder="비밀번호를 다시 한 번 입력해주세요">
+                        <input type="password" id="confirmPassword" placeholder="비밀번호를 다시 한 번 입력해주세요" autocomplete="current-password">
                         <button id="confirmEye" type="button"><img src="../img/eyes.svg" alt=""></button>
                     </div>
                 </div>

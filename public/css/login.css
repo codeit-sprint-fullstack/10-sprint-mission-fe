@@ -64,11 +64,15 @@ main {
     flex-direction: column;
     width: 100%;
     gap: 24px;
+    justify-content: center;
+    align-items: center;
 }
 
 #signupform {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     width: 100%;
     gap: 24px;
 }
@@ -87,6 +91,12 @@ main {
     line-height: 26px;
 }
 
+
+.login-username,
+.login-nickname,
+.login-password {
+    width:100%;
+} 
 
 .login-username input,
 .login-nickname input,
@@ -187,6 +197,8 @@ main {
 
 .sns-container {
     display:flex;
+    justify-content: center;
+    align-items: center;
     width:100%;
 }
 
@@ -223,6 +235,9 @@ main {
     font-weight: 500;
 }
 
+.button-container {
+    width:100%;
+}
 
 .clearBtn {
     background: var(--brand-blue, #3692FF);
