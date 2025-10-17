@@ -1,3 +1,9 @@
+:root {
+    --width: 33vw;
+    --image-size: 5rem;
+    --font-size: 4rem;
+}
+
 body {
     background-color: #FCFCFC;
 }
@@ -8,7 +14,7 @@ body {
     gap: 1.5rem;
     margin: 0 auto;
     margin-top: 14.44vh;
-    width: 33vw;
+    width: var(--width);
 }
 
 .main-container > header {
@@ -19,7 +25,7 @@ body {
 
     color: var(--primary-100);
     font-family: 'ROKAF Sans';
-    font-size: 4rem;
+    font-size: var(--font-size);
     font-style: normal;
     font-weight: 700;
     line-height: normal;
@@ -34,8 +40,8 @@ body {
 }
 
 .main-container > header > a > img {
-    width: 5rem;
-    height: 5rem;
+    width: var(--image-size);
+    height: var(--image-size);
 }
 
 form {
@@ -50,29 +56,43 @@ form > label {
     align-self: flex-start;
 }
 
-form > .input-wrapper > input {
-    border: 0;
-    width: 33vw;
-    height: 5vh;
-    padding-top: 1vh;
-    padding-bottom: 1vh;
-    padding-left: 1.5vw;
-    padding-right: 4vw;
-    margin-bottom: 1rem;
-    border-radius: 0.75rem;
-    background-color: var(--gray-100);
-    box-sizing: border-box;
-}
-
 form > .input-wrapper {
+    position: relative;
     display: flex;
     flex-direction: column;
     margin-bottom: 0.5vh;
     align-items: center;
 }
 
+form > .input-wrapper > input {
+    border: 0;
+    width: var(--width);
+    height: 5vh;
+    padding: 1vh 4vw 1vh 1.5vw;
+    margin-bottom: 1rem;
+    border-radius: 0.75rem;
+    background-color: var(--gray-100);
+    box-sizing: border-box;
+    padding-left: 0;
+    text-indent: 2rem;
+}
+
 form > .input-wrapper > input:focus {
     border: 1px solid var(--primary-100);
+}
+
+form > .input-wrapper > input.invalid {
+    border: 1px solid red;
+}
+
+form > .input-wrapper > .error-message {
+    color: red;
+    font-size: 0.6rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    align-self: flex-start;
+    padding-left: 1.5rem;
 }
 
 form > .input-wrapper> input::placeholder {
@@ -83,45 +103,47 @@ form > .input-wrapper> input::placeholder {
 }
 
 form > .input-wrapper > img {
-    position: relative;
-    margin-top: -5.5vh;
-    margin-left: 15vw;
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-75%);
     cursor: pointer;
-    flex-shrink: 0;
     width: 1.5rem;
     height: 1.5rem;
-    
-    align-self: flex-end;
-    margin-right: 1vw;
-    margin-bottom: 2vh;
+    object-fit: contain;
 }
 
 form > button {
     cursor: pointer;
-    width: 33vw;
+    width: var(--width);
     height: 5vh;
     padding: 1vh 7.75vw;
     border-radius: 2.5rem;
-    background-color: var(--gray-400);
+    background-color: var(--primary-100);
     color: var(--gray-100);
     font-weight: 600;
     font-size: 1rem;
     border: 0;
 }
 
-.oAuth {
-    width: 33vw;
-    height: 6vh;
+form > button:disabled {
+    background-color: var(--gray-400);
+}
 
+.oAuth {
+    margin: 0 auto;
+    height: 6vh;
+    width: var(--width);
     background-color: #E6F2FF;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1.44vw;
+    padding: 1.5rem;
 
     font-size: 0.75rem;
     font-weight: 500;
     line-height: 1.625rem;
+    border-radius: 0.5rem;
 }
 
 .oAuth > .icon-box {
@@ -154,10 +176,74 @@ footer {
     font-size: 0.75rem;
     font-weight: 500;
     line-height: 1.5rem;
+    padding-left: 1rem;
 }
 
 footer > a {
     color: var(--primary-100);
     text-decoration: underline;
     cursor: pointer;
+}
+
+.modal {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal > .modal-message {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: white;
+    padding: 10vh 10vw;
+    border-radius: 0.7rem;
+}
+
+.modal > .modal-message > .modal-button {
+    position: absolute;
+    bottom: 2vh;
+    right: 2vw;
+    background-color: var(--primary-100);
+    padding: 1vh 2vw;
+    border-radius: 0.7rem;
+    cursor: pointer;
+    color: white;
+}
+
+@media (min-width: 1200px) {
+    :root {
+        --width: 33vw;
+    }
+}
+
+@media (max-width: 1199px) {
+    :root {
+        --width: 90vw;
+    }
+}
+
+@media (max-width: 744px) {
+    :root {
+        --width: calc(100vw - 32px);
+        --image-size: 3rem;
+        --font-size: 2.5rem;
+    }
+
+    .main-container,
+    form > .input-wrapper > input,
+    form > button,
+    .oAuth {
+        max-width: 400px;
+    }
 }

@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="/reset.css">
     <link rel="stylesheet" href="./register-style.css">
     <title>회원가입</title>
+
+    <script src="auth-common-script.js" defer></script>
 </head>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-37XJCRCCF0"></script>
@@ -38,16 +40,16 @@
             <label for="password">비밀번호</label>
             <div class="input-wrapper">
                 <input placeholder="비밀번호를 입력해주세요" id="password" type="password">
-                <img src="./images/btn-visibility.png" alt="비밀번호 표시/비표시">
+                <img class="show-toggle" src="./images/btn-visibility.png" alt="비밀번호 표시/비표시">
             </div>
 
             <label for="password-retry">비밀번호 확인</label>
             <div class="input-wrapper">
                 <input placeholder="비밀번호를 다시 한 번 입력해주세요" id="password-retry" type="password">
-                <img src="./images/btn-visibility.png" alt="비밀번호 표시/비표시">
+                <img class="show-toggle" src="./images/btn-visibility.png" alt="비밀번호 표시/비표시">
             </div>
 
-            <button>회원가입</button>
+            <button id="submit">회원가입</button>
         </form>
         <section class="oAuth">
             간편 로그인하기
