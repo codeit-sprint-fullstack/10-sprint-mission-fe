@@ -1,5 +1,4 @@
-/* [sprint2_심화 요구사항] palette에 있는 color값들을 css 변수로 등록해서 사용합니다.
-   바로 아래에 로그인 페이지와 회원가입 페이지에서 반복 사용되는 [#3692FF] blue color를 사용자 지정 속성 선언하여 사용하였습니다. */ 
+
 :root {
     --blue: #3692FF;
 }
@@ -8,16 +7,48 @@
     width: 100%;
     max-width: 640px;
     margin: 0 auto;
-    background-color: #FCFCFC;    
+    background-color: #FCFCFC;        
 }
 
-.logo_pandaMarket {    
+@media (min-width: 1200px) {
+    .auth, .logo_pandaMarket {
+        width: 100%;
+    }
+}
+
+@media (max-width: 1199px) {
+    .auth, .logo_pandaMarket {
+        width: 100%;
+    }
+}
+
+@media (max-width: 743px) {
+    .auth, .logo_pandaMarket {
+        width: 80%; 
+    }
+}
+
+.logo_pandaMarket {   
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 1rem;
     margin-bottom: 2rem;
     /* 위의 margin-top은 6rem, margin-bottom은 4rem이어야 시안과 같으나, 브라우저 변동 사이즈에 비해 이미지가 좀 큰 것 같아 줄여봤습니다. */
+}
+
+#logoImg {    
+    width: 396px;
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+}
+
+@media (max-width: 743px) {   
+    #logoImg {
+        width: 50%;
+    }
 }
 
 .input_item {
