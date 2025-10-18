@@ -1,5 +1,4 @@
-/* [sprint2_심화 요구사항] palette에 있는 color값들을 css 변수로 등록해서 사용합니다.
-   바로 아래에 로그인 페이지와 회원가입 페이지에서 반복 사용되는 [#3692FF] blue color를 사용자 지정 속성 선언하여 사용하였습니다. */ 
+
 :root {
     --blue: #3692FF;
 }
@@ -8,10 +7,32 @@
     width: 100%;
     max-width: 640px;
     margin: 0 auto;
-    background-color: #FCFCFC;    
+    background-color: #FCFCFC;        
 }
 
-.logo_pandaMarket {    
+@media (min-width: 1200px) {
+    .auth, .logo_pandaMarket {
+        width: 100%;
+    }
+}
+
+@media (max-width: 1199px) {
+    .auth, .logo_pandaMarket {
+        width: 100%;
+    }
+}
+
+@media (max-width: 743px) {
+    .auth, .logo_pandaMarket {
+        width: 80%; 
+    }
+    #panda_logoImg {
+        width: 50%;
+    }
+}
+
+.logo_pandaMarket {   
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -20,8 +41,15 @@
     /* 위의 margin-top은 6rem, margin-bottom은 4rem이어야 시안과 같으나, 브라우저 변동 사이즈에 비해 이미지가 좀 큰 것 같아 줄여봤습니다. */
 }
 
+#logoImg {    
+    width: 396px;
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+}
+
 .input_item {
-    width: 100%;
+    width: 100%;    
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -76,6 +104,7 @@ input:focus {
 }
 
 .eye {
+    width: 24px;
     position: absolute;
     right: 24px;      
 }
@@ -97,7 +126,7 @@ input:focus {
 }
 
 .social_login {
-    width: 100%;   
+    width: 100%;      
     background-color: #E6F2FF;
     padding: 1.6rem 2.3rem;
     margin-top: 2.4rem;
@@ -114,12 +143,34 @@ input:focus {
     border-radius: 0.8rem;
 }
 
-.social_button {
+.social_button {    
+    width: 100px;
+    height: 42px;
     position: absolute;
-    right: 23px;
-    gap: 1.6rem;
+    top: 0.8rem;
+    right: 2.3rem;
     display: flex;
+    justify-content: space-between;
     align-items: center;
+}
+
+#goo {
+    width: 42px;
+    height: 42px;
+    position: absolute;
+    top: 0;     
+    display: flex;
+    align-items: center;    
+}
+
+#kaka {
+    width: 42px;
+    height: 42px;
+    position: absolute;
+    top: 0;
+    right: 0;    
+    display: flex;
+    align-items: center;    
 }
 
 .signup {
