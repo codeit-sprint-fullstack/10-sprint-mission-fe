@@ -26,6 +26,9 @@
     .auth, .logo_pandaMarket {
         width: 80%; 
     }
+    #panda_logoImg {
+        width: 50%;
+    }
 }
 
 .logo_pandaMarket {   
@@ -45,14 +48,8 @@
     align-items: center;    
 }
 
-@media (max-width: 743px) {   
-    #logoImg {
-        width: 50%;
-    }
-}
-
 .input_item {
-    width: 100%;
+    width: 100%;    
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -107,6 +104,7 @@ input:focus {
 }
 
 .eye {
+    width: 24px;
     position: absolute;
     right: 24px;      
 }
@@ -128,7 +126,7 @@ input:focus {
 }
 
 .social_login {
-    width: 100%;   
+    width: 100%;      
     background-color: #E6F2FF;
     padding: 1.6rem 2.3rem;
     margin-top: 2.4rem;
@@ -145,12 +143,34 @@ input:focus {
     border-radius: 0.8rem;
 }
 
-.social_button {
+.social_button {    
+    width: 100px;
+    height: 42px;
     position: absolute;
-    right: 23px;
-    gap: 1.6rem;
+    top: 0.8rem;
+    right: 2.3rem;
     display: flex;
+    justify-content: space-between;
     align-items: center;
+}
+
+#goo {
+    width: 42px;
+    height: 42px;
+    position: absolute;
+    top: 0;     
+    display: flex;
+    align-items: center;    
+}
+
+#kaka {
+    width: 42px;
+    height: 42px;
+    position: absolute;
+    top: 0;
+    right: 0;    
+    display: flex;
+    align-items: center;    
 }
 
 .signup {
