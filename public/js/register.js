@@ -1,0 +1,167 @@
+import { USER_DATA, isEmailValid, isPwdValid } from './common.js';
+
+const signUpForm = document.querySelector('#signupform');
+const emailInput = document.querySelector('#username')
+
+const pwdInput = document.querySelector('#password')
+const confirmdInput = document.querySelector('#confirmPassword')
+
+const signUpBtn = document.querySelector('.signupbtn')
+
+
+
+
+function clearError(input) {
+    input.classList.remove('errborder');
+
+    const parent = input.parentElement.parentElement;
+    const exist = parent.querySelector('.eMessage');
+    if (exist) {
+        exist.remove();
+    }
+}
+
+function showError(input, message) {
+    clearError(input)
+    input.classList.add('errborder');
+    const span = document.createElement('span');
+    span.classList.add('eMessage')
+    span.textContent = message
+    input.parentElement.parentElement.append(span);
+}
+
+
+function emailCheck() {
+    const v = emailInput.value;
+    if (v.trim() === '') {
+        showError(emailInput, '이메일을 입력해주세요.'); return false;
+    }
+    if (!isEmailValid(v)) {
+        showError(emailInput, '잘못된 이메일 형식입니다'); return false;
+    }
+    clearError(emailInput);
+    return true;
+}
+
+
+function passWordCheck() {
+    const v = pwdInput.value;
+
+    if (v.length === 0) {
+        showError(pwdInput, '비밀번호를 입력해주세요.'); return false;
+    }
+    if (!isPwdValid(v)) {
+        showError(pwdInput, '비밀번호를 8자 이상 입력해주세요.');
+        return false;
+    }
+
+    clearError(pwdInput);
+    return true;
+}
+
+function confirmdCheck() {
+    const c = confirmdInput.value;
+    const v = pwdInput.value;
+
+    if (c.length === 0) {
+        showError(confirmdInput, '비밀번호를 입력해주세요.'); return false;
+    }
+    if (!isPwdValid(c)) {
+        showError(confirmdInput, '비밀번호를 8자 이상 입력해주세요.');
+        return false;
+    }
+    if (c !== v) {
+        showError(confirmdInput, '비밀번호가 일치하지 않습니다.')
+        return false;
+    }
+    clearError(confirmdInput);
+    return true;
+}
+
+function dobbleEmailCheck(email) {
+    const target = email.trim().toLowerCase();
+    return USER_DATA.some(u => u.email.toLowerCase() === target);
+}
+
+
+
+
+function modal(message) {
+    const overlay = document.createElement('div');
+    overlay.classList.add('modal-overlay');
+
+    const modal = document.createElement('div');
+    modal.classList.add('modal');
+
+    const msg = document.createElement('p')
+    msg.textContent = message;
+
+    const closeBtn = document.createElement('button');
+    closeBtn.type = 'button';
+    closeBtn.textContent = '확인';
+    closeBtn.classList.add('modal-close');
+
+    closeBtn.addEventListener('click', () => {
+        overlay.remove();
+    })
+
+    modal.append(msg, closeBtn);
+    overlay.append(modal);
+    document.body.append(overlay);
+}
+
+
+
+function updateBtn() {
+    const emailOk = isEmailValid(emailInput.value);
+    const pwdOk = isPwdValid(pwdInput.value);
+    const confirmOk = isPwdValid(confirmdInput.value) && (confirmdInput.value === pwdInput.value);
+
+    const allOk = emailOk && pwdOk && confirmOk;
+
+
+    signUpBtn.disabled = !allOk;
+    signUpBtn.setAttribute('aria-disabled', String(!allOk));
+    signUpBtn.classList.toggle('clearBtn', allOk);
+
+}
+
+emailInput.addEventListener('input', updateBtn);
+pwdInput.addEventListener('input', updateBtn);
+confirmdInput.addEventListener('input', updateBtn);
+
+
+emailInput.addEventListener('blur', emailCheck);
+pwdInput.addEventListener('blur', passWordCheck);
+confirmdInput.addEventListener('blur', confirmdCheck);
+
+
+
+signUpForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const ok1 = emailCheck();
+    const ok2 = passWordCheck();
+    const ok3 = confirmdCheck();
+    updateBtn();
+    if (!ok1 || !ok2 || !ok3) {
+        return;
+    }
+    if (dobbleEmailCheck(emailInput.value)) {
+        modal('사용 중인 이메일입니다.');
+        return;
+    } 
+
+    window.location.assign('/items');
+
+})
+
+function togglePasswordVisibility(button, input) {
+    button.addEventListener('click', (e) => {
+        e.preventDefault();
+        input.type = input.type === 'password' ? 'text' : 'password';
+    });
+}
+
+
+togglePasswordVisibility(pwdEye, pwdInput);
+togglePasswordVisibility(confirmEye, confirmdInput);

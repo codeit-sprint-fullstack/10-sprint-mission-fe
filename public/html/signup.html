@@ -19,45 +19,49 @@
             </a>
         </div>
 
-        <div>
-            <form action="" class="loginform">
+        <div class="signup-container">
+            <form action="" id="signupform">
                 <div class="login-username">
-                    <label for="username">이메일</label>
-                    <input type="text" id="username" placeholder="이메일을 입력해주세요">
+                    <div>
+                        <label for="username">이메일</label>
+                        <input type="text" id="username" placeholder="이메일을 입력해주세요" autocomplete="email">
+                    </div>
                 </div>
                 <div class="login-nickname">
                     <label for="nickname">닉네임</label>
-                    <input type="password" id="password" placeholder="닉네임을 입력해주세요">
+                    <input type="nickname" id="nickname" placeholder="닉네임을 입력해주세요" autocomplete="username">
                 </div>
 
                 <div class="login-password">
                     <label for="password">비밀번호</label>
                     <div class="login-eyes">
-                        <input type="password" id="password" placeholder="비밀번호를 입력해주세요">
-                        <a href=""><img src="../img/eyes.svg" alt=""></a>
-                        <!-- button이 더 효율성이 좋음 -->
+                        <input type="password" id="password" placeholder="비밀번호를 입력해주세요" autocomplete="password">
+                        <button id="pwdEye" type="button"><img src="../img/eyes.svg" alt=""></button>
                     </div>
 
                 </div>
                 <div class="login-password">
                     <label for="password">비밀번호 확인</label>
                     <div class="login-eyes">
-                        <input type="password" id="password" placeholder="비밀번호를 다시 한 번 입력해주세요">
-                        <a href=""><img src="../img/eyes.svg" alt=""></a>
+                        <input type="password" id="confirmPassword" placeholder="비밀번호를 다시 한 번 입력해주세요"
+                            autocomplete="current-password">
+                        <button id="confirmEye" type="button"><img src="../img/eyes.svg" alt=""></button>
                     </div>
                 </div>
-                <div>
-                    <button type="submit">회원가입</button>
-                    </div>
+                <div class="button-container">
+                    <button class="signupbtn" type="submit" disabled>회원가입</button>
+                </div>
             </form>
         </div>
 
-        <div class="snslogin">
-            <div class="easylogin">
-                <a class="easylogin-btn" href="">간편 로그인하기</a>
-                <div>
-                    <a href="https://google.com/"><img src="../img/SNSLOGOS/google.svg" alt=""></a>
-                    <a href="http://kakaocorp.com/page/"><img src="../img/SNSLOGOS/kakao.svg" alt=""></a>
+        <div class="sns-container">
+            <div class="snslogin">
+                <div class="easylogin">
+                    <a class="easylogin-btn" href="">간편 로그인하기</a>
+                    <div>
+                        <a href="https://google.com/"><img src="../img/SNSLOGOS/google.svg" alt=""></a>
+                        <a href="http://kakaocorp.com/page/"><img src="../img/SNSLOGOS/kakao.svg" alt=""></a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -66,6 +70,8 @@
             <p>이미 회원이신가요? <a href="./login.html">로그인</a></p>
         </div>
     </main>
+
+    <script type="module" src="../js/register.js"></script>
 </body>
 
 </html>
