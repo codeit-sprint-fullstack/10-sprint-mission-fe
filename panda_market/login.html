@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Login</title>
+    <title>판다마켓</title>
     <link rel="stylesheet" href="./CSS/signup.css" />
   </head>
   <body>
@@ -22,22 +22,24 @@
           <label class="email">이메일</label>
           <input
             type="email"
+            id="email_input"
             placeholder="이메일을 입력해주세요"
             class="email_input"
           />
+          <p class="email_error_message"></p>
         </div>
         <div class="section">
           <label class="password">비밀번호</label>
           <input
             type="password"
+            id="password_input"
             placeholder="비밀번호를 입력해주세요"
             class="password_input"
           />
+          <p class="password_error_message"></p>
         </div>
       </div>
-      <button class="signup-button" onclick="location.href='./signup.html'">
-        로그인
-      </button>
+      <button class="login_button" disabled>로그인</button>
       <div class="login-option">
         <span>간편 로그인하기</span>
         <div class="sns-login">
@@ -61,4 +63,5 @@
       </p>
     </form>
   </body>
+  <script src="./JS/login.js"></script>
 </html>
