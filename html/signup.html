@@ -28,17 +28,18 @@
 </a>
             </section>
             <section class="panda_login_01_form mt40">
-                <form action="" method="post">
+                <form action="" id="panda_btn_login_02" method="post">
 
                     <!-- 아이디 입력 -->
                     <div class="panda_input_wrap ">
                         <label for="panda_email01" class="Text-lg-bold">이메일</label>
                         <input type="email" class="panda_input" placeholder="이메일을 입력해주세요" id="panda_email01">
+                        <p id="email-message"></p>
                     </div>
                     <!-- 닉네임 입력 -->
                     <div class="panda_input_wrap mt24">
                         <label for="panda_email01" class="Text-lg-bold">닉네임</label>
-                        <input type="text" class="panda_input" placeholder="닉네임을 입력해주세요" id="panda_email01">
+                        <input type="text" class="panda_input" placeholder="닉네임을 입력해주세요" id="panda_email02">
                     </div>
 
 
@@ -46,21 +47,23 @@
                     <div class="panda_input_wrap panda_input_icon mt24">
                         <label class="Text-lg-bold">비밀번호</label>
                         <div class="password_hid_wrap">
-                            <input type="password" class="panda_input password_hid" placeholder="비밀번호를 입력해주세요">
+                            <input type="password" class="panda_input password_hid" id="panda_pw" placeholder="비밀번호를 입력해주세요">
                             <button type="button" class="password_hid_icon_btn" onclick="togglePassword(this)"></button>
+                            <p id="pw-message" class="mt16"></p>
                         </div>
                     </div>
 
                     <div class="panda_input_wrap panda_input_icon mt24">
                         <label class="Text-lg-bold">비밀번호 확인</label>
                         <div class="password_hid_wrap">
-                            <input type="password" class="panda_input password_hid" placeholder="비밀번호를 다시 입력해주세요">
+                            <input type="password" class="panda_input password_hid" id="re_panda_pw" placeholder="비밀번호를 다시 입력해주세요">
                             <button type="button" class="password_hid_icon_btn" onclick="togglePassword(this)"></button>
+                             <p id="re_pw-message" class="mt16"></p>
                         </div>
                     </div>
 
 <!-- 로그인 데이터입력시 클래스에 btn_disabled를 붙여서 활성화 -->
-                    <button class="panda_btn_login mt24" type="submit">로그인</button>
+                    <button class="panda_btn_login mt24" disabled type="submit">회원가입</button>
 
                 </form>
             </section>
@@ -82,22 +85,7 @@
         </article>
     </main>
 
-    <script>
-        function togglePassword(btn) {
-            // 버튼과 가장 가까운 input을 찾음
-            const wrapper = btn.closest(".password_hid_wrap");
-            const input = wrapper.querySelector("input");
-
-            if (input.type === "password") {
-                input.type = "text";
-                btn.classList.add("on");
-            } else {
-                input.type = "password";
-                btn.classList.remove("on");
-            }
-        }
-    </script>
-
+<script src="../script/signup.js"></script>
 
 </body>
 

@@ -155,7 +155,7 @@ function findEmail(e) {
 }
 
 
-panda_btn_login_click_event.addEventListener('click', findEmail);
+panda_btn_login_click_event.addEventListener('submit', findEmail);
 
 
 
