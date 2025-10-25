@@ -48,6 +48,20 @@ input {
     background: var(--Cool-Gray-100, #F3F4F6);
 }
 
+input.error{
+    border: 1px;
+    border-color: red;
+
+}
+
+.error-message{
+    color: red;
+    font-size: 13px;
+    margin-top: 5px;
+
+}
+
+
 
 button {
     margin-top: 24px;
@@ -66,6 +80,10 @@ button {
 
 }
 
+button.active {
+    background-color: #007bff;
+    cursor: pointer;
+  }
 
 .easy_login {
     margin-top: 24px;

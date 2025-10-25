@@ -28,7 +28,6 @@
 
   <body>
   
-
     <div>
       <div class="logo">
        <a href="./index.html"> <img src="./images/판다 얼굴.svg" alt="logo"> </a>
@@ -37,15 +36,17 @@
       </div>
   
       <div class="list">이메일</div>
-      <input type="text" name="email" id="email"><br>
+      <input type="text"  id="email">
+      <div id = "emailError" class = "error-message"></div>
    
       <div class="list">비밀번호</div>
       <div class = "password">
           <input type="password" name="password" id="password">
           <img src = "./images/btn_visibility_off_24px.svg">
       </div>
+      <div id="passwordError" class="error-message"></div>
   
-      <button type="submit">로그인</button>
+      <button type="button" id="loginBtn" > 로그인</button>
    
       <div class = "easy_login">
           
@@ -61,7 +62,7 @@
   
       <div class = "tail">
           <p >판다마켓이 처음이신가요?
-          <a href="회원가입.html">회원가입</a>
+          <a href="join.html">회원가입</a>
           </p>
   
       </div>
@@ -70,6 +71,99 @@
   
   
     </div>
+  <script>
+
+const USER_DATA = [
+      { email: 'codeit1@codeit.com', password: "codeit101!" },
+      { email: 'codeit2@codeit.com', password: "codeit202!" },
+      { email: 'codeit3@codeit.com', password: "codeit303!" },
+      { email: 'codeit4@codeit.com', password: "codeit404!" },
+      { email: 'codeit5@codeit.com', password: "codeit505!" },
+      { email: 'codeit6@codeit.com', password: "codeit606!" },
+    ];
+
+const emailInput = document.getElementById("email");
+    const passwordInput = document.getElementById("password");
+    const loginBtn = document.getElementById("loginBtn");
+
+    const emailError = document.getElementById("emailError");
+    const passwordError = document.getElementById("passwordError");
+
+    // 이메일 유효성 검사
+    emailInput.addEventListener("focusout", () => {
+      const email = emailInput.value.trim();
+      if (!email) {
+        setError(emailInput, emailError, "이메일을 입력해주세요.");
+      } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+        setError(emailInput, emailError, "잘못된 이메일 형식입니다.");
+      } else {
+        clearError(emailInput, emailError);
+      }
+      toggleButton();
+    });
+
+    // 비밀번호 유효성 검사
+    passwordInput.addEventListener("blur", () => {
+      const password = passwordInput.value.trim();
+      if (!password) {
+        setError(passwordInput, passwordError, "비밀번호를 입력해주세요.");
+      } else if (password.length < 8) {
+        setError(passwordInput, passwordError, "비밀번호를 8자 이상 입력해주세요.");
+      } else {
+        clearError(passwordInput, passwordError);
+      }
+      toggleButton();
+    });
+
+
+    // 공통 에러 처리 함수
+    function setError(input, errorElement, message) {
+      input.classList.add("error");
+      errorElement.textContent = message;
+    }
+
+    function clearError(input, errorElement) {
+      input.classList.remove("error");
+      errorElement.textContent = "";
+    }
+
+    // 버튼 활성화 조건 확인
+    function toggleButton() {
+      const hasError =
+        emailError.textContent ||
+        passwordError.textContent;
+
+      const hasEmpty =
+        !emailInput.value.trim() ||
+        !passwordInput.value.trim();
+
+      if (!hasError && !hasEmpty) {
+        loginBtn.classList.add("active");
+        loginBtn.disabled = false;
+      } else {
+        loginBtn.classList.remove("active");
+        loginBtn.disabled = true;
+      }
+    }
+
+    // 로그인 버튼 클릭 시 /items 이동
+    loginBtn.addEventListener("click", () => {
+      const email = emailInput.value.trim();
+      const password = passwordInput.value.trim();
+
+      // 이메일과 비밀번호가 모두 일치하는 사용자 찾기
+      const user = USER_DATA.find((user) => user.email === email && user.password === password);
+
+      if (!user) {
+        alert("이메일 또는 비밀번호가 일치하지 않습니다.");
+        return;
+      }
+
+      // 로그인 성공
+      alert("로그인 성공!");
+      window.location.href = "items.html";
+    });
   
+  </script>
   </body>
 </html>

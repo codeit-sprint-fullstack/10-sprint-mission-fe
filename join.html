@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+  <link rel="stylesheet" href="./styles/login.css">
+</head>
+
+
+<body>
+<div>
+    <div class="logo">
+        <a href="./index.html"> <img src="./images/판다 얼굴.svg" alt="logo"></a>
+    <p> 판다마켓 </p>
+
+    </div>
+
+    <div class="list">이메일</div>
+        <input type="text"  id="email" >
+        <div id = "emailError" class = "error-message"></div>
+ 
+ 
+    <div class="list">닉네임</div>
+        <input type="text" id="nickname">
+
+    <div class="list">비밀번호</div>
+    <div class = "password">
+        <input type="password"  id="password">
+        <img src = "./images/btn_visibility_off_24px.svg"><br>
+    </div>    
+    <div id="passwordError" class="error-message"></div>
+
+    <div class="list">비밀번호확인</div>
+    <div class = "password">
+        <input type="password"  id="confirmPassword">
+        <img src = "./images/btn_visibility_off_24px.svg"><br>
+    </div>
+    <div id="confirmError" class="error-message"></div>
+
+
+
+    <button type="button" id ="signupBtn" disabled>회원가입</button>
+    
+    <div class = "easy_login">
+        
+        <div>간편 로그인하기 </div>
+        <div class = "login_button">
+            <a href ="https://www.google.com"><img src = "./images/google.png" alt = "google login">
+            <a href ="https://www.kakao.com"><img src = "./images/kakao.svg" alt = "kakao login"></a>
+        </div>
+            
+    
+        
+    </div>
+
+    <div class="tail">
+        <p >이미 회원이신가요??
+        <a href="login.html">로그인</a>
+        </p>
+
+    </div>
+
+</div>
+
+<script>
+
+const USER_DATA = [
+      { email: 'codeit1@codeit.com', password: "codeit101!" },
+      { email: 'codeit2@codeit.com', password: "codeit202!" },
+      { email: 'codeit3@codeit.com', password: "codeit303!" },
+      { email: 'codeit4@codeit.com', password: "codeit404!" },
+      { email: 'codeit5@codeit.com', password: "codeit505!" },
+      { email: 'codeit6@codeit.com', password: "codeit606!" },
+    ];
+
+
+    const emailInput = document.getElementById("email");
+    const nicknameInput = document.getElementById("nickname");
+    const passwordInput = document.getElementById("password");
+    const confirmInput = document.getElementById("confirmPassword");
+    const signupBtn = document.getElementById("signupBtn");
+
+    const emailError = document.getElementById("emailError");
+    const passwordError = document.getElementById("passwordError");
+    const confirmError = document.getElementById("confirmError");
+
+    // 이메일 유효성 검사
+    emailInput.addEventListener("focusout", () => {
+      const email = emailInput.value.trim();
+      if (!email) {
+        setError(emailInput, emailError, "이메일을 입력해주세요.");
+      } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+        setError(emailInput, emailError, "잘못된 이메일 형식입니다.");
+      } else {
+        clearError(emailInput, emailError);
+      }
+      toggleButton();
+    });
+
+    // 비밀번호 유효성 검사
+    passwordInput.addEventListener("blur", () => {
+      const password = passwordInput.value.trim();
+      if (!password) {
+        setError(passwordInput, passwordError, "비밀번호를 입력해주세요.");
+      } else if (password.length < 8) {
+        setError(passwordInput, passwordError, "비밀번호를 8자 이상 입력해주세요.");
+      } else {
+        clearError(passwordInput, passwordError);
+      }
+      toggleButton();
+    });
+
+    // 비밀번호 확인 유효성 검사
+    confirmInput.addEventListener("blur", () => {
+      const confirm = confirmInput.value.trim();
+      const password = passwordInput.value.trim();
+      if (!confirm) {
+        setError(confirmInput, confirmError, "비밀번호 확인을 입력해주세요.");
+      } else if (confirm !== password) {
+        setError(confirmInput, confirmError, "비밀번호가 일치하지 않습니다.");
+      } else {
+        clearError(confirmInput, confirmError);
+      }
+      toggleButton();
+    });
+
+    // 공통 에러 처리 함수
+    function setError(input, errorElement, message) {
+      input.classList.add("error");
+      errorElement.textContent = message;
+    }
+
+    function clearError(input, errorElement) {
+      input.classList.remove("error");
+      errorElement.textContent = "";
+    }
+
+    // 버튼 활성화 조건 확인
+    function toggleButton() {
+      const hasError =
+        emailError.textContent ||
+        passwordError.textContent ||
+        confirmError.textContent;
+
+      const hasEmpty =
+        !emailInput.value.trim() ||
+        !nicknameInput.value.trim() ||
+        !passwordInput.value.trim() ||
+        !confirmInput.value.trim();
+
+      if (!hasError && !hasEmpty) {
+        signupBtn.classList.add("active");
+        signupBtn.disabled = false;
+      } else {
+        signupBtn.classList.remove("active");
+        signupBtn.disabled = true;
+      }
+    }
+
+    // 회원가입 버튼 클릭 시 동작
+    signupBtn.addEventListener("click", (e) => {
+      const email = emailInput.value.trim();
+      const password = passwordInput.value.trim();
+      const nickname = nicknameInput.value.trim();
+
+      // 이메일 중복 확인
+      const exists = USER_DATA.some((user) => user.email === email);
+
+      if (exists) {
+        alert("사용 중인 이메일입니다.");
+      } else {
+        alert("회원가입이 완료되었습니다!");
+        // 새로운 유저 추가 (임시)
+        USER_DATA.push({ email, password, nickname });
+        window.location.href = "login.html";
+      }
+    });
+
+
+
+</script>
+
+
+
+
+
+
+
+</body>
+</html>

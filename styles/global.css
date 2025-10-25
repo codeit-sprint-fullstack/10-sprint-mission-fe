@@ -22,13 +22,6 @@ a {
   color: inherit;
 }
 
-button {
-  background: none;
-  border: none;
-  outline: none;
-  box-shadow: none;
-  cursor: pointer;
-}
 
 /* 
   - 이미지는 기본적으로 inline 요소로 취급되기 때문에 텍스트의 baseline에 맞춰서 정렬됩니다. 
