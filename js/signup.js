@@ -1,9 +1,9 @@
 document.addEventListener("DOMContentLoaded", function () {
+  const form = document.getElementById("signup-form");
   const email = document.getElementById("email");
   const pw = document.getElementById("password");
   const pw2 = document.getElementById("passwordConfirm");
   const signupBtn = document.getElementById("signup-btn");
-  const form = document.getElementById("signup-form");
 
   /* ---------------------------
    * 비밀번호 눈 아이콘 (미션2)
@@ -154,17 +154,26 @@ document.addEventListener("DOMContentLoaded", function () {
   // submit: 최종 표시용 검증 후 이동
   form.addEventListener("submit", function (e) {
     e.preventDefault();
+
     const ok =
       validateEmail_show() &&
       validatePassword_show() &&
       validatePasswordConfirm_show();
     refreshButton();
-    if (ok) {
-      alert("회원가입 성공!");
-      location.href = "../pages/login.html";
-    }
-  });
+    if (!ok) return;
 
-  // 초기 상태
-  refreshButton();
+    const emailVal = (email.value || "").trim();
+    const pwVal = pw.value || "";
+    const nickVal = (document.getElementById("username")?.value || "").trim();
+
+    if (DB.findByEmail(emailVal)) {
+      alert("사용 중인 이메일입니다");
+      return;
+    }
+
+    DB.addUser({ email: emailVal, password: pwVal, nickname: nickVal });
+
+    alert("회원가입이 완료되었습니다. 로그인 페이지로 이동합니다.");
+    location.href = "/pages/login.html";
+  });
 });

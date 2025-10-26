@@ -1,8 +1,9 @@
 document.addEventListener("DOMContentLoaded", function () {
+  console.log("✅ DOM fully loaded");
+  const form = document.getElementById("login-form");
   const email = document.getElementById("email");
   const password = document.getElementById("password");
   const loginBtn = document.getElementById("login-btn");
-  const form = document.getElementById("login-form");
 
   // 눈 아이콘
   document.querySelectorAll(".toggle-password").forEach((icon) => {
@@ -108,11 +109,20 @@ document.addEventListener("DOMContentLoaded", function () {
     e.preventDefault();
     const ok = validateEmail_show() && validatePassword_show();
     refreshButton();
-    if (ok) {
-      location.href = "/items"; // 필요시 경로를 '/pages/items.html'로 변경
-    }
-  });
+    if (!ok) return;
 
-  // 초기 상태
-  refreshButton();
+    const emailVal = (email.value || "").trim();
+    const pwVal = password.value || "";
+
+    // - 이메일이 없거나
+    // - 이메일은 있으나 비밀번호가 다르면
+    //   → "비밀번호가 일치하지 않습니다." alert
+    if (!DB.verify(emailVal, pwVal)) {
+      alert("비밀번호가 일치하지 않습니다.");
+      return;
+    }
+
+    // 둘 다 맞으면 /items 로 이동 (정적 경로)
+    location.href = "/pages/items.html";
+  });
 });
