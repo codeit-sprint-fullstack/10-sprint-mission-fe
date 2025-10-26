@@ -1,0 +1,32 @@
+/* 로그인/회원가입 전용 */
+.frame-login input.is-invalid,
+.frame-login input.is-invalid:focus {
+  border-color: #ff4d4f !important;
+  outline: 2px solid #ff4d4f;
+}
+
+.input-error {
+  color: #ff4d4f;
+  font-size: 12px;
+  margin-top: 6px;
+  display: none;
+}
+.is-invalid {
+  outline: 2px solid #ff4d4f;
+  border-color: #ff4d4f !important;
+}
+.btn-disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.input-error {
+  color: #ff4d4f;
+  font-size: 12px;
+  margin-top: 6px;
+  display: none;
+}
+.btn-disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}

@@ -1,0 +1,46 @@
+/* 랜딩(첫 페이지) 전용 */
+
+/* -------------------- 헤더 시작 -------------- */
+
+/* 헤더 고정하고 여백 설정 */
+header {
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  width: 100%;
+  height: 4.375rem;
+  padding: 0.6rem 12.5rem;
+  background: #fff;
+}
+/* 헤더 판다마켓(왼쪽) 영역과 로그인 버튼 영역(오른쪽) 배치 */
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+/* 헤더 로고와 판다마켓 정렬 */
+.header-logotitle {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.5rem;
+  flex: 0 0 auto;
+}
+
+/* 헤더 로고 이미지 */
+.header-logo {
+  width: 2.5rem;
+  min-width: 2.5rem; /* 최소 폭 지정 (추가 안전장치) */
+  flex-shrink: 0;
+}
+
+/* 헤더 판다마켓 텍스트 */
+.header-title span {
+  color: var(--primary-color);
+  font-family: "ROKAF Sans";
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  min-width: 6.4375rem;
+}
