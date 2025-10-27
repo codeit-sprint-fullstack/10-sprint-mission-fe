@@ -7,6 +7,9 @@
   <link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" rel="stylesheet" />
   <link rel="stylesheet" href="/reset.css">
   <link rel="stylesheet" href="/style.css">
+  <script src="../js/validation.js" defer></script>
+  <script src="../js/modal.js" defer></script>
+  <script src="../js/authentication.js" defer></script>
 </head>
 <body>
   <main class="login">
@@ -21,6 +24,7 @@
           <div class="login-email authentication-email">
             <label for="email">이메일</label>
             <input id="email" name="email" type="email" placeholder="이메일을 입력해주세요">
+            <p class="error-message" role="alert" aria-live="polite"></p>
           </div>
           <div class="login-password authentication-password">
             <label for="password">비밀번호</label>
@@ -28,6 +32,7 @@
               <input id="password" name="password" type="password" placeholder="비밀번호를 입력해주세요">
               <button class="visibility-icon" type="button"><img src="/image/visibility.svg" alt="비밀번호 표시"></button>
             </div>
+            <p class="error-message" role="alert" aria-live="polite"></p>
           </div>
           <button class="login-btn authentication-btn" type="submit">로그인</button>
         </form>
@@ -52,6 +57,16 @@
             회원가입
           </a>
         </section>
+      </div>
+    </div>
+    <div id="alert-modal" class="modal-background">
+      <div class="modal-box">
+        <div class="modal-message">
+          <p id="alert-message">메시지 영역</p>
+        </div>
+        <div class="modal-button">
+          <button type="button" id="modal-check" class="check-btn">확인</button>
+        </div>
       </div>
     </div>
   </main>

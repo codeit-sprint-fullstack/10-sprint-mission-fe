@@ -53,6 +53,12 @@ a {
 
 .panda-logo {
   cursor: pointer;
+  flex-shrink: 0;
+}
+
+.panda-logo img {
+  display: block;
+  height: auto;
 }
 
 .header-login {
@@ -70,6 +76,7 @@ a {
   border: none;
   cursor: pointer;
   text-decoration: none;
+  flex-shrink: 0;
 }
 
 .with-fixed-header {
@@ -239,13 +246,13 @@ main .inner {
   justify-content: space-between;
   align-items: flex-start;
   padding: 2rem 12.5rem;
-  height: 10rem;
+  min-height: 10rem;
   max-width: 1920px;
 }
 
 .footer {
   width: 100%;
-  height: 10rem;
+  min-height: 10rem;
   flex-shrink: 0;
   background-color: var(--Secondary-900);
 }
@@ -523,3 +530,432 @@ main .inner {
 }
 
 /* ======================= Signup ====================== */
+
+/* ======================= authentication - error ====================== */
+
+.error-message {
+  margin-top: 0.5rem;
+  color: var(--error-red);
+  font-family: Pretendard, sans-serif;
+  font-size: 0.9375rem;
+  font-weight: 600;
+}
+
+.authentication-form .authentication-email.is-error input,
+.authentication-form .authentication-password.is-error .input-wrap {
+  border-color: var(--error-red) !important; /* 에러일 때는 빨간 테두리가 우선이어야해서! */
+  box-shadow: none;
+}
+
+/* ======================= 모달 ====================== */
+
+.modal-background {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: none;      
+  align-items: center;   
+  justify-content: center;
+  z-index: 9999;
+}
+
+.modal-background.is-open {
+  display: flex;
+}
+
+.modal-box {
+  position: relative;
+  width: 33.75rem;
+  height: 15.625rem;  
+  background-color: var(--White);
+  border-radius: 8px;
+  padding: 1.5rem 1.5rem 1.25rem;
+  display: block;
+}
+
+.modal-message {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;  
+  justify-content: center;
+  text-align: center;
+}
+
+#alert-message {
+  font-family: Pretendard, sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--Secondary-800);
+  line-height: 1.4;
+}
+
+.modal-button {
+  position: absolute;
+  right: 1.5rem;
+  bottom: 1.25rem;
+}
+
+.check-btn {
+  width: 120px;
+  height: 48px;
+  border-radius: 8px;
+  padding: 12px 23px; 
+  background-color: var(--Primary-100);
+  cursor: pointer;
+  font-family: Pretendard, sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: 100%;
+  color: var(--White);
+  text-align: center;
+  border: none;
+}
+
+
+/* ======================= 반응형 디자인 ====================== */
+
+/* PC */
+@media (min-width: 1200px) {
+  .panda-hot,
+  .search-img,
+  .register-img {
+    width: 588px;
+    height: 444px;
+  }
+
+  .panda-top-ad {
+    width: 746px;
+    height: 340px;
+  }
+
+  .panda-bottom-ad {
+    width: 746px;
+    height: 397px;
+  }
+}
+
+
+/* 태블릿 */
+@media (max-width: 1199px) and (min-width: 744px) {
+  .header {
+    width: 100vw;
+  }
+
+  .header .inner {
+    padding: 0.5625rem 1.5rem;
+  }
+
+  .home-top-ad {
+    height: 48.1875rem;
+  }
+  
+  .home-top-ad .inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    padding-top: 5.25rem; 
+    padding-bottom: 0;
+    height: 100%;
+  }
+
+  .home-bottom-ad {
+    height: 57.9375rem;
+  }
+
+  .home-bottom-ad .inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    padding-top: 12.5625rem;
+    padding-bottom: 0;
+    height: 100%;
+  }
+
+  .home-top-ad-announcement,
+  .home-bottom-ad-announcement {
+    position: static;  
+    margin-bottom: 3rem;   
+    font-size: 2.5rem; 
+    text-align: center;
+  }
+
+  .shopping {
+    position: static;
+    display: block;
+    width: fit-content;
+    margin-bottom: 3rem; 
+    font-size: 1.25rem;
+  }
+
+  .panda-top-ad {
+    position: static;
+    margin-top: auto;
+    width: 744px;
+    height: 340px;
+  }
+
+  .panda-bottom-ad {
+    position: static;
+    margin-top: auto;
+    width: 744px;
+    height: 397px;
+  }
+
+  .register-product {
+    margin-bottom: 0;
+  }
+
+  .hot-product .inner,
+  .search .inner,
+  .register-product .inner {
+    padding-top: 1.625rem;
+    padding-bottom: 1.625rem;  
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;  
+  }
+  
+  .panda-hot,
+  .search-img,
+  .register-img {
+    position: static;
+    width: 696px;
+    height: 524px;
+    order: 1;
+  }
+
+  .hot-product-content,
+  .search-content,
+  .register-product-content {
+    flex-direction: column;
+    width: 100%;
+    max-width: 696px;
+    margin: 0 auto;
+    gap: 1.5rem;  
+  }
+
+  .hot-product-description,
+  .search-description,
+  .register-product-description {
+    width: 100%;
+    order: 2;
+  }
+
+  .hot-product-description,
+  .register-product-description {
+    align-items: flex-start;
+  }
+
+  .search-description {
+    align-items: flex-end;
+  }
+
+  .badge {
+    font-size: 1.125rem;
+    margin-bottom: 1rem;  
+  }
+
+  .check {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;  
+  }
+
+  .announcement {
+    font-size: 1.125rem;
+  }
+}
+
+/* 모바일 */
+@media (max-width: 743px) {
+  .header {
+    width: 100vw;
+  }
+
+  .header .inner {
+    padding: 0.5625rem 1rem;
+  }
+
+  .home-top-ad,
+  .home-bottom-ad {
+    height: 33.75rem;
+  }
+
+  .panda-logo img {
+    max-width: 103px;
+    height: auto;
+  }
+
+  .home-top-ad .inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    padding-top: 3rem; 
+    height: 100%;
+  }
+
+  .home-bottom-ad .inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    padding-top: 7.5625rem;  
+    padding-bottom: 0;
+    height: 100%;
+  }
+
+  .home-top-ad-announcement,
+  .home-bottom-ad-announcement {
+    position: static;  
+    padding-bottom: 2rem; 
+    font-size: 2rem; 
+    text-align: center;
+  }
+
+  .shopping {
+    position: static; 
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 2rem;
+    width: fit-content;
+    padding: 1rem 3rem;
+    font-size: 1.125rem;
+  }
+
+  .panda-top-ad {
+    position: static;
+    margin-top: auto; 
+    width: 100%;
+    height: auto;
+  }
+
+  .panda-bottom-ad {
+    position: static;
+    margin-top: auto; 
+    width: 100%;
+    height: auto;
+  }
+
+  .register-product {
+    margin-bottom: 0;
+  }
+
+  .home-top-ad .inner,
+  .hot-product .inner,
+  .search .inner,
+  .register-product .inner,
+  .home-bottom-ad .inner,
+  .login .inner,
+  .signup .inner {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  .hot-product .inner,
+  .search .inner,
+  .register-product .inner {
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;  
+    padding-left: 2rem;
+    padding-right: 2rem;  
+  }
+
+  .panda-hot,
+  .search-img,
+  .register-img,
+  .panda-top-ad,
+  .panda-bottom-ad {
+    position: static;
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .panda-hot,
+  .search-img,
+  .register-img {
+    order: 1;
+  }
+
+  .hot-product-content,
+  .search-content,
+  .register-product-content {
+    flex-direction: column;
+    width: 100%;
+    max-width: 696px;
+    gap: 1.5rem;  
+  }
+
+  .hot-product-description,
+  .search-description,
+  .register-product-description {
+    order: 2;
+    width: 100%;
+  }
+
+  .hot-product-description,
+  .register-product-description {
+    align-items: flex-start;
+  }
+
+  .search-description {
+    align-items: flex-end;
+  }
+
+  .badge {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;  
+
+  .check {
+    font-size: 1.5rem;
+    margin-bottom: 1rem; 
+  }
+
+  .announcement {
+    font-size: 1rem;
+  }
+
+  .login-box,
+  .signup-box {
+    width: 100%;
+    max-width: 400px; 
+    margin: 0 auto;
+  }
+
+  .login .inner,
+  .signup .inner {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .footer {
+    width: 100vw;
+  }
+
+  .footer .inner {
+    padding: 2rem 1rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .legal {
+    order: 1;
+    flex: 0 0 auto;
+  }
+
+  .links {
+    order: 2;
+    flex: 0 0 auto;
+    margin-left: auto;
+  }
+
+  .copyright {
+    order: 3;
+    flex: 0 0 auto;
+    text-align: left;
+  }
+}
