@@ -5,8 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/general.css">
     <link rel="stylesheet" href="css/logIn.css" />
-        <link rel="stylesheet" href="css/common.css" />
+    <link rel="stylesheet" href="css/common.css" />
+    <link rel="stylesheet" href="css/queries-login.css" />
     <link rel="icon" href="img/pandamarket-logo.svg" />
+    <script defer src="js/login.js"></script>
     <title>Panda Market</title>
 
   </head>
@@ -15,19 +17,20 @@
       <section>
         <div class="container">
           <a href="index.html" class="logoWrap">
-                      <img
+            <img
               class="logo"
               src="img/pandamarket-logo.svg"
               alt="panda market logo"
             />
 
-            <div>판다마켓</div>
+            <div class="logo-name">판다마켓</div>
           </a>
                 <!------------- inputs ---------->
           <form action="">
-            <label for="email">
+            <label class="email-label" for="email">
               이메일
               <input
+              class="email-input"
                 type="text"
                 id="email"
                 name="email"
@@ -35,10 +38,11 @@
                 placeholder="이메일을 입력해주세요"
               />
             </label>
-            <label for="password">
+            <label class="password-label" for="password">
               비밀번호
               <div class="input-wrapper">
                  <input 
+                 class="password-input"
                 type="password"
                 id="password"
                 name="password"
@@ -48,7 +52,7 @@
             <button class="pswToggle"></button>
               </div>
           </label>
-            <button class="btn" type="submit">로그인</button>
+            <button class="btn" id="loginButton" type="submit">로그인</button>
           </form>
                 <!------------- easyLogin---------->
           <div class="easyLogin">

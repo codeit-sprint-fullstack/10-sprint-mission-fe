@@ -20,12 +20,14 @@ section {
 
 .logo {
   width: 10.3rem;
+  /* width: clamp(5.2rem, 7vw, 10.3rem); */
 }
 
-.logoWrap div {
+.logo-name {
   color: var(--primary600);
   font-family: "ROKAF Sans";
   font-size: 6.6rem;
+  /* font-size: clamp(3.3rem, 4vw, 6.6rem); */
   font-weight: 700;
   font-family: "ROKAF Sans";
 }
@@ -78,4 +80,16 @@ section {
 .signup {
   color: var(--primary600);
   text-decoration: underline;
+}
+.errorMessage {
+  font-family: Pretendard;
+  font-weight: 600;
+  font-style: SemiBold;
+  font-size: 15px;
+  leading-trim: NONE;
+  line-height: 100%;
+  letter-spacing: 0%;
+  color: #f74747;
+  margin-top: 0.8rem;
+  margin-left: 1.6rem;
 }

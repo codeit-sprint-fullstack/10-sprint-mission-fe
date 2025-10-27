@@ -20,13 +20,16 @@ section {
 
 .logo {
   width: 10.3rem;
+  /* width: clamp(5.2rem, 7vw, 10.3rem); */
 }
 
-.logoWrap div {
+.logo-name {
   color: var(--primary600);
   font-family: "ROKAF Sans";
   font-size: 6.6rem;
+  /* font-size: clamp(3.3rem, 4vw, 6.6rem); */
   font-weight: 700;
+  font-family: "ROKAF Sans";
 }
 
 .easyLogin {
