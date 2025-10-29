@@ -5,47 +5,57 @@
     <title>Panda Sign Up</title>
     <link rel="stylesheet" href="./css/sign-in-and-up.css">
 </head>
+<script lang="javascript" src="./js/validate.js"></script>
 <body>
 
-<header>
+<main>
+
     <div class="logo-container">
         <a href="/"><img class="logo-img" src="./images/Panda_logo-login.svg" alt="판다마켓"></a>
     </div>
-</header>
-
-<main>
 
     <form method="post">
         <label for="username">이메일</label>
         <input id="username" name="email" placeholder="이메일을 입력하세요.">
+        <div id="emailError" class="error-message"></div>
+        
         <label for="nickname">닉네임</label>
         <input id="nickname" name="nickname" placeholder="닉네임을 입력하세요.">
+        <div id="nicknameError" class="error-message"></div>
+        
         <label for="password">비밀번호</label>
         <div class="inputPWD">
             <input id="passwordInput" name="password" type="password" placeholder="비밀번호를 입력하세요.">
-            <img class="fa-eye" src="./images/fa-eye.svg">
+            <img id="passwordToggle" class="fa-eye" src="./images/eye-closed.svg" alt="비밀번호 표시/숨김">
         </div>
+        <div id="passwordError" class="error-message"></div>
+        
         <label for="password_confirm">비밀번호 확인</label>
-        <div class="inputPWDs">
-            <input id="passwordInput" name="password_confirm" type="password" placeholder="비밀번호를 한번 더 입력하세요.">
-            <img class="fa-eye" src="./images/fa-eye.svg">
+        <div class="inputPWD">
+            <input id="passwordInput2" name="password_confirm" type="password" placeholder="비밀번호를 한번 더 입력하세요.">
+            <img id="passwordConfirmToggle" class="fa-eye" src="./images/eye-closed.svg" alt="비밀번호 표시/숨김">
         </div>
+        <div id="passwordConfirmError" class="error-message"></div>
+        
         <button type="submit" aria-label="회원가입 하기">회원가입</button>
     </form>
-
-</main>
-
-<div class="footerLogin">
+    
+    <div class="socialLogin">
         간편 로그인하기
         <div class="social-login-button">
             <a href="https://www.google.com/" target="_blank"><img src="./images/google_button.svg" width="42"/></a>
             <a href="https://www.kakaocorp.com/page/" target="_blank"><img src="./images/kakao-button.svg" width="42"/></a>
         </div>
-</div>
+    </div>
 
-<footer>
-    이미 회원이신가요? <a href="./sign-in.html">로그인</a>
-</footer>
+    <div class="membership">
+        이미 회원이이신가요? <a href="./sign-in.html">로그인</a>
+    </div>
+
+
+</main>
+
+
 
 
 </body>

@@ -22,26 +22,16 @@ body {
 
 }
 
-header {
-    margin: 1 auto;
-    max-width: 640px;
-    height: var(--header-height);
-    display: block;
-    justify-content: center;
-    align-items: center;
-    background-color: #ffffff;
+
+.logo-container {
+    text-align: center;
     margin-top: 60px;
     margin-bottom: 60px;
 }
 
-.logo-container {
-    text-align: center;
-
-}
 
 
-
-footer {
+.membership {
     margin: 0 auto;
     max-width: 640px;
     color: #1F2937;
@@ -54,13 +44,13 @@ footer {
     font-size: 14px;
 }
 
-footer a {
+.membership a {
     color: #3182f6;
     text-decoration: underline;
     text-underline-offset: 2px;
 }
 
-.footerLogin {
+.socialLogin {
     background-color: #E6F2FF;
     border-radius: 8px;
     margin: 0 auto;
@@ -115,22 +105,10 @@ input {
     outline: none;
 }
 
-.inputPWDs {
-    position: relative;
-}
-
-.inputPWDs .input {
-    width: 100%;
-    padding: 10px 40px 10px 10px; /* Add paddings */
-    box-sizing: border-box; /* Include paddings and border to width */
-    border: 0px solid #F3F4F6;
-    outline: none;
-}
-
 
 input:focus {
     /* border-color: #3692FF; */
-    outline-color: #3692FF;
+    outline-color: var(--blue);
 }
 
 .fa-eye {
@@ -166,3 +144,121 @@ button:focus {
   background-color: #1251aa;
 }
 
+/* 에러 상태 스타일 */
+input.error {
+  border: 2px solid #ef4444 !important;
+  background-color: #fef2f2;
+}
+
+.error-message {
+  color: #ef4444;
+  font-size: 14px;
+  margin-top: 4px;
+  margin-bottom: 8px;
+  min-height: 20px;
+  display: none;
+}
+
+.error-message.show {
+  display: block;
+}
+
+
+/* Responsive - tablet adjustments */
+@media (max-width: 1199px) {
+  .logo-container {
+      align-items: center;
+      margin-top: 60px;
+      margin-bottom: 60px;
+  }
+
+  img {
+    max-width: 80%;
+  }
+
+
+}
+
+
+
+/* Responsive - mobile adjustments */
+@media (max-width: 743px) {
+    .logo-container {
+        align-items: center;
+        margin-top: 60px;
+        margin-bottom: 60px;
+    }
+
+    img {
+      max-width: 50%;
+    }
+
+  .socialLogin {
+      background-color: #E6F2FF;
+      border-radius: 8px;
+      margin: 0 auto;
+      max-width: 90%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: #1F2937;
+      padding: 16px 23px;
+  }
+
+  /* form CSS below */
+  form {
+    margin: 16px auto;
+    max-width: 90%;
+  }
+
+}
+
+/* Modal styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    align-items: center;
+    justify-content: center;
+}
+
+.modal.show {
+    display: flex;
+}
+
+.modal-content {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 400px; /* max screen size */
+    max-height: 350px;  /* max screen size */
+    text-align: center;
+    position: relative;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    transform: translateY(0);
+}
+
+
+.modal-content p {
+    margin-bottom: 25px;
+    color: #666;
+    line-height: 1.5;
+}
+
+.modal-btn {
+    background-color: var(--blue);
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    transition: background-color 0.2s;
+}

@@ -19,6 +19,9 @@ body {
     font-family: "Pretendard", sans-serif;
 }
 
+
+
+
 header {
     position: fixed;
     top: 0;
@@ -58,8 +61,9 @@ footer {
 
 .wrapper {
     max-width: 120rem;
-    margin: 0 auto;
+    margin: 1 auto;
     width: 100%;
+    border: 0px solid red;
 }
 
 button {
@@ -86,12 +90,6 @@ button {
     background-color: #1251aa;
 }
 
-.button:disabled {
-    background-color: #9ca3af;
-    cursor: default;
-    pointer-events: none;
-}
-
 .pill-button {
     font-size: 2rem;
     font-weight: 700;
@@ -100,18 +98,18 @@ button {
 }
 
 .banner {
-    background-color: cfe5ff;
+    background-color: #cfe5ff;
     height: 540px;
     display: flex;
     align-items: center;
     background-repeat: no-repeat;
-    background-position: 80% bottom;
+    background-position: 50% bottom;
     background-size: 55%;
 }
 
 #hero {
     background-image: url("../images/panda.svg");
-}
+} 
 
 #features {
     padding-bottom: 138px;
@@ -162,3 +160,166 @@ button {
     margin-top: 24px;
 }
 
+/* Responsive - tablet adjustments */
+@media (max-width: 1199px) {
+    /* Hero banner image scales to fit width and centers */
+    .banner {
+        background-size: contain;
+        background-position: center bottom;
+    }
+
+
+    #hero {
+        background-image: url("../images/panda.svg");
+        background-size: auto;
+    } 
+
+    /* Center hero content; make h1 and pill-button half size */
+    .banner .wrapper {
+        text-align: center;
+    }
+
+    #hero h1 {
+        font-size: 2rem; /* approx half-sized heading on mobile */
+        
+    }
+
+    .banner .pill-button {
+        font-size: 2rem; /* half of 2rem */
+        padding: 0.1rem 6.2rem; /* half of 1.6rem 12.4rem */
+    }
+
+    /* Features: stack vertically, image first then text; image at 70% width */
+    .feature {
+        padding: 60px 0;
+        flex-direction: column;
+        text-align: center;
+        gap: 2rem;
+    }
+
+    .feature img {
+        width: 70%;
+        max-width: 70%;
+        order: 0;
+        display: block;
+        margin: 0 auto;
+    }
+
+    .feature .feature-content {
+        order: 1;
+        width: 100%;
+        text-align: center;
+    }
+
+    /* Override the right alignment for the second feature on mobile */
+    .feature:nth-child(2) .feature-content {
+        text-align: center;
+    }
+
+    /* Footer: stack items vertically and center */
+    footer {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 1.2rem;
+        padding: 2rem;
+        text-align: center;
+    }
+
+    #footerMenu {
+        justify-content: center;
+    }
+
+    #socialMedia {
+        justify-content: center;
+    }
+
+    /* Header: reduce padding on smaller screens */
+    header {
+        padding: 0 1.6rem;
+    }
+}
+
+
+
+/* Responsive - tablet adjustments */
+@media (max-width: 743px) {
+    .banner {
+        background-size: contain;
+        background-position: center bottom;
+    }
+
+    .banner .wrapper {
+        text-align: center;
+    }
+
+    #hero h1 {
+        font-size: 1.6rem; /* approx half-sized heading on mobile */
+    }
+
+    .banner .pill-button {
+        font-size: 1rem; 
+        padding: 0.8rem 6.2rem; 
+    }
+
+    /* Features: stack vertically, image first then text; image at 70% width */
+    .feature {
+        padding: 60px 0;
+        flex-direction: column;
+        text-align: center;
+        gap: 2rem;
+    }
+
+    .feature img {
+        width: 70%;
+        max-width: 70%;
+        order: 0;
+        display: block;
+        margin: 0 auto;
+    }
+
+    .feature .feature-content {
+        order: 1;
+        width: 100%;
+        text-align: center;
+    }
+
+    /* Override the right alignment for the second feature on mobile */
+    .feature:nth-child(2) .feature-content {
+        text-align: center;
+    }
+
+    /* Footer: stack items vertically and center */
+    footer {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 1.2rem;
+        padding: 2rem;
+        text-align: center;
+    }
+
+    #footerMenu {
+        justify-content: center;
+    }
+
+    #socialMedia {
+        justify-content: center;
+    }
+
+    /* Header: reduce padding on smaller screens */
+    header {
+        padding: 0 1.6rem;
+    }
+}
+
+/* Specific adjustment when screen size is (mobile)500px or less */
+@media (max-width: 500px) {
+    /* Center logo and login button side-by-side */
+    header {
+        justify-content: space-between;
+        gap: 1.2rem;
+    }
+
+    
+}
