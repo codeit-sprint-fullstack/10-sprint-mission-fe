@@ -1,0 +1,52 @@
+label {
+  display: block;
+  font-size: 1.8rem;
+  margin-bottom: 2.4rem;
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+input {
+  display: block;
+  font-size: 1.8rem;
+  border: none;
+  background-color: #f3f4f6;
+  color: var(--gray400);
+  padding: 1.6rem 2.4rem;
+  width: 100%;
+  margin-top: 1.6rem;
+  border-radius: 1.2rem;
+}
+input:focus {
+  border: 1px solid var(--primary600);
+}
+
+.input-wrapper {
+  position: relative;
+}
+.pswToggle {
+  background: no-repeat center/80% url("/img/btn-visibility-off.svg");
+  width: 2.4rem;
+  height: 2.4rem;
+  border: none;
+  fill: var(--gray600);
+  position: absolute;
+  top: 50%;
+  right: 2.4rem;
+  transform: translateY(-50%);
+}
+
+.btn {
+  padding: 1.6rem 12.4rem;
+  display: block;
+  background-color: var(--gray400);
+  color: white;
+  border-radius: 3rem;
+  margin-bottom: 2.4rem;
+  width: 100%;
+  font-size: 20px;
+  font-weight: 600;
+}
+.btn:hover {
+  background-color: var(--primary600);
+  transition: all 0.3s;
+}

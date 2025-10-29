@@ -1,0 +1,79 @@
+/* *********.  Desktop  *********** */
+@media (max-width: 1200px) {
+  .section-hero {
+    padding-top: 8.4rem;
+  }
+
+  .container-hero,
+  .container-bottom {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .heroWrap {
+    max-width: 55rem;
+
+    margin-bottom: 21.1rem;
+  }
+
+  .heroWrap .title {
+    text-align: center;
+  }
+
+  .hero-btn {
+    justify-self: center;
+  }
+}
+
+/* *********.  tablet  *********** */
+@media (max-width: 744px) {
+  .container-nav {
+    max-width: 72.8rem;
+    padding: 0 1.6rem;
+  }
+
+  .container-best,
+  .container-search,
+  .container-register {
+    max-width: 69.6rem;
+    grid-template-columns: 1fr;
+    row-gap: 2.4rem;
+    background-color: transparent;
+  }
+
+  .section-best,
+  .section-search,
+  .section-register {
+    padding: 2.6rem 0;
+  }
+  .container-search div:last-child {
+    order: 2;
+  }
+  .section-bottom {
+    padding-top: 20rem;
+  }
+  .container-footer {
+    max-width: 74.4rem;
+    padding: 0 2.4rem;
+  }
+}
+
+/* *********.  mobile  *********** */
+@media (max-width: 375px) {
+  .logoWrap img {
+    display: none;
+  }
+
+  .section-bottom {
+    padding-top: 12rem;
+  }
+  .container-footer {
+    max-width: 37.5rem;
+    padding: 0 1.6rem;
+  }
+  .footer-copy {
+    margin-top: 2.4rem;
+    order: 1;
+  }
+}
