@@ -1,0 +1,157 @@
+/* (기존) 점진적으로 비우고 삭제 예정 */
+
+/* -------------------- 헤더 끝 -------------- */
+
+/* -------------------- footer -------------- */
+
+footer {
+  padding: 2rem 12.5rem;
+  background: #111827;
+  flex-shrink: 0;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  height: 10rem;
+  gap: 1.875rem;
+}
+
+.footer-codeit {
+  color: #9ca3af;
+}
+
+.footer-privecy {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.875rem;
+}
+
+.social {
+  display: flex;
+  width: 7.25rem;
+  align-items: flex-start;
+  gap: 0.75rem;
+}
+
+.social img {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+/* -------------------- 로그인 페이지 -------------- */
+/* 전체 프레임 */
+.frame-login {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.frame-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 40rem;
+  height: auto;
+  margin-top: 14.4rem;
+  margin-bottom: 17.75rem;
+}
+
+/* 로고 프레임과 판다마켓 폰트 설정 */
+.frame-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* 폰트 */
+  color: var(--primary-color);
+  font-family: "ROKAF Sans";
+  font-size: 4.1465rem;
+  font-style: normal;
+  font-weight: 700;
+  /* 영역과 간격 */
+  width: 24.75rem;
+  height: 8.25rem;
+  gap: 1.39rem;
+}
+/* 로고 이미지 영역(이미지 크기) */
+.frame-logo a {
+  width: 6.47056rem;
+  height: 6.4925rem;
+  flex-shrink: 0;
+  cursor: pointer;
+}
+/* 로고 크기는 부모 따라가도록 */
+.logo-img {
+  flex-shrink: 0;
+  width: 100%;
+}
+
+/* 로고와 판다마켓 텍스트 */
+.login-title {
+  display: flex;
+  align-items: center;
+}
+
+/* 회원가입 버튼 마우스 오버 */
+/* .bt_login:hover {
+    background: #0056b3;
+  } */
+
+/* -------------------- 간편 로그인 -------------- */
+/* 간편 로그인 */
+.simple-login-frame {
+  width: 40rem;
+  height: 4.625rem;
+  padding: 1rem 1.44rem;
+  border-radius: 0.5rem;
+  background: #e6f2ff;
+  margin: 1.5rem 0;
+}
+
+.simple-login-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 37.125rem;
+}
+/* 간편 로그인하기 영역 자동 늘어나도록 */
+.simple-login-inner span {
+  flex: 1 1 auto;
+  color: var(--secondary-color);
+  /* pretendard/lg-16px-medium */
+  font-family: Pretendard;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.625rem;
+}
+
+/* 구글, 카카오 영역은 고정 */
+.login-social {
+  display: flex;
+  gap: 1rem;
+  flex: 0 0 auto;
+}
+
+/* 구글, 카카오 아이콘 이미지 영역과 이미지 크기 */
+.simple-login-inner .social a,
+.simple-login-inner .social a img {
+  width: 2.625rem;
+  height: 2.625rem;
+}
+
+/* -------------------- 로그인 가장 하단, 회원가입 링크 프레임 -------------- */
+.login-bottom span {
+  font-family: "Pretendard-Medium", Helvetica;
+  font-weight: 500;
+  color: var(--secondary-color);
+  font-size: 0.875rem;
+}
+
+.link-signup {
+  color: #3691ff;
+  text-decoration: underline;
+  font-size: 0.875rem;
+}

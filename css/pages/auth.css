@@ -1,0 +1,123 @@
+/* 로그인/회원가입 전용 */
+.frame-login input.is-invalid,
+.frame-login input.is-invalid:focus {
+  border-color: #ff4d4f !important;
+  outline: 2px solid #ff4d4f;
+}
+
+.input-error {
+  color: #ff4d4f;
+  font-size: 12px;
+  margin-top: 6px;
+  display: none;
+}
+.is-invalid {
+  outline: 2px solid #ff4d4f;
+  border-color: #ff4d4f !important;
+}
+.btn-disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.input-error {
+  color: #ff4d4f;
+  font-size: 12px;
+  margin-top: 6px;
+  display: none;
+}
+.btn-disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* -------------------- 이메일 비밀번호 폼 -------------- */
+
+label {
+  color: var(--Secondary-800, #1f2937);
+  /* pretendard/2lg-18px-bold */
+  font-family: Pretendard;
+  font-size: 1.125rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.625rem;
+}
+/* 비밀번호 전체 박스 설정 */
+.input-box {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+/* 기본 인풋(이메일, 닉네임, 비밀번호) */
+input {
+  display: flex;
+  width: 40rem;
+  height: 3.5rem;
+  padding: 1rem 1.5rem;
+  align-items: center;
+  gap: 0.625rem;
+  border-radius: 0.75rem;
+  background: #f3f4f6;
+  border: 1px solid hsla(0, 0%, 0%, 0); /* 기본 테두리 지정 */
+  outline: none; /* 브라우저 기본 파란 외곽선 제거 */
+}
+
+.input-box input {
+  padding-right: 2.5rem; /* 아이콘 자리 확보 */
+}
+/* 비밀번호 아이콘 배치 */
+.toggle-password {
+  position: absolute;
+  right: 1rem;
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  z-index: 1;
+}
+
+/* 이메일과 패스워드 정렬 */
+.frame-email,
+.frame-password,
+.frame-username {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+/* focus 커서있을 때 테두리 색상 변경 */
+.frame-login input:focus {
+  border-color: var(--primary-color);
+}
+
+/* -------------------- 로그인 버튼 -------------- */
+/* 로그인 버튼 */
+.bt_login {
+  display: flex;
+  width: 40rem;
+  height: 3.5rem;
+  padding: 1rem 7.75rem;
+  justify-content: center;
+  align-items: center;
+  gap: 0.625rem;
+  border-radius: 2.5rem;
+  background: var(--primary-color);
+  cursor: pointer;
+
+  color: var(--Cool-Gray-100);
+  text-align: center;
+  font-family: Pretendard;
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 2rem;
+  transition: background-color 0.2s ease;
+}
+
+/* 비활성화 상태 (JS에서 disabled 속성 + btn-disabled 클래스 추가됨) */
+.bt_login:disabled,
+.bt_login.btn-disabled {
+  background-color: var(--Cool-Gray-400);
+  cursor: not-allowed;
+}

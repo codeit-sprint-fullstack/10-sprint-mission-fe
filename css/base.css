@@ -1,0 +1,182 @@
+/* reset + :root 토큰(색/폰트/spacing/bp) */
+
+/* 여백 제거 */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* 모든 요소와 가상요소에 box-sizing과 기본 여백 제거 */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* HTML5 시맨틱 태그를 block으로 통일 */
+article,
+aside,
+footer,
+header,
+nav,
+section,
+main {
+  display: block;
+}
+
+/* 리스트 불릿 제거 */
+ul,
+ol {
+  list-style: none;
+}
+
+/* 링크의 밑줄 제거 및 색상 상속 */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* a {
+    color: #ffffff;
+  } */
+
+/* 이미지가 부모 폭에 맞게 */
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* 인용문 스타일 제거 */
+blockquote,
+q {
+  quotes: none;
+}
+
+/* 테이블 기본 보더 합치기 */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* 폼 요소 기본 초기화 */
+button,
+input,
+select,
+textarea {
+  font: inherit;
+  background: none;
+  border: none;
+  outline: none;
+}
+
+:root {
+  /* 🎨 팔레트 색상 정의 */
+  --primary-color: #3692ff;
+  --secondary-color: #1f2937;
+  --text-color: #374151;
+  --background-color: #cfe5ff;
+  --Cool-Gray-100: #f3f4f6;
+  --Cool-Gray-400: #9ca3af;
+}
+
+html {
+  font-size: 16px;
+}
+
+/* 정보 굵은 텍스트 */
+h1 {
+  color: var(--text-color);
+  font-family: Pretendard;
+  font-size: 2.5rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 140%;
+  margin-bottom: 1.5rem;
+}

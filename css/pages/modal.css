@@ -1,0 +1,9 @@
+/* 베이스 레이어 */
+.modal-backdrop { position: fixed; inset: 0; background: rgba(0,0,0,.5); display:none; align-items:center; justify-content:center; z-index: 1000; }
+.modal { width: min(480px, 92vw); background:#fff; border-radius:12px; overflow:hidden; box-shadow: 0 10px 30px rgba(0,0,0,.2); }
+.modal__header { padding:16px 20px; font-weight:700; border-bottom:1px solid #eee; }
+.modal__body { padding:18px 20px; line-height:1.6; }
+.modal__footer { padding:12px 20px; display:flex; gap:8px; justify-content:flex-end; border-top:1px solid #eee; }
+.modal__btn { padding:10px 14px; border-radius:10px; border:1px solid #ddd; background:#fff; cursor:pointer; }
+.modal__btn--primary { background:#2f80ed; color:#fff; border-color:#2f80ed; }
+.modal-backdrop.show { display:flex; }

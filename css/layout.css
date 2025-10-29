@@ -1,0 +1,97 @@
+/* 헤더/푸터/컨테이너/그리드 */
+
+.main-home {
+  margin-top: 4.375rem;
+}
+
+/* -------------------- 메인 콘텐츠 - 01 영역 -------------- */
+/* 첫번째 영역 - 전체 설정 */
+.section-01 {
+  position: relative;
+  background: #cfe5ff;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 33.75rem;
+  padding-top: 12.5rem;
+  flex-shrink: 0;
+  width: 100%;
+}
+/* 첫 번째 영역 - 콘텐츠 */
+.section-01-content {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+}
+
+/* -------------------- 02 영역 -------------- */
+/* 02 전체 영역 */
+.section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8.625rem 21.5rem;
+  gap: 0.625rem;
+  height: 45rem;
+}
+/* 02 콘텐츠 영역 */
+.section-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fcfcfc;
+  gap: 4rem;
+  flex: 0 0 auto;
+  padding: 0 1rem;
+}
+/* 02 텍스트 영역 */
+.content-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.75rem;
+  width: 100%;
+}
+
+/* -------------------- 03 영역 -------------- */
+/* 03 텍스트 영역 - 오른쪽 정렬*/
+.content-info-r {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.75rem;
+  width: 100%;
+}
+/* 텍스트 정보 오른쪽 정렬 */
+.content-info-r h1,
+.content-info-r span {
+  text-align: right;
+}
+
+/* -------------------- 05 영역 -------------- */
+/* 05 전체 영역 */
+.section-05 {
+  margin-top: 8.625rem;
+  padding-top: 8.9375rem;
+  position: relative;
+  background: #cfe5ff;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 33.75rem;
+  flex-shrink: 0;
+  width: 100%;
+}
+
+/* 05 콘텐츠 (텍스트+이미지) */
+.section-05-content {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 46.625rem;
+}

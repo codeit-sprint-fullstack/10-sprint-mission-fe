@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>회원 가입</title>
+
+    <!-- /* -------------------- css -------------- */ -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="../css/base.css" />
+    <link rel="stylesheet" href="../css/layout.css" />
+    <link rel="stylesheet" href="../css/components.css" />
+    <link rel="stylesheet" href="../css/utilities.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/pages/auth.css" />
+
+    <script src="../js/validators.js" defer></script>
+    <script src="../js/db.js" defer></script>
+    <script src="../js/signup.js" defer></script>
+  </head>
+  <body class="frame-login">
+    <main class="frame-main">
+      <!-- /* -------------------- 상단 로그+판다마켓 -------------- */ -->
+      <div class="frame-logo">
+        <a href="/">
+          <img class="logo-img" src="../image/img_logo.svg" alt="logo" />
+        </a>
+        <span>판다마켓</span>
+      </div>
+      <!-- /* -------------------- 이메일, 닉네임, 비밀번호 -------------- */ -->
+      <form id="signup-form" class="frame-login">
+        <div class="frame-email">
+          <label for="email">이메일</label>
+          <input
+            id="email"
+            name="email"
+            type="email"
+            placeholder="이메일을 입력해주세요"
+            required
+          />
+          <small id="email-error" class="input-error"></small>
+        </div>
+        <div class="frame-username">
+          <label for="username">닉네임</label>
+          <input
+            id="username"
+            name="username"
+            type="text"
+            placeholder="닉네임을 입력해주세요"
+            required
+          />
+        </div>
+        <div class="frame-password">
+          <label for="password">비밀번호</label>
+          <div class="input-box">
+            <input
+              id="password"
+              name="password"
+              type="password"
+              placeholder="비밀번호를 입력해주세요"
+              required
+            />
+            <img
+              src="../image/ic_eye_off.svg"
+              alt="비밀번호 보기"
+              class="toggle-password"
+              data-target="password"
+            />
+          </div>
+          <small id="password-error" class="input-error"></small>
+        </div>
+
+        <div class="frame-password">
+          <label for="passwordConfirm">비밀번호 확인</label>
+          <div class="input-box">
+            <input
+              id="passwordConfirm"
+              name="passwordConfirm"
+              type="password"
+              placeholder="비밀번호를 다시 입력해주세요"
+              required
+            />
+            <img
+              src="../image/ic_eye_off.svg"
+              alt="비밀번호 보기"
+              class="toggle-password"
+              data-target="passwordConfirm"
+            />
+          </div>
+          <small id="passwordConfirm-error" class="input-error"></small>
+        </div>
+
+        <!-- ✅ 반드시 id="signup-btn" 있어야 함 -->
+        <button id="signup-btn" class="bt_login" type="submit" disabled>
+          회원가입
+        </button>
+      </form>
+      <!-- /* -------------------- 간편 로그인 -------------- */ -->
+      <div class="simple-login-frame">
+        <div class="simple-login-inner">
+          <span>간편 로그인하기</span>
+          <div class="login-social">
+            <a href="https://www.google.com/" target="_blank">
+              <img src="../image/ic_google.svg" alt="Google" />
+            </a>
+            <a href="https://www.kakaocorp.com/page/" target="_blank">
+              <img src="../image/ic_kakao.svg" alt="Kakao" />
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- /* -------------------- 이미 회원이신가요? -------------- */ -->
+      <div class="login-bottom">
+        <span
+          >이미 회원이신가요?
+          <a class="link-signup" href="../pages/login.html">로그인</a>
+        </span>
+      </div>
+    </main>
+  </body>
+</html>
