@@ -1,27 +1,26 @@
 :root {
-  --Primary-100: #3692FF;
-  --Primary-200: #1967D6;
-  --Primary-300: #1251AA;
-  --Primary-050: #CFE5FF;
-  --Primary-025: #E6F2FF;
+  --Primary-100: #3692ff;
+  --Primary-200: #1967d6;
+  --Primary-300: #1251aa;
+  --Primary-050: #cfe5ff;
+  --Primary-025: #e6f2ff;
 
   --Secondary-900: #111827;
-  --Secondary-800: #1F2937;
+  --Secondary-800: #1f2937;
   --Secondary-700: #374151;
-  --Secondary-600: #4B5563;
-  --Secondary-500: #6B7280;
-  --Secondary-400: #9CA3AF;
-  --Secondary-300: #E5E7EB;
-  --Secondary-200: #F3F4F6;
-  --Secondary-150: #DFDFDF;
-  --Secondary-100: #F9FAFB;
-  --Secondary-050: #FCFCFC;
+  --Secondary-600: #4b5563;
+  --Secondary-500: #6b7280;
+  --Secondary-400: #9ca3af;
+  --Secondary-300: #e5e7eb;
+  --Secondary-200: #f3f4f6;
+  --Secondary-150: #dfdfdf;
+  --Secondary-100: #f9fafb;
+  --Secondary-050: #fcfcfc;
 
-  --error-red: #F74747;
+  --error-red: #f74747;
 
-  --White: #FFFFFF;
+  --White: #ffffff;
 }
-
 
 * {
   box-sizing: border-box;
@@ -41,7 +40,7 @@ a {
 }
 
 .header .inner {
-  margin:0 auto;
+  margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -84,8 +83,8 @@ a {
 }
 
 main .inner {
-  max-width:1920px;
-  margin:0 auto;
+  max-width: 1920px;
+  margin: 0 auto;
 }
 
 .ad {
@@ -199,7 +198,6 @@ main .inner {
   margin: 0 auto;
 }
 
-
 .search-description {
   display: flex;
   flex-direction: column;
@@ -241,7 +239,7 @@ main .inner {
 }
 
 .footer .inner {
-  margin:0 auto;
+  margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
@@ -327,7 +325,7 @@ main .inner {
 
 .authentication-panda-logo {
   cursor: pointer;
-  width: 24.75rem; 
+  width: 24.75rem;
   display: block;
 }
 
@@ -393,10 +391,10 @@ main .inner {
 
 .authentication-form .authentication-email input {
   width: 100%;
-  padding: 1.5rem 1rem;                  
+  padding: 1.5rem 1rem;
   border-radius: 0.75rem;
-  background-color: var(--Secondary-200);   
-  border: 1px solid var(--Secondary-200);  
+  background-color: var(--Secondary-200);
+  border: 1px solid var(--Secondary-200);
 }
 
 .authentication-form .authentication-email input:focus {
@@ -407,11 +405,11 @@ main .inner {
 .authentication-form .input-wrap {
   display: flex;
   align-items: center;
-  justify-content: space-between;     
-  padding: 1.5rem 1rem;                
+  justify-content: space-between;
+  padding: 1.5rem 1rem;
   border-radius: 0.75rem;
-  background-color: var(--Secondary-200);     
-  border: 1px solid var(--Secondary-200);  
+  background-color: var(--Secondary-200);
+  border: 1px solid var(--Secondary-200);
 }
 
 .authentication-form .input-wrap:focus-within {
@@ -421,16 +419,16 @@ main .inner {
 
 .authentication-form .input-wrap > input {
   border: 0;
-  padding: 0;  
+  padding: 0;
   margin: 0;
-  color: var(--Secondary-400);  
-  background-color: var(--Secondary-200); 
+  color: var(--Secondary-400);
+  background-color: var(--Secondary-200);
   outline: none;
 }
 
 .authentication-form .input-wrap > button {
   border: none;
-  background-color: var(--Secondary-200); 
+  background-color: var(--Secondary-200);
 }
 
 .authentication-btn {
@@ -506,10 +504,10 @@ main .inner {
 
 .authentication-form .authentication-nickname input {
   width: 100%;
-  padding: 1.5rem 1rem;                  
+  padding: 1.5rem 1rem;
   border-radius: 0.75rem;
-  background-color: var(--Secondary-200);   
-  border: 1px solid var(--Secondary-200);  
+  background-color: var(--Secondary-200);
+  border: 1px solid var(--Secondary-200);
 }
 
 .authentication-form .authentication-nickname input:focus {
@@ -522,10 +520,13 @@ main .inner {
 .authentication-form input[type="password"]::-ms-clear {
   display: none;
 }
-.authentication-form input[type="password"]::-webkit-credentials-auto-fill-button {
-  visibility: hidden; pointer-events: none;
+.authentication-form
+  input[type="password"]::-webkit-credentials-auto-fill-button {
+  visibility: hidden;
+  pointer-events: none;
 }
-.authentication-form input[type="password"]::-webkit-textfield-decoration-container {
+.authentication-form
+  input[type="password"]::-webkit-textfield-decoration-container {
   display: none !important;
 }
 
@@ -543,7 +544,9 @@ main .inner {
 
 .authentication-form .authentication-email.is-error input,
 .authentication-form .authentication-password.is-error .input-wrap {
-  border-color: var(--error-red) !important; /* 에러일 때는 빨간 테두리가 우선이어야해서! */
+  border-color: var(
+    --error-red
+  ) !important; /* 에러일 때는 빨간 테두리가 우선이어야해서! */
   box-shadow: none;
 }
 
@@ -553,8 +556,8 @@ main .inner {
   position: fixed;
   inset: 0;
   background-color: rgba(0, 0, 0, 0.7);
-  display: none;      
-  align-items: center;   
+  display: none;
+  align-items: center;
   justify-content: center;
   z-index: 9999;
 }
@@ -566,7 +569,7 @@ main .inner {
 .modal-box {
   position: relative;
   width: 33.75rem;
-  height: 15.625rem;  
+  height: 15.625rem;
   background-color: var(--White);
   border-radius: 8px;
   padding: 1.5rem 1.5rem 1.25rem;
@@ -579,7 +582,7 @@ main .inner {
   left: 50%;
   transform: translate(-50%, -50%);
   display: flex;
-  align-items: center;  
+  align-items: center;
   justify-content: center;
   text-align: center;
 }
@@ -602,7 +605,7 @@ main .inner {
   width: 120px;
   height: 48px;
   border-radius: 8px;
-  padding: 12px 23px; 
+  padding: 12px 23px;
   background-color: var(--Primary-100);
   cursor: pointer;
   font-family: Pretendard, sans-serif;
@@ -613,7 +616,6 @@ main .inner {
   text-align: center;
   border: none;
 }
-
 
 /* ======================= 반응형 디자인 ====================== */
 
@@ -637,7 +639,6 @@ main .inner {
   }
 }
 
-
 /* 태블릿 */
 @media (max-width: 1199px) and (min-width: 744px) {
   .header {
@@ -651,13 +652,13 @@ main .inner {
   .home-top-ad {
     height: 48.1875rem;
   }
-  
+
   .home-top-ad .inner {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-end;
-    padding-top: 5.25rem; 
+    padding-top: 5.25rem;
     padding-bottom: 0;
     height: 100%;
   }
@@ -678,9 +679,9 @@ main .inner {
 
   .home-top-ad-announcement,
   .home-bottom-ad-announcement {
-    position: static;  
-    margin-bottom: 3rem;   
-    font-size: 2.5rem; 
+    position: static;
+    margin-bottom: 3rem;
+    font-size: 2.5rem;
     text-align: center;
   }
 
@@ -688,7 +689,7 @@ main .inner {
     position: static;
     display: block;
     width: fit-content;
-    margin-bottom: 3rem; 
+    margin-bottom: 3rem;
     font-size: 1.25rem;
   }
 
@@ -714,11 +715,11 @@ main .inner {
   .search .inner,
   .register-product .inner {
     padding-top: 1.625rem;
-    padding-bottom: 1.625rem;  
+    padding-bottom: 1.625rem;
     padding-left: 1.5rem;
-    padding-right: 1.5rem;  
+    padding-right: 1.5rem;
   }
-  
+
   .panda-hot,
   .search-img,
   .register-img {
@@ -735,7 +736,7 @@ main .inner {
     width: 100%;
     max-width: 696px;
     margin: 0 auto;
-    gap: 1.5rem;  
+    gap: 1.5rem;
   }
 
   .hot-product-description,
@@ -756,12 +757,12 @@ main .inner {
 
   .badge {
     font-size: 1.125rem;
-    margin-bottom: 1rem;  
+    margin-bottom: 1rem;
   }
 
   .check {
     font-size: 2rem;
-    margin-bottom: 1.5rem;  
+    margin-bottom: 1.5rem;
   }
 
   .announcement {
@@ -794,7 +795,7 @@ main .inner {
     flex-direction: column;
     align-items: center;
     justify-content: flex-end;
-    padding-top: 3rem; 
+    padding-top: 3rem;
     height: 100%;
   }
 
@@ -803,21 +804,21 @@ main .inner {
     flex-direction: column;
     align-items: center;
     justify-content: flex-end;
-    padding-top: 7.5625rem;  
+    padding-top: 7.5625rem;
     padding-bottom: 0;
     height: 100%;
   }
 
   .home-top-ad-announcement,
   .home-bottom-ad-announcement {
-    position: static;  
-    padding-bottom: 2rem; 
-    font-size: 2rem; 
+    position: static;
+    padding-bottom: 2rem;
+    font-size: 2rem;
     text-align: center;
   }
 
   .shopping {
-    position: static; 
+    position: static;
     display: block;
     margin: 0 auto;
     margin-bottom: 2rem;
@@ -828,14 +829,14 @@ main .inner {
 
   .panda-top-ad {
     position: static;
-    margin-top: auto; 
+    margin-top: auto;
     width: 100%;
     height: auto;
   }
 
   .panda-bottom-ad {
     position: static;
-    margin-top: auto; 
+    margin-top: auto;
     width: 100%;
     height: auto;
   }
@@ -859,9 +860,9 @@ main .inner {
   .search .inner,
   .register-product .inner {
     padding-top: 1.25rem;
-    padding-bottom: 1.25rem;  
+    padding-bottom: 1.25rem;
     padding-left: 2rem;
-    padding-right: 2rem;  
+    padding-right: 2rem;
   }
 
   .panda-hot,
@@ -887,7 +888,7 @@ main .inner {
     flex-direction: column;
     width: 100%;
     max-width: 696px;
-    gap: 1.5rem;  
+    gap: 1.5rem;
   }
 
   .hot-product-description,
@@ -908,11 +909,12 @@ main .inner {
 
   .badge {
     font-size: 1rem;
-    margin-bottom: 0.5rem;  
+    margin-bottom: 0.5rem;
+  }
 
   .check {
     font-size: 1.5rem;
-    margin-bottom: 1rem; 
+    margin-bottom: 1rem;
   }
 
   .announcement {
@@ -922,7 +924,7 @@ main .inner {
   .login-box,
   .signup-box {
     width: 100%;
-    max-width: 400px; 
+    max-width: 400px;
     margin: 0 auto;
   }
 
