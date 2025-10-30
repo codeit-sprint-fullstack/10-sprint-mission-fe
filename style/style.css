@@ -184,7 +184,7 @@
 .fs19 {font-size:19px !important}
 .fs20 {font-size:20px !important}
 .fs30 {font-size:30px !important}
-.fs66 {font-size:66px !important}
+.fs66 {font-size:4.1rem !important}
 
 /* font-color */
 .tc_primary{color: var(--primary-blue);}
@@ -355,7 +355,7 @@
 
 
 body {
-    min-width: 1100px;
+    min-width:375px;
     margin: 0;
     color: var(--text-color);
 }
@@ -394,13 +394,11 @@ a {
     background-color: #fff;
     width: 100%;
     height: 70px;
-    padding: 0 20px;
-    min-width: 1100px;
-    max-width: 1420px;
+    padding: 0 24px;
+    max-width: 1920px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: var(--max-width);
     margin: 0 auto;
     box-sizing: border-box;
 }
@@ -432,7 +430,6 @@ a {
     margin-top: 70px;
     background-color: var(--light-blue-bg);
     width: 100%;
-    height: 540px;
 
 }
 
@@ -442,10 +439,20 @@ a {
     display: flex;
     justify-content: space-between;
     align-items: end;
-    max-width: var(--max-width);
     margin: 0 auto;
-    width: 1100px;
-    height: 540px;
+    max-width: 1100px;
+    padding-top: 200px;
+    box-sizing: border-box;
+}
+.panda_hero_content_02 {
+    
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    margin: 0 auto;
+    max-width: 1100px;
+    padding-top: 140px;
     box-sizing: border-box;
 }
 
@@ -491,6 +498,7 @@ display: flex;
 }
 
 .panda_feature_card {
+  background-color: #FCFCFC;
     width: 988px;
     display: flex;
     gap: 64px;
@@ -581,13 +589,12 @@ display: flex;
 
 
 /* 로그인 페이지 */
-.panda_login_01{ max-width: 640px; width: 100%; margin: auto; margin-top: 230px; margin-bottom: 230px;}
+.panda_login_01{ max-width: 640px; width: 100%; margin: auto; margin-top: 60px; margin-bottom: 230px;}
 .panda_login_01_header{gap: 24px; width: 100%; padding: 15px; }
 .panda_login_01_header img{width: 104; height: 104px;}
 
 .panda_input_wrap{display: flex; flex-direction: column; gap: 16px;}
 .panda_input_wrap .panda_input{ font-size: 1rem; color: var(--Secondary-color-600); width: 100%; padding: 16px 24px; border:1px solid transparent; background-color:var(--Secondary-color-100) ; border-radius: 12px; }
-.panda_input_wrap .panda_input:focus{border: 1px solid var(--primary-blue); }
 .panda_input_wrap .panda_input:focus-visible{outline: 2px solid var(--primary-blue); /* 포커스 표시 */
   border-color: var(--primary-blue); }
 .panda_input_wrap .panda_input::placeholder{color: var(--Secondary-color-400); }
@@ -595,7 +602,9 @@ display: flex;
 .password_hid_icon_btn{position: absolute; top: 16px; right: 24px; width: 24px; background-repeat: no-repeat; cursor: pointer; height: 24px;background-image: url(/img/btn_visibility_off_24px.svg); background-color: transparent;  border: 1px solid transparent;}
 .password_hid_icon_btn.on{background-image: url(/img/btn_visibility_on_24px.svg);}
 .panda_btn_login{width: 100%;  padding: 16px 124px; border: 1px solid transparent; border-radius: 40px; background-color: var(--primary-blue); color: var(--white-color); cursor: pointer; font-size: 1.3rem; font-weight: 600; }
-.btn_disabled{background-color:  var(--Secondary-color-400);}
+.panda_btn_login:disabled {background-color:  var(--Secondary-color-400);}
 .quick_login{padding: 16px 23px; background-color: #E6F2FF;}
+.panda_input_wrap .panda_input.error{outline: 2px solid var(--error-red); /* 포커스 표시 */}
 
+.panda_error_msg{    color: rgb(229, 57, 53);    font-size: 0.875rem;    margin-top: 6px;}
 
