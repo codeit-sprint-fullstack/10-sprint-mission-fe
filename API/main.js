@@ -44,7 +44,7 @@ createArticle(articleData)
     return getArticleList({ page: 1, pageSize: 10, keyword: '테스트' });
   })
   .then(list => {
-    console.log(`list get 성공 총 ${list.total}개`);
+    console.log(`list 조회 성공 총 ${list.total}개`);
 
     // 수정
     return patchArticle(createdArticleId, { content: "내용수정 완료" });
@@ -55,7 +55,7 @@ createArticle(articleData)
   })
 
   .then(retrievedArticle => {
-    console.log(`article get 성공 제목: ${retrievedArticle.title}`);
+    console.log(`조회 성공 제목: ${retrievedArticle.title}`);
 
     // 삭제
     return deleteArticle(createdArticleId);
