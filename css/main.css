@@ -1,7 +1,9 @@
 /* 공통 속성 */
 html {
   width: 100vw;
-  height: 100vw;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
 }
 a {
   display: inline-block;
@@ -49,6 +51,7 @@ header {
   background-color: #fff;
   z-index: 9999;
   height: 70px;
+  width: auto;
 }
 .header {
   display: flex;
@@ -59,7 +62,7 @@ header {
   justify-content: space-between;
   align-items: center;
   gap: 10px;
-  padding: 9px 200px ;
+  padding: 9px 150px ;
   /* padding: 9px, 16px; */
   border: 1px solid #DFDFDF;
   background-color: #FFF;
@@ -105,16 +108,10 @@ header {
   position: relative;
   background-color: #CFE5FF;
   display: block;
-  width: 100%;
-  height: auto;
-  /* top: 70px; */
+  height: 540px;
   padding: 120px 16px 80px;
-  margin-top: 70px;
 }
 .section1-word {
-  /* position: absolute; */
-  /* top: 200px; */
-  /* left: 405px; */
   position: relative;
   display: flex;
   align-items: center;
@@ -139,9 +136,8 @@ header {
   width: fit-content;
 }
 .section1 .panda {
-  /* position: relative; */
-  /* bottom: -300px; */
-  /* right: -700px; */
+  display: felx;
+  align-content: center;
   width: min(46vw, 746px);
   height: auto;
   margin-bottom: -100px;
@@ -155,8 +151,6 @@ header {
 /* -------------- section2 --------------- */
 
 .section2 {
-  /* top: 70px; */
-  /* padding: 140px 0; */
   width: 100%;
   position: relative;
   text-align: center;
@@ -233,13 +227,13 @@ header {
   padding: 40px;
   /* padding-right: 60px; */
 }
-.section4. .paragraph {
-  line-height: 140%;
-}
+
+/* ----------- section5 ------------- */
 .section5 {
   width: 100%;
   height: 540px;
   background-color: #CFE5FF;
+  margin: -16px;
 }
 
 .section5 .img {
@@ -263,7 +257,6 @@ footer {
   display: flex;
   width: 100%;
   height: 158px;
-  /* padding: 23px 200px; */
   padding: 24px 16px;
   align-items: flex-start;
   justify-content: space-between;
@@ -272,6 +265,7 @@ footer {
   background-color: #111827;
   color: #FFF;
   box-sizing: border-box;
+  margin: -16px;
 }
 footer .footer-content {
   color: #9CA3AF;
