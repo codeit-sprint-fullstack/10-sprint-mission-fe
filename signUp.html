@@ -4,21 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Panda Market</title>
-  </head>
-  <body>
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/general.css">
-    <link rel="stylesheet" href="css/signUp.css" />
-    <link rel="stylesheet" href="css/common.css" />
-    <link rel="stylesheet" href="css/queries-signup.css" />
-    <link rel="icon" href="img/pandamarket-logo.svg" />
-        <script defer src="js/signUp.js"></script>
-    <title>Panda Market</title>
 
+    <link rel="stylesheet" href="css/common.css" />
+    <link rel="stylesheet" href="css/signUp.css" />
+    <link rel="stylesheet" href="css/queries/queries-signup.css" />
+    <link rel="icon" href="img/pandamarket-logo.svg" />
+    <script defer src="js/pages/signUp.js"></script>
   </head>
   <body>
     <main>
@@ -30,13 +21,13 @@
               src="img/pandamarket-logo.svg"
               alt="panda market logo"
             />
-
             <div class="logo-name">판다마켓</div>
           </a>
-                <!------------- inputs ---------->
+
+          <!-- inputs -->
           <form action="">
-            <label for="email">
-              이메일
+            <label for="email"
+              >이메일
               <input
                 type="text"
                 id="email"
@@ -45,8 +36,8 @@
                 placeholder="이메일을 입력해주세요"
               />
             </label>
-            <label for="nickname">
-              닉네임
+            <label for="nickname"
+              >닉네임
               <input
                 type="text"
                 id="nickname"
@@ -55,59 +46,59 @@
                 placeholder="닉네임을 입력해주세요"
               />
             </label>
-                       <label for="password">
-              비밀번호
+            <label for="password"
+              >비밀번호
               <div class="input-wrapper">
-                 <input 
-                type="password"
-                id="password"
-                name="password"
-                placeholder="비밀번호를 입력해주세요"
-                required
-            />
-            <button class="pswToggle"></button>
+                <input
+                  type="password"
+                  id="password"
+                  name="password"
+                  placeholder="비밀번호를 입력해주세요"
+                  required
+                />
+                <button type="button" class="pswToggle"></button>
               </div>
-          </label>
-                      <label for="password">
-              비밀번호 확인
+            </label>
+            <label for="confirm-password"
+              >비밀번호 확인
               <div class="input-wrapper">
-                 <input 
-                type="password"
-                id="confirm-password"
-                name="password"
-                placeholder="비밀번호를 다시 한번 입력해주세요"
-                required
-            />
-            <button class="pswToggle"></button>
+                <input
+                  type="password"
+                  id="confirm-password"
+                  name="confirmPassword"
+                  placeholder="비밀번호를 다시 한번 입력해주세요"
+                  required
+                />
+                <button type="button" class="pswToggle"></button>
               </div>
-          </label>
-                       
+            </label>
             <button class="btn" type="submit">회원가입</button>
           </form>
-                <!------------- easyLogin---------->
+
+          <!-- easyLogin -->
           <div class="easyLogin">
             <p>간편 로그인하기</p>
             <div class="social-icons">
               <a href="https://www.google.com/" class="google" target="_blank">
                 <img src="img/google.png" alt="google" />
               </a>
-              <a href="https://www.kakaocorp.com/page/" class="kakaotalk" target="_blank">
+              <a
+                href="https://www.kakaocorp.com/page/"
+                class="kakaotalk"
+                target="_blank"
+              >
                 <img src="img/kakaotalk.svg" alt="kakaotalk" />
               </a>
             </div>
           </div>
-<!-- login -->
- <div class="loginWrap"> 
-  <p>이미회원이신가요?</p> 
-  <a class="login" href="login.html">로그인</a>
-</div>
 
+          <!-- login -->
+          <div class="loginWrap">
+            <p>이미 회원이신가요?</p>
+            <a class="login" href="login.html">로그인</a>
           </div>
         </div>
       </section>
     </main>
-  </body>
-</html>
-
   </body>
 </html>

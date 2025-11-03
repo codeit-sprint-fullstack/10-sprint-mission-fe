@@ -99,6 +99,8 @@
   border-radius: 0.8rem;
   padding: 1.2rem 2.3rem;
   font-size: 1.6rem;
+  inline-size: max-content;
+  margin-bottom: 0;
 }
 
 /* *************** section-hero **************** */
