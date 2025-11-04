@@ -134,15 +134,3 @@ button:disabled {
   opacity: 0.5;
   cursor: not-allowed;
 }
-
-.modal { display:none; position:fixed; inset:0; }
-.modal.show { display:block; }
-.modal-backdrop { position:absolute; inset:0; background:rgba(0,0,0,0.4); }
-.modal-panel {
-  position:relative; z-index:1;
-  max-width:360px; margin:20vh auto 0; padding:20px;
-  background:#fff; border-radius:12px; box-shadow:0 10px 30px rgba(0,0,0,0.15);
-  font-family:Pretendard, system-ui, sans-serif;
-}
-.modal-message { margin-bottom:16px; color:#111; }
-.modal-close { width:100%; padding:12px; border-radius:8px; background:#3692FF; color:#fff; border:0; }
