@@ -1,29 +1,18 @@
-import './styles/main.css';
-import Main from './pages/Main';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import React from "react";
+import Main from "./pages/Main";
+import Login from "./pages/Login";
 
 function App() {
   return (
-     <Main />
-    // <div className="App">
-    //   <header className="App-header">
-    //     <img src={logo} className="App-logo" alt="logo" />
-    //     <p>
-    //       Edit <code>src/App.js</code> and save to reload.
-    //     </p>
-    //     <a
-    //       className="App-link"
-    //       href="https://reactjs.org"
-    //       target="_blank"
-    //       rel="noopener noreferrer"
-    //     >
-    //       Learn React
-    //     </a>
-    //   </header>
-    // </div>
-    
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Main />} />       {/* 메인 페이지 */}
+        <Route path="./pages/Login" element={<Login />} /> 로그인 페이지
+        {/* <Route path="/signup" element={<SignUp />} /> ← 회원가입 추가 시 */}
+      </Routes>
+    </BrowserRouter>
   );
 }
-
-
 
 export default App;

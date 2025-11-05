@@ -1,5 +1,6 @@
 import React from "react";
 import "../styles/main.css"
+import { Link } from "react-router-dom"
 
 import logo from "../assets/img/logo.svg";
 import main1 from "../assets/img/main1.svg";
@@ -21,7 +22,7 @@ function Main () {
         <div className="main-logo">
           <img src={logo} alt="판다로고" /> <span>판다마켓</span>
         </div>
-        <a href="/src/pages/Login.js">로그인</a>
+        <Link to="./Login.js">로그인</Link>
       </div>
     </header>
     {/* Body */}
