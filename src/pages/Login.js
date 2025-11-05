@@ -1,8 +1,6 @@
 import React, { useMemo, useState } from "react";
 import "../styles/login.css"
 import ErrorModal from '../components/ErrorModal'
-
-
 import panda from "../assets/img/loginpanda.svg";
 import googleIcon from "../assets/img/logingoogle.svg";
 import kakaoIcon from "../assets/img/loginkakao.svg";
@@ -25,10 +23,8 @@ export default function Login() {
   const [password, setPassword] = useState("");
 
   const [errors, setErrors] = useState({ email: "", password: ""});
-
   const [modalOpen, setModalOpen] = useState(false);
   const [modalMsg, setModalMsg] = useState("");
-
   const openModal = (msg) => {
     setModalMsg(msg);
     setModalOpen(true);

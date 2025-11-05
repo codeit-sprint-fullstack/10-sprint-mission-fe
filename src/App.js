@@ -7,9 +7,9 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Main />} />       {/* 메인 페이지 */}
-        <Route path="./pages/Login" element={<Login />} /> 로그인 페이지
-        {/* <Route path="/signup" element={<SignUp />} /> ← 회원가입 추가 시 */}
+        <Route path="/" element={<Main />} />       
+        <Route path="./pages/Login" element={<Login />} /> 
+        <Route path="/signup" element={<Signup />} /> 
       </Routes>
     </BrowserRouter>
   );
