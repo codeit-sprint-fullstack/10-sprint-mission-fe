@@ -22,7 +22,7 @@ function Main () {
         <div className="main-logo">
           <img src={logo} alt="판다로고" /> <span>판다마켓</span>
         </div>
-        <Link to="./Login.js">로그인</Link>
+        <Link to="/Login.js">로그인</Link>
       </div>
     </header>
     {/* Body */}

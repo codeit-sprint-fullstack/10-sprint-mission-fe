@@ -157,7 +157,7 @@ export default function SignUp() {
     <>
     <div className="signup-container">
       <div className="header">
-        <Link to="./Main.js"><img src={loginpanda} alt="로그인 판다" /></Link>
+        <Link to="/Main.js"><img src={loginpanda} alt="로그인 판다" /></Link>
       </div>
       <span>판다 마켓</span>
     </div>
@@ -175,7 +175,7 @@ export default function SignUp() {
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           onBlur={validateEmail}
-          className={`input ${errors.email ? "error-boder" : ""}`}
+          className={`input ${errors.email ? "error-border" : ""}`}
           />
           {errors.email && (
             <p className="error-message">{errors.email}</p>
@@ -193,7 +193,7 @@ export default function SignUp() {
               value={nickname}
               onChange={(e) => setNickname(e.target.value)}
               onBlur={validateNickname}
-              className={`inpur ${errors.nickname ? "error-border" : ""}`}
+              className={`input ${errors.nickname ? "error-border" : ""}`}
               />
             {errors.nickname && (
               <p className="error-message">{errors.nickname}</p>
@@ -256,7 +256,7 @@ export default function SignUp() {
 
     <div className="login">
       <span>이미 회원아신가요?</span>
-      <Link to="./Login.js">로그인</Link>
+      <Link to="/Login.js">로그인</Link>
     </div>
 
     <Modal
