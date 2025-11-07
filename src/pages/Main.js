@@ -1,124 +1,148 @@
 import React from "react";
-import "../styles/main.css"
-import { Link } from "react-router-dom"
+import "../styles/home.css"
+// 이미지
+import logo from "../assets/logo/logo.svg"
+import feature1 from "../assets/home/feature1-image.png";
+import feature2 from "../assets/home/feature2-image.png";
+import feature3 from "../assets/home/feature3-image.png";
+import facebookIcon from "../assets/social/facebook-logo.svg";
+import twitterIcon from "../assets/social/twitter-logo.svg";
+import youtubeIcon from "../assets/social/youtube-logo.svg";
+import instagramIcon from "../assets/social/instagram-logo.svg";
+import { Link } from "react-router-dom";
+import Login from "./Login";
 
-import logo from "../assets/img/logo.svg";
-import main1 from "../assets/img/main1.svg";
-import item1 from "../assets/img/1.svg";
-import item2 from "../assets/img/2.svg";
-import item3 from "../assets/img/3.svg";
-import bottom from "../assets/img/bottom.svg";
-import facebook from "../assets/img/facebook.svg";
-import twitter from "../assets/img/twitter.svg";
-import youtube from "../assets/img/youtude.svg";
-import insta from "../assets/img/insta.svg";
-
-function Main () {
+export default function Main () {
   return (
     <>
-    {/* Header */}
     <header>
-      <div className="header">
-        <div className="main-logo">
-          <img src={logo} alt="판다로고" /> <span>판다마켓</span>
-        </div>
-        <Link to="/Login.js">로그인</Link>
-      </div>
+      <a href="/" aria-label="홈으로 이동">
+      <img src={logo} alt="판다마켓 로고" width="153" />
+      </a>
+      <Link to={Login} id="loginLink" className="button">로그인</Link>
     </header>
-    {/* Body */}
-    <div className="section1">
-      <div className="section1-word">
-        <div className="word1">
-          <div className="paragraph">
-            일상의 모든 물건을<br /> 거래해 보세요
-          </div>
-          <a href="/items">구경하러 가기</a>
-        </div>
-        <img src={main1} alt="판다 하이" className="panda" />
-      </div>
-    </div>
 
-    <div className="section2">
-      <div className="section2-main">
-        <img src={item1} alt="옷 하트" />
-        <div className="section2-word">
-          <div className="blue">Hot item</div>
-          <div className="paragraph">
-            인기 상품을<br />확인해 보세요
-          </div>
-          <div className="small-paragraph">
-            가장 HOT한 중고거래 플랫폼<br />
-            판다 마켓에서 확인해 보세요
-          </div>
+    <main className="with-header">
+      <section id="hero" className="banner">
+        <div className="wrapper">
+          <h1>
+            일상의 모든 물건을
+            <br />
+            거래해 보세요
+          </h1>
+          <a href="/items" className="button pill-button">
+            구경하러가기
+          </a>
         </div>
-      </div>
-    </div>
+      </section>
 
-    <div className="section3">
-      <div className="section-main">
-        <div className="section3-word">
-          <div className="blue">Search</div>
-          <div className="paragraph">
-            구매를 원하는<br />상품을 검색하세요
-          </div>
-          <div className="small-paragraph">
-            구매하고 싶은 물품은 검색해서<br />
-            쉽게 찾아보세요
+      <section id="features" className="wrapper">
+        <div className="feature">
+          <img src={feature1} alt="인기 상품" />
+          <div className="feature-content">
+            <h2>Hot item</h2>
+            <h1>
+              인기 상품을 <span className="break-on-desktop"><br /></span>
+              확인해보세요
+            </h1>
+            <p className="feature-description">
+              가장 HOT한 중고거래 물품을
+              <br />
+              판다마켓에서 확인해 보세요
+            </p>
           </div>
         </div>
-        <img src={item2} alt="돋보기"/>
-      </div>
-    </div>
 
-    <div className="section4">
-      <img src={item3} alt="상품 등록"/>
-      <div className="section4-main">
-        <div className="blue">Register</div>
-        <div className="section4-word">
-          <div className="paragraph">
-            판매를 원하는<br />상품을 등록하세요
-          </div>
-          <div className="small-paragraph">
-            어떤 물건이든 판매하고 싶은 <br />
-            상품을 쉽게 등록하세요
+        <div className="feature">
+          <img src={feature2} alt="검색 가능" />
+          <div className="feature-content">
+            <h2>Search</h2>
+            <h1>
+              구매를 원하는 <span className="break-on-desktop"><br /></span>
+              상품을 검색하세요
+            </h1>
+            <p className="feature-description">
+              구매하고 싶은 물품은 검색해서
+              <br />
+              쉽게 찾아보세요
+            </p>
           </div>
         </div>
-      </div>
-    </div>
 
-    <div className="section5">
-      <div className="paragraph">
-        믿을 수 있는 <br />
-        판다마켓 중고 거래
-      </div>
-      <img src={bottom} alt="판다하이"/>
-    </div>
+        <div className="feature">
+          <img src={feature3} alt="판매 상품 등록" />
+          <div className="feature-content">
+            <h2>Register</h2>
+            <h1>
+              판매를 원하는 <span className="break-on-desktop"><br /></span>
+              상품을 등록하세요
+            </h1>
+            <p className="feature-description">
+              어떤 물건이든 판매하고 싶은 상품을
+              <br />
+              쉽게 등록하세요
+            </p>
+          </div>
+        </div>
+      </section>
 
-    {/* FOOTER */}
+      <section id="bottomBanner" className="banner">
+        <div className="wrapper">
+          <h1>
+            믿을 수 있는
+            <br />
+            판다마켓 중고거래
+          </h1>
+        </div>
+      </section>
+   </main>
+    
     <footer>
-      <div className="footer-content">@codeit - 2024</div>
+      <div id="copyright">©codeit - 2024</div>
 
-      <div className="footer-mid">
-        <a href="/privacy">Privacy Polocy</a>
-        <a href="/faq">FAQ</a>
-      </div>
+        <div id="footerMenu">
+          <a href="/privacy">Privacy Policy</a>
+          <a href="/faq">FAQ</a>
+        </div>
 
-      <div className="img">
-        <a href="https://www.facebook.com/?locale=ko_KR" target="_blank" rel="noreferrer">
-        <img src={facebook} alt="facebook"/>
-        </a>
-        <a href="https://x.com/" target="_blank" rel="noreferrer">
-        <img src={twitter}/>
-        </a>
-        <a href="https://www.youtube.com/" target="_blank" rel="noreferrer">
-        <img src={youtube}/>
-        </a>
-        <a href="https://www.instagram.com/" target="_blank" rel="noreferrer">
-        <img src={insta}/>
-        </a>
-      </div>
-    </footer>
+        <div id="socialMedia">
+          <a
+            href="https://www.facebook.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="판다마켓 페이스북"
+          >
+            <img src={facebookIcon} alt="페이스북" width="20" />
+          </a>
+
+          <a
+            href="https://twitter.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="판다마켓 트위터"
+          >
+            <img src={twitterIcon} alt="트위터" width="20" />
+          </a>
+
+          <a
+            href="https://www.youtube.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="판다마켓 유튜브"
+          >
+            <img src={youtubeIcon} alt="유튜브" width="20" />
+          </a>
+
+          <a
+            href="https://www.instagram.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="판다마켓 인스타그램"
+          >
+            <img src={instagramIcon} alt="인스타그램" width="20" />
+          </a>
+        </div>
+      </footer>
     </>
-  );
+  )
 }
-export default Main

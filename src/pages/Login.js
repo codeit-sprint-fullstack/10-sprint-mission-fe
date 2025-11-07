@@ -1,174 +1,236 @@
-import React, { useMemo, useState } from "react";
-import "../styles/login.css"
-import ErrorModal from '../components/ErrorModal'
-import panda from "../assets/img/loginpanda.svg";
-import googleIcon from "../assets/img/logingoogle.svg";
-import kakaoIcon from "../assets/img/loginkakao.svg";
+import React, { useEffect, useMemo, useState } from "react";
+import "../styles/auth.css"
+import "../styles/modal.css"
+import USER_DATA from "../components/Constants"
+//로고
+import logo from "../assets/logo/logo.svg";
+import googleLogo from "../assets/social/google-logo.png";
+import kakaoLogo from "../assets/social/kakao-logo.png";
+import eyeInvisible from "../assets/icons/eye-invisible.svg";
+import eyeVisible from "../assets/icons/eye-visible.svg";
+import { Link } from "react-router-dom";
 
-const USER_DATA = [
-  { email: "codeit1@codeit.com", password: "codeit101!" },
-  { email: "codeit2@codeit.com", password: "codeit202!" },
-  { email: "codeit3@codeit.com", password: "codeit303!" },
-  { email: "codeit4@codeit.com", password: "codeit404!" },
-  { email: "codeit5@codeit.com", password: "codeit505!" },
-  { email: "codeit6@codeit.com", password: "codeit606!" },
-];
-
-function isValidEmail(value) {
-  return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
-}
+const errors = {
+  passwordMismatch: "이메일 또는 비밀번호가 일치하지 않습니다.",
+  emailExists: "이미 가입된 이메일입니다."
+};
 
 export default function Login() {
-  const [email, setEmail] = useState("");
+  const [email, setEamil] = useState("");
   const [password, setPassword] = useState("");
 
-  const [errors, setErrors] = useState({ email: "", password: ""});
+  const [isEmailValid, setIsEmailValid] = useState(false);
+  const [isPasswordValid, setIsPasswordInvalid] = useState(false);
+
+  const [showEmailEmpty, setShowEmailEmpty] = useState(false);
+  const [showEmailInvalid, setShowEmailInvalid] = useState(false);
+  const [showPasswordEmpty, setShowPasswordEmpty] = useState(false);
+  const [showPasswordShort, setShowPasswordShort] = useState(false);
+
+  const [showPassword, setShowPassword] = useState(false);
+
   const [modalOpen, setModalOpen] = useState(false);
-  const [modalMsg, setModalMsg] = useState("");
-  const openModal = (msg) => {
-    setModalMsg(msg);
+  const [modalMessage, setModalMessage] = useState("");
+  const [modalConfirmHref, setModalConfirmHref] = useState("");
+
+  const isFormValid = useMemo(
+    () => isEmailValid && isPasswordValid,
+    [isEmailValid, isPasswordValid]
+  );
+
+  const validateEmailString = (value) => {
+    const emailRegex = /^[A-Za-z0-9._%-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}$/;
+    return emailRegex.test(value);
+  };
+
+  const checkEmailValidity = () => {
+    const v = email.trim();
+    setIsEmailValid(false);
+    setShowEmailEmpty(false);
+    setShowEmailInvalid(false);
+
+    if (!v) {
+      setShowEmailEmpty(true);
+    } else if (!validateEmailString(v)) {
+      setShowEmailInvalid(true);
+    } else {
+      setIsEmailValid(true);
+    }
+  };
+
+  const checkPasswordValidity = () => {
+    const v = password.trim();
+    setIsPasswordInvalid(false);
+    setShowPasswordEmpty(false);
+    setShowPasswordShort(false);
+
+    if (!v) {
+      setShowPasswordEmpty(true);
+    } else if (v.length < 8) {
+      setShowPasswordShort(true);
+    } else {
+      setIsPasswordInvalid(true);
+    }
+  };
+
+  useEffect(() => {
+    checkEmailValidity();
+    checkPasswordValidity();
+  }, []);
+
+  const showModal = (message, confirmHref = "") => {
+    setModalMessage(message);
+    setModalConfirmHref(confirmHref);
     setModalOpen(true);
   };
 
-  const closeModal = () => setModalOpen(false);
-
-  const validateEmail = () => {
-    const value = email.trim();
-    if (value === "") {
-      setErrors((e) => ({...e, email: "이메일을 입력해주세요." }));
-      return false;
-    }
-    if (!isValidEmail(value)) {
-      setErrors((e) => ({...e, email: "잘못된 이메일 형식입니다. "}));
-      return false;
-    }
-    setErrors((e) => ({ ...e, email: "" }));
-    return true;
+  const closeModal = () => {
+    setModalOpen(false);
+    setModalMessage("");
+    setModalConfirmHref("");
   };
 
-  const validatePassword = () => {
-    const value = password.trim();
-    if (value === "") {
-      setErrors((e) => ({ ...e, password: "비밀번호를 입력해주세요," }));
-      return false;
+  const handleModalConfirm = () => {
+    if (modalConfirmHref) {
+      window.location.href = modalConfirmHref;
+    } else {
+      closeModal();
     }
-    if (value.length < 8) {
-      setErrors((e) => ({ ...e, password: "비밀번호 8자 이상을 입력해주세요. "}));
-      return false;
-    }
-    setErrors((e) => ({ ...e, password: "" }));
-    return true;
-  };
+  }
 
-  const canSubmit = useMemo(() => {
-    const emailOk = email.trim() !== "" && isValidEmail(email.trim());
-    const passwordOk = password.trim().length >= 8;
-    return emailOk && passwordOk;
-  }, [email, password]);
-
-  const handleSubmit = (e) => {
+  const onSubmit = (e) => {
     e.preventDefault();
+    checkEmailValidity();
+    checkPasswordValidity();
+    if (!isFormValid) return;
 
-    const emailOk = validateEmail();
-    const passwordOk = validatePassword();
-    if (!emailOk || !passwordOk) return;
-
-    const emailValue = email.trim();
-    const passwordValue = password.trim();
-
-    if (!emailValue || !passwordValue) {
-      openModal("이메일과 비밀번호를 입력해주세요.");
-      return;
+    const user = USER_DATA.find((u) => u.email === email.trim());
+    if (!user || user.password !== password.trim()) {
+      showModal(errors.passwordMismatch, "/src/pages/SignUp.js");
+    } else {
+      window.location.href = "./Items.js";
     }
-    const user = USER_DATA.find(
-      (u) => u.email.toLowerCase() === emailValue.toLowerCase()
-    );
-    if (!user || user.password !== passwordValue) {
-      openModal("비밀번호가 일치하지 않습니다.");
-      return;
-    }
-
-    window.location.assign("/items");
   };
-
   return (
     <>
-    {/* HEADER */}
-    <div className="header">
-      <a href="/src/pages/Main.js">
-        <img src={panda} alt="panda" />
+    <main className="auth-container">
+      <a href="/" className="logo-home-link" aria-label="홈으로 이동">
+        <img src={logo} alt="판다마켓 로고" />
       </a>
-      <span>판다마켓</span>
-    </div>
 
-    {/* FORM */}
-    <form className="login-form" onSubmit={handleSubmit} noValidate>
-      <div className="username">
-        <label htmlFor="username" className="inputname">
-          이메일
-        </label>
-        <input 
-          type="email"
-          id="username"
-          name="username"
-          className={`input ${errors.email ? "error-border" : ""}`}
-          placeholder="이메일을 입력해주세요"
-          value={email}
-          onChange={(e) => {
-            setEmail(e.target.value);
-            if (errors.email) validateEmail();
-        }}
-        onBlur={validateEmail}
-        />
-        {errors.email && <p className="error-message">{errors.email}</p>}
+      <form id="loginForm" onSubmit={onSubmit}>
+        <div className="input-item">
+          <label htmlFor="email">이메일</label>
+          <input
+            id="email"
+            name="email"
+            type="email"
+            placeholder="이메일을 입력해 주세요"
+            value={email}
+            onChange={(e) => setEamil(e.target.value)}
+            onBlur={checkEmailValidity}
+            aria-invalid={showEmailEmpty || showEmailInvalid}
+          />
+          {showEmailEmpty && (
+            <span id="emailEmptyError" className="errormessage">
+              이메일을 입력해주세요
+            </span>
+          )}
+          {showEmailInvalid && (
+            <span id="emailInvalidError" className="error-message">
+              잘못된 이메일 형식입니다
+            </span>
+          )}
+        </div>
+
+        <div className="input-item">
+          <label htmlFor="password">비밀번호</label>
+          <div className="input-wrapper">
+            <input
+              id="password"
+              name="password"
+              type={showPassword ? "text" : "password"}
+              placeholder="비밀번호를 입력해 주세요"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              onInput={checkPasswordValidity}
+              aria-invalid={showPasswordEmpty || showPasswordShort}
+            />
+            <button
+              type="button"
+              className="password-toggle-button"
+              aria-label={showPassword ? "비밀번호 숨기기" : "비밀번호 보기"}
+              onClick={() => setPassword((p) => !p)}
+              >
+                <img
+                  className="password-toggle-icon"
+                  src={showPassword ? eyeVisible : eyeInvisible}
+                  alt={showPassword ? "비밀번호 표시 상태 아이콘" : "비밀번호 숨김 상태 아이콘"}
+                />
+              </button>
+          </div>
+          {showPasswordEmpty && (
+            <span id="passwordEmptyError" className="error-message">
+              비밀번호를 입력해 주세요
+            </span>
+          )}
+          {showPasswordShort && (
+            <span id="passwordInvalidError" className="error-message">
+              비밀번호를 8자 이상 입력해주세요
+            </span>
+          )}
+        </div>
+
+        <button
+          type="submit"
+          className="button pill-button full-width"
+          disabled={!isFormValid}
+          >
+            로그인
+          </button>
+      </form>
+      
+      <div className="sicial-login-container">
+        <h3>간편 로그인하기</h3>
+        <div className="social-login-links-container">
+          <a
+            href="https://www.kakaocorp.com/page/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="구글 로그인"
+            >
+              <img src={googleLogo} alt="구글 로그인" width="42" />
+          </a>
+          <a
+            href="https://www.kakaocorp.com/page/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="카카오톡 로그인"
+          >
+            <img src={kakaoLogo} alt="카카오톡 로그인" width="42" />
+          </a>
+        </div>
       </div>
 
-      <div className="password">
-        <label htmlFor="password" className="inputname">
-          비밀번호
-        </label>
-        <input 
-          type="password"
-          id="password"
-          name="password"
-          className={`input ${errors.password ? "error-border" : ""}`}
-          placeholder="비밀번호를 입력해주세요"
-          value={password}
-          onChange={(e) => {
-            setPassword(e.target.value);
-            if (errors.password) validatePassword();
-          }}
-          onBlur={validatePassword}
-        />
-        {errors.password && <p className="error-message">{errors.password}</p>}
+      <div className="auth-swith">
+          판다마켓이 처음이신가요? <a href="./SignUp.js">회원가입</a>
       </div>
+    </main>
 
-      <button id="loginBtn" type="submit" disabled={!canSubmit}>
-        로그인
-      </button>
-    </form>
-
-    {/* 간편 로그인 */}
-    <div className="easy">
-      <span className="easy-login">간편 로그인하기</span>
-      <div className="sns">
-        <a href="https://www.google.com" target="_blank" rel="noreferrer">
-        <img src={googleIcon} alt="google"/>
-        </a>
-        <a href="https://www.kakaocorp.com/page" target="_blank" rel="norefrrer">
-        <img src={kakaoIcon} alt="kakao"/>
-        </a>
-      </div>
-    </div>
-
-    {/* 회원가입 */}
-    <div className="first">
-      <span>판다마켓이 처음이신가요?</span>{" "}
-      <a href="/src/pages/SiginUp.js">회원가입</a>
-    </div>
-
-    {/* 에러 모달 */}
-    <ErrorModal open={modalOpen} message={modalMsg} onClose={closeModal} />
+    {modalOpen && (
+      <div id="error-modal" className="modal" role="dialog" aria-modal="true">
+        <div className="modal-content">
+          <p id="modal-message">{modalMessage}</p>
+          <button
+            id="confirm-button"
+            className="confirm-button"
+            onClick={handleModalConfirm}
+          >
+            확인
+          </button>
+         </div>
+        </div>
+       )}
     </>
-  )
+  );
 }
