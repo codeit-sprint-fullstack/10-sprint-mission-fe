@@ -43,6 +43,13 @@ HTML, CSS, JavaScript를 중심으로 로그인·회원가입,
 - HTTP 상태 코드 2XX 미만 응답 시 콘솔에 에러 메시지 출력
 - API 기능을 `service/` 폴더로 분리하여 모듈화
 
+### 📌스프린트 미션5 — React 마이그레이션 & 반응형 마켓 페이지
+
+- Vite + React 세팅, 컴포넌트 분리
+  - `Header`, `Footer`, `Pagination`, `SortDropdown`, `EmptyResult`
+- useProducts Hook 생성
+- 반응형 레이아웃
+
 ## 💬 느낀 점
 
 처음에는 코드가 마음대로 작동하지 않아 어려웠습니다.
