@@ -1,11 +1,11 @@
-import React from 'react';
+import React, { memo } from 'react';
 
-const Image = ({src, alt, style, onClick= () => {}}) => {
+const Image = ({src, alt, style}) => {
     return (
-        <img src={src} alt={alt} style={style} onClick={() => onClick()}>
+        <img src={src} alt={alt} style={style}>
 
         </img>
     );
 };
 
-export default Image;
+export default memo(Image);

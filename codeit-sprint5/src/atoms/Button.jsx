@@ -1,10 +1,10 @@
-import React from 'react';
+import React, { memo } from 'react';
 
-const Button = ({onClick = () => {}, style, children}) => {
+const Button = ({onClick = null, style, children}) => {
 
     return (
-        <button onClick={() => onClick()} style={style}>{children}</button>
+        <button {...(onClick ? { onClick } : {})} style={style}>{children}</button>
     );
 };
 
-export default Button;
+export default memo(Button);

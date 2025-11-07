@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { memo } from 'react';
 
 const Option = ({key, value, children, style}) => {
     return (
@@ -8,4 +8,4 @@ const Option = ({key, value, children, style}) => {
     );
 };
 
-export default Option;
+export default memo(Option);

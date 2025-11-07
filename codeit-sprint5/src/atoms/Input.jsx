@@ -1,11 +1,11 @@
-import React from 'react';
+import React, { memo } from 'react';
 
-const Input = ({type, style, placeholder, onChange = () => {}, ref = null}) => {
+const Input = ({type, style, placeholder, onChange = null, ref = null}) => {
     return (
-        <input type={type} style={style} placeholder={placeholder} onClick={() => onChange()} ref={ref}>
+        <input type={type} style={style} placeholder={placeholder} {...(onChange ? { onChange } : {})} ref={ref}>
 
         </input>
     );
 };
 
-export default Input;
+export default memo(Input);
