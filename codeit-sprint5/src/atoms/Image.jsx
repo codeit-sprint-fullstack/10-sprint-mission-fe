@@ -1,8 +1,8 @@
 import React, { memo } from 'react';
 
-const Image = ({src, alt, style}) => {
+const Image = ({src, alt, style, onClick = null}) => {
     return (
-        <img src={src} alt={alt} style={style}>
+        <img src={src} alt={alt} className={style} {...(onClick ? { onClick } : {})}>
 
         </img>
     );
