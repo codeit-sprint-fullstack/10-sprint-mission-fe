@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Label = ({style, children, onClick = null, htmlFor = null}) => {
+const Label = ({style, children, onClick = () => {}, htmlFor = null}) => {
     return (
         <label style={style} onClick={() => onClick()} htmlFor={htmlFor}>{children}</label>
     );

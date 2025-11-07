@@ -11,7 +11,7 @@ const App = () => {
     return (
         <>
             <Button onClick={() => console.log('click2')} style={{background: '#123456'}}>1</Button>
-            <Input type={'text'} placeholder={'검색할 상품을 입력해주세요'} style={{background: 'blue'}}></Input>
+            <Input type={'text'} placeholder={'검색할 상품을 입력해주세요'} style={{background: 'blue'}} onChange={() => {}}></Input>
             <Label style={{background: 'red'}} htmlFor={'test'}>자유게시판</Label>
             <Image src={pandaIcon} alt={'판다'} style={{borderRadius: '24px'}}></Image>
             <Select id={'test'} style={{background: 'green'}} onChange={(data) => console.log(data)}></Select>
