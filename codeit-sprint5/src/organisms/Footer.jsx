@@ -39,7 +39,7 @@ const iconData = [
 const Footer = () => {
     return (
         <div className={styles.footer}>
-            <p className={styles.year}>@codeit - ${year}</p>
+            <p className={styles.year}>@codeit - {year}</p>
 
             <Nav type={"footer"} navMenu={footerMenu} className={styles.nav}></Nav>
 

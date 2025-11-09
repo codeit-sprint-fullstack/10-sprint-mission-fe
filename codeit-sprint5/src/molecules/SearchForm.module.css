@@ -1,11 +1,84 @@
 .layout {
+  display: flex;
+  align-items: center;
+  border: none;
+  border-radius: 0.75rem;
+  padding: 0.5625rem 1rem;
+  background: #f3f4f6;
+  flex: 1;
+  min-width: 20.3125rem;
+  transition: all 0.2s ease;
+  height: 2.625rem;
+}
 
+.layout:focus-within {
+  background: white;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 0 0 0.1875rem rgba(54, 146, 255, 0.1);
 }
 
 .searchIcon {
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-right: 0.25rem;
+  cursor: pointer;
+  flex-shrink: 0;
+  display: block;
+  opacity: 1;
+  transition: opacity 0.2s ease;
+}
 
+.layout:hover .searchIcon {
+  opacity: 0.8;
 }
 
 .searchBar {
+  flex: 1;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  padding: 0;
+  background: transparent;
+  color: #1f2937;
+}
 
+.searchBar::placeholder {
+  color: #9ca3af;
+}
+
+@media (max-width: 1023px) {
+  .layout {
+    padding: 0.5625rem 1rem;
+    min-width: 18rem;
+    height: 2.625rem;
+  }
+
+  .searchIcon {
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-right: 0.25rem;
+  }
+
+  .searchBar {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .layout {
+    width: 100%;
+    padding: 0.5625rem 1rem;
+    min-width: 0;
+    height: 2.625rem;
+  }
+
+  .searchIcon {
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-right: 0.25rem;
+  }
+
+  .searchBar {
+    font-size: 1rem;
+  }
 }

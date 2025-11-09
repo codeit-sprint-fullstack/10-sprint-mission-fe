@@ -11,14 +11,14 @@ const navItems = [
     },
     {
         src: "/",
-        value: "중고마켓s"
+        value: "중고마켓"
     }
 ];
 
 const Header = () => {
     return (
         <header className={styles.header}>
-            <div style={styles.logoBox}>
+            <div className={styles.logoBox}>
                 <Logo/>
                 <Nav type={"header"} navMenu={navItems}></Nav>
             </div>

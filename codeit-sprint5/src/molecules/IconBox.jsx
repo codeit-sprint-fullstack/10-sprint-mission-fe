@@ -1,13 +1,15 @@
 import React from 'react';
 import styles from "./IconBox.module.css";
+import Image from "../atoms/Image";
 
 const IconBox = ({ iconData = [] }) => {
-
-    const listStyle = {};
-
     return (
         <ul className={styles.ulList}>
-            { iconData.map((item) => {return <li className={styles.liList}><Image src={item.src} alt={item.alt} className={styles.image}></Image></li>})}
+            { iconData.map((item, index) => (
+                <li key={index} className={styles.liList}>
+                    <Image src={item.src} alt={item.alt} style={styles.image} />
+                </li>
+            ))}
         </ul>
     );
 };
