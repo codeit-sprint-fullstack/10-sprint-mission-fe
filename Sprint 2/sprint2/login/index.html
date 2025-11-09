@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>로그인</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="brand">
+      <img id="panda_logo" src="panda.svg" alt="판다 로고"> 
+      <h1 class="brand-title">판다마켓</h1>
+    </div> 
+    
+    <form class="login">
+      <label>이메일</label>
+      <input id="email" name="email" type="text" placeholder="이메일을 입력해주세요"/>
+      <p class="error-message"></p> /*0번째*/
+
+      <label>비밀번호</label>
+      <input id="password" type="password" placeholder="비밀번호를 입력해주세요"/>
+      <p class="error-message"></p> /*1번째*/
+      <button type="submit">로그인</button>
+    </form>
+
+      <div class="login-signup">판다마켓이 처음이신가요?
+        <a class="login-signup-link" href="#">회원가입</a>
+      </div>
+      <section class="social-box">간편 로그인하기
+      <div class="icons">
+      <img src="kago.svg" alt="kaka and Google">
+       </div>
+    </section>
+
+    <script src="login.js"></script>
+  </body>
+</html>

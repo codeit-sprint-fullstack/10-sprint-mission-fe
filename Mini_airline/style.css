@@ -1,0 +1,314 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #f7f8fd;
+  color: #0b1f66;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 8px;
+  background-color: #16bf97;
+  box-shadow: 0px 4px 15px rgba(18, 23, 42, 0.03);
+  color: #ffffff;
+  font-weight: 700;
+}
+
+button:disabled {
+  background-color: #f5f6f9;
+  color: #b6bfd3;
+}
+
+.container {
+
+  margin: 0 auto;
+  padding: 0 24px;
+  width: 100%;
+  max-width: 880px;
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  padding: 18px 0;
+  background-color: #2a3251;
+  color: #ffffff;
+}
+
+#logo {
+  height: 24px;
+}
+
+.header > .divider {
+  color: #3b4252;
+}
+
+.trip {
+
+  /*flex-wrap: wrap;*/
+  /*justify-content: space-between;*/
+  display: flex;
+  align-items: center;
+  
+  
+  margin: 40px 0 24px;
+  padding: 24px 32px;
+  border-radius: 8px;
+  background: #ebeff8;
+}
+
+
+.trip-title {
+
+  /*display: inline-block;
+  vertical-align: text-top;*/
+  color: #b3bdd5;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 23px;
+}
+
+.trip-depart-icon {
+
+  /*display: inline-flex;
+  align-items: center;*/
+  gap: 4px;
+  height: 12px;
+}
+
+.trip-airports {
+  /*flex-direction: column;*/
+  /*display: flex;*/
+
+  display: block;
+  align-items: flex-start;
+ 
+
+
+  margin: 8px 0 0;
+  color: #000000;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 32px;
+  font-family: 'Titillium Web';
+  line-height: 32px;
+}
+
+.trip-date {
+
+  /*margin: 16px 0;*/
+
+  display: inline-block;  
+  margin: 0 0 0 auto;
+  padding: 8px 24px;
+  border-radius: 4px;
+  background: #ffffff;
+  color: #000000;
+}
+
+.flights-header {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 40px;
+  
+}
+
+
+
+.flights-header-result, .flights-header-col 
+{
+  
+  /*flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;*/
+
+
+  padding-bottom: 18px;
+  border-bottom: 1px solid #d6dbe8;
+}
+
+.flights-header-result {
+
+ /*margin-right: auto;*/
+
+ flex: 1 1 auto; 
+    
+}
+
+.flights-header-col {
+ 
+
+  flex: 0 0 147px;
+  /*gap: 3px;*/
+  padding: 18px;
+  margin-right: 0;
+  color: #b1bac9;
+}
+
+.flights-header-col.active {
+  border-bottom: 3px solid #2a3251;
+  color: #2a3251;
+}
+
+.order-by {
+
+  margin-bottom: 8px;
+  font-weight: 700;
+}
+
+.flight-card {
+  
+  display: flex;
+  /*align-items: stretch;*/
+
+  margin: 24px 0;
+  border-radius: 8px;
+  background: #ffffff;
+  box-shadow: 0px 4px 15px rgba(18, 23, 42, 0.1);
+}
+
+.flight-card > .ticket > .content {
+
+  display: flex;
+  flex-direction: column;
+  gap:8px; 
+
+}
+
+.flight-card > .cabin {
+
+  flex: 0 0 147px;
+  border-left: 1px solid #e5e9f3;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+
+.ticket-label {
+  
+
+  margin: 0;
+  padding: 8px 24px;
+  background-image: url('images/bg_ticket_label.svg');
+  background-position: 0 0;
+  background-size: contain;
+  background-repeat: no-repeat;
+  color: #16bf97;
+  font-size: 12px;
+  font-family: 'Titillium Web';
+  line-height: 18px;
+
+  gap: 16px;
+}
+
+
+
+.flight-card > .ticket {
+  padding: 24px 24px 32px;
+  color: #1a345e;
+  font-weight: 700;
+  flex: 1 1 auto;
+  min-width: 0; 
+}
+
+
+
+.flight-card .departure-arrival {
+ 
+ /*margin-bottom: 16px;*/
+ /*align-items: flex-end;*/
+ /*justify-content: center;*/
+ /*gap: 12px;*/
+  
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: 700;
+  
+}
+
+
+.flight-card .label {
+  /*align-items: center;*/
+  /*justify-content: space-between;*/
+
+
+  margin: 0;
+  padding: 0;
+  color: #b6bfd3;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 17px;
+}
+
+
+
+.cabin .name,
+.cabin .price,
+.cabin .left {
+  margin: 0;
+}
+
+.cabin .name {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 23px;
+}
+
+.cabin .price {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 23px;
+}
+
+.cabin .left {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 17px;
+}
+
+.cabin .reserve {
+  margin-top: 23px;
+}
+
+.soldout.cabin .left {
+  color: #b6bfd3;
+}
+
+.soldout-soon.cabin .left {
+  color: #dc534a;
+}
+
+.ad {
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 47px;
+  border-radius: 8px;
+  background-color: #ebeff8;
+}
+
+.ad > h3 {
+  margin: 0;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 23px;
+}
+
+.ad > p {
+  margin: 0;
+  color: #b6bfd3;
+  font-size: 12px;
+  line-height: 17px;
+}
