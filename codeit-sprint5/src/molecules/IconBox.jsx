@@ -7,7 +7,7 @@ const IconBox = ({ iconData = [] }) => {
 
     return (
         <ul className={styles.ulList}>
-            { iconData.map((item) => {return <li className={styles.liList}><Image src={item.src} alt={item.alt} style={item.style}></Image></li>})}
+            { iconData.map((item) => {return <li className={styles.liList}><Image src={item.src} alt={item.alt} className={styles.image}></Image></li>})}
         </ul>
     );
 };

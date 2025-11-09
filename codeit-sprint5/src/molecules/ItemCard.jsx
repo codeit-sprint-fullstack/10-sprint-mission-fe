@@ -3,11 +3,9 @@ import Image from "../atoms/Image";
 import heartIcon from "../assets/ic_heart.svg";
 import styles from "./ItemCard.module.css";
 
-const ItemCard = ({ imageSrc, alt, title, money, hit }) => {
+const ItemCard = ({ imageSrc, alt, item }) => {
 
-    const layoutStyle = {};
-    const imageStyle = {};
-    const heartStyle = {};
+    const {title, money, hit} = item;
 
     return (
         <div className={styles.layoutStyle}>
