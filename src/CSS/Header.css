@@ -1,0 +1,124 @@
+@font-face {
+  font-family: 'ROKAF Sans';
+  src: url('../assets/fonts/ROKAFSans.woff2') format('woff2'),
+    url('../assets/fonts/ROKAFSans.woff') format('woff');
+  font-weight: 100 900;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Pretendard';
+  src: url('../assets/fonts/Pretendard.woff2') format('woff2'),
+    url('../assets/fonts/Pretendard.woff') format('woff');
+  font-weight: 100 900;
+  font-display: swap;
+}
+
+.Header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 70px;
+  border-bottom: 1px solid #dfdfdf;
+  background: #f3f4f6;
+  z-index: 10;
+  font-family: 'ROKAF Sans', Pretendard, system-ui, -apple-system, 'Segoe UI',
+    Roboto, sans-serif;
+}
+
+.Header__content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  height: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* 로고 */
+.Header__logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+}
+
+.Header__logo-img {
+  width: 40px;
+  height: 40px;
+}
+
+.Header__logo-nav {
+  display: flex;
+  align-items: center;
+  gap: 40px; /* 로고 ↔ 메뉴 간격 */
+}
+
+.Header__title {
+  font-size: 28px;
+  font-weight: 800;
+  color: #4f7cff;
+}
+
+/* 메뉴 */
+.Header__nav {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  font-family: Pretendard, system-ui, -apple-system, 'Segoe UI', Roboto,
+    sans-serif;
+}
+.Header__link {
+  font-size: 18px;
+  font-weight: 600;
+  color: #374151; /* gray-700 */
+  text-decoration: none;
+  padding: 6px 2px;
+  border-radius: 6px;
+  transition: color 0.15s ease;
+}
+.Header__link:hover {
+  color: #111827; /* gray-900 */
+}
+.Header__link.is-active {
+  color: #111827;
+  position: relative;
+}
+.Header__link.is-active::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -8px;
+  height: 3px;
+  border-radius: 3px;
+  background: #2f80ed; /* 선택 강조색 */
+}
+
+/* 우측 버튼 */
+.Header__login-btn {
+  height: 40px;
+  padding: 0 14px;
+  border: 0;
+  border-radius: 8px;
+  background: #4f7cff;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* 작은 화면 대응(선택) */
+@media (max-width: 720px) {
+  .Header__content {
+    grid-template-columns: auto auto; /* 로고 | 로그인 */
+    grid-template-rows: auto auto; /* 1행: 로고/로그인, 2행: 메뉴 */
+    row-gap: 8px;
+  }
+  .Header__nav {
+    grid-column: 1 / -1;
+    justify-content: flex-start;
+    gap: 20px;
+  }
+}
