@@ -1,0 +1,199 @@
+/*
+* Styles for FS_10-React Sprint 5 Application
+* style for borth items.html and index.html
+* Description: Basic resets and global styles for the application
+* Author: Taeyoung Seon
+* created: 11/6/2015 09:42
+* last updated: 11/9/2025 22:45
+*/
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: Pretendard, sans-serif;
+    word-break: keep-all;
+    font-size: 62.5%;   /* 1rem = 10px */
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Prevent accidental horizontal overflow on small screens */
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    margin: 0;
+    background-color: #ffffff;
+    color: #fff;
+    font-size: 16px;
+    line-height: 24px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/**
+ * Header styles - shared across all pages
+ */
+header {
+    background-color: #ffffff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 72px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20rem;
+    box-sizing: border-box;
+    border-bottom: 1px solid #dfdfdf;
+    z-index: 1000;
+}
+
+header a {
+    display: inline-block;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.main-nav {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-link {
+    color: #111827;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.nav-link:hover {
+    color: #2F80ED;
+}
+
+header img {
+    display: block;
+    width: 153px;
+    height: auto;
+}
+
+header a.button {
+    margin: 0;
+    background: #2F80ED;
+    color: #ffffff;
+    padding: 8px 14px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+/**
+shared button element and loginLinkButton
+*/
+.button {
+    background-color: #3692ff;
+    color: #ffffff;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#loginLinkButton {
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 8px;
+    padding: 11.5px 23px;
+}
+
+.button:hover {
+    background-color: #1967d6;
+}
+
+.button:focus {
+    background-color: #1251aa;
+}
+
+
+/* footer {
+    background-color: #111827;
+    color: #9ca3af;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3.2rem 20rem;
+    font-size: 1.6rem;
+    max-width: 100%;
+} */
+
+footer {
+    max-width: 100%;
+    background-color: #111827;
+    color: #9ca3af;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 20px;
+    gap: 12px;
+    font-size: 14px;
+}
+
+#footerMenu {
+    display: flex;
+    flex-direction: row;
+    gap: 3rem;
+    color: #e5e7eb;
+    align-items: center;
+}
+
+#socialMedia {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    align-items: center;
+}
+
+/* Responsive layout for header and footer */
+@media (max-width: 1199px) {
+    header, footer {
+        padding: 0 4rem;
+    }
+    
+    header {
+        height: 72px;
+    }
+
+    footer {
+        padding: 3.2rem 4rem;
+    }
+}
+
+@media (max-width: 743px) {
+    header, footer {
+        padding: 0 2rem;
+    }
+    
+    footer {
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+        padding: 2rem;
+    }
+}

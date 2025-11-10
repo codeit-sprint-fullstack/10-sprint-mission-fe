@@ -1,0 +1,505 @@
+/*
+* Styles for FS_10-React Sprint 5 Application
+* style for items.html
+* Description: Basic resets and global styles for the application
+* Author: Taeyoung Seon
+* Date: 11/6/2015 09:42 AM
+*/
+
+/* Ensure images never exceed their containers 
+ img {} : banner images in landing page
+*/
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+
+/* Header and footer styles are now in global.css */
+
+
+.logo {
+    padding: 24px 28px;
+    font-weight: 900;
+}
+
+.menu-items {
+    margin: 0;
+    margin-bottom: 48px;
+    padding: 0;
+    list-style: none;
+}
+
+.menu-item {
+    display: flex;
+    align-items: center;
+    padding: 8px 24px;
+
+    gap: 8px;
+}
+
+.menu-item.active {
+    background-color: rgba(205, 187, 255, 0.1);
+    color: #ffffff;
+}
+
+main {
+    margin: 0px;
+    margin-bottom: 100px;
+    padding-top: 72px; /* reserve space for fixed header */
+    width: 100%;
+    max-width: 1120px;
+}
+
+
+
+section {
+    width: 100%;
+    margin: 80px auto;
+    padding: 0;
+}
+
+.section-title {
+    color: black;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 38px;
+    margin: 0;
+}
+
+/* Section Header and Controls */
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 40px 0;
+    gap: 24px;
+    flex-wrap: wrap;
+}
+
+.section-header-left {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.section-controls {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.search-container {
+    position: relative;
+    width: 280px;
+}
+
+.search-input {
+    width: 100%;
+    height: 40px;
+    padding: 8px 40px 8px 16px;
+    background: #F3F4F6;
+    border: 1px solid #E5E7EB;
+    border-radius: 8px;
+    font-size: 14px;
+    color: #111827;
+}
+
+.search-input::placeholder {
+    color: #6B7280;
+}
+
+.search-button {
+    position: absolute;
+    right: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    padding: 4px;
+    cursor: pointer;
+}
+
+    .search-clear-button {
+        position: absolute;
+        right: 40px;
+        top: 50%;
+        transform: translateY(-50%);
+        background: none;
+        border: none;
+        padding: 4px;
+        cursor: pointer;
+        font-size: 20px;
+        line-height: 1;
+        color: #6B7280;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+    }
+
+    .search-clear-button:hover {
+        background-color: #F3F4F6;
+    }
+
+.register-button {
+    background: #2F80ED;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 8px 16px;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.register-button:hover {
+    background: #1967d6;
+}
+
+.sort-select {
+    text-align: center;
+    height: 40px;
+    padding: 8px 32px 8px 16px;
+    background: #F3F4F6;
+    border: 1px solid #E5E7EB;
+    border-radius: 8px;
+    font-size: 14px;
+    color: #111827;
+    cursor: pointer;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5 7.5L10 12.5L15 7.5' stroke='%236B7280' stroke-width='1.67' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 8px center;
+}
+
+/* Mobile Controls */
+.mobile-controls {
+    display: none;
+    align-items: center;
+    gap: 12px;
+    position: relative;
+    width: 100%;
+}
+
+.mobile-search-bar {
+    display: flex;
+    align-items: center;
+    background: #F3F4F6;
+    border: 1px solid #E5E7EB;
+    border-radius: 8px;
+    padding: 0 12px;
+    flex: 1;
+        position: relative;
+}
+
+.mobile-search-bar .search-icon {
+    color: #6B7280;
+    margin-right: 8px;
+}
+
+.mobile-search-bar .search-input {
+    border: none;
+    background: transparent;
+    padding: 8px 0;
+    width: 100%;
+    font-size: 14px;
+    color: #111827;
+}
+
+.mobile-search-bar .search-input:focus {
+    outline: none;
+}
+
+.sort-toggle {
+    background: none;
+    border: none;
+    padding: 8px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.mobile-sort-dropdown {
+    position: absolute;
+    top: calc(100% + 8px);
+    right: 0;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+    z-index: 1000;
+    min-width: 120px;
+    border: 1px solid #E5E7EB;
+}
+
+.sort-option {
+    width: 100%;
+    padding: 12px 16px;
+    background: none;
+    border: none;
+    text-align: left;
+    font-size: 14px;
+    color: #111827;
+    cursor: pointer;
+    border-bottom: 1px solid #E5E7EB;
+}
+
+.sort-option:last-child {
+    border-bottom: none;
+}
+
+.sort-option:hover {
+    background-color: #F3F4F6;
+}
+
+.sort-option:hover {
+    background: #F3F4F6;
+}
+
+/* Utility classes for responsive design */
+.desktop-only {
+    display: flex;
+}
+
+.mobile-only {
+    display: none;
+}
+
+/* .featured {
+    display: flex;
+    gap: 40px;
+}
+
+.featured-thumb {
+    flex-shrink: 0;
+    border-radius: 24px;
+}
+
+.featured-content {
+    display: flex;
+    gap: 24px;
+    flex-direction: column;
+}
+
+.featured-tag {
+    width: fit-content;
+    background-color: #18181b;
+    border-radius: 16px;
+    padding: 8px 16px;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    color: #565662;
+}
+
+.featured-title {
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 48px;
+    color: #d9d9d9;
+    margin: 0;
+}
+
+.featured-description {
+    margin: 0;
+    color: #868686;
+} */
+
+.playlists {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+}
+
+.no-results {
+    width: 100%;
+    padding: 48px 0;
+    text-align: center;
+    color: #6B7280;
+    font-weight: 700;
+    font-size: 1.6rem;
+}
+
+.playlist {
+    flex-basis: 23%;
+}
+
+.playlist-thumb {
+    width: 100%;
+    border-radius: 16px;
+}
+
+/* Make the '판매중인 상품' (2nd section) show 5 items per row */
+section:nth-of-type(2) .playlists {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 24px;
+}
+
+/* Reset flex sizing for items inside the 2nd section so grid controls layout */
+section:nth-of-type(2) .playlist {
+    flex: none;
+}
+
+.playlist-title {
+    color: black;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 20px;
+    margin: 10px 0 8px;
+}
+
+.playlist-artist {
+    
+    color: #868686;
+    margin: 0;
+}
+
+.playlist-like-count {
+    font-weight: 600;
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    color: #000000;
+    margin: 8px 0 0;
+}
+
+/* Add bottom margin to the pagination section */
+section:last-of-type {
+    margin-bottom: 60px;
+    padding-bottom: 60px;
+}
+
+
+/* Responsive layout rules */
+/* Tablet: <= 900px */
+@media (max-width: 1199px) {
+    /* 베스트 상품: 2 columns */
+    section:nth-of-type(1) .playlists {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px;
+    }
+    section:nth-of-type(1) .playlist { flex: none; }
+
+    /* 판매중인 상품: 3 columns (will form rows as needed) */
+    section:nth-of-type(2) .playlists {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 24px;
+    }
+    section:nth-of-type(2) .playlist { flex: none; }
+
+    footer {
+        background-color: #111827;
+        color: #9ca3af;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 40px 20px;
+        gap: 12px;
+        font-size: 14px;
+    }
+
+}
+
+/* Mobile: <= 480px */
+@media (max-width: 480px) {
+    main {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    
+    section {
+        margin: 40px auto;
+    }
+
+    /* Control visibility for mobile/desktop elements */
+    .desktop-only {
+        display: none;
+    }
+    
+    .mobile-only {
+        display: flex;
+    }
+
+    /* Section header adjustments */
+    .section-header {
+        margin: 24px 0;
+        gap: 12px;
+    }
+
+    .mobile-controls {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    /* Ensure search container takes full width on mobile */
+    .mobile-search-container .search-input {
+        width: 100%;
+    }
+
+    /* 베스트 상품: 1 column */
+    section:nth-of-type(1) .playlists {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+    section:nth-of-type(1) .playlist { flex: none; }
+
+    /* 판매중인 상품: 2 columns */
+    section:nth-of-type(2) .playlists {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+    }
+    section:nth-of-type(2) .playlist { flex: none; }
+
+    /* Pagination adjustments for small screens */
+    .pagination {
+        width: auto;
+        gap: 8px;
+        padding: 0 8px;
+    }
+
+    /* Header & footer tweaks for small screens */
+    header {
+        height: 56px;
+        padding: 8px 12px;
+    }
+    header img {
+        width: 120px;
+    }
+
+    .main-nav { 
+        display: flex; 
+        gap: 5px;
+    }
+
+    header a.button {
+        padding: 6px 10px;
+        font-size: 14px;
+    }
+
+    footer {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 24px 12px;
+        gap: 8px;
+    }
+    #footerMenu, #socialMedia {
+        gap: 6px;
+    }
+}
+
+/* Ensure main padding matches header height on small screens */
+/* @media (max-width: 480px) {
+    main { padding-top: 56px; }
+} */
