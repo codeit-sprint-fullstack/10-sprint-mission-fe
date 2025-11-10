@@ -1,0 +1,77 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.25rem;
+  margin-top: 2.5rem;
+  padding: 0;
+}
+
+.arrowButton {
+  padding: 0;
+  border: none;
+  background: transparent;
+  border-radius: 0;
+  cursor: pointer;
+  font-size: 1rem;
+  color: #1f2937;
+  transition: all 0.2s ease;
+  width: 2.5rem;
+  height: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.arrowButton:hover:not(:disabled) {
+  opacity: 0.7;
+}
+
+.arrowButton:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+.active {
+  background-color: #2f80ed !important;
+  color: #f9fafb !important;
+  border: none !important;
+  border-radius: 2.5rem !important;
+}
+
+.inactive {
+  background-color: white;
+  color: #6b7280;
+  border: 1px solid #e5e7eb;
+  border-radius: 2.5rem;
+}
+
+.inactive:hover {
+  background-color: #f9fafb;
+  border-color: #3692ff;
+}
+
+@media (max-width: 1023px) {
+  .container {
+    gap: 0.25rem;
+    margin-top: 2rem;
+  }
+
+  .arrowButton {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .container {
+    gap: 0.25rem;
+    margin-top: 1.5rem;
+  }
+
+  .arrowButton {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+}

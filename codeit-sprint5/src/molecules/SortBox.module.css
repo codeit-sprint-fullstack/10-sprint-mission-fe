@@ -1,0 +1,53 @@
+.selectBox {
+  padding: 0.75rem 1.25rem;
+  padding-right: 2.75rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.75rem;
+  background: white;
+  font-size: 1rem;
+  color: #1f2937;
+  cursor: pointer;
+  outline: none;
+  min-width: 8.125rem;
+  transition: all 0.2s ease;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'%3E%3Cpath fill='%231f2937' d='M8 12L2 6h12z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  font-weight: 400;
+  height: 2.625rem;
+}
+
+.selectBox:hover {
+  border-color: #3692ff;
+}
+
+.selectBox:focus {
+  border-color: #3692ff;
+  box-shadow: 0 0 0 0.1875rem rgba(54, 146, 255, 0.1);
+}
+
+.options {
+  padding: 0.5rem;
+}
+
+@media (max-width: 1023px) {
+  .selectBox {
+    padding: 0.75rem 1.25rem;
+    padding-right: 2.75rem;
+    font-size: 1rem;
+    min-width: 8.125rem;
+    height: 2.625rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .selectBox {
+    width: 100%;
+    padding: 0.75rem 1.25rem;
+    padding-right: 2.75rem;
+    font-size: 1rem;
+    min-width: 0;
+    height: 2.625rem;
+  }
+}

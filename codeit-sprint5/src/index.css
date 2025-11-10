@@ -1,0 +1,29 @@
+:root {
+
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('./assets/fonts/Pretendard-Regular.woff2');
+}
+
+@font-face {
+    font-family: 'ROKAF-sans';
+    src: url('./assets/fonts/ROKAF-Sans-Medium.ttf');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Pretendard, ROKAF-sans, sans-serif;
+
+}
+
+a {
+    text-decoration: none;
+}
+
+li, ol, ul {
+    list-style: none;
+}

@@ -1,0 +1,74 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 12.5rem;
+  background-color: white;
+  color: #1f2937;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  border-bottom: 1px solid #dfdfdf;
+  height: 4.25rem;
+}
+
+.logoBox {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.loginButton {
+  padding: 0.75rem 1.4375rem;
+  background-color: #3692ff;
+  border: none;
+  color: #f9fafb;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+  height: 2.625rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loginButton:hover {
+  background-color: #2f80ed;
+}
+
+@media (max-width: 1023px) {
+  .header {
+    padding: 0 1.5rem;
+    height: 4.375rem;
+  }
+
+  .logoBox {
+    gap: 1.5rem;
+  }
+
+  .loginButton {
+    padding: 0.75rem 1.4375rem;
+    font-size: 1rem;
+    height: 2.625rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .header {
+    padding: 0 1rem;
+    height: 4.375rem;
+  }
+
+  .logoBox {
+    gap: 1rem;
+  }
+
+  .loginButton {
+    padding: 0.75rem 1.4375rem;
+    font-size: 1rem;
+    height: 2.625rem;
+  }
+}

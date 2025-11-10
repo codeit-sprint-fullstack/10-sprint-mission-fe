@@ -1,0 +1,90 @@
+.headerListStyle {
+  display: flex;
+  gap: 0;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.headerItemStyle {
+  list-style: none;
+}
+
+.headerLinkStyle {
+  color: #4b5563;
+  text-decoration: none;
+  font-size: 1.125rem;
+  font-weight: 700;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+  padding: 1.3125rem 0.9375rem;
+  display: block;
+  line-height: 1.625rem;
+}
+
+.headerLinkStyle:hover {
+  color: #1f2937;
+}
+
+.footerListStyle {
+  display: flex;
+  gap: 1.875rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footerItemStyle {
+  list-style: none;
+}
+
+.footerLinkStyle {
+  color: #e5e7eb;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+  font-weight: 400;
+}
+
+.footerLinkStyle:hover {
+  color: white;
+}
+
+@media (max-width: 1023px) {
+  .headerListStyle {
+    gap: 0;
+  }
+
+  .headerLinkStyle {
+    font-size: 1.125rem;
+    padding: 1.3125rem 0.9375rem;
+  }
+
+  .footerListStyle {
+    gap: 1.875rem;
+  }
+
+  .footerLinkStyle {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .headerListStyle {
+    gap: 0;
+  }
+
+  .headerLinkStyle {
+    font-size: 1.125rem;
+    padding: 1.3125rem 0.9375rem;
+  }
+
+  .footerListStyle {
+    gap: 1.875rem;
+  }
+
+  .footerLinkStyle {
+    font-size: 1rem;
+  }
+}

@@ -1,0 +1,44 @@
+.layoutStyle {
+  display: flex;
+  align-items: center;
+  gap: 0;
+}
+
+.logoStyle {
+  width: 2.5rem;
+  height: 2.5rem;
+  display: block;
+  flex-shrink: 0;
+}
+
+.labelStyle {
+  font-size: 1.602rem;
+  font-weight: 700;
+  color: #3692ff;
+  margin: 0;
+  line-height: 1;
+  white-space: nowrap;
+  font-family: 'ROKAF Sans', sans-serif;
+}
+
+@media (max-width: 1023px) {
+  .logoStyle {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+
+  .labelStyle {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .logoStyle {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+
+  .labelStyle {
+    font-size: 1.5rem;
+  }
+}
