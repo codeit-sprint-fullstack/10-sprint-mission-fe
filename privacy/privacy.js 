@@ -1,0 +1,37 @@
+console.log('privacy.js 로드됨!');
+
+const emailInput = document.getElementById('email');
+const nicknameInput = document.getElementById('nickname');
+const passwordInput = document.getElementById('password');
+const password2Input = document.getElementById('password2');
+const submitButton = document.querySelector('button[type="submit"]')
+
+const USER_DATA = [
+    { email: 'codeit1@codeit.com', password: "codeit101!" },
+    { email: 'codeit2@codeit.com', password: "codeit202!" },
+    { email: 'codeit3@codeit.com', password: "codeit303!" },
+    { email: 'codeit4@codeit.com', password: "codeit404!" },
+    { email: 'codeit5@codeit.com', password: "codeit505!" },
+    { email: 'codeit6@codeit.com', password: "codeit606!" },
+];
+
+function isValidEmail(email) {
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailPattern.test(email);
+}
+
+
+emailInput.addEventListener('blur', function() {
+    const errorElement = emailInput.nextElementSibling;
+
+    if (emailInput.value === '') {
+        //에러 표시
+        emailInput.classList.add('error');
+        errorElement.textContent = '이메일을 입력해주세요';
+        errorElement.classList.add('show');
+    } else if (!isValidEmail(emailInput.value)) {
+        emailInput.classList.add('error');
+        errorElement.textContent = '잘못된 이메일 형식입니다'
+        errorElement.classList.add('show');
+    }
+});
