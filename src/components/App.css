@@ -1,0 +1,60 @@
+main {
+    width: 100%;
+    height: 100%;
+}
+
+.Bestcontainer {
+    display: flex;
+    justify-content: center;
+    padding-top: 94px;
+}
+
+.BestString {
+    font-family: Pretendard;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 32px;
+    color: var(--Secondary-900, #111827);
+    margin: 16px 0 16px 0px;
+}
+
+.SellingString {
+    font-family: Pretendard;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 32px;
+    color: var(--Secondary-900, #111827);
+}
+
+.SellingHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 40px 0 24px 0;
+}
+
+.SellingTool {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    gap: 12px;
+}
+
+@media (min-width: 744px) and (max-width: 1199px) {
+    .SellingHeader {
+        margin: 40px 24.5px 24px;
+    }
+    .BestString {
+        margin: 16px 24px;
+    }
+}
+
+@media (min-width: 375px) and (max-width: 743px) {
+    .SellingHeader {
+        margin: 40px 16px 24px;
+    }
+    .BestString {
+        margin: 16px 24px;
+    }
+}
