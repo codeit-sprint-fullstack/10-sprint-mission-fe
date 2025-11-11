@@ -1,7 +1,8 @@
 import React, { useEffect, useMemo, useState } from "react";
 import "../styles/auth.css";
 import "../styles/modal.css";
-import USER_DATA from "../components/Constants"
+import USER_DATA from "../../components/Constants"
+import { Link } from "react-router-dom";
 //이미지
 import logo from "../assets/logo/logo.svg";
 import googleLogo from "../assets/social/google-logo.png";
