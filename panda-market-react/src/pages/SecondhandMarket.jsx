@@ -5,6 +5,7 @@ import Pagination from "../components/Pagination";
 import SortDropdown from "../components/SortDropdown";
 import useResponsivePage from "../hooks/useResponsivePage";
 import ProductGrid from "../components/ProductGrid";
+import "./SecondhandMarket.css";
 
 function SecondhandMarket() {
   const best = useProducts({ page: 1, pageSize: 4, orderBy: "favorite" });

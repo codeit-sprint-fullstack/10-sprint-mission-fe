@@ -1,0 +1,11 @@
+.empty-result {
+  text-align: center;
+  color: var(--Secondary-900);
+  background-color: var(--White);
+  border: 1px solid var(--Secondary-300);
+  border-radius: 0.5rem;
+  padding: 2.5rem;
+  margin: 1.5rem 0;
+  font-size: 1.125rem;
+  font-weight: 600;
+}

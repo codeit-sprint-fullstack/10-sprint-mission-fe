@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import "./SortDropdown.css";
 
 const OPTIONS = [
   { value: "recent", label: "최신순" },

@@ -1,3 +1,5 @@
+import "./Pagination.css";
+
 function Pagination({
   page, // 현재 페이지
   totalPages, // 총 페이지 수

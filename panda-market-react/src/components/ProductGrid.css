@@ -1,0 +1,38 @@
+.grid-best,
+.grid-all {
+  display: grid;
+}
+
+/* 데스크탑 */
+.grid-best {
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2.5rem 1.5rem;
+} /* 베스트: 4열 */
+.grid-all {
+  grid-template-columns: repeat(5, 1fr);
+  gap: 2.5rem 1.5rem;
+} /* 전체: 5열 */
+
+/* ======================= 반응형 ======================= */
+
+/* 태블릿 (<=1199) */
+@media (max-width: 1199px) {
+  .grid-best {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .grid-all {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem 1rem;
+  }
+}
+
+/* 태블릿 (<=743) */
+@media (max-width: 743px) {
+  .grid-best {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .grid-all {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem 0.5rem;
+  }
+}

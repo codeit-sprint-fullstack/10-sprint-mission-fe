@@ -1,4 +1,5 @@
 import ProductCard from "./ProductCard";
+import "./ProductGrid.css";
 
 function ProductGrid({ items, field = "all" }) {
   const productList = Array.isArray(items) ? items : [];

@@ -1,4 +1,5 @@
 import { price } from "../utils/price";
+import "./ProductCard.css";
 
 function ProductCard({ item }) {
   return (
