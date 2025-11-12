@@ -1,0 +1,74 @@
+.SellingItem {
+    display: flex;
+    flex-direction: column;
+    width: 221px;
+    height: 317px;
+}
+
+.SellingContentItem-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 18px;
+}
+
+.Selling-itemList {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    justify-items: center;
+    gap: 40px 24px;
+}
+
+.item-name {
+    font-family: Pretendard;
+    margin-top: 16px;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 24px;
+    color: var(--Secondary-800, #1f2937);
+}
+
+.item-price {
+    color: var(--Secondary-800, #1f2937);
+    font-family: Pretendard;
+    margin: 6px 0;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 26px;
+}
+
+.item-favorite {
+    color: var(--Secondary-600, #4b5563);
+    font-family: Pretendard;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 18px;
+}
+
+@media (min-width: 744px) and (max-width: 1199px) {
+    .Selling-itemList {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        margin: 24px 24.5px 0 24.5px;
+        gap: 40px 16px;
+    }
+    .SellingHeader {
+        justify-content: space-around;
+    }
+}
+
+@media (min-width: 375px) and (max-width: 743px) {
+    .Selling-itemList {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        margin: 16px;
+        gap: 32px 8px;
+    }
+    .SellingHeader {
+        justify-content: space-around;
+    }
+    .SellingItem {
+        width: 168px;
+        height: 264px;
+    }
+}
