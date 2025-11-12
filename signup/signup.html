@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>회원가입</title>
+  <link rel="stylesheet" href="../css/signup.css">
+  <script src="/JS/signup.js" defer></script>
+  <script src="/JS/utils/madal.js" defer></script>
+</head>
+<body>
+    <div class="header">
+      <a href="/index.html">
+        <img src="../img/loginpanda.svg" alt="panda">
+      </a>
+      <span>판다마켓</span>
+    </div>
+    <form action="signup">
+      <div class="username">
+        <label for="username" class="inputname">이메일</label>
+        <input type="email" 
+        placeholder="이메일을 입력해주세요" 
+        id="email" 
+        name="email" 
+        class="input">
+      </div>
+
+      <div class="nickname">
+        <label for="nickname" class="nickname">닉네임</label>
+        <input type="text" 
+        placeholder="닉네임을 입력해주세요" 
+        id="nickname" 
+        name="nickname" 
+        class="input">
+      </div>
+
+      <div class="password">
+        <label for="password" class="inputname">비밀번호</label>
+        <input type="password" 
+        placeholder="비밀번호를 입력해주세요" 
+        id="password" 
+        name="password" 
+        class="input"> 
+        <label 
+        for="password" 
+        class="inputname"
+        required
+        minlength="8">비밀번호</label>
+        
+        <input type="password" 
+        placeholder="비밀번호를 다시 한 번 입력해주세요" 
+        id="passwordconfirm" 
+        name="passwordconfirm" 
+        class="input"
+        required
+        minlength="8"> 
+      </div>
+
+      <button id="signupBtn" type="submit">회원가입</button>
+
+    </form>
+    <div class="easy">
+      <span class="easy-login">간편 로그인하기</span>
+      <div class="sns">
+          <a href="https://www.google.com">
+          <img src="../img/logingoogle.svg" alt="google">
+        </a>
+        <a href="https://www.kakaocorp.com/page">
+          <img src="../img/loginkakao.svg" alt="kakao">
+        </a>
+      </div>
+    </div>
+    <div class="login">
+      <span>이미 회원이신가요?</span> <a href="../login/login.html">로그인</a> 
+    </div>
+
+    <div id="errorModal" class="modal" aria-hidden="true" role="dialog" aria-modal="true">
+      <div class="modal-backdrop" data-close="true"></div>
+      <div class="modal-panel" role="document">
+        <p id="errorModalMessage" class="modal-message"></p>
+        <button id="errorModalCloseBtn" class="modal-close">확인</button>
+      </div>
+    </div>
+  </body>
+</html>
