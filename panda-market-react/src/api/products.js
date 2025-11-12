@@ -7,32 +7,47 @@ export async function fetchProducts({
   orderBy = "recent", // 정렬 기준
   keyword = "", // 사용자가 검색하는 키워드
 } = {}) {
-  const url = new URL(PRODUCT_BASE);
-  url.searchParams.set("page", page);
-  url.searchParams.set("pageSize", pageSize);
-  if (keyword) url.searchParams.set("keyword", keyword);
-  if (orderBy) url.searchParams.set("orderBy", orderBy);
+  let response;
+  let apiData;
 
-  const response = await fetch(url.toString(), {
-    method: "GET",
-  });
+  try {
+    const url = new URL(PRODUCT_BASE);
+
+    url.searchParams.set("page", page);
+    url.searchParams.set("pageSize", pageSize);
+    if (keyword) url.searchParams.set("keyword", keyword);
+    if (orderBy) url.searchParams.set("orderBy", orderBy);
+
+    response = await fetch(url, {
+      method: "GET",
+    });
+  } catch (error) {
+    const message = `오류가 발생했습니다: ${error.message}`;
+    console.error(message);
+    throw new Error(message);
+  }
+
+  try {
+    apiData = await response.json();
+  } catch (error) {
+    const message = `데이터를 JSON 형식으로 변환하는데 오류가 발생했습니다: ${error.message}`;
+    console.error(message);
+    throw new Error(message);
+  }
 
   if (!response.ok) {
-    let body = {};
-    try {
-      body = await response.json();
-    } catch {
-      // json 형태가 아님 !
-    }
     const message =
-      body?.message ||
+      apiData?.message ||
       `요청이 실패했습니다: ${response.status} ${response.statusText}`;
     console.error(message);
     throw new Error(message);
   }
-  const apiData = await response.json();
+
+  const items = Array.isArray(apiData.list) ? apiData.list : [];
+  const total = Number(apiData.totalCount) || 0;
+
   return {
-    items: Array.isArray(apiData.list) ? apiData.list : [],
-    total: Number(apiData.totalCount) || 0,
+    items,
+    total,
   };
 }
