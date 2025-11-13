@@ -1,0 +1,253 @@
+:root {
+  /* Colors */
+  --cg-200: #e5e7eb;
+  --cg-400: #9ca3af;
+  --cg-500: #6b7280;
+  --cg-600: #2f80ed; /* active */
+
+  --sec-100: #f5f6f8;
+  --sec-600: #4b5563;
+  --sec-800: #1f2937;
+
+  /* Layout */
+  --container-w: min(1200px, 90vw);
+  --radius: 16px;
+  --frame-gap: 80px; /* 베스트 ↔ 판매중 섹션 간격 */
+  --section-gap: 24px; /* 섹션 제목 ↔ 내용 간격 */
+  --grid-gap: 24px; /* 카드 그리드 간격 */
+
+  /* Pagination */
+  --page-size: 40px;
+  --page-gap: 4px;
+}
+
+/* ========== Base ========== */
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* ========== Main Frame ========== */
+.MainFrame {
+  width: var(--container-w);
+  margin: 100px auto 0;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.BestFrame,
+.SellingFrame {
+  display: flex;
+  flex-direction: column;
+  gap: var(--section-gap);
+  margin-top: 24px;
+}
+.BestFrame > h2,
+.SellingFrame > h2 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--sec-800);
+}
+
+/* ========== SearchBar ========== */
+.SellingFrame__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 32px;
+}
+
+.SearchBar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex: 1;
+  justify-content: flex-end;
+  flex-wrap: wrap; /* 좁을 때 줄바꿈 */
+}
+.SearchBar input {
+  flex: 1;
+  min-width: 240px;
+  max-width: 560px;
+  height: 40px;
+  padding: 0 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background: #f3f4f6;
+}
+.SearchBar .primary {
+  height: 42px;
+  padding: 0 14px;
+  border: none;
+  border-radius: 8px;
+  background: #2f80ed;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+}
+.SearchBar .primary:hover {
+  background: #1f6be0;
+}
+.SearchBar select {
+  height: 40px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  background: #fff;
+  padding: 0 8px;
+}
+
+/* ========== Card / Grid ========== */
+.CardGrid {
+  display: grid;
+  gap: var(--grid-gap);
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* 기본(데스크톱) */
+.BestFrame .CardGrid {
+  grid-template-columns: repeat(4, 1fr);
+}
+.SellingFrame .CardGrid {
+  grid-template-columns: repeat(5, 1fr);
+}
+
+/* 카드 */
+.Card {
+  border: none;
+  border-radius: var(--radius);
+  background: #fff;
+  overflow: hidden;
+}
+.Card__img-wrapper {
+  border-radius: 12px;
+  overflow: hidden;
+}
+.Card__img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  display: block;
+}
+.Card__meta {
+  padding: 8px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  line-height: 1.2;
+}
+.Card__meta .title {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--sec-800);
+}
+.Card__meta .price {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 26px;
+  color: var(--sec-800);
+}
+.Card__meta .likes {
+  margin: 0;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--sec-600);
+}
+
+/* ========== Pagination ========== */
+.pg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--page-gap);
+  margin: 24px 0;
+}
+.pg__btn {
+  width: var(--page-size);
+  height: var(--page-size);
+  border-radius: 50%;
+  border: 1px solid var(--cg-200);
+  background: #fff;
+  color: var(--cg-500);
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 26px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.15s, border-color 0.15s, color 0.15s;
+}
+.pg__btn:hover:not(:disabled) {
+  background: #f9fafb;
+}
+.pg__btn.is-active {
+  background: var(--cg-600);
+  border-color: var(--cg-600);
+  color: #fff;
+}
+.pg__btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+.pg__dot {
+  width: var(--page-size);
+  height: var(--page-size);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--cg-400);
+}
+
+/* 메시지/에러 */
+.error {
+  color: #d73737;
+  font-weight: 600;
+}
+
+/* ========== Responsive ========== */
+/* 태블릿 (패드) */
+@media (max-width: 1024px) {
+  .BestFrame .CardGrid {
+    grid-template-columns: repeat(2, 1fr);
+  } /* 베스트 2열 */
+  .SellingFrame .CardGrid {
+    grid-template-columns: repeat(3, 1fr);
+  } /* 판매 3열 */
+}
+
+/* 모바일 */
+@media (max-width: 600px) {
+  .BestFrame .CardGrid {
+    grid-template-columns: 1fr;
+  } /* 베스트 1열 */
+  .SellingFrame .CardGrid {
+    grid-template-columns: repeat(2, 1fr);
+  } /* 판매 2열 */
+
+  .SearchBar input {
+    flex: 1 1 100%;
+  }
+  .SearchBar .primary,
+  .SearchBar select {
+    flex: 1 1 calc(50% - 4px);
+  }
+}
+
+/* 페이지네이션 모바일 줄바꿈 */
+.Pagination {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+}
