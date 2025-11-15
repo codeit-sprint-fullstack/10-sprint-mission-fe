@@ -1,9 +1,12 @@
 import React from "react";
 import Logo from "../../assets/images/logo/logo.svg";
 import "./Header.css";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 function Header() {
+  const location = useLocation();
+  const isItemsPage = location.pathname === "/items";
+
   return (
     <header className="globalHeader">
       <div className="headerLeft">
@@ -20,7 +23,7 @@ function Header() {
           <ul>
             <li>자유게시판</li>
 
-            <li>
+            <li className={isItemsPage ? "active" : ""}>
               <Link to="/items" aria-label="중고마켓 페이지로 이동">
                 중고마켓
               </Link>
@@ -29,7 +32,9 @@ function Header() {
         </nav>
       </div>
       <button type="button" className="loginLink button">
-        로그인
+        <Link to="/Login" aria-label="로그인 페이지로 이동">
+          로그인
+        </Link>
       </button>
     </header>
   );

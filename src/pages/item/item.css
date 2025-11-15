@@ -1,0 +1,125 @@
+.itemPageRoot {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.sectionTitle {
+  color: #111827;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: normal;
+  margin-bottom: 16px;
+}
+
+.allItemsCardSection {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px 8px;
+}
+
+.allItemsSectionHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 32px;
+}
+
+.searchBarWrapper {
+  display: flex;
+  background-color: #f3f4f6;
+  border-radius: 12px;
+  padding: 9px 16px;
+  flex: 1;
+  align-items: center;
+  min-width: 200px;
+}
+
+.searchBarInput {
+  border: none;
+  flex: 1;
+  background-color: inherit;
+  margin-left: 4px;
+}
+
+.searchBarInput::placeholder {
+  color: #9ca3af;
+  font-size: 16px;
+}
+
+.searchBarInput:focus {
+  outline: none;
+}
+
+.createItemButton {
+  margin: 0px 12px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 8px;
+  padding: 11.5px 23px;
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.paginationBarWrapper {
+  padding-top: 40px;
+  padding-bottom: 80px;
+}
+
+.market-empty {
+  text-align: center;
+  padding: 40px;
+  color: #9ca3af;
+  font-size: 16px;
+}
+
+@media (min-width: 744px) {
+  .allItemsSectionHeader {
+    display: grid;
+    grid-template-columns: 1fr auto auto;
+  }
+
+  .allItemsCardSection {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px 16px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .allItemsCardSection {
+    grid-template-columns: repeat(5, 1fr);
+    gap: 40px 24px;
+  }
+}
+
+@media (max-width: 1199px) {
+  .searchBarInput {
+    width: 206px;
+  }
+}
+
+@media (max-width: 744px) {
+  .allItemsSectionHeader {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .sectionTitle {
+    flex: 1 1 auto;
+    order: 1;
+  }
+
+  .createItemButton {
+    flex: 0 0 auto;
+    order: 2;
+  }
+
+  .searchBarWrapper {
+    flex: 1 1 auto;
+    width: calc(100% - 60px);
+    order: 3;
+  }
+}

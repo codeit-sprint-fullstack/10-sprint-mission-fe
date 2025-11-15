@@ -20,6 +20,10 @@
   color: var(--blue);
 }
 
+.globalHeader nav ul li.active a {
+  color: #3692ff;
+}
+
 .loginLink {
   font-size: 16px;
   font-weight: 600;
