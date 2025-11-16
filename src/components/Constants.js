@@ -6,3 +6,5 @@ const USER_DATA = [
   { email: "codeit5@codeit.com", password: "codeit505!" },
   { email: "codeit6@codeit.com", password: "codeit606!" },
 ];
+
+export default USER_DATA;
