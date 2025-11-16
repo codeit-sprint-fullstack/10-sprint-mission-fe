@@ -1,0 +1,19 @@
+.login .inner {
+  max-width: 1920px;
+  margin: 0 auto;
+  padding-top: 14.4375rem;
+  padding-bottom: 17.75rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-box {
+  width: 40rem;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+}

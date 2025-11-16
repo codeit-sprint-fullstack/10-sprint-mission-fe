@@ -24,12 +24,17 @@
   gap: 1.5rem;
   align-items: center;
 }
-.nav a {
+
+.nav-link {
   color: var(--Secondary-600);
   text-decoration: none;
   font-weight: 700;
   text-align: center;
   font-size: 1.125rem;
+}
+
+.nav-link-active {
+  color: #3692ff;
 }
 
 .header-login {

@@ -1,4 +1,4 @@
-const PRODUCT_BASE = "https://panda-market-api.vercel.app/products";
+const PRODUCT_BASE = "http://localhost:4000/products";
 
 // Product List 조회 (GET) - page, pageSize, orderBy, keyword 쿼리
 export async function fetchProducts({
@@ -50,4 +50,37 @@ export async function fetchProducts({
     items,
     total,
   };
+}
+
+// Product 등록 (POST) - 상품 정보(name, description, price, tags)
+export async function createProduct({ name, description, price, tags }) {
+  let response;
+  let data = {};
+
+  try {
+    response = await fetch(PRODUCT_BASE, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        name,
+        description,
+        price,
+        tags,
+      }),
+    });
+
+    data = await response.json();
+
+    if (!response.ok) {
+      const message =
+        data?.message ||
+        `요청이 실패했습니다: ${response.status} ${response.statusText}`;
+      throw new Error(message);
+    }
+
+    return data;
+  } catch (error) {
+    console.error(error.message);
+    throw error;
+  }
 }

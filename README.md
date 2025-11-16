@@ -50,6 +50,16 @@ HTML, CSS, JavaScript를 중심으로 로그인·회원가입,
 - useProducts Hook 생성
 - 반응형 레이아웃
 
+📌 스프린트 미션6 — React 마이그레이션 & 상품 CRUD API(Express + MongoDB)
+
+- 프론트엔드
+
+  - 랜딩 페이지 마이그레이션
+  - 상품 등록 페이지 구현
+
+- 백엔드
+  - REST API 작성
+
 ## 💬 느낀 점
 
 처음에는 코드가 마음대로 작동하지 않아 어려웠습니다.
@@ -59,7 +69,6 @@ HTML, CSS, JavaScript를 중심으로 로그인·회원가입,
 
 ## 🧾 라이선스
 
-본 프로젝트는 코드잇(Codeit)
-의 소유이며,
+본 프로젝트는 코드잇(Codeit)의 소유이며,
 교육 목적으로만 사용됩니다.
 © 2024 Codeit. All rights reserved.
