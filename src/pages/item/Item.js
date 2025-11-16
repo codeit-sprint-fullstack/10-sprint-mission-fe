@@ -11,16 +11,17 @@ import SellingItems from "./SellingItems";
 import { ReactComponent as SearchIcon } from "../../assets/images/icons/ic_search.svg";
 
 export default function Item() {
-  const [keyword, setKeyword] = useState("");
-  const [searchKeyword, setSearchKeyword] = useState("");
+  const [inputValue, setInputValue] = useState("");
+  const [searchValue, setSearchValue] = useState("");
 
   const handleInputChange = (event) => {
-    setKeyword(event.target.value);
+    const newValue = event.target.value;
+    setInputValue(newValue);
   };
 
   const handleKeyPress = (event) => {
     if (event.key === "Enter") {
-      setSearchKeyword(keyword);
+      setSearchValue(inputValue);
     }
   };
 
@@ -37,7 +38,7 @@ export default function Item() {
               <input
                 className="searchBarInput"
                 placeholder="검색할 상품을 입력해 주세요"
-                value={keyword}
+                value={inputValue}
                 onChange={handleInputChange}
                 onKeyPress={handleKeyPress}
                 aria-label="상품 검색어 입력"
@@ -49,7 +50,7 @@ export default function Item() {
           </div>
 
           <section className="section">
-            <SellingItems keyword={searchKeyword} />
+            <SellingItems keyword={searchValue} />
           </section>
         </div>
       </main>

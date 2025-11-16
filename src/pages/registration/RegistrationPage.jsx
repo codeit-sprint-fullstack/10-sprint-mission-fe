@@ -11,101 +11,137 @@ import instagramIcon from "../../assets/social/instagram-logo.svg";
 
 function RegistrationPage() {
   const navigate = useNavigate();
-  const [formData, setFormData] = useState({
-    name: "",
-    description: "",
-    price: "",
-    tags: [],
-  });
-  const [tagInput, setTagInput] = useState("");
-  const [errors, setErrors] = useState({});
-  const [isSubmitting, setIsSubmitting] = useState(false);
+  
+  const [productName, setProductName] = useState("");
+  const [productDescription, setProductDescription] = useState("");
+  const [productPrice, setProductPrice] = useState("");
+  const [productTags, setProductTags] = useState([]);
+  const [tagInputValue, setTagInputValue] = useState("");
+  const [nameError, setNameError] = useState("");
+  const [priceError, setPriceError] = useState("");
+  const [descriptionError, setDescriptionError] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData((prev) => ({
-      ...prev,
-      [name]: value,
-    }));
-    if (errors[name]) {
-      setErrors((prev) => ({
-        ...prev,
-        [name]: "",
-      }));
+  const handleNameChange = (e) => {
+    setProductName(e.target.value);
+    if (nameError !== "") {
+      setNameError("");
+    }
+  };
+
+  const handleDescriptionChange = (e) => {
+    setProductDescription(e.target.value);
+    if (descriptionError !== "") {
+      setDescriptionError("");
+    }
+  };
+
+  const handlePriceChange = (e) => {
+    setProductPrice(e.target.value);
+    if (priceError !== "") {
+      setPriceError("");
     }
   };
 
   const handleTagInputKeyPress = (e) => {
     if (e.key === "Enter") {
       e.preventDefault();
-      const tag = tagInput.trim();
-      if (tag && !formData.tags.includes(tag)) {
-        setFormData((prev) => ({
-          ...prev,
-          tags: [...prev.tags, tag],
-        }));
-        setTagInput("");
+      const trimmedTag = tagInputValue.trim();
+      if (trimmedTag !== "") {
+        let tagExists = false;
+        for (let i = 0; i < productTags.length; i++) {
+          if (productTags[i] === trimmedTag) {
+            tagExists = true;
+            break;
+          }
+        }
+        if (tagExists === false) {
+          const updatedTags = [];
+          for (let i = 0; i < productTags.length; i++) {
+            updatedTags.push(productTags[i]);
+          }
+          updatedTags.push(trimmedTag);
+          setProductTags(updatedTags);
+          setTagInputValue("");
+        }
       }
     }
   };
 
-  const removeTag = (tagToRemove) => {
-    setFormData((prev) => ({
-      ...prev,
-      tags: prev.tags.filter((tag) => tag !== tagToRemove),
-    }));
+  const handleRemoveTag = (tagToRemove) => {
+    const updatedTags = [];
+    for (let i = 0; i < productTags.length; i++) {
+      if (productTags[i] !== tagToRemove) {
+        updatedTags.push(productTags[i]);
+      }
+    }
+    setProductTags(updatedTags);
   };
 
-  const validate = () => {
-    const newErrors = {};
+  const checkFormValid = () => {
+    let hasError = false;
 
-    if (!formData.name.trim()) {
-      newErrors.name = "상품명을 입력해 주세요";
+    if (productName.trim() === "") {
+      setNameError("상품명을 입력해 주세요");
+      hasError = true;
     }
 
-    if (!formData.price.trim()) {
-      newErrors.price = "가격을 입력해 주세요";
-    } else if (isNaN(Number(formData.price)) || Number(formData.price) <= 0) {
-      newErrors.price = "올바른 가격을 입력해 주세요";
+    if (productPrice.trim() === "") {
+      setPriceError("가격을 입력해 주세요");
+      hasError = true;
+    } else {
+      const priceAsNumber = Number(productPrice);
+      if (isNaN(priceAsNumber) === true) {
+        setPriceError("올바른 가격을 입력해 주세요");
+        hasError = true;
+      } else if (priceAsNumber <= 0) {
+        setPriceError("올바른 가격을 입력해 주세요");
+        hasError = true;
+      }
     }
 
-    if (!formData.description.trim()) {
-      newErrors.description = "상품 설명을 입력해 주세요";
+    if (productDescription.trim() === "") {
+      setDescriptionError("상품 설명을 입력해 주세요");
+      hasError = true;
     }
 
-    setErrors(newErrors);
-    return Object.keys(newErrors).length === 0;
+    if (hasError === true) {
+      return false;
+    } else {
+      return true;
+    }
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    if (!validate()) {
+    const isValid = checkFormValid();
+    if (isValid === false) {
       return;
     }
 
-    setIsSubmitting(true);
+    setIsLoading(true);
 
     try {
-      const productData = {
-        name: formData.name.trim(),
-        price: Number(formData.price),
-        description: formData.description.trim(),
-        tags: formData.tags,
+      const dataToSend = {
+        name: productName.trim(),
+        price: Number(productPrice),
+        description: productDescription.trim(),
+        tags: productTags,
       };
 
-      const response = await createProduct(productData);
+      const result = await createProduct(dataToSend);
       
-      if (response.id) {
-        navigate(`/product/${response.id}`);
+      if (result.id !== undefined && result.id !== null) {
+        navigate("/product/" + result.id);
       } else {
         navigate("/product/1");
       }
+      setIsLoading(false);
     } catch (error) {
       console.error("상품 등록 실패:", error);
       alert("상품 등록에 실패했습니다. 다시 시도해 주세요.");
-    } finally {
-      setIsSubmitting(false);
+      setIsLoading(false);
     }
   };
 
@@ -121,9 +157,9 @@ function RegistrationPage() {
                 type="submit"
                 form="registrationForm"
                 className="registerButton button"
-                disabled={isSubmitting}
+                disabled={isLoading}
               >
-                {isSubmitting ? "등록 중..." : "등록"}
+                {isLoading === true ? "등록 중..." : "등록"}
               </button>
             </div>
 
@@ -140,13 +176,13 @@ function RegistrationPage() {
                   type="text"
                   id="name"
                   name="name"
-                  value={formData.name}
-                  onChange={handleChange}
-                  className={`formInput ${errors.name ? "error" : ""}`}
+                  value={productName}
+                  onChange={handleNameChange}
+                  className={nameError !== "" ? "formInput error" : "formInput"}
                   placeholder="상품명을 입력해주세요"
                 />
-                {errors.name && (
-                  <span className="errorMessage">{errors.name}</span>
+                {nameError !== "" && (
+                  <span className="errorMessage">{nameError}</span>
                 )}
               </div>
 
@@ -157,14 +193,14 @@ function RegistrationPage() {
                 <textarea
                   id="description"
                   name="description"
-                  value={formData.description}
-                  onChange={handleChange}
-                  className={`formTextarea ${errors.description ? "error" : ""}`}
+                  value={productDescription}
+                  onChange={handleDescriptionChange}
+                  className={descriptionError !== "" ? "formTextarea error" : "formTextarea"}
                   placeholder="상품 소개를 입력해주세요"
                   rows="10"
                 />
-                {errors.description && (
-                  <span className="errorMessage">{errors.description}</span>
+                {descriptionError !== "" && (
+                  <span className="errorMessage">{descriptionError}</span>
                 )}
               </div>
 
@@ -176,14 +212,14 @@ function RegistrationPage() {
                   type="number"
                   id="price"
                   name="price"
-                  value={formData.price}
-                  onChange={handleChange}
-                  className={`formInput ${errors.price ? "error" : ""}`}
+                  value={productPrice}
+                  onChange={handlePriceChange}
+                  className={priceError !== "" ? "formInput error" : "formInput"}
                   placeholder="판매 가격을 입력해주세요"
                   min="0"
                 />
-                {errors.price && (
-                  <span className="errorMessage">{errors.price}</span>
+                {priceError !== "" && (
+                  <span className="errorMessage">{priceError}</span>
                 )}
               </div>
 
@@ -195,26 +231,28 @@ function RegistrationPage() {
                   type="text"
                   id="tags"
                   name="tags"
-                  value={tagInput}
-                  onChange={(e) => setTagInput(e.target.value)}
+                  value={tagInputValue}
+                  onChange={(e) => setTagInputValue(e.target.value)}
                   onKeyPress={handleTagInputKeyPress}
                   className="formInput"
                   placeholder="태그를 입력해주세요"
                 />
-                {formData.tags.length > 0 && (
+                {productTags.length > 0 && (
                   <div className="tagsContainer">
-                    {formData.tags.map((tag, index) => (
-                      <span key={index} className="tag">
-                        #{tag}
-                        <button
-                          type="button"
-                          onClick={() => removeTag(tag)}
-                          className="tagRemoveButton"
-                        >
-                          ×
-                        </button>
-                      </span>
-                    ))}
+                    {productTags.map(function(tag, index) {
+                      return (
+                        <span key={index} className="tag">
+                          #{tag}
+                          <button
+                            type="button"
+                            onClick={() => handleRemoveTag(tag)}
+                            className="tagRemoveButton"
+                          >
+                            ×
+                          </button>
+                        </span>
+                      );
+                    })}
                   </div>
                 )}
               </div>

@@ -6,6 +6,7 @@ import { ReactComponent as SortIconArrowDown } from "../../../assets/images/icon
 import { ReactComponent as SearchIcon } from "../../../assets/images/icons/ic_search.svg";
 import DropdownList from "../../../components/UI/DropdownList";
 import PaginationBar from "../../../components/UI/PaginationBar";
+import { Link } from "react-router-dom";
 
 const getPageSize = () => {
   const width = window.innerWidth;
@@ -18,75 +19,89 @@ const getPageSize = () => {
 };
 
 function AllItemsSection() {
-  const [orderBy, setOrderBy] = useState("recent");
-  const [page, setPage] = useState(1);
+  const [sortBy, setSortBy] = useState("recent");
+  const [currentPage, setCurrentPage] = useState(1);
   const [pageSize, setPageSize] = useState(getPageSize());
-  const [itemList, setItemList] = useState([]);
-  const [isDropdownVisible, setIsDropdownVisible] = useState(false);
-  const [totalPageNum, setTotalPageNum] = useState(1);
-  const [keyword, setKeyword] = useState("");
+  const [items, setItems] = useState([]);
+  const [showDropdown, setShowDropdown] = useState(false);
+  const [totalPages, setTotalPages] = useState(1);
+  const [searchText, setSearchText] = useState("");
 
-  const fetchSortedData = async ({ orderBy, page, pageSize, keyword }) => {
+  const loadProducts = async () => {
     try {
-      const products = await getProducts({ orderBy, page, pageSize, keyword });
-      setItemList(products.list);
-      setTotalPageNum(Math.max(1, Math.ceil(products.totalCount / pageSize)));
+      const result = await getProducts({
+        orderBy: sortBy,
+        page: currentPage,
+        pageSize: pageSize,
+        keyword: searchText,
+      });
+      setItems(result.list);
+      const calculatedPages = Math.ceil(result.totalCount / pageSize);
+      if (calculatedPages < 1) {
+        setTotalPages(1);
+      } else {
+        setTotalPages(calculatedPages);
+      }
     } catch (error) {
       console.error("상품 목록을 불러오지 못했습니다.", error);
     }
   };
 
-  const handleSortSelection = (sortOption) => {
-    setOrderBy(sortOption);
-    setIsDropdownVisible(false);
+  const handleSortClick = (selectedSort) => {
+    setSortBy(selectedSort);
+    setShowDropdown(false);
   };
 
   const handleInputChange = (event) => {
-    setKeyword(event.target.value);
+    setSearchText(event.target.value);
   };
 
-  const handleSearch = () => {
-    setPage(1);
-    fetchSortedData({ orderBy, page: 1, pageSize, keyword });
+  const handleSearchClick = () => {
+    setCurrentPage(1);
+    loadProducts();
   };
 
   const handleKeyPress = (event) => {
     if (event.key === "Enter") {
-      handleSearch();
+      handleSearchClick();
     }
   };
 
-  const convertToKorean = (orderByValue) => {
-    switch (orderByValue) {
-      case "recent":
-        return "최신순";
-      case "favorite":
-        return "인기순";
-      default:
-        return "최신순";
+  const getSortText = (sortValue) => {
+    if (sortValue === "recent") {
+      return "최신순";
+    } else if (sortValue === "favorite") {
+      return "인기순";
+    } else {
+      return "최신순";
     }
   };
 
   useEffect(() => {
-    const handleResize = () => {
-      setPageSize(getPageSize());
-    };
+    function handleResize() {
+      const newSize = getPageSize();
+      setPageSize(newSize);
+    }
 
     window.addEventListener("resize", handleResize);
-    fetchSortedData({ orderBy, page, pageSize, keyword });
+    loadProducts();
 
-    return () => {
+    return function cleanup() {
       window.removeEventListener("resize", handleResize);
     };
-  }, [orderBy, page, pageSize, keyword]);
+  }, [sortBy, currentPage, pageSize, searchText]);
 
   const toggleDropdown = () => {
-    setIsDropdownVisible((prev) => !prev);
+    if (showDropdown === true) {
+      setShowDropdown(false);
+    } else {
+      setShowDropdown(true);
+    }
   };
 
-  const onPageChange = (pageNumber) => {
-    setPage(pageNumber);
-    fetchSortedData({ orderBy, page: pageNumber, pageSize, keyword });
+  const handlePageChange = (newPageNumber) => {
+    setCurrentPage(newPageNumber);
+    loadProducts();
   };
 
   return (
@@ -99,15 +114,17 @@ function AllItemsSection() {
           <input
             className="searchBarInput"
             placeholder="검색할 상품을 입력해 주세요"
-            value={keyword}
+            value={searchText}
             onChange={handleInputChange}
             onKeyPress={handleKeyPress}
             aria-label="상품 검색어 입력"
           />
         </div>
+        <Link to='items'>
         <div className="createItemButton button" role="button" tabIndex={0}>
           상품 등록하기
         </div>
+        </Link>
         <div className="sortButtonWrapper">
           <button
             type="button"
@@ -115,28 +132,28 @@ function AllItemsSection() {
             onClick={toggleDropdown}
           >
             <div className="sortBtn">
-              <span>{convertToKorean(orderBy)}</span>
+              <span>{getSortText(sortBy)}</span>
               <SortIconArrowDown aria-hidden />
             </div>
             <SortIconMobile className="mobileSortBtn" aria-hidden />
           </button>
-          {isDropdownVisible && (
-            <DropdownList onSortSelection={handleSortSelection} />
+          {showDropdown === true && (
+            <DropdownList onSortSelection={handleSortClick} />
           )}
         </div>
       </div>
 
       <div className="allItemsCardSection">
-        {itemList?.map((item) => (
-          <ItemCard item={item} key={`market-item-${item.id}`} />
-        ))}
+        {items.map(function(item) {
+          return <ItemCard item={item} key={"market-item-" + item.id} />;
+        })}
       </div>
 
       <div className="paginationBarWrapper">
         <PaginationBar
-          totalPageNum={totalPageNum}
-          activePageNum={page}
-          onPageChange={onPageChange}
+          totalPageNum={totalPages}
+          activePageNum={currentPage}
+          onPageChange={handlePageChange}
         />
       </div>
     </section>
