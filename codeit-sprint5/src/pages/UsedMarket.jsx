@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
+import { useNavigate } from 'react-router';
 import UsedMarketTemplate from '../templates/UsedMarketTemplate';
 import useProducts from '../utils/useProducts';
 
@@ -39,16 +40,12 @@ const UsedMarket = () => {
     };
   }, []);
 
-  const { products: bestProducts, loading: bestLoading, error: bestError } = useProducts({
-    page: 1,
-    pageSize: bestPageSize,
-    sort: 'favorite',
-  });
+  // 베스트 항목은 GURU 명세에 따라 비활성화
 
   const { products: allProducts, loading: allLoading, totalPages, error: allError } = useProducts({
     page: currentPage,
     pageSize,
-    sort: sortBy,
+    sort: 'latest',
     search: searchQuery,
   });
 
@@ -67,28 +64,25 @@ const UsedMarket = () => {
     }
   };
 
-  const handleSortChange = (value) => {
-    setSortBy(value);
-    setCurrentPage(1);
-  };
+  const handleSortChange = () => {};
 
   const handlePageChange = (page) => {
     setCurrentPage(page);
   };
 
-  const handleRegisterClick = () => {};
+  const navigate = useNavigate();
+  const handleRegisterClick = () => {
+    navigate('/registration');
+  };
 
   const sortOptions = [
-    { key: '1', value: 'latest', children: '최신순' },
-    { key: '2', value: 'favorite', children: '좋아요순' },
+    { key: '1', value: 'latest', children: '최신순' }
   ];
 
   return (
     <UsedMarketTemplate
       mainRef={mainRef}
-      bestProducts={bestProducts}
-      bestLoading={bestLoading}
-      bestError={bestError}
+      
       allProducts={allProducts}
       allLoading={allLoading}
       allError={allError}

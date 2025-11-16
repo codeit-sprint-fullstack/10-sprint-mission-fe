@@ -1,6 +1,7 @@
 import React from 'react';
 import Image from "../atoms/Image";
 import heartIcon from "../assets/ic_heart.svg";
+import defaultProductImage from "../assets/Img_home_01.png";
 import styles from "./ItemCard.module.css";
 
 const ItemCard = ({ item, type = 'all' }) => {
@@ -19,7 +20,7 @@ const ItemCard = ({ item, type = 'all' }) => {
         hit
     } = item;
 
-    const imageSrc = imageUrl || image || (images && images.length > 0 ? images[0] : '');
+    const imageSrc = (images && images.length > 0 ? images[0] : '') || imageUrl || image || defaultProductImage;
     const itemTitle = title || name || '';
     const itemPrice = price || money || 0;
     const likeCount = favoriteCount || favorites || hit || 0;
@@ -32,7 +33,12 @@ const ItemCard = ({ item, type = 'all' }) => {
 
     return (
         <div className={styles.layoutStyle}>
-            <Image src={imageSrc} alt={itemTitle} style={imageStyleClass} />
+            <Image
+                src={imageSrc}
+                alt={itemTitle}
+                style={imageStyleClass}
+                onError={(e) => { e.currentTarget.src = defaultProductImage; }}
+            />
             <div className={styles.contentContainer}>
                 <div className={styles.textContainer}>
                     <p className={styles.title}>{itemTitle}</p>

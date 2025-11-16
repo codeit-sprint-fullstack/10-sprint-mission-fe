@@ -1,0 +1,78 @@
+.hotItem {
+  padding: 3rem 0;
+  width: 100%;
+}
+
+.sectionContainer {
+  display: flex;
+  flex-direction: row;
+  max-width: 75rem;
+  margin: 0 auto;
+  justify-content: center;
+  gap: 3rem;
+  padding: 0 var(--row-gap, 1.5rem);
+  align-items: center;
+  text-align: left;
+}
+
+.reverse {
+  flex-direction: row-reverse;
+}
+
+.featureImage {
+  max-width: 31.25rem;
+  width: 100%;
+}
+
+.explain {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.word {
+  margin-bottom: 0.5rem;
+  font-size: 0.875rem;
+  color: #1e3a8a;
+  font-weight: 700;
+}
+
+.mainExplain {
+  margin-bottom: 1rem;
+  font-size: 1.75rem;
+  color: #374151;
+  font-weight: 700;
+}
+
+.subExplain {
+  font-size: 1.125rem;
+  color: #374151;
+  font-weight: 500;
+}
+
+@media (max-width: 1199px) {
+  .sectionContainer {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .reverse.sectionContainer {
+    flex-direction: column;
+  }
+  .mainExplain {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .sectionContainer {
+    gap: 1.5rem;
+  }
+  .mainExplain {
+    font-size: 1.25rem;
+  }
+  .subExplain {
+    font-size: 1rem;
+  }
+}
+
+

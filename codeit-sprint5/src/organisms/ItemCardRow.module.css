@@ -1,0 +1,31 @@
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.card {
+  flex: 1 1 calc(20% - 1rem);
+  min-width: 13rem;
+  max-width: 20rem;
+}
+
+.empty {
+  padding: 2rem 1rem;
+  color: #666;
+  font-size: 0.9375rem;
+}
+
+@media (max-width: 1023px) {
+  .card {
+    flex: 1 1 calc(33.333% - 1rem);
+  }
+}
+
+@media (max-width: 767px) {
+  .card {
+    flex: 1 1 calc(50% - 1rem);
+  }
+}
+
+
