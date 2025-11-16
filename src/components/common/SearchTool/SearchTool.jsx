@@ -1,5 +1,5 @@
 import "./SearchTool.css";
-import SearchIcon from "../img/Search.svg";
+import SearchIcon from "../../../assets/img/Search.svg";
 
 function SearchTool({ onChange }) {
     return (

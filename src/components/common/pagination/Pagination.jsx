@@ -1,6 +1,6 @@
 import "./Pagination.css";
-import leftbtn from "../img/Button-left.svg";
-import rightbtn from "../img/Button-right.svg";
+import leftbtn from "../../../assets/img/Button-left.svg";
+import rightbtn from "../../../assets/img/Button-right.svg";
 
 function Pagination({ page, totalPages, onChange }) {
     if (!totalPages || totalPages <= 1) return null;

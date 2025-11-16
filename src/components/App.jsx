@@ -1,16 +1,20 @@
-import BestContent from "./BestContent";
-import SellingContent from "./SellingContent";
-import MainHeader from "./MainHeader";
-import "./App.css";
 import { useState, useEffect } from "react";
-import { getData } from "../api";
-import SearchTool from "./SearchTool";
-import ItemRegister from "./ItemRegister";
-import OrderSelect from "./OrderSelect";
-import Pagination from "./Pagination";
-import useSortedItems from "../customhook/useSortedItems";
-import Footer from "./footer";
-import usePageSize from "../customhook/usePageSize";
+import "./App.css";
+
+import MainHeader from "./common/MainHeader/MainHeader";
+import SearchTool from "./common/SearchTool/SearchTool";
+import OrderSelect from "./common/OrderSelect/OrderSelect";
+import Pagination from "./common/pagination/Pagination";
+import Footer from "./common/Footer/Footer";
+
+import BestContent from "./home/BestContent/BestContent";
+import SellingContent from "./home/SellingContent/SellingContent";
+
+import ItemRegister from "./item/ItemRegister/ItemRegister";
+
+import { getData } from "../api/api";
+import useSortedItems from "../hooks/useSortedItems";
+import usePageSize from "../hooks/usePageSize";
 
 function App() {
     const [bestItems, setBestItems] = useState([]);

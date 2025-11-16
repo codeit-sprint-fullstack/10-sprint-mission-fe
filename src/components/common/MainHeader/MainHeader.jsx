@@ -1,5 +1,5 @@
-import imglogoSrc from "../img/imgLogo.svg";
-import stringlogoSrc from "../img/stringLogo.svg";
+import imglogoSrc from "../../../assets/img/imgLogo.svg";
+import stringlogoSrc from "../../../assets/img/stringLogo.svg";
 import "./MainHeader.css";
 
 function MainHeader() {

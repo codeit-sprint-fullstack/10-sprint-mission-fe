@@ -1,9 +1,8 @@
 import "./Footer.css";
-import FooterChar from "../img/footer.svg";
-import facebook from "../img/Snslogos/facebook.svg";
-import instagram from "../img/Snslogos/instagram.svg";
-import twitter from "../img/Snslogos/twitter.svg";
-import youtube from "../img/Snslogos/youtube.svg";
+import facebook from "../../../assets/img/Snslogos/facebook.svg";
+import instagram from "../../../assets/img/Snslogos/instagram.svg";
+import twitter from "../../../assets/img/Snslogos/twitter.svg";
+import youtube from "../../../assets/img/Snslogos/youtube.svg";
 
 function Footer() {
     return (
