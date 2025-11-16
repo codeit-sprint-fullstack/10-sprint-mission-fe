@@ -7,29 +7,6 @@
     background-color: #cfe5ff;
 }
 
-.banner-text {
-    display: flex;
-    height: 100%;
-    justify-content: center;
-    flex-direction: column;
-    gap: 20px;
-}
-
-.banner-text span {
-    font-size: 2rem;
-    font-weight: 700;
-}
-
-.banner-text a {
-    background-color: #3692ff;
-    padding: 16px 124px;
-    border-radius: 40px;
-    color: #ffffff;
-    margin-top: 30px;
-    cursor: pointer;
-    text-decoration: none;
-}
-
 .footer-img {
     display: flex;
     align-items: flex-end;
@@ -39,7 +16,6 @@
 .ft-shoutout {
     display: flex;
     justify-content: space-between;
-    margin-top: 140px;
     height: 160px;
     padding: 32px 200px;
     background-color: #111827;

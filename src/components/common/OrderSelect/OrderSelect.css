@@ -26,7 +26,8 @@
     right: 12px;
     width: 12px;
     height: 12px;
-    background: url("../img/selectDrop.svg") no-repeat center / 12px 12px;
+    background: url("../../../assets/img/selectDrop.svg") no-repeat center /
+        12px 12px;
     transition: transform 0.2s;
 }
 
@@ -67,7 +68,8 @@
         height: 42px;
         padding: 9px;
         border-radius: 12px;
-        background: #fff url("../img/mobileSelect.svg") no-repeat center center;
+        background: #fff url("../../../assets/img/mobileSelect.svg") no-repeat
+            center center;
         background-size: 16px auto;
         font-size: 0;
     }

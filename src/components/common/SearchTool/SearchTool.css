@@ -1,6 +1,7 @@
 .Search-Container {
     display: flex;
     align-items: center;
+    height: 42px;
 }
 
 .SearchTool {
@@ -10,7 +11,7 @@
     background: var(--Secondary-100, #f3f4f6);
     padding: 9px 20px 9px 16px;
     width: 289px;
-    height: 24px;
+    height: 100%;
 }
 
 .SearchIcon {
@@ -39,7 +40,6 @@
 @media (min-width: 744px) and (max-width: 1199px) {
     .SearchTool {
         width: 206px;
-        height: 24px;
     }
 }
 

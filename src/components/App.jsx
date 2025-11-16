@@ -87,10 +87,10 @@ function App() {
             <main>
                 <div className="Bestcontainer">
                     <div>
-                        <div className="BestHeader">
+                        {/* <div className="BestHeader">
                             <h2 className="BestString">베스트 상품</h2>
                         </div>
-                        <BestContent items={bestItems} />
+                        <BestContent items={bestItems} /> */}
                         <div className="SellingHeader">
                             <h2 className="SellingString">판매 중인 상품</h2>
                             <div className="SellingTool">
