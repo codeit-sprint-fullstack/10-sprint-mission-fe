@@ -7,10 +7,10 @@ import Button from "../atoms/Button";
 const navItems = [
     {
         src: "/",
-        value: "자유게시판"
+        value: "홈"
     },
     {
-        src: "/",
+        src: "/items",
         value: "중고마켓"
     }
 ];
