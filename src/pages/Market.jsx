@@ -1,11 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import ProductCard from "./../components/market/ProductCard";
+import ProductBest from "./../components/market/ProductBest";
 
 const Market = () => {
   return (
     <div>
-      <ProductCard />
+      <ProductBest />
     </div>
   );
 };

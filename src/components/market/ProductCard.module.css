@@ -1,0 +1,50 @@
+.imgBox {
+  width: 20rem;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  border-radius: 1.6rem;
+  margin-bottom: 1.6rem;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* 꽉 채우기 */
+  object-position: center; /* 중앙 기준 */
+  /* height: 20rem; */
+}
+
+.productName {
+  font-weight: 500;
+  font-style: Medium;
+  font-size: 1.4rem;
+  line-height: 2.4rem;
+  letter-spacing: 0%;
+  color: #1f2937;
+  margin-bottom: 0.6rem;
+}
+
+.productPrice {
+  font-weight: 700;
+  font-style: Bold;
+  font-size: 1.6rem;
+  leading-trim: NONE;
+  line-height: 2.6rem;
+  letter-spacing: 0%;
+  margin-bottom: 0.6rem;
+}
+
+.likes {
+  width: 1.4rem;
+  display: flex;
+  gap: 1rem;
+}
+
+.likes span {
+  font-weight: 500;
+  font-style: Medium;
+  font-size: 1.2rem;
+  leading-trim: NONE;
+  line-height: 1.8rem;
+  letter-spacing: 0%;
+}
