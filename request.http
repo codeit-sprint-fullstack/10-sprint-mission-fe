@@ -1,0 +1,18 @@
+POST http://localhost:3000/products
+Content-Type: application/json
+
+{
+  "name": "푸바오 찾아 떠나는 청두 여행!!!",
+  "description": "제 딸 푸바d오가 있는 쓰촨성 청두로 날아가 보세요!!!",
+  "price": 999999499,
+  "tags": ["푸바오", "러바d오", "아이바오"],
+  "images": ["https://image.hanatour.com/usr/cms/resize/...jpg"]
+}
+
+###
+
+Delete http://localhost:3000/products/691a8aa85b71adba44a8bd6f
+
+###
+
+GET http://localhost:3000/products

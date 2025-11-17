@@ -1,12 +1,6 @@
 .RegisterBtn {
     padding: 12px 23px 12px 23px;
     border-radius: 8px;
-    background: var(--Primary-100, #3692ff);
-    cursor: pointer;
-}
-
-.RegisterBtn button {
-    cursor: pointer;
     border: none;
     background: var(--Primary-100, #3692ff);
     color: var(--Cool-Gray-100, #f3f4f6);
@@ -14,4 +8,5 @@
     font-size: 16px;
     font-style: normal;
     font-weight: 600;
+    cursor: pointer;
 }

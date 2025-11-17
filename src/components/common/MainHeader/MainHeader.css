@@ -16,6 +16,16 @@
     padding: 0 16px;
 }
 
+.Header-nav .nav-link {
+    text-decoration: none;
+    color: #4b5563;
+    font-weight: 500;
+}
+
+.Header-nav .nav-link.active {
+    color: #3692ff;
+}
+
 .logoplus {
     display: flex;
     align-items: center;

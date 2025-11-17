@@ -1,11 +1,12 @@
 import "./SellingContent.css";
+import defaultImg from "../../../assets/img/defaultContent.svg";
 
 function SellingContentItem({ item }) {
     return (
         <div className="SellingItem">
             <img
                 className="SellingContentItem-img"
-                src={item.images}
+                src={defaultImg}
                 alt="상품 이미지"
             />
             <div>

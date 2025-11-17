@@ -41,13 +41,13 @@ function App() {
 
     const loadBest = async (size) => {
         try {
-            const { list } = await getData({
+            const { items } = await getData({
                 page: 1,
                 pageSize: size,
                 orderBy: "favorite",
                 keyword: "",
             });
-            setBestItems(list || []);
+            setBestItems(items || []);
         } catch (e) {
             console.error(e);
         }
@@ -57,8 +57,8 @@ function App() {
         try {
             setLoading(true);
             setErr(null);
-            const { list, totalCount } = await getData(options);
-            setItems(list || []);
+            const { items, totalCount } = await getData(options);
+            setItems(items || []);
             setTotalPages(
                 Math.max(1, Math.ceil((totalCount ?? 0) / options.pageSize))
             );

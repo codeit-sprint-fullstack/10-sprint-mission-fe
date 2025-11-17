@@ -1,10 +1,13 @@
 import "./ItemRegister.css";
+import { Link } from "react-router-dom";
 
 function ItemRegister() {
     return (
-        <div className="RegisterBtn">
-            <button type="submit">상품 등록하기</button>
-        </div>
+        <Link to="/registration">
+            <button className="RegisterBtn" type="submit">
+                상품 등록하기
+            </button>
+        </Link>
     );
 }
 
