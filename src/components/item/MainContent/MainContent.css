@@ -113,7 +113,18 @@
     margin-bottom: 76px;
 }
 
-.Registerbtn:not([disabled]) {
+.Register-btn {
+    display: flex;
+    height: 42px;
+    padding: 12px 23px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 8px;
+    background: var(--Cool-Gray-400, #9ca3af);
+}
+
+.Register-btn:not([disabled]) {
     cursor: pointer;
     color: white;
     background: var(--Primary-100, #3692ff);

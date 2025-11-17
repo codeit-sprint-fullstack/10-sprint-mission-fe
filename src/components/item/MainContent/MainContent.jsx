@@ -111,7 +111,7 @@ function MainContent() {
                     <div className="RegisterIntro">
                         <h1>상품 등록하기</h1>
                         <button
-                            className="Registerbtn"
+                            className="Register-btn"
                             type="submit"
                             disabled={!isFormValid}
                         >
