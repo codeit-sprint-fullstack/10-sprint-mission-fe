@@ -1,16 +1,20 @@
-import BestContent from "./BestContent";
-import SellingContent from "./SellingContent";
-import MainHeader from "./MainHeader";
-import "./App.css";
 import { useState, useEffect } from "react";
-import { getData } from "../api";
-import SearchTool from "./SearchTool";
-import ItemRegister from "./ItemRegister";
-import OrderSelect from "./OrderSelect";
-import Pagination from "./Pagination";
-import useSortedItems from "../customhook/useSortedItems";
-import Footer from "./footer";
-import usePageSize from "../customhook/usePageSize";
+import "./App.css";
+
+import MainHeader from "./common/MainHeader/MainHeader";
+import SearchTool from "./common/SearchTool/SearchTool";
+import OrderSelect from "./common/OrderSelect/OrderSelect";
+import Pagination from "./common/pagination/Pagination";
+import Footer from "./common/Footer/Footer";
+
+import BestContent from "./home/BestContent/BestContent";
+import SellingContent from "./home/SellingContent/SellingContent";
+
+import ItemRegister from "./item/ItemRegister/ItemRegister";
+
+import { getData } from "../api/api";
+import useSortedItems from "../hooks/useSortedItems";
+import usePageSize from "../hooks/usePageSize";
 
 function App() {
     const [bestItems, setBestItems] = useState([]);
@@ -37,13 +41,13 @@ function App() {
 
     const loadBest = async (size) => {
         try {
-            const { list } = await getData({
+            const { items } = await getData({
                 page: 1,
                 pageSize: size,
                 orderBy: "favorite",
                 keyword: "",
             });
-            setBestItems(list || []);
+            setBestItems(items || []);
         } catch (e) {
             console.error(e);
         }
@@ -53,8 +57,8 @@ function App() {
         try {
             setLoading(true);
             setErr(null);
-            const { list, totalCount } = await getData(options);
-            setItems(list || []);
+            const { items, totalCount } = await getData(options);
+            setItems(items || []);
             setTotalPages(
                 Math.max(1, Math.ceil((totalCount ?? 0) / options.pageSize))
             );
@@ -83,10 +87,10 @@ function App() {
             <main>
                 <div className="Bestcontainer">
                     <div>
-                        <div className="BestHeader">
+                        {/* <div className="BestHeader">
                             <h2 className="BestString">베스트 상품</h2>
                         </div>
-                        <BestContent items={bestItems} />
+                        <BestContent items={bestItems} /> */}
                         <div className="SellingHeader">
                             <h2 className="SellingString">판매 중인 상품</h2>
                             <div className="SellingTool">

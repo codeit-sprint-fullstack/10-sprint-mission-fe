@@ -1,0 +1,80 @@
+.order-select-wrap {
+    position: relative;
+    display: inline-block;
+}
+
+.order-Select-btn {
+    width: 130px;
+    height: 42px;
+    padding: 0 36px 0 14px;
+    border-radius: 12px;
+    border: 1px solid var(--Cool-Gray-200, #e5e7eb);
+    background: #fff;
+    font-family: Pretendard, system-ui, -apple-system, Segoe UI, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: #111827;
+    text-align: left;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.order-Select-caret {
+    position: absolute;
+    right: 12px;
+    width: 12px;
+    height: 12px;
+    background: url("../../../assets/img/selectDrop.svg") no-repeat center /
+        12px 12px;
+    transition: transform 0.2s;
+}
+
+.order-Select-menu {
+    position: absolute;
+    top: calc(100% + 6px);
+    right: 0;
+    min-width: 130px;
+    background: #fff;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+    padding: 6px 0;
+    margin: 0;
+    list-style: none;
+    z-index: 1000;
+    overflow: hidden;
+}
+
+.order-Select-item {
+    padding: 12px 16px;
+    font-size: 16px;
+    color: #111827;
+    cursor: pointer;
+    user-select: none;
+}
+.order-Select-item + .order-Select-item {
+    border-top: 1px solid #f1f5f9;
+}
+
+.order-Select-item.selected {
+    font-weight: 600;
+}
+
+@media (max-width: 743px) {
+    .order-Select-btn {
+        width: 42px;
+        height: 42px;
+        padding: 9px;
+        border-radius: 12px;
+        background: #fff url("../../../assets/img/mobileSelect.svg") no-repeat
+            center center;
+        background-size: 16px auto;
+        font-size: 0;
+    }
+
+    .order-Select-caret {
+        display: none;
+    }
+}
