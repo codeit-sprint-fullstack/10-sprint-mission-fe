@@ -1,0 +1,24 @@
+/* *********.  Desktop  *********** */
+@media (max-width: 1200px) {
+}
+/* *********.  tablet  *********** */
+@media (max-width: 744px) {
+}
+
+@media (max-width: 415px) {
+  .logo {
+    width: 5.2rem;
+  }
+  .logo-name {
+    font-size: 3.3rem;
+  }
+}
+/* *********.  mobile  *********** */
+@media (max-width: 375px) {
+  .container {
+    margin: auto;
+
+    padding: 0 1.5rem;
+    max-width: 37.4rem;
+  }
+}

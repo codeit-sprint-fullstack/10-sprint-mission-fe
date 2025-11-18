@@ -1,0 +1,11 @@
+.sectionSignup {
+  padding: 6rem 0;
+}
+.container {
+  margin: auto;
+  /* 설정 다시하기 */
+  padding: 0 3rem;
+  max-width: 64rem;
+  display: flex;
+  flex-direction: column;
+}

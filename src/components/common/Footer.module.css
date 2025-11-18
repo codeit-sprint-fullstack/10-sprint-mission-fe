@@ -1,0 +1,28 @@
+.sectionFooter {
+  background-color: var(--gray900);
+  padding: 3.2rem 0 11rem;
+}
+
+.containerFooter {
+  color: white;
+  max-width: 152rem;
+  padding: 0 3rem;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  font-size: 1.6rem;
+}
+.footerCopy {
+  color: #9ca3af;
+}
+.footerNav {
+  display: flex;
+  gap: 3rem;
+}
+
+.socialLinks {
+  display: flex;
+  gap: 1.2rem;
+  align-items: center;
+}

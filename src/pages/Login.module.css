@@ -1,0 +1,24 @@
+.sectionLogin {
+  padding: 6rem 0;
+}
+.container {
+  margin: auto;
+  /* 설정 다시하기 */
+  padding: 0 3rem;
+  max-width: 64rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.errorMessage {
+  font-family: Pretendard;
+  font-weight: 600;
+  font-style: SemiBold;
+  font-size: 15px;
+  leading-trim: NONE;
+  line-height: 100%;
+  letter-spacing: 0%;
+  color: #f74747;
+  margin-top: 0.8rem;
+  margin-left: 1.6rem;
+}

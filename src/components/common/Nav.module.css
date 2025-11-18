@@ -1,0 +1,45 @@
+.sectionNav {
+  padding-block: 0.9rem;
+}
+
+.containerNav {
+  max-width: 155rem;
+  padding: 0 1.6rem;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.logoWrap {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.logo {
+  width: 4rem;
+}
+
+.logoWrap div {
+  color: var(--primary600);
+  font-family: var(--font-logo);
+  font-size: 2.5rem;
+  font-weight: 700;
+  font-family: "ROKAF Sans";
+}
+.loginBtn {
+  border-radius: 0.8rem;
+  padding: 1.2rem 2.3rem;
+  font-size: 1.6rem;
+  inline-size: max-content;
+  margin-bottom: 0;
+}
+
+.navBtn {
+  background-color: var(--primary600);
+  color: white;
+  font-size: 2rem;
+  font-weight: 600;
+  border: none;
+  display: inline-block;
+}

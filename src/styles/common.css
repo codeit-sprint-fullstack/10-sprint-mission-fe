@@ -1,0 +1,200 @@
+/*
+
+------color------
+
+-Primary:
+#3692FF
+#1967D6
+#1251AA
+
+-Secondary:
+#111827
+#1F2937
+#374151
+#4B5563
+#6B7280
+#9CA3AF
+#E5E7EB
+#F3F4F6
+#F9FAFB
+
+-Error:
+#F74747
+ */
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary800: #1251aa;
+  --primary700: #1967d6;
+  --primary600: #3692ff;
+  --primary300: #e6f2ff;
+
+  --gray900: #111827;
+  --gray800: #1f2937;
+  --gray700: #374151;
+  --gray600: #4b5563;
+  --gray500: #6b7280;
+  --gray400: #9ca3af;
+  --gray200: #e5e7eb;
+  --gray100: #f3f4f6;
+  --gray50: #f9fafb;
+
+  --font-logo: "ROKAF Sans", serif;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Pretendard", sans-serif;
+  color: var(--gray700);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+img {
+  width: 100%;
+}
+
+a,
+button {
+  cursor: pointer;
+  border: none;
+  color: white;
+}
+
+label {
+  display: block;
+  font-size: 1.8rem;
+  margin-bottom: 2.4rem;
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+input {
+  display: block;
+  font-size: 1.8rem;
+  border: none;
+  background-color: #f3f4f6;
+  color: var(--gray400);
+  padding: 1.6rem 2.4rem;
+  width: 100%;
+  margin-top: 1.6rem;
+  border-radius: 1.2rem;
+}
+input:focus {
+  border: 1px solid var(--primary600);
+}
+
+.input-wrapper {
+  position: relative;
+}
+.pswToggle {
+  background: no-repeat center/80% url("/img/btn-visibility-off.svg");
+  width: 2.4rem;
+  height: 2.4rem;
+  border: none;
+  fill: var(--gray600);
+  position: absolute;
+  top: 50%;
+  right: 2.4rem;
+  transform: translateY(-50%);
+}
+
+.btn {
+  padding: 1.6rem 12.4rem;
+  display: block;
+  background-color: var(--gray400);
+  color: white;
+  border-radius: 3rem;
+  margin-bottom: 2.4rem;
+  width: 100%;
+  font-size: 20px;
+  font-weight: 600;
+  transition: all 0.3s;
+}
+.btn:hover {
+  background-color: var(--primary600);
+}
+
+.logoWrap {
+  display: flex;
+  align-items: center;
+  gap: 2.2rem;
+  align-self: center;
+  margin-bottom: 4rem;
+}
+
+.logo {
+  width: 10.3rem;
+  /* width: clamp(5.2rem, 7vw, 10.3rem); */
+}
+
+.logoName {
+  color: var(--primary600);
+  font-family: "ROKAF Sans";
+  font-size: 6.6rem;
+  /* font-size: clamp(3.3rem, 4vw, 6.6rem); */
+  font-weight: 700;
+  font-family: "ROKAF Sans";
+}
+
+.easyLogin {
+  background-color: var(--primary300);
+  padding: 1.6rem 2.3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 0.8rem;
+  margin-bottom: 2.4rem;
+  /* width: 100%; */
+}
+
+.easyLogin p {
+  font-size: 1.6rem;
+}
+.social-icons {
+  display: flex;
+  gap: 1.6rem;
+}
+.google,
+.kakaotalk {
+  width: 4.4rem;
+  height: 4.4rem;
+  border-radius: 50%;
+}
+
+.google {
+  background-color: white;
+  padding: 1rem;
+}
+.kakaotalk {
+  background-color: #f5e14b;
+  padding: 1rem 0.8rem 0.8rem;
+}
+.google img,
+.kakaotalk img {
+  width: 100%;
+}
+
+.auth-text {
+  font-size: 1.4rem;
+  display: flex;
+  justify-content: center;
+}
+.auth-text > * {
+  display: inline-block;
+}
+.link {
+  color: var(--primary600);
+  text-decoration: underline;
+}
