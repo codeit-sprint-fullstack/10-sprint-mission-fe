@@ -1,0 +1,162 @@
+.MainContainer {
+    display: flex;
+    padding-top: 94px;
+    justify-content: center;
+}
+
+.ContentBox {
+    width: 1200px;
+}
+.ItemRegister-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.ItemRegister-form h1 {
+    color: var(--Secondary-800, #1f2937);
+    font-family: Pretendard;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 32px;
+    margin-bottom: 24px;
+}
+
+.ItemRegister-form h2 {
+    color: var(--Secondary-800, #1f2937);
+    font-family: Pretendard;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 26px;
+    margin-top: 32px;
+    margin-bottom: 14px;
+}
+
+.ItemRegister-form h2:first-of-type {
+    margin-top: 0;
+}
+
+.ItemRegister-form input {
+    display: flex;
+    padding: 16px 24px;
+    align-items: flex-start;
+    gap: 10px;
+    align-self: stretch;
+    border-radius: 12px;
+    background: var(--Cool-Gray-100, #f3f4f6);
+    border: none;
+}
+
+.ItemRegister-form input::placeholder {
+    color: var(--Secondary-400, #9ca3af);
+    font-family: Pretendard;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 26px;
+}
+
+.input-name,
+.input-price,
+.input-tag {
+    height: 56px;
+}
+
+.input-Intro {
+    display: flex;
+    padding: 16px 24px;
+    border-radius: 12px;
+    background: var(--Cool-Gray-100, #f3f4f6);
+    border: none;
+    height: 282px;
+    vertical-align: top;
+}
+
+.input-Intro::placeholder {
+    color: var(--Secondary-400, #9ca3af);
+    font-family: Pretendard;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 26px;
+}
+
+.RegisterIntro {
+    display: flex;
+    justify-content: space-between;
+}
+
+.RegisterIntro button {
+    display: flex;
+    height: 42px;
+    padding: 12px 23px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 8px;
+    background: var(--Cool-Gray-400, #9ca3af);
+    border: none;
+}
+
+.input-error {
+    border: 1px solid #ef4444 !important;
+}
+
+.error-text {
+    color: #ef4444;
+    font-size: 0.875rem;
+    margin-top: 8px;
+}
+
+.footer-error-text {
+    color: #ef4444;
+    font-size: 0.875rem;
+    margin-top: 4px;
+    margin-bottom: 76px;
+}
+
+.Register-btn {
+    display: flex;
+    height: 42px;
+    padding: 12px 23px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 8px;
+    background: var(--Cool-Gray-400, #9ca3af);
+}
+
+.Register-btn:not([disabled]) {
+    cursor: pointer;
+    color: white;
+    background: var(--Primary-100, #3692ff);
+}
+
+.tag-chip-container {
+    margin-top: 8px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.tag-chip {
+    display: flex;
+    height: 36px;
+    padding: 6px 12px 6px 16px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 76px;
+    border-radius: 26px;
+    background: var(--Cool-Gray-100, #f3f4f6);
+}
+
+.tag-chip-remove {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+    fill: var(--Cool-Gray-400, #9ca3af);
+    border: none;
+    background: url("/src/assets/img/TagRemovebtn.svg") no-repeat center;
+    background-size: contain;
+    cursor: pointer;
+    padding: 0;
+}

@@ -1,0 +1,26 @@
+.pagination {
+    display: flex;
+    margin-top: 50px;
+    gap: 4px;
+    justify-content: center;
+    margin-bottom: 140px;
+}
+
+.page-btn {
+    border-radius: 40px;
+    width: 40px;
+    height: 40px;
+    background: #fff;
+    border: 1px solid var(--Cool-Gray-200, #e5e7eb);
+    color: var(--Cool-Gray-500, #6b7280);
+    font-family: Pretendard;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 26px;
+    cursor: pointer;
+}
+
+.page-btn.selected {
+    background: #2f80ed;
+    color: var(--Secondary-100, #f9fafb);
+}
