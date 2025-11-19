@@ -1,0 +1,11 @@
+# 공통 node_modules / 빌드 결과 무시
+node_modules/
+dist/
+.env
+npm-debug.log*
+
+# 백엔드 API 전용 (이번에 추가한 폴더)
+panda-market-api/node_modules/
+panda-market-api/.env
+panda-market-api/npm-debug.log*
+

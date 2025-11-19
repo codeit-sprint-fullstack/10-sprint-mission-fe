@@ -1,0 +1,435 @@
+.with-fixed-header {
+  margin-top: 4.375rem;
+}
+
+main .inner {
+  max-width: 1920px;
+  margin: 0 auto;
+}
+
+.ad {
+  width: 100%;
+  height: 33.75rem;
+  flex-shrink: 0;
+  background-color: var(--Primary-050);
+}
+
+.ad .inner {
+  position: relative;
+  max-width: 1920px;
+  margin: 0 auto;
+}
+
+.shopping {
+  display: inline-block;
+  height: 3.5rem;
+  padding: 1rem 7.75rem;
+  background-color: var(--Primary-100);
+  border-radius: 2.5rem;
+  color: var(--Secondary-100);
+  font-family: Pretendard, sans-serif;
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 2rem;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  top: 384px;
+  left: 408px;
+  text-decoration: none;
+  z-index: 1;
+}
+
+.ad-announcement {
+  color: var(--Secondary-700);
+  font-family: Pretendard, sans-serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 140%;
+  padding-bottom: 3.75rem;
+}
+
+.home-top-ad-announcement {
+  position: absolute;
+  top: 240px;
+  left: 405px;
+}
+
+.panda-top-ad {
+  position: absolute;
+  top: 200px;
+  left: 769px;
+}
+
+.hot-product .inner {
+  position: relative;
+  max-width: 1920px;
+  padding: 8.625rem 21.5rem;
+  margin: 0 auto;
+}
+
+.hot-product-content,
+.search-content,
+.register-product-content {
+  display: flex;
+  width: 61.75rem;
+  gap: 4rem;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--Secondary-050);
+}
+
+.hot-product-description {
+  display: flex;
+  flex-direction: column;
+}
+
+.badge {
+  font-family: Pretendard, sans-serif;
+  font-size: 1.125rem;
+  font-weight: 700;
+  line-height: 1.625rem;
+  color: var(--Primary-100);
+  margin-bottom: 0.75rem;
+}
+
+.check {
+  font-family: Pretendard, sans-serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 3.5rem;
+  letter-spacing: 0.05rem;
+  color: var(--Secondary-700);
+  margin-bottom: 1.5rem;
+}
+
+.announcement {
+  font-family: Pretendard, sans-serif;
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 2rem;
+  color: var(--Secondary-700);
+}
+
+.search .inner {
+  position: relative;
+  max-width: 1920px;
+  padding: 8.625rem 21.375rem;
+  margin: 0 auto;
+}
+
+.search-description {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.search-img,
+.register-img {
+  width: 36.75rem;
+  height: 27.75rem;
+}
+
+.search-check,
+.search-announcement {
+  text-align: right;
+}
+
+.register-product {
+  margin-bottom: 8.625rem;
+}
+
+.register-product .inner {
+  position: relative;
+  max-width: 1920px;
+  padding: 8.625rem 22.5rem;
+  margin: 0 auto;
+}
+
+.home-bottom-ad-announcement {
+  position: absolute;
+  top: 255.5px;
+  left: 405px;
+}
+
+.panda-bottom-ad {
+  position: absolute;
+  top: 143px;
+  left: 769px;
+}
+
+/* ======================= 반응형 디자인 ====================== */
+
+/* PC */
+@media (min-width: 1200px) {
+  .panda-hot,
+  .search-img,
+  .register-img {
+    width: 588px;
+    height: 444px;
+  }
+
+  .panda-top-ad {
+    width: 746px;
+    height: 340px;
+  }
+
+  .panda-bottom-ad {
+    width: 746px;
+    height: 397px;
+  }
+}
+
+/* 태블릿 */
+@media (max-width: 1199px) and (min-width: 744px) {
+  .home-top-ad {
+    height: 48.1875rem;
+  }
+
+  .home-top-ad .inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    padding-top: 5.25rem;
+    padding-bottom: 0;
+    height: 100%;
+  }
+
+  .home-bottom-ad {
+    height: 57.9375rem;
+  }
+
+  .home-bottom-ad .inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    padding-top: 12.5625rem;
+    padding-bottom: 0;
+    height: 100%;
+  }
+
+  .home-top-ad-announcement,
+  .home-bottom-ad-announcement {
+    position: static;
+    margin-bottom: 3rem;
+    font-size: 2.5rem;
+    text-align: center;
+  }
+
+  .shopping {
+    position: static;
+    display: block;
+    width: fit-content;
+    margin-bottom: 3rem;
+    font-size: 1.25rem;
+  }
+
+  .panda-top-ad {
+    position: static;
+    margin-top: auto;
+    width: 744px;
+    height: 340px;
+  }
+
+  .panda-bottom-ad {
+    position: static;
+    margin-top: auto;
+    width: 744px;
+    height: 397px;
+  }
+
+  .register-product {
+    margin-bottom: 0;
+  }
+
+  .hot-product .inner,
+  .search .inner,
+  .register-product .inner {
+    padding-top: 1.625rem;
+    padding-bottom: 1.625rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+  .panda-hot,
+  .search-img,
+  .register-img {
+    position: static;
+    width: 696px;
+    height: 524px;
+    order: 1;
+  }
+
+  .hot-product-content,
+  .search-content,
+  .register-product-content {
+    flex-direction: column;
+    width: 100%;
+    max-width: 696px;
+    margin: 0 auto;
+    gap: 1.5rem;
+  }
+
+  .hot-product-description,
+  .search-description,
+  .register-product-description {
+    width: 100%;
+    order: 2;
+  }
+
+  .hot-product-description,
+  .register-product-description {
+    align-items: flex-start;
+  }
+
+  .search-description {
+    align-items: flex-end;
+  }
+
+  .badge {
+    font-size: 1.125rem;
+    margin-bottom: 1rem;
+  }
+
+  .check {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .announcement {
+    font-size: 1.125rem;
+  }
+}
+
+/* 모바일 */
+@media (max-width: 743px) {
+  .home-top-ad,
+  .home-bottom-ad {
+    height: 33.75rem;
+  }
+
+  .home-top-ad .inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    padding-top: 3rem;
+    height: 100%;
+  }
+
+  .home-bottom-ad .inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    padding-top: 7.5625rem;
+    padding-bottom: 0;
+    height: 100%;
+  }
+
+  .home-top-ad-announcement,
+  .home-bottom-ad-announcement {
+    position: static;
+    padding-bottom: 2rem;
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .shopping {
+    position: static;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 2rem;
+    width: fit-content;
+    padding: 1rem 3rem;
+    font-size: 1.125rem;
+  }
+
+  .panda-top-ad {
+    position: static;
+    margin-top: auto;
+    width: 100%;
+    height: auto;
+  }
+
+  .panda-bottom-ad {
+    position: static;
+    margin-top: auto;
+    width: 100%;
+    height: auto;
+  }
+
+  .home-top-ad .inner,
+  .hot-product .inner,
+  .search .inner,
+  .register-product .inner,
+  .home-bottom-ad .inner {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  .hot-product .inner,
+  .search .inner,
+  .register-product .inner {
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+  }
+
+  .panda-hot,
+  .search-img,
+  .register-img,
+  .panda-top-ad,
+  .panda-bottom-ad {
+    position: static;
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .panda-hot,
+  .search-img,
+  .register-img {
+    order: 1;
+  }
+
+  .hot-product-content,
+  .search-content,
+  .register-product-content {
+    flex-direction: column;
+    width: 100%;
+    max-width: 696px;
+    gap: 1.5rem;
+  }
+
+  .hot-product-description,
+  .search-description,
+  .register-product-description {
+    order: 2;
+    width: 100%;
+  }
+
+  .hot-product-description,
+  .register-product-description {
+    align-items: flex-start;
+  }
+
+  .search-description {
+    align-items: flex-end;
+  }
+
+  .badge {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .check {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .announcement {
+    font-size: 1rem;
+  }
+}

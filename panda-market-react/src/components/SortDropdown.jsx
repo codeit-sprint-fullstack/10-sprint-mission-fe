@@ -1,8 +1,11 @@
 import { useEffect, useRef, useState } from "react";
+import "./SortDropdown.css";
+
+/* 요구사항에서 중고마켓 페이지의 좋아요 순 정렬 기능은 제외하라 되어있어서 best, favorite 관련 부분은 다 지우려고 하는데 혹시나 그게 아닐까봐 주석 처리하겠습니다 ㅠㅠ */
 
 const OPTIONS = [
   { value: "recent", label: "최신순" },
-  { value: "favorite", label: "좋아요순" },
+  // { value: "favorite", label: "좋아요순" },
 ];
 
 function SortDropdown({ value = "recent", onChange }) {
@@ -37,7 +40,7 @@ function SortDropdown({ value = "recent", onChange }) {
           <button
             type="button"
             role="option"
-            className="sort-item sort-item-first"
+            className="sort-item sort-item-first sort-item-second"
             onClick={() => {
               onChange?.("recent");
               setOpen(false);
@@ -45,7 +48,7 @@ function SortDropdown({ value = "recent", onChange }) {
           >
             최신순
           </button>
-          <button
+          {/* <button
             type="button"
             role="option"
             className="sort-item sort-item-second"
@@ -55,7 +58,7 @@ function SortDropdown({ value = "recent", onChange }) {
             }}
           >
             좋아요순
-          </button>
+          </button> */}
         </div>
       )}
     </div>

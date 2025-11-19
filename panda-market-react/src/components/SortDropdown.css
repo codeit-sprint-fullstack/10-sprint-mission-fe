@@ -1,0 +1,83 @@
+.sort {
+  position: relative;
+}
+
+.sort-button {
+  height: 2.5rem;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid var(--Secondary-300);
+  border-radius: 0.5rem;
+  background-color: var(--White);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.sort-triangle {
+  width: 0;
+  height: 0;
+  border-left: 0.375rem solid transparent;
+  border-right: 0.375rem solid transparent;
+  border-top: 0.4375rem solid #000000;
+}
+
+.sort-menu {
+  position: absolute;
+  top: calc(100% + 0.375rem);
+  right: 0;
+  z-index: 20;
+  display: grid;
+  gap: 0;
+}
+
+.sort-item {
+  background-color: var(--White);
+  text-align: left;
+  padding: 0.625rem 0.75rem;
+  cursor: pointer;
+  font-size: 0.875rem;
+  color: var(--Secondary-900);
+}
+
+.sort-item:hover {
+  background-color: var(--Secondary-100);
+}
+
+.sort-item-first {
+  border-radius: 0.75rem 0.75rem 0 0;
+  border: 1px solid var(--Secondary-300);
+  background-color: var(--White);
+}
+
+.sort-item-second {
+  border-radius: 0 0 0.75rem 0.75rem;
+  border: 1px solid var(--Secondary-300);
+  background-color: var(--White);
+  border-top: none;
+}
+
+/* ======================= 반응형 ======================= */
+
+/* 모바일 (<=743) */
+@media (max-width: 743px) {
+  .sort {
+    order: 2;
+    flex-shrink: 0;
+  }
+
+  .sort-button {
+    width: 2.625rem;
+    height: 2.625rem;
+    padding: 0;
+    font-size: 0;
+    line-height: 0;
+    background-image: url("/image/dropdown.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .sort-triangle {
+    display: none;
+  }
+}

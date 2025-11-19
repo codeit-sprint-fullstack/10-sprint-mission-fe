@@ -1,0 +1,186 @@
+.authentication-btn,
+.visibility-icon {
+  cursor: pointer;
+}
+
+.authentication-panda-logo {
+  cursor: pointer;
+  width: 24.75rem;
+  display: block;
+}
+
+.authentication-panda-logo img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.authentication-panda-market-logo {
+  margin-bottom: 2.5rem;
+  display: flex;
+  justify-content: center;
+}
+
+.authentication-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.authentication-email,
+.authentication-password,
+.authentication-nickname {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.social-login {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  padding: 1rem 1.4375rem;
+  background-color: var(--Primary-025);
+  border-radius: 0.5rem;
+}
+
+.login-signup {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.social-login-links {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.authentication-form input {
+  font-family: Pretendard;
+  color: var(--Secondary-400);
+}
+
+.authentication-form label {
+  color: var(--Secondary-800);
+  font-family: Pretendard;
+  font-size: 1.125rem;
+  font-weight: 700;
+}
+
+.authentication-form .authentication-email input {
+  width: 100%;
+  padding: 1.5rem 1rem;
+  border-radius: 0.75rem;
+  background-color: var(--Secondary-200);
+  border: 1px solid var(--Secondary-200);
+}
+
+.authentication-form .authentication-email input:focus {
+  border: 1px solid var(--Primary-100);
+  outline: none;
+}
+
+.authentication-form .input-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem 1rem;
+  border-radius: 0.75rem;
+  background-color: var(--Secondary-200);
+  border: 1px solid var(--Secondary-200);
+}
+
+.authentication-form .input-wrap:focus-within {
+  border: 1px solid var(--Primary-100);
+  outline: none;
+}
+
+.authentication-form .input-wrap > input {
+  border: 0;
+  padding: 0;
+  margin: 0;
+  color: var(--Secondary-400);
+  background-color: var(--Secondary-200);
+  outline: none;
+}
+
+.authentication-form .input-wrap > button {
+  border: none;
+  background-color: var(--Secondary-200);
+}
+
+.authentication-btn {
+  padding: 1rem 7.75rem;
+  border-radius: 2.5rem;
+  border: none;
+  background-color: var(--Secondary-400);
+  color: var(--Secondary-200);
+  text-align: center;
+  font-family: Pretendard;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.start-social-login {
+  color: var(--Secondary-800);
+  font-family: Pretendard;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.login-signup-question {
+  color: var(--Secondary-800);
+  font-family: Pretendard;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.login-signup-link {
+  color: var(--Primary-100);
+  font-family: Pretendard;
+  font-size: 0.875rem;
+  font-weight: 500;
+  text-decoration: underline;
+}
+
+.authentication-nickname {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.authentication-form .authentication-nickname input {
+  width: 100%;
+  padding: 1.5rem 1rem;
+  border-radius: 0.75rem;
+  background-color: var(--Secondary-200);
+  border: 1px solid var(--Secondary-200);
+}
+
+.authentication-form .authentication-nickname input:focus {
+  border: 1px solid var(--Primary-100);
+  outline: none;
+}
+
+.authentication-form input[type="password"]::-ms-reveal,
+.authentication-form input[type="password"]::-ms-clear {
+  display: none;
+}
+.authentication-form
+  input[type="password"]::-webkit-credentials-auto-fill-button {
+  visibility: hidden;
+  pointer-events: none;
+}
+.authentication-form
+  input[type="password"]::-webkit-textfield-decoration-container {
+  display: none !important;
+}
+
+.error-message {
+  color: var(--error-red);
+  font-size: 0.875rem;
+}

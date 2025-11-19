@@ -1,0 +1,89 @@
+.footer-inner {
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 2rem 12.5rem;
+  min-height: 10rem;
+  max-width: 1920px;
+}
+
+.footer {
+  width: 100%;
+  min-height: 10rem;
+  flex-shrink: 0;
+  background-color: var(--Secondary-900);
+}
+
+.link {
+  cursor: pointer;
+}
+
+.copyright {
+  text-align: center;
+  font-family: Pretendard;
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--Secondary-400);
+}
+
+.legal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.875rem;
+}
+
+.privacy,
+.faq {
+  text-align: center;
+  font-family: Pretendard, sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--Secondary-300);
+  text-decoration: none;
+}
+
+.footer-link-logo {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.links {
+  display: flex;
+  justify-content: flex-end;
+  justify-items: center;
+  gap: 0.75rem;
+}
+
+/* ======================= 반응형 ======================= */
+
+/* 모바일 (<=743) */
+@media (max-width: 743px) {
+  .footer {
+    width: 100vw;
+  }
+
+  .footer-inner {
+    padding: 2rem 1rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .legal {
+    order: 1;
+    flex: 0 0 auto;
+  }
+
+  .links {
+    order: 2;
+    flex: 0 0 auto;
+    margin-left: auto;
+  }
+
+  .copyright {
+    order: 3;
+    flex: 0 0 auto;
+    text-align: left;
+  }
+}
