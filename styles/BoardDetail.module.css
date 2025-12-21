@@ -1,6 +1,3 @@
-.wrap {
-    padding: 24px 0 80px;
-}
 
 .titleSection {
     border-bottom: 1px solid var(--Cool-Gray-200, #e5e7eb);
@@ -95,6 +92,15 @@
     line-height: 24px;
 }
 
+.CommentDateValue {
+    color: var(--Cool-Gray-400, #9ca3af);
+    font-family: Pretendard;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+}
+
 .content {
     padding-top: 24px;
     color: var(--Secondary-800, #1f2937);
@@ -118,4 +124,51 @@
 .buttonRow {
     display: flex;
     justify-content: right;
+}
+
+.commentsSection {
+    padding-top: 24px;
+}
+
+.commentsList {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.commentItem {
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--Cool-Gray-200, #e5e7eb);
+    background: #FCFCFC;
+}
+
+
+.commentContent {
+    margin-bottom: 24px;
+}
+
+.commentContent p {
+    margin: 0;
+    color: var(--Secondary-800, #1f2937);
+    font-family: Pretendard;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 26px;
+    white-space: pre-wrap;
+}
+
+.commentMeta {
+    padding-bottom: 0;
+}
+
+.commentMetaRow {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.commentUserInfo {
+    display: flex;
+    flex-direction: column;
 }

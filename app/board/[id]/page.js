@@ -3,6 +3,7 @@ import styles from "@/styles/BoardDetail.module.css";
 import Image from "next/image";
 import profiles from "@/public/images/profiles.svg";
 import CommentForm from "@/components/CommentForm";
+import CommentList from "@/components/CommentList";
 
 async function getArticleById(id) {
     const backendBase =
@@ -15,9 +16,29 @@ async function getArticleById(id) {
     return await res.json();
 }
 
+async function getCommentsByArticleId(id) {
+    try {
+        const backendBase =
+            process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:4000/articles";
+        const backendUrl = new URL(backendBase);
+        backendUrl.pathname = `${backendUrl.pathname.replace(/\/$/, "")}/${id}/comments`;
+
+        const res = await fetch(backendUrl.toString(), { cache: "no-store" });
+        if (!res.ok) return [];
+        const data = await res.json();
+        return Array.isArray(data) ? data : data.items || [];
+    } catch (error) {
+        console.error("Failed to fetch comments:", error);
+        return [];
+    }
+}
+
 export default async function BoardDetailPage({ params }) {
     const { id } = await Promise.resolve(params);
-    const article = await getArticleById(id);
+    const [article, comments] = await Promise.all([
+        getArticleById(id),
+        getCommentsByArticleId(id),
+    ]);
 
     if (!article) {
         return (
@@ -63,6 +84,8 @@ export default async function BoardDetailPage({ params }) {
                 </div>
 
                 <CommentForm articleId={id} />
+                <CommentList comments={comments} />
+                
             </article>
         </Container>
     );

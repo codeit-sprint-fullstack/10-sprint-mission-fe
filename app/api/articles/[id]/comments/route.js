@@ -4,6 +4,45 @@ function getBackendBase() {
     return process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:4000/articles";
 }
 
+export async function GET(request, { params }) {
+    const { id } = await Promise.resolve(params);
+    const backendBase = getBackendBase();
+
+    try {
+        const backendUrl = new URL(backendBase);
+        backendUrl.pathname = `${backendUrl.pathname.replace(/\/$/, "")}/${id}/comments`;
+
+        const res = await fetch(backendUrl.toString(), { cache: "no-store" });
+
+        const text = await res.text();
+        let data = null;
+        try {
+            data = text ? JSON.parse(text) : null;
+        } catch {
+            data = text;
+        }
+
+        if (!res.ok) {
+            return NextResponse.json(
+                {
+                    items: [],
+                    error: `API Error: ${res.status} ${res.statusText}`,
+                    data,
+                },
+                { status: res.status }
+            );
+        }
+
+        return NextResponse.json(data, { status: 200 });
+    } catch (error) {
+        console.error("Proxy /api/articles/[id]/comments GET failed:", error);
+        return NextResponse.json(
+            { items: [], error: "Failed to fetch comments" },
+            { status: 500 }
+        );
+    }
+}
+
 export async function POST(request, { params }) {
     const { id } = await Promise.resolve(params);
     const backendBase = getBackendBase();
