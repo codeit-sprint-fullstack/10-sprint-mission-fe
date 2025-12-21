@@ -1,0 +1,68 @@
+.root {
+    position: relative;
+    width: 130px;
+}
+
+.trigger {
+    display: flex;
+    width: 130px;
+    height: 42px;
+    padding: 12px 20px;
+    align-items: center;
+    border-radius: 12px;
+    border: 1px solid var(--Cool-Gray-200, #e5e7eb);
+    background: #fff;
+
+    color: var(--Secondary-600, #4b5563);
+    font-family: Pretendard, Arial, sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    cursor: pointer;
+
+    /* right arrow */
+    background-image: url("/images/dropbtn.svg");
+    background-repeat: no-repeat;
+    background-position: right 20px center;
+    background-size: 24px 24px;
+    padding-right: 52px; /* 20px + 24px + 여유 */
+}
+
+.menu {
+    position: absolute;
+    top: calc(42px + 8px);
+    left: 0;
+    width: 130px;
+    border-radius: 12px;
+    border: 1px solid var(--Cool-Gray-200, #e5e7eb);
+    background: #fff;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    z-index: 10;
+}
+
+.option {
+    display: flex;
+    width: 100%;
+    height: 42px;
+    padding: 12px 20px;
+    align-items: center;
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+
+    color: var(--Secondary-600, #4b5563);
+    font-family: Pretendard, Arial, sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    text-align: left;
+}
+
+.option:hover {
+    background: var(--Secondary-100, #f3f4f6);
+}
+
+.optionActive {
+    background: var(--Secondary-100, #f3f4f6);
+}

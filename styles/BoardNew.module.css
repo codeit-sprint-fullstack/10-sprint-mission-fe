@@ -1,0 +1,53 @@
+.wrap {
+    padding-bottom: 794px; /* 내용 input ↔ footer 간격 */
+}
+
+.headerRow {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.title {
+    color: var(--Cool-Gray-900, #111827);
+    font-family: Pretendard;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    padding-bottom: 32px;
+    margin: 0;
+}
+
+.submitButton {
+    display: inline-flex;
+    height: 42px;
+    padding: 12px 23px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border: none;
+    border-radius: 8px;
+    background: var(--Cool-Gray-300, #d1d5db);
+    color: #fff;
+    font-family: Pretendard, Arial, sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    cursor: not-allowed;
+}
+
+.submitButtonActive {
+    background: var(--brand-blue, #3692ff);
+    color: #fff;
+    cursor: pointer;
+}
+
+.error {
+    padding: 12px 0 16px;
+    color: #ef4444;
+    font-family: Pretendard;
+    font-size: 14px;
+    line-height: 24px;
+}
