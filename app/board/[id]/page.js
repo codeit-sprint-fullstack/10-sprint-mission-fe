@@ -4,10 +4,12 @@ import Image from "next/image";
 import profiles from "@/public/images/profiles.svg";
 import CommentForm from "@/components/CommentForm";
 import CommentList from "@/components/CommentList";
+import BackToListButton from "@/components/BackToListButton";
+import ArticleKebabMenu from "@/components/ArticleKebabMenu";
 
 async function getArticleById(id) {
     const backendBase =
-        process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:4000/articles";
+        process.env.NEXT_PUBLIC_BASE_URL;
     const url = new URL(backendBase);
     url.pathname = `${url.pathname.replace(/\/$/, "")}/${id}`;
 
@@ -19,7 +21,7 @@ async function getArticleById(id) {
 async function getCommentsByArticleId(id) {
     try {
         const backendBase =
-            process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:4000/articles";
+            process.env.NEXT_PUBLIC_BASE_URL;
         const backendUrl = new URL(backendBase);
         backendUrl.pathname = `${backendUrl.pathname.replace(/\/$/, "")}/${id}/comments`;
 
@@ -52,7 +54,10 @@ export default async function BoardDetailPage({ params }) {
         <Container>
             <article className={styles.wrap}>
                 <div className={styles.titleSection}>
-                    <h2 className={styles.title}>{article.title}</h2>
+                    <div className={styles.titleRow}>
+                        <h2 className={styles.title}>{article.title}</h2>
+                        <ArticleKebabMenu articleId={id} />
+                    </div>
                     <div className={styles.metaRow}>
                         <div className={styles.metaUserRow}>
                             <span className={styles.metaUser}>
@@ -85,7 +90,9 @@ export default async function BoardDetailPage({ params }) {
 
                 <CommentForm articleId={id} />
                 <CommentList comments={comments} />
-                
+                <div className={styles.returnButton}>
+                    <BackToListButton />
+                </div>
             </article>
         </Container>
     );

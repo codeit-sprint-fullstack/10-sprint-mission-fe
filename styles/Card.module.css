@@ -115,6 +115,7 @@
     justify-content: space-between;
     gap: 8px;
 }
+
 .notebook {
     display: flex;
     width: 72px;
@@ -126,4 +127,18 @@
     border-radius: 6px;
     border: 1px solid var(--Cool-Gray-200, #e5e7eb);
     background: #fff;
+}
+
+/* 744px 미만: 2개만 표시 */
+@media (max-width: 743px) {
+    .cardLink:nth-child(n + 3) {
+        display: none;
+    }
+}
+
+/* 480px 이하: 1개만 표시 */
+@media (max-width: 480px) {
+    .cardLink:nth-child(n + 2) {
+        display: none;
+    }
 }

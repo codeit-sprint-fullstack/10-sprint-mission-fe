@@ -21,6 +21,7 @@ export default function Header() {
                                     alt="logo"
                                     width={40}
                                     height={41}
+                                    className={styles.logoIcon}
                                 />
                                 <Image
                                     src="/logotext.svg"

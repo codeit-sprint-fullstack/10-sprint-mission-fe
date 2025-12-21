@@ -35,6 +35,16 @@
     gap: 8.592px;
 }
 
+.logoIcon {
+    display: block;
+}
+
+@media (max-width: 480px) {
+    .logoIcon {
+        display: none;
+    }
+}
+
 .navLinks {
     display: flex;
     align-items: center;
@@ -80,4 +90,17 @@
     font-weight: 600;
     line-height: normal;
     cursor: pointer;
+}
+
+@media (max-width: 480px) {
+    .navLink {
+        font-size: 16px;
+    }
+    .leftSection {
+        gap: 16px;
+    }
+    .navLinks {
+        gap: 8px;
+    }
+
 }

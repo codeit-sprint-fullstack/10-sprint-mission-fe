@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 
 function getBackendBase() {
-    return process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:4000/articles";
+    return process.env.NEXT_PUBLIC_BASE_URL;
 }
 
 export async function GET(request) {
