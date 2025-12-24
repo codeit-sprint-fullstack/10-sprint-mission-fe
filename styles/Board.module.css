@@ -1,0 +1,147 @@
+.bestTitle {
+    color: var(--Cool-Gray-900, #111827);
+    font-family: Pretendard;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    padding-bottom: 24px;
+}
+
+.postsSection {
+    padding-top: 24px;
+}
+
+.postsHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 0 16px 0;
+}
+
+.postsTitle {
+    color: var(--Cool-Gray-900, #111827);
+    font-family: Pretendard;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.writeButton {
+    display: inline-flex;
+    height: 42px;
+    padding: 12px 23px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border: none;
+    border-radius: 8px;
+    background: var(--brand-blue, #3692ff);
+    color: #fff;
+    font-family: Pretendard, Arial, sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    cursor: pointer;
+}
+
+.writeButton:hover {
+    opacity: 0.9;
+}
+
+.writeButton:active {
+    opacity: 0.8;
+}
+
+.postsToolbar {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding-bottom: 16px;
+}
+
+.searchWrap {
+    flex: 1;
+    min-width: 0;
+}
+
+.postsList {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding-bottom: 40px;
+}
+
+.postLink {
+    display: block;
+}
+
+.postItem {
+    background: var(--Cool-Gray-50, #f9fafb);
+    border-bottom: 1px solid var(--Cool-Gray-200, #e5e7eb);
+}
+
+.postTitle {
+    color: var(--Cool-Gray-900, #111827);
+    font-family: Pretendard;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 26px;
+    margin: 0;
+}
+
+.postMeta {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding-top: 16px;
+    padding-bottom: 24px;
+
+    color: var(--Secondary-600, #4b5563);
+    font-family: Pretendard;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px; /* 171.429% */
+}
+
+.postDivider {
+    color: var(--Secondary-400, #9ca3af);
+}
+
+.postDate {
+    color: var(--Secondary-400, #9ca3af);
+}
+
+.postMetaSpacer {
+    flex: 1;
+}
+
+.postUser {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.postUser::before {
+    content: "";
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("/images/profiles.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+.postLikes {
+    color: var(--Secondary-500, #6b7280);
+}
+
+.BoardHeader {
+    display: flex;
+    justify-content: space-between;
+}

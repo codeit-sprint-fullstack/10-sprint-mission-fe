@@ -1,0 +1,144 @@
+.card {
+    display: flex;
+    width: 100%;
+    border-radius: 8px;
+    flex: 1;
+    gap: 24px;
+}
+
+.cardLink {
+    display: block;
+    width: 100%;
+}
+
+.cardItem {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    padding: 0 24px;
+    border-radius: 8px;
+    background: var(--Cool-Gray-50, #f9fafb);
+}
+
+.cardTitle {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--Cool-Gray-900, #111827);
+    margin: 0;
+}
+
+.cardContent {
+    font-size: 14px;
+    color: var(--Cool-Gray-600, #4b5563);
+    margin: 0;
+    line-height: 1.5;
+}
+
+.badge {
+    display: flex;
+    flex-direction: row !important;
+    width: 102px;
+    height: 30px;
+    padding: 2px 24px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 0 0 16px 16px;
+    background: var(--brand-blue, #3692ff);
+}
+
+.badge span {
+    color: #fff;
+    font-family: Pretendard;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 26px; /* 162.5% */
+}
+
+.cardFooter {
+    display: flex;
+    justify-content: space-between;
+}
+
+.cardFooterLeft {
+    display: flex;
+    align-items: center;
+    gap: 8px; /* item.user ↔ 하트 */
+}
+
+.cardUser {
+    color: var(--Secondary-600, #4b5563);
+
+    /* pretendard/md-14px-regular */
+    font-family: Pretendard;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px; /* 171.429% */
+}
+
+.likeGroup {
+    display: flex;
+    align-items: center;
+    gap: 4px; /* 하트 ↔ likeCount */
+}
+
+.cardFooterItem {
+    display: flex;
+    align-items: center;
+
+    color: var(--Secondary-400, #9ca3af);
+
+    /* pretendard/md-14px-regular */
+    font-family: Pretendard;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px; /* 171.429% */
+}
+
+.heart,
+.likeCount {
+    color: var(--Secondary-500, #6b7280);
+    font-family: Pretendard;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px; /* 171.429% */
+}
+
+.cardHeader {
+    display: flex;
+    align-items: center;
+    padding: 16px 0 26px 0;
+    justify-content: space-between;
+    gap: 8px;
+}
+
+.notebook {
+    display: flex;
+    width: 72px;
+    height: 72px;
+    padding: 13.714px 12px;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    border-radius: 6px;
+    border: 1px solid var(--Cool-Gray-200, #e5e7eb);
+    background: #fff;
+}
+
+/* 744px 미만: 2개만 표시 */
+@media (max-width: 743px) {
+    .cardLink:nth-child(n + 3) {
+        display: none;
+    }
+}
+
+/* 480px 이하: 1개만 표시 */
+@media (max-width: 480px) {
+    .cardLink:nth-child(n + 2) {
+        display: none;
+    }
+}

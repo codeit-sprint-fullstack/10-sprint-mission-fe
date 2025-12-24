@@ -1,0 +1,33 @@
+.footer {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 160px;
+    padding: 32px 24px;
+    background: var(--Secondary-900, #111827);
+    color: white;
+}
+.footerContent {
+    display: flex;
+    width: 100%;
+    max-width: 1520px;
+    justify-content: space-between;
+}
+.footerLinks {
+    display: flex;
+    gap: 30px;
+}
+
+.snsLogos {
+    gap: 12px;
+    display: flex;
+}
+
+@media (max-width: 480px) {
+    .footerContent {
+        flex-wrap: wrap;
+    }
+    .footerCopyright {
+        order: 1;
+    }
+}
